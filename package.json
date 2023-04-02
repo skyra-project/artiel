@@ -60,7 +60,7 @@
 		"prisma": "^4.11.0",
 		"rimraf": "^4.4.1",
 		"turndown": "^7.1.2",
-		"typescript": "^4.9.5"
+		"typescript": "^5.0.3"
 	},
 	"resolutions": {
 		"ansi-regex": "^5.0.1",
