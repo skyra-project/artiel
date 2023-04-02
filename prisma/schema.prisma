@@ -1,0 +1,16 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+/// The amount of times a XKCD comic has been used.
+model Comic {
+    id   Int @id
+    uses Int @default(0)
+
+    @@map("xkcd")
+}
