@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
       - name: Run the XKCD Extraction script
-        run: node ./scripts/update-xkcd-data.mjs
+        run: node ./scripts/update-xkcd-entries.mjs
       - name: Commit any changes and create a pull request
         env:
           GITHUB_USER: github-actions[bot]
