@@ -24793,5 +24793,23 @@
 		"alt": "'So how DID you go from working at the employment records office to becoming president of MIT and CEO of IBM?' 'I guess I just have an eye for opportunities.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2757,
+		"date": 1680264000000,
+		"title": "Towed Message",
+		"image": "https://imgs.xkcd.com/comics/towed_message.png",
+		"alt": "\"Hi, what you do is fly over a designated zone and detach the--\" \"WE'RE SORRY, THE MOBILE CUSTOMER YOU ARE TRYING TO REACH IS OUT OF SERVICE\"",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2758,
+		"date": 1680523200000,
+		"title": "My Favorite Things",
+		"image": "https://imgs.xkcd.com/comics/my_favorite_things.png",
+		"alt": "When an Ur guy / sells Nanni things / but the copper's bad, / He simply records his complaint for all time / \"I got a bad deal / I'm maaaaad\"",
+		"transcript": null,
+		"news": null
 	}
 ]
