@@ -24820,5 +24820,14 @@
 		"alt": "'Lever' was originally an acronym for Load Emplification by the Vimulated Emission of Radiation.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2760,
+		"date": 1680868800000,
+		"title": "Paleontology Museum",
+		"image": "https://imgs.xkcd.com/comics/paleontology_museum.png",
+		"alt": "Nowadays the only ones left that do anything are turtles.",
+		"transcript": null,
+		"news": null
 	}
 ]
