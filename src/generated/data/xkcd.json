@@ -24829,5 +24829,14 @@
 		"alt": "Nowadays the only ones left that do anything are turtles.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2761,
+		"date": 1681128000000,
+		"title": "1-to-1 Scale",
+		"image": "https://imgs.xkcd.com/comics/1_to_1_scale.png",
+		"alt": "There's a version that shows the planets with no cropping, but it's hard to find a display that supports it.",
+		"transcript": null,
+		"news": null
 	}
 ]
