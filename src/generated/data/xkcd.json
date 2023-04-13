@@ -24838,5 +24838,14 @@
 		"alt": "There's a version that shows the planets with no cropping, but it's hard to find a display that supports it.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2762,
+		"date": 1681300800000,
+		"title": "Diffraction Spikes",
+		"image": "https://imgs.xkcd.com/comics/diffraction_spikes.png",
+		"alt": "Even if a planet is lucky enough to have a stable orbit that weaves between the spikes, the seasons get weird whenever it passes close to them.",
+		"transcript": null,
+		"news": null
 	}
 ]
