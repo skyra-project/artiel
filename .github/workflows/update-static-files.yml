@@ -22,9 +22,9 @@ jobs:
         run: node ./scripts/update-xkcd-entries.mjs
       - name: Commit any changes and create a pull request
         env:
-          GITHUB_USER: github-actions[bot]
-          GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: NM-EEA-Y
+          GITHUB_EMAIL: contact@skyra.pw
+          GITHUB_TOKEN: ${{ secrets.SKYRA_TOKEN }}
         run: |
           git add .;
           if git diff-index --quiet HEAD --; then
@@ -34,8 +34,6 @@ jobs:
             git remote set-url origin "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${GITHUB_REPOSITORY}.git";
             git config --local user.email "${GITHUB_EMAIL}";
             git config --local user.name "${GITHUB_USER}";
-            git checkout -b update-xkcd/$(date +%F-%H-%M);
             git commit -sam "refactor: update xkcd data";
-            git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
-            gh pr create -t "refactor: update xkcd data" -b "*bleep bloop* I updated the xkcd data file" -B main;
+            git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD);
           fi
