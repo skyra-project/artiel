@@ -24865,5 +24865,23 @@
 		"alt": "Later renouncing clickbait, Einstein called his inclusion of cosmological content in general relativity the biggest blunder of his career.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2765,
+		"date": 1681905600000,
+		"title": "Escape Speed",
+		"image": "https://imgs.xkcd.com/comics/escape_speed.png",
+		"alt": "Gotta go fast",
+		"transcript": null,
+		"news": "Today's comic was put together with help from [Max Goodhart](https://chromakode.com/), [Patrick Clapp](https://www.instagram.com/fading_interest/), [Amber](https://amberyu.st/), [Kevin](https://twitter.com/cotrone), [Benjamin Staffin](https://twitter.com/bstaffin), and [Janelle Shane](https://www.aiweirdness.com/)."
+	},
+	{
+		"id": 2766,
+		"date": 1682078400000,
+		"title": "Helium Reserve",
+		"image": "https://imgs.xkcd.com/comics/helium_reserve.png",
+		"alt": "The government has been trying to sell off the Federal Helium Reserve for a few years now, but the sale has been on hold while they try to figure out how to explain this situation to buyers.",
+		"transcript": null,
+		"news": null
 	}
 ]
