@@ -1,6 +1,7 @@
 name: Update Static Files
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 12 * * 1-5'
 
@@ -8,9 +9,19 @@ jobs:
   UpdateXKCDData:
     name: Update XKCD Data
     runs-on: ubuntu-latest
+    env:
+      GITHUB_USER: NM-EEA-Y
+      GITHUB_EMAIL: contact@skyra.pw
+      GITHUB_TOKEN: ${{ secrets.SKYRA_TOKEN }}
     steps:
+      - name:
+        run: |
+          git config --local user.email "${GITHUB_EMAIL}";
+          git config --local user.name "${GITHUB_USER}";
       - name: Checkout Project
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.SKYRA_TOKEN }}
       - name: Use Node.js v18
         uses: actions/setup-node@v3
         with:
@@ -21,10 +32,6 @@ jobs:
       - name: Run the XKCD Extraction script
         run: node ./scripts/update-xkcd-entries.mjs
       - name: Commit any changes and create a pull request
-        env:
-          GITHUB_USER: NM-EEA-Y
-          GITHUB_EMAIL: contact@skyra.pw
-          GITHUB_TOKEN: ${{ secrets.SKYRA_TOKEN }}
         run: |
           git add .;
           if git diff-index --quiet HEAD --; then
@@ -32,8 +39,6 @@ jobs:
             exit 0;
           else
             git remote set-url origin "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${GITHUB_REPOSITORY}.git";
-            git config --local user.email "${GITHUB_EMAIL}";
-            git config --local user.name "${GITHUB_USER}";
             git commit -sam "refactor: update xkcd data";
             git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD);
           fi
