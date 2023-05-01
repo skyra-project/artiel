@@ -24901,5 +24901,23 @@
 		"alt": "Yeah, my math teacher back in high school set up the system to try to teach us something or other, but the 100% rate was unbelievably good, so I engineered a hostile takeover of his bank and now use it to make extra cash on the side.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2769,
+		"date": 1682683200000,
+		"title": "Overlapping Circles",
+		"image": "https://imgs.xkcd.com/comics/overlapping_circles.png",
+		"alt": "\"The Venn diagram of the sun and the moon is a circle.\" --someone being snarky at totality",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2770,
+		"date": 1682942400000,
+		"title": "Tapetum Lucidum",
+		"image": "https://imgs.xkcd.com/comics/tapetum_lucidum.png",
+		"alt": "Using a reflective wall in a game to give one shot two chances to hit is called a double-tapetum lucidum.",
+		"transcript": null,
+		"news": null
 	}
 ]
