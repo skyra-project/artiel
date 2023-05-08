@@ -24928,5 +24928,14 @@
 		"alt": "'Your chitin armor is no match for our iron-tipped stingers! Better go hide in your jars!' --common playground taunt",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2772,
+		"date": 1683288000000,
+		"title": "Commemorative Plaque",
+		"image": "https://imgs.xkcd.com/comics/commemorative_plaque.png",
+		"alt": "[Below] On this site on May 12th, 2023, I finally learned how to use the masonry bit for my drill.",
+		"transcript": null,
+		"news": null
 	}
 ]
