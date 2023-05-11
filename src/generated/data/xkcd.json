@@ -24946,5 +24946,14 @@
 		"alt": "This rumpled fabric at the corner looks like evidence of ongoing tectonic activity.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2774,
+		"date": 1683720000000,
+		"title": "Taxiing",
+		"image": "https://imgs.xkcd.com/comics/taxiing.png",
+		"alt": "I don't understand why anyone would pay full price for a flatbed truck rental when you can buy 'DETOUR' signs online for like $10.",
+		"transcript": null,
+		"news": null
 	}
 ]
