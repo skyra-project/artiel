@@ -23,7 +23,7 @@ jobs:
         run: yarn --immutable
       - name: Run the XKCD Extraction script
         run: node ./scripts/update-xkcd-entries.mjs
-      - name: Commit any changes and create a pull request
+      - name: Commit any changes and push code
         env:
           GITHUB_USER: github-actions[bot]
           GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
