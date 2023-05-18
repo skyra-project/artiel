@@ -24973,5 +24973,14 @@
 		"alt": "They often use ball lenses to collect light at the ends of optical fibers, so when you look stuff up on the internet you're actually scrying through a crystal ball.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2777,
+		"date": 1684324800000,
+		"title": "Noise Filter",
+		"image": "https://imgs.xkcd.com/comics/noise_filter.png",
+		"alt": "Party Mode also enables the feature, but reverses the slider.",
+		"transcript": null,
+		"news": null
 	}
 ]
