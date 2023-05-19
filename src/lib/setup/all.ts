@@ -1,3 +1,4 @@
+import '#lib/setup/canvas';
 import '#lib/setup/logger';
 import '#lib/setup/prisma';
 import { setup as envRun } from '@skyra/env-utilities';

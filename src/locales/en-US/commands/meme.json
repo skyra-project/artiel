@@ -1,0 +1,9 @@
+{
+	"name": "meme",
+	"description": "Generate a meme",
+	"optionsNameName": "name",
+	"optionsNameDescription": "The name of the meme template to use",
+	"optionsContentName": "content",
+	"optionsContentDescription": "The content to write into the template",
+	"noEntryFound": "No meme template found under the name of {{value}}."
+}
