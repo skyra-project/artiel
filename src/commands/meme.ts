@@ -33,6 +33,7 @@ const Root = LanguageKeys.Commands.Meme;
 )
 export class UserCommand extends Command {
 	private readonly wordSizes = new Collection<string, number>();
+	private spaceWidth = null as null | number;
 
 	public override async autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
 		const results = searchMeme(options.name);
@@ -75,7 +76,6 @@ export class UserCommand extends Command {
 			}
 		}
 
-		// TODO: Figure out how to write the ALT property
 		const file = { name: 'meme.png', data: await canvas.pngAsync(), contentType: 'image/png' } satisfies RawFile;
 		return response.update({
 			files: [file],
@@ -84,9 +84,12 @@ export class UserCommand extends Command {
 	}
 
 	private drawBox(canvas: Canvas, box: EntryBox, part: string) {
+		this.spaceWidth ??= canvas.measureText(' ').width;
+
+		const space = this.spaceWidth;
 		const words = part.trim().split(/\s+/);
 		const sizes = words.map((word) => this.wordSizes.ensure(word, () => canvas.measureText(word).width));
-		const total = sizes.reduce((acc, size) => acc + size, 0);
+		const total = sizes.reduce((acc, size) => acc + size, 0) + (words.length - 1) * space;
 		if (total === 0) return;
 
 		canvas
@@ -99,11 +102,15 @@ export class UserCommand extends Command {
 		} else {
 			let fontSize = 32;
 			let fontScale = 1.0;
+			let fontHeight!: number;
 
 			tryNewSize: while (fontSize > 1) {
+				fontHeight = fontSize * 1.2;
+
 				let lines = 0;
 				let current = 0;
-				const maximumLines = Math.floor(box.height / fontSize) - 1;
+				let leftWordPadding = 0;
+				const maximumLines = Math.floor(box.height / fontHeight) - 1;
 				for (const fullSize of sizes) {
 					const size = fullSize * fontScale;
 
@@ -117,8 +124,8 @@ export class UserCommand extends Command {
 
 					// If adding the current word doesn't exceed the box's width,
 					// add it:
-					if (current + size <= box.width) {
-						current += size;
+					if (current + leftWordPadding + size <= box.width) {
+						current += leftWordPadding + size;
 					} else {
 						current = size;
 						++lines;
@@ -131,6 +138,9 @@ export class UserCommand extends Command {
 							continue tryNewSize;
 						}
 					}
+
+					// The first word has been added, set padding to the space:
+					leftWordPadding = space;
 				}
 
 				break;
@@ -139,26 +149,26 @@ export class UserCommand extends Command {
 			canvas.setTextSize(fontSize);
 			const lines = [] as string[];
 			const line = [] as string[];
-			let current = 0;
-			for (let i = 0; i < sizes.length; ++i) {
+			for (let i = 0, current = 0, leftWordPadding = 0; i < sizes.length; ++i) {
 				const size = sizes[i] * fontScale;
-				if (current + size > box.width) {
+				if (current + leftWordPadding + size > box.width) {
 					current = size;
 					lines.push(line.join(' '));
 					line.length = 0;
 				} else {
-					current += size;
+					current += leftWordPadding + size;
 				}
 
 				line.push(words[i]);
+				leftWordPadding = space;
 			}
 
 			if (line.length) lines.push(line.join(' '));
 
-			let yOffset = 0 - fontSize * ((lines.length - 1) / 2);
+			let yOffset = 0 - fontHeight * ((lines.length - 1) / 2);
 			for (const line of lines) {
 				canvas.printStrokeText(line, 0, yOffset).printText(line, 0, yOffset);
-				yOffset += fontSize;
+				yOffset += fontHeight;
 			}
 		}
 
