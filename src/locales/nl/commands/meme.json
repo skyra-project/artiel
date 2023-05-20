@@ -1,12 +1,12 @@
 {
 	"name": "meme",
-	"description": "Generate a meme",
-	"optionsNameName": "name",
-	"optionsNameDescription": "The name of the meme template to use",
-	"optionsContentName": "content",
-	"optionsContentDescription": "The content to write into the template",
-	"optionsTargetName": "target",
-	"optionsTargetDescription": "The user to include in the meme",
-	"noEntryFound": "No meme template found under the name of {{value}}.",
-	"altText": "A meme generated with the \"{{template}}\" template. {{parts}}"
+	"description": "Genereer een meme",
+	"optionsNameName": "naam",
+	"optionsNameDescription": "De naam van het te gebruiken meme-sjabloon",
+	"optionsContentName": "inhoud",
+	"optionsContentDescription": "De inhoud om op het template te zetten",
+	"optionsTargetName": "doel",
+	"optionsTargetDescription": "De gebruiker om op te nemen in de meme",
+	"noEntryFound": "Geen meme-sjabloon gevonden voor {{value}}.",
+	"altText": "Een meme gegenereerd met het \"{{template}}\" sjabloon. {{parts}}"
 }
