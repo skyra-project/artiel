@@ -5,5 +5,8 @@
 	"optionsNameDescription": "The name of the meme template to use",
 	"optionsContentName": "content",
 	"optionsContentDescription": "The content to write into the template",
-	"noEntryFound": "No meme template found under the name of {{value}}."
+	"optionsTargetName": "target",
+	"optionsTargetDescription": "The user to include in the meme",
+	"noEntryFound": "No meme template found under the name of {{value}}.",
+	"altText": "A meme generated with the \"{{template}}\" template. {{parts}}"
 }
