@@ -1,12 +1,12 @@
 {
-	"name": "meme",
-	"description": "Generate a meme",
-	"optionsNameName": "name",
-	"optionsNameDescription": "The name of the meme template to use",
-	"optionsContentName": "content",
-	"optionsContentDescription": "The content to write into the template",
-	"optionsTargetName": "target",
-	"optionsTargetDescription": "The user to include in the meme",
-	"noEntryFound": "No meme template found under the name of {{value}}.",
-	"altText": "A meme generated with the \"{{template}}\" template. {{parts}}"
+	"name": "मीम",
+	"description": "एक मीम बनाए",
+	"optionsNameName": "नाम",
+	"optionsNameDescription": "उपयोग करने के लिए मीम टेम्पलेट का नाम",
+	"optionsContentName": "कांटेंट",
+	"optionsContentDescription": "टेम्पलेट में लिखने के लिए कांटेंट",
+	"optionsTargetName": "लक्ष्य",
+	"optionsTargetDescription": "मीम में शामिल करने के लिए उपयोगकर्ता",
+	"noEntryFound": "{{value}} के नाम से कोई मीम टेम्पलेट नहीं मिला।",
+	"altText": "\"{{template}}\" टेम्प्लेट से उत्पन्न एक मीम। {{parts}}"
 }
