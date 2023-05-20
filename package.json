@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"@discordjs/builders": "^1.6.1",
+		"@napi-rs/canvas": "^0.1.40",
 		"@prisma/client": "^4.14.0",
 		"@sapphire/result": "^2.6.4",
 		"@sapphire/utilities": "^3.11.2",
@@ -35,6 +36,7 @@
 		"@skyra/safe-fetch": "^1.1.2",
 		"@skyra/shared-http-pieces": "^1.0.2",
 		"@skyra/start-banner": "^2.0.0",
+		"canvas-constructor": "^7.0.0",
 		"discord-api-types": "^0.37.38",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.5.0"
