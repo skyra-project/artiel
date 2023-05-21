@@ -1,0 +1,12 @@
+{
+	"name": "meme",
+	"description": "Genereer een meme",
+	"optionsNameName": "naam",
+	"optionsNameDescription": "De naam van het te gebruiken meme-sjabloon",
+	"optionsContentName": "inhoud",
+	"optionsContentDescription": "De inhoud om op het template te zetten",
+	"optionsTargetName": "doel",
+	"optionsTargetDescription": "De gebruiker om op te nemen in de meme",
+	"noEntryFound": "Geen meme-sjabloon gevonden voor {{value}}.",
+	"altText": "Een meme gegenereerd met het \"{{template}}\" sjabloon. {{parts}}"
+}
