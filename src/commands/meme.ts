@@ -218,7 +218,7 @@ export class UserCommand extends Command {
 	}
 
 	private getFontFamily(modifiers: EntryBoxModifiers) {
-		return modifiers.font === 'impact' ? Fonts.ImpactMedium : Fonts.ImpactMedium;
+		return modifiers.font === 'impact' ? Fonts.ImpactMedium : Fonts.ArialMedium;
 	}
 
 	private getBoxX(box: EntryBox) {
