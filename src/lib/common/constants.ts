@@ -8,5 +8,6 @@ export const enum BrandingColors {
 }
 
 export const enum Fonts {
-	ImpactMedium = 'Impact-Medium, Impact-Unicode-Medium, NotoSans-Bold, NotoEmoji-Bold'
+	ImpactMedium = 'Impact-Medium, Impact-Unicode-Medium, NotoSans-Bold, NotoEmoji-Bold',
+	ArialMedium = 'Arial-Medium, NotoSans-Medium, NotoEmoji-Medium'
 }

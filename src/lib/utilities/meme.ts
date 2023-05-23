@@ -82,6 +82,20 @@ export interface EntryBox {
 	readonly width: number;
 	readonly height: number;
 	readonly rotation: number;
+	readonly modifiers: EntryBoxModifiers;
+}
+
+export interface EntryBoxModifiers {
+	readonly font: 'impact' | 'arial';
+	readonly fontSize: number;
+	readonly allCaps: boolean;
+	readonly bold: boolean;
+	readonly italic: boolean;
+	readonly outlineType: 'shadow' | 'outline' | 'none';
+	readonly outlineWidth: number;
+	readonly textAlign: 'left' | 'center' | 'right';
+	readonly verticalAlign: 'top' | 'middle' | 'bottom';
+	readonly opacity: number;
 }
 
 export interface EntryAvatars {

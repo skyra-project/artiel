@@ -27,14 +27,38 @@
 				"y": 100,
 				"width": 190,
 				"height": 190,
-				"rotation": 0
+				"rotation": 0,
+				"modifiers": {
+					"font": "impact",
+					"fontSize": 32,
+					"allCaps": false,
+					"bold": false,
+					"italic": false,
+					"outlineType": "outline",
+					"outlineWidth": 4,
+					"textAlign": "center",
+					"verticalAlign": "middle",
+					"opacity": 1
+				}
 			},
 			{
 				"x": 300,
 				"y": 300,
 				"width": 190,
 				"height": 190,
-				"rotation": 0
+				"rotation": 0,
+				"modifiers": {
+					"font": "impact",
+					"fontSize": 32,
+					"allCaps": false,
+					"bold": false,
+					"italic": false,
+					"outlineType": "outline",
+					"outlineWidth": 4,
+					"textAlign": "center",
+					"verticalAlign": "middle",
+					"opacity": 1
+				}
 			}
 		]
 	}

@@ -8,7 +8,8 @@ import {
 	searchMeme,
 	type Entry,
 	type EntryAvatarPosition,
-	type EntryBox
+	type EntryBox,
+	type EntryBoxModifiers
 } from '#lib/utilities/meme';
 import { userMention } from '@discordjs/builders';
 import { Collection } from '@discordjs/collection';
@@ -16,11 +17,10 @@ import type { RawFile } from '@discordjs/rest';
 import { isNullish, isNullishOrEmpty } from '@sapphire/utilities';
 import { Command, RegisterCommand, type AutocompleteInteractionArguments, type TransformedArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, resolveKey, resolveUserKey } from '@skyra/http-framework-i18n';
-import { Canvas, Image, color, loadImage } from 'canvas-constructor/napi-rs';
+import { Canvas, Image, color, filter, loadImage } from 'canvas-constructor/napi-rs';
 import { MessageFlags, type APIUser } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Meme;
-const FontSize = 32;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
@@ -35,9 +35,6 @@ const FontSize = 32;
 		.addUserOption((builder) => applyLocalizedBuilder(builder, Root.OptionsTarget))
 )
 export class UserCommand extends Command {
-	private readonly wordSizes = new Collection<string, number>();
-	private spaceWidth = null as null | number;
-
 	public override async autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
 		const results = searchMeme(options.name);
 		return interaction.reply({ choices: makeMemeChoices(results) });
@@ -56,12 +53,9 @@ export class UserCommand extends Command {
 		const image = await loadImage(entry.url);
 		const width = 400;
 		const height = 400 * (image.height / image.width);
-		const canvas = new Canvas(width, height)
+		const canvas = new Canvas(width, height) //
 			.setColor(color('white'))
 			.setStroke(color('black'))
-			.setStrokeWidth(4)
-			.setTextFont(`${FontSize}px ${Fonts.ImpactMedium}`)
-			.setTextAlign('center')
 			.setTextBaseline('middle')
 			.printImage(image, 0, 0, width, height);
 
@@ -91,21 +85,28 @@ export class UserCommand extends Command {
 	}
 
 	private drawBox(canvas: Canvas, box: EntryBox, part: string) {
-		this.spaceWidth ??= canvas.measureText(' ').width;
+		canvas.save().setTextFont(this.getFont(box.modifiers)).setTextAlign(box.modifiers.textAlign).setGlobalAlpha(box.modifiers.opacity);
+		if (box.modifiers.allCaps) part = part.toUpperCase();
 
-		const space = this.spaceWidth;
+		const space = canvas.measureText(' ').width;
 		const words = part.trim().split(/\s+/);
-		const sizes = words.map((word) => this.wordSizes.ensure(word, () => canvas.measureText(word).width));
+		const wordSizes = new Collection<string, number>();
+		const sizes = words.map((word) => wordSizes.ensure(word, () => canvas.measureText(word).width));
 		const total = sizes.reduce((acc, size) => acc + size, 0) + (words.length - 1) * space;
-		if (total === 0) return;
+		if (total === 0) {
+			canvas.restore();
+			return;
+		}
 
-		canvas
-			.save()
-			.translate(box.x, box.y)
-			.rotate(box.rotation * (Math.PI / 180));
+		const FontSize = box.modifiers.fontSize;
+		canvas.translate(box.x, box.y).rotate(box.rotation * (Math.PI / 180));
+		this.setOutlineWidth(canvas, box.modifiers.outlineType, box.modifiers.outlineWidth);
 
+		const x = this.getBoxX(box);
 		if (total <= box.width) {
-			canvas.printStrokeText(part, 0, 0).printText(part, 0, 0);
+			const y = this.getBoxY(box, FontSize * 1.2, 1);
+			if (box.modifiers.outlineType === 'outline') canvas.printStrokeText(part, x, y);
+			canvas.printText(part, x, y);
 		} else {
 			let fontSize = FontSize;
 			let fontScale = 1.0;
@@ -154,7 +155,8 @@ export class UserCommand extends Command {
 				break;
 			}
 
-			canvas.setTextSize(fontSize).setStrokeWidth(Math.max(2, 4 * fontScale));
+			this.setOutlineWidth(canvas, box.modifiers.outlineType, Math.max(2, box.modifiers.outlineWidth * fontScale));
+			canvas.setTextSize(fontSize);
 			const lines = [] as string[];
 			const line = [] as string[];
 			for (let i = 0, current = 0, leftWordPadding = 0; i < sizes.length; ++i) {
@@ -177,14 +179,70 @@ export class UserCommand extends Command {
 			if (line.length) lines.push(line.join(' '));
 
 			// `y = 0` is the middle of the box:
-			let yOffset = 0 - fontHeight * ((lines.length - 1) / 2);
+			let yOffset = this.getBoxY(box, fontHeight, lines.length);
 			for (const line of lines) {
-				canvas.printStrokeText(line, 0, yOffset).printText(line, 0, yOffset);
+				if (box.modifiers.outlineType === 'outline') canvas.printStrokeText(line, x, yOffset);
+				canvas.printText(line, x, yOffset);
 				yOffset += fontHeight;
 			}
 		}
 
 		canvas.restore();
+	}
+
+	private setOutlineWidth(canvas: Canvas, type: EntryBoxModifiers['outlineType'], width: number) {
+		switch (type) {
+			case 'outline':
+				canvas.setStrokeWidth(width).setStroke(color('black'));
+				break;
+			case 'shadow':
+				canvas.setFilter(filter('drop-shadow', '0px', '0px', `${width}px`, 'black'));
+				break;
+			case 'none':
+				break;
+		}
+	}
+
+	private getFont(modifiers: EntryBoxModifiers) {
+		return `${this.getFontStyle(modifiers)}${modifiers.fontSize}px ${this.getFontFamily(modifiers)}`;
+	}
+
+	private getFontStyle(modifiers: EntryBoxModifiers) {
+		return modifiers.bold //
+			? modifiers.italic
+				? 'italic bold '
+				: 'bold '
+			: modifiers.italic
+			? 'italic '
+			: '';
+	}
+
+	private getFontFamily(modifiers: EntryBoxModifiers) {
+		return modifiers.font === 'impact' ? Fonts.ImpactMedium : Fonts.ArialMedium;
+	}
+
+	private getBoxX(box: EntryBox) {
+		// `x = 0` is the center of the box:
+		switch (box.modifiers.textAlign) {
+			case 'left':
+				return -box.width / 2;
+			case 'center':
+				return 0;
+			case 'right':
+				return box.width / 2;
+		}
+	}
+
+	private getBoxY(box: EntryBox, fontHeight: number, lines: number) {
+		// `y = 0` is the middle of the box:
+		switch (box.modifiers.verticalAlign) {
+			case 'top':
+				return fontHeight / 2 - box.height / 2;
+			case 'middle':
+				return 0 - fontHeight * ((lines - 1) / 2);
+			case 'bottom':
+				return box.height / 2 - fontHeight * lines + fontHeight / 2;
+		}
 	}
 
 	private async drawAvatars(canvas: Canvas, user: APIUser | null, positions: readonly EntryAvatarPosition[]) {
