@@ -25009,5 +25009,14 @@
 		"alt": "The Hubble length is about 1.9 meters lying down; Edwin Hubble was a tall guy.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2781,
+		"date": 1685102400000,
+		"title": "The Six Platonic Solids",
+		"image": "https://imgs.xkcd.com/comics/the_six_platonic_solids.png",
+		"alt": "Plato made the solids, and five were gifted to the mathematicians. But in secret Plato forged a sixth solid to rule over all the others.",
+		"transcript": null,
+		"news": null
 	}
 ]
