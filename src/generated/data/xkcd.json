@@ -25027,5 +25027,14 @@
 		"alt": "I would never stoop to vandalism, but I'm not above discreetly deleting the occasional 'this article contains excessive amounts of detail' tag.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2783,
+		"date": 1685534400000,
+		"title": "Ruling Out",
+		"image": "https://imgs.xkcd.com/comics/ruling_out.png",
+		"alt": "We were able to replicate and confirm prior authors' detection of a moon orbiting the Earth with high confidence.",
+		"transcript": null,
+		"news": null
 	}
 ]
