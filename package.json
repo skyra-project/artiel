@@ -24,7 +24,7 @@
 		"postinstall": "husky install .github/husky"
 	},
 	"dependencies": {
-		"@discordjs/builders": "^1.6.1",
+		"@discordjs/builders": "^1.6.3",
 		"@napi-rs/canvas": "^0.1.41",
 		"@prisma/client": "^4.15.0",
 		"@sapphire/result": "^2.6.4",
@@ -37,7 +37,7 @@
 		"@skyra/shared-http-pieces": "^1.0.2",
 		"@skyra/start-banner": "^2.0.0",
 		"canvas-constructor": "^7.0.1",
-		"discord-api-types": "^0.37.38",
+		"discord-api-types": "^0.37.43",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.5.3"
 	},
