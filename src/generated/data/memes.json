@@ -65,5 +65,44 @@
 				}
 			}
 		]
+	},
+	{
+		"name": "Change my mind",
+		"url": "https://imgflip.com/s/meme/Change-My-Mind.jpg",
+		"avatars": {
+			"author": [
+				{
+					"x": 164,
+					"y": 55,
+					"size": 47,
+					"style": "circle",
+					"rotation": -13
+				}
+			],
+			"target": []
+		},
+		"boxes": [
+			{
+				"x": 261,
+				"y": 216,
+				"width": 163,
+				"height": 72,
+				"rotation": -7,
+				"textColor": "#000000",
+				"modifiers": {
+					"font": "arial",
+					"fontSize": 32,
+					"allCaps": false,
+					"bold": false,
+					"italic": false,
+					"outlineType": "none",
+					"outlineWidth": 4,
+					"outlineColor": "#000000",
+					"textAlign": "center",
+					"verticalAlign": "middle",
+					"opacity": 1
+				}
+			}
+		]
 	}
 ]
