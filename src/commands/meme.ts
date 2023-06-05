@@ -9,7 +9,9 @@ import {
 	type Entry,
 	type EntryAvatarPosition,
 	type EntryBox,
-	type EntryBoxModifiers
+	type EntryBoxModifiers,
+	type EntryBoxModifiersOutlineType,
+	type HexadecimalColor
 } from '#lib/utilities/meme';
 import { userMention } from '@discordjs/builders';
 import { Collection } from '@discordjs/collection';
@@ -17,7 +19,7 @@ import type { RawFile } from '@discordjs/rest';
 import { isNullish, isNullishOrEmpty } from '@sapphire/utilities';
 import { Command, RegisterCommand, type AutocompleteInteractionArguments, type TransformedArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, resolveKey, resolveUserKey } from '@skyra/http-framework-i18n';
-import { Canvas, Image, color, filter, loadImage } from 'canvas-constructor/napi-rs';
+import { Canvas, Image, filter, loadImage } from 'canvas-constructor/napi-rs';
 import { MessageFlags, type APIUser } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Meme;
@@ -54,8 +56,6 @@ export class UserCommand extends Command {
 		const width = 400;
 		const height = 400 * (image.height / image.width);
 		const canvas = new Canvas(width, height) //
-			.setColor(color('white'))
-			.setStroke(color('black'))
 			.setTextBaseline('middle')
 			.printImage(image, 0, 0, width, height);
 
@@ -98,14 +98,17 @@ export class UserCommand extends Command {
 			return;
 		}
 
-		const FontSize = box.modifiers.fontSize;
-		canvas.translate(box.x, box.y).rotate(box.rotation * (Math.PI / 180));
-		this.setOutlineWidth(canvas, box.modifiers.outlineType, box.modifiers.outlineWidth);
+		const { outlineType, outlineColor, outlineWidth, fontSize: FontSize } = box.modifiers;
+		canvas
+			.translate(box.x, box.y)
+			.rotate(box.rotation * (Math.PI / 180))
+			.setColor(box.textColor)
+			.process(() => this.setOutlineWidth(canvas, outlineType, outlineColor, outlineWidth));
 
 		const x = this.getBoxX(box);
 		if (total <= box.width) {
 			const y = this.getBoxY(box, FontSize * 1.2, 1);
-			if (box.modifiers.outlineType === 'outline') canvas.printStrokeText(part, x, y);
+			if (outlineType === 'outline') canvas.printStrokeText(part, x, y);
 			canvas.printText(part, x, y);
 		} else {
 			let fontSize = FontSize;
@@ -155,7 +158,7 @@ export class UserCommand extends Command {
 				break;
 			}
 
-			this.setOutlineWidth(canvas, box.modifiers.outlineType, Math.max(2, box.modifiers.outlineWidth * fontScale));
+			this.setOutlineWidth(canvas, outlineType, outlineColor, Math.max(2, outlineWidth * fontScale));
 			canvas.setTextSize(fontSize);
 			const lines = [] as string[];
 			const line = [] as string[];
@@ -181,7 +184,7 @@ export class UserCommand extends Command {
 			// `y = 0` is the middle of the box:
 			let yOffset = this.getBoxY(box, fontHeight, lines.length);
 			for (const line of lines) {
-				if (box.modifiers.outlineType === 'outline') canvas.printStrokeText(line, x, yOffset);
+				if (outlineType === 'outline') canvas.printStrokeText(line, x, yOffset);
 				canvas.printText(line, x, yOffset);
 				yOffset += fontHeight;
 			}
@@ -190,13 +193,13 @@ export class UserCommand extends Command {
 		canvas.restore();
 	}
 
-	private setOutlineWidth(canvas: Canvas, type: EntryBoxModifiers['outlineType'], width: number) {
+	private setOutlineWidth(canvas: Canvas, type: EntryBoxModifiersOutlineType, color: HexadecimalColor, width: number) {
 		switch (type) {
 			case 'outline':
-				canvas.setStrokeWidth(width).setStroke(color('black'));
+				canvas.setStrokeWidth(width).setStroke(color);
 				break;
 			case 'shadow':
-				canvas.setFilter(filter('drop-shadow', '0px', '0px', `${width}px`, 'black'));
+				canvas.setFilter(filter('drop-shadow', '0px', '0px', `${width}px`, color));
 				break;
 			case 'none':
 				break;

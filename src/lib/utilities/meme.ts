@@ -93,6 +93,7 @@ export interface EntryBox {
 	readonly width: number;
 	readonly height: number;
 	readonly rotation: number;
+	readonly textColor: HexadecimalColor;
 	readonly modifiers: EntryBoxModifiers;
 }
 
@@ -102,12 +103,15 @@ export interface EntryBoxModifiers {
 	readonly allCaps: boolean;
 	readonly bold: boolean;
 	readonly italic: boolean;
-	readonly outlineType: 'shadow' | 'outline' | 'none';
+	readonly outlineType: EntryBoxModifiersOutlineType;
 	readonly outlineWidth: number;
+	readonly outlineColor: HexadecimalColor;
 	readonly textAlign: 'left' | 'center' | 'right';
 	readonly verticalAlign: 'top' | 'middle' | 'bottom';
 	readonly opacity: number;
 }
+
+export type EntryBoxModifiersOutlineType = 'shadow' | 'outline' | 'none';
 
 export interface EntryAvatars {
 	readonly author: readonly EntryAvatarPosition[];
@@ -121,3 +125,5 @@ export interface EntryAvatarPosition {
 	readonly style: 'circle' | 'square';
 	readonly rotation: number;
 }
+
+export type HexadecimalColor = `#${string}`;

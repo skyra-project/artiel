@@ -28,6 +28,7 @@
 				"width": 190,
 				"height": 190,
 				"rotation": 0,
+				"textColor": "#ffffff",
 				"modifiers": {
 					"font": "impact",
 					"fontSize": 32,
@@ -36,6 +37,7 @@
 					"italic": false,
 					"outlineType": "outline",
 					"outlineWidth": 4,
+					"outlineColor": "#000000",
 					"textAlign": "center",
 					"verticalAlign": "middle",
 					"opacity": 1
@@ -47,6 +49,7 @@
 				"width": 190,
 				"height": 190,
 				"rotation": 0,
+				"textColor": "#ffffff",
 				"modifiers": {
 					"font": "impact",
 					"fontSize": 32,
@@ -55,6 +58,7 @@
 					"italic": false,
 					"outlineType": "outline",
 					"outlineWidth": 4,
+					"outlineColor": "#000000",
 					"textAlign": "center",
 					"verticalAlign": "middle",
 					"opacity": 1
