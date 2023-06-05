@@ -1,26 +1,37 @@
 import { PathSrc } from '#lib/common/constants';
+import { Collection } from '@discordjs/collection';
 import { cutText } from '@sapphire/utilities';
+import { envParseString } from '@skyra/env-utilities';
+import { container } from '@skyra/http-framework';
+import { Json, safeFetch } from '@skyra/safe-fetch';
 import type { APIApplicationCommandOptionChoice } from 'discord-api-types/v10';
 import { readFile } from 'node:fs/promises';
 
 let MinimumLength = 100;
 let MaximumLength = 0;
-const entries = new Map<string, Entry>();
+const entries = new Collection<string, Entry>();
 {
-	const PathFile = new URL('./generated/data/memes.json', PathSrc);
-	for (const entry of JSON.parse(await readFile(PathFile, 'utf8')) as Entry[]) {
+	let rawEntries: readonly Entry[];
+	try {
+		const url = new URL('https://memes.skyra.pw/api/entries');
+		url.searchParams.append('limit', '1000');
+		const result = await Json<Entry[]>(safeFetch(url, { headers: { authorization: envParseString('MEME_TEMPLATE_DATABASE_TOKEN') } }));
+		rawEntries = result.unwrap();
+		container.logger.debug(`Successfully downloaded ${rawEntries.length} from the database.`);
+	} catch {
+		const PathFile = new URL('./generated/data/memes.json', PathSrc);
+		rawEntries = JSON.parse(await readFile(PathFile, 'utf8')) as Entry[];
+		container.logger.debug(`Successfully loaded ${rawEntries.length} from the local fallback.`);
+	}
+
+	for (const entry of rawEntries) {
 		entries.set(entry.name.toLocaleLowerCase(), entry);
 		if (entry.name.length > MaximumLength) MaximumLength = entry.name.length;
 		if (entry.name.length < MinimumLength) MinimumLength = entry.name.length;
 	}
 }
 
-// TODO: Make this use a database point counter, like XKCD does, but also include a way
-// to de-prioritize heavily-used dying memes over time. For now, this will be a manual
-// hardcoded list until we figure this out.
-const defaults = [
-	'drake hotline bling' //
-].map((value) => ({ score: 1, value: entries.get(value)! } satisfies MemeSearchResult));
+const defaults = entries.first(25).map((value) => ({ score: 1, value } satisfies MemeSearchResult));
 
 export function getMinimumMemeNameLength() {
 	return MinimumLength;
