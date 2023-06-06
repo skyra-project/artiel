@@ -19,7 +19,8 @@ const Root = LanguageKeys.Commands.Ship;
 			applyLocalizedBuilder(builder, Root.OptionsTheme).addChoices(
 				createSelectMenuChoiceName(Root.ThemeLight, { value: 'light' }),
 				createSelectMenuChoiceName(Root.ThemeDark, { value: 'dark' }),
-				createSelectMenuChoiceName(Root.ThemeTransRights, { value: 'trans-rights' })
+				createSelectMenuChoiceName(Root.ThemeTransPride, { value: 'trans-pride' }),
+				createSelectMenuChoiceName(Root.ThemeNonBinaryPride, { value: 'non-binary' })
 			)
 		)
 )
@@ -57,12 +58,20 @@ export class UserCommand extends Command {
 			.resetFilters()
 
 			// Heart
-			.setColor(colors.border)
+			.setColor(colors.heartBorder)
 			.fill(this.heartBorder)
 			.setColor(colors.heart)
 			.fill(this.heartFill)
 
 			// Avatars
+			.process((canvas) => {
+				if (colors.avatar) {
+					canvas
+						.setColor(colors.avatar) //
+						.printRoundedRectangle(20, 20, 100, 100, 25)
+						.printRoundedRectangle(240, 20, 100, 100, 25);
+				}
+			})
 			.printRoundedImage(avatars[0], 25, 25, 90, 90, 20)
 			.printRoundedImage(avatars[1], 245, 25, 90, 90, 20);
 
@@ -149,10 +158,11 @@ export class UserCommand extends Command {
 	}
 
 	private static readonly Themes = {
-		light: { background: '#f5f5f4', heart: '#dc2626', border: '#fca5a5' },
-		dark: { background: '#1c1917', heart: '#e11d48', border: '#fb7185' },
-		'trans-rights': { background: '#5bcffa', heart: '#f5abb9', border: '#f5f5f4' }
-	} satisfies Record<Theme, { background: string; heart: string; border: string }>;
+		light: { avatar: null, background: '#f5f5f4', heart: '#dc2626', heartBorder: '#fca5a5' },
+		dark: { avatar: null, background: '#1c1917', heart: '#e11d48', heartBorder: '#fb7185' },
+		'trans-pride': { avatar: '#f5f5f4', background: '#5bcffa', heart: '#f5abb9', heartBorder: '#f5f5f4' },
+		'non-binary': { avatar: '#e9e9e7', background: '#2b262c', heart: '#9c69ac', heartBorder: '#e5c30a' }
+	} satisfies Record<Theme, { avatar: string | null; background: string; heart: string; heartBorder: string }>;
 }
 
 type Avatars = [author: Image, target: Image];
@@ -163,4 +173,4 @@ interface Options {
 	theme?: Theme;
 }
 
-type Theme = 'light' | 'dark' | 'trans-rights';
+type Theme = 'light' | 'dark' | 'trans-pride' | 'non-binary';
