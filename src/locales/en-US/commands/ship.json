@@ -1,0 +1,17 @@
+{
+	"name": "ship",
+	"description": "Generate a ship between two users",
+	"optionsTargetName": "target",
+	"optionsTargetDescription": "The user to ship with",
+	"optionsAuthorName": "author",
+	"optionsAuthorDescription": "The user to use as the author, replacing you",
+	"optionsThemeName": "theme",
+	"optionsThemeDescription": "The theme to use",
+	"themeLight": "Light",
+	"themeDark": "Dark",
+	"themeTransRights": "Trans Rights",
+	"abortError": "I tried to download the avatars, but Discord is being a bit too slow right now, please try again later!",
+	"unknownError": "I received an unknown error while downloading your avatars, please let my developers know about this incident!",
+	"content": "A ship between {{author}} and {{target}}, uh? I call that {{name}}!",
+	"altText": "A ship between {{author}} and {{target}}, named {{name}}"
+}
