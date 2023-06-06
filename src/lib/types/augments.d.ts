@@ -9,5 +9,6 @@ declare module '@skyra/env-utilities' {
 		HTTP_PORT: IntegerString;
 
 		REGISTRY_GUILD_ID: string;
+		MEME_TEMPLATE_DATABASE_TOKEN: string;
 	}
 }
