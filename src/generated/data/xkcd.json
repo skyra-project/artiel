@@ -25045,5 +25045,14 @@
 		"alt": "After a pail of water was thrown on the Wicked Witch of the West outside Salt Lake City, Utah's Great Salt Lake was measured to be 7 parts per trillion witch by volume.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2785,
+		"date": 1685966400000,
+		"title": "Marble Run",
+		"image": "https://imgs.xkcd.com/comics/marble_run.png",
+		"alt": "I have so many plans. It would incorporate a Galton board, a Ranque-Hilsch marble vortex tube, and a compartment lined with pinball bouncers with a camera-and-servo Maxwell's Demon that separated the balls into fast and slow sides.",
+		"transcript": null,
+		"news": null
 	}
 ]
