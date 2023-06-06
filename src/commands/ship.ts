@@ -40,8 +40,8 @@ export class UserCommand extends Command {
 	public override onLoad() {
 		super.onLoad();
 
-		this.heartFill = this.generateHeart(95, 26, 52, 52);
-		this.heartBorder = this.generateHeart(93, 24, 56, 56);
+		this.heartBorder = this.generateHeart(140, 30, 80, 80);
+		this.heartFill = this.generateHeart(146, 36, 68, 68);
 	}
 
 	private async handleOk(interaction: Command.ChatInputInteraction, author: APIUser, target: APIUser, avatars: Avatars, theme: Theme) {
@@ -49,11 +49,11 @@ export class UserCommand extends Command {
 
 		const colors = UserCommand.Themes[theme];
 		const name = this.generateName(author.username, target.username);
-		const canvas = new Canvas(242, 104)
+		const canvas = new Canvas(360, 140)
 			// Background
 			.setColor(colors.background)
 			.setFilter(filter('drop-shadow', '0px', '0px', '10px', '#1c1917'))
-			.printRoundedRectangle(10, 10, 222, 84, 10)
+			.printRoundedRectangle(10, 10, 340, 120, 20)
 			.resetFilters()
 
 			// Heart
@@ -63,8 +63,8 @@ export class UserCommand extends Command {
 			.fill(this.heartFill)
 
 			// Avatars
-			.printRoundedImage(avatars[0], 20, 20, 64, 64, 10)
-			.printRoundedImage(avatars[1], 157, 20, 64, 64, 10);
+			.printRoundedImage(avatars[0], 25, 25, 90, 90, 20)
+			.printRoundedImage(avatars[1], 245, 25, 90, 90, 20);
 
 		const authorTag = getTag(author);
 		const targetTag = getTag(target);
