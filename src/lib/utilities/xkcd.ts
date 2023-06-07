@@ -1,8 +1,11 @@
 import { PathSrc } from '#lib/common/constants';
-import { cutText, regExpEsc } from '@sapphire/utilities';
+import { strikethrough } from '@discordjs/builders';
+import { cutText, isNullishOrEmpty, regExpEsc } from '@sapphire/utilities';
 import { container } from '@skyra/http-framework';
+import { Json, safeFetch, safeTimedFetch } from '@skyra/safe-fetch';
 import type { APIApplicationCommandOptionChoice } from 'discord-api-types/v10';
 import { readFile } from 'fs/promises';
+import TurndownService from 'turndown';
 
 let Maximum = 0;
 const comics = new Map<number, Comic>();
@@ -14,8 +17,56 @@ const comics = new Map<number, Comic>();
 	}
 }
 
+export async function refreshComicsFromRemote() {
+	const result = await Json<Comic[]>(safeFetch('https://raw.githubusercontent.com/skyra-project/artiel/main/src/generated/data/xkcd.json'));
+	result.match({
+		ok(entries) {
+			for (const entry of entries) {
+				comics.set(entry.id, entry);
+				Maximum = Math.max(Maximum, entry.id);
+			}
+			container.logger.debug('Successfully refreshed the local database. Latest comic:', Maximum);
+		},
+		err(error) {
+			container.logger.error('Failed to refresh the local comic database:', error);
+		}
+	});
+}
+
 export function getComic(id: number) {
 	return comics.get(id) ?? null;
+}
+
+export async function fetchComic(id: number) {
+	if (!Number.isSafeInteger(id) || id < 0) return null;
+	if (id <= Maximum) return getComic(id);
+	if (id === Maximum + 1) return tryFetchComic(id);
+	return null;
+}
+
+const service = new TurndownService();
+service.addRule('strikethrough', {
+	filter: ['del', 's'],
+	replacement: (content) => strikethrough(content)
+});
+
+async function tryFetchComic(id: number) {
+	const result = await Json<RawComic>(safeTimedFetch(`https://xkcd.com/${id}/info.0.json`, 2000));
+	if (result.isErr()) return null;
+
+	const entry = result.unwrap();
+	const data = {
+		id: entry.num,
+		date: Date.UTC(entry.year, entry.month - 1, entry.day, 12, 0, 0, 0),
+		title: entry.safe_title || entry.title,
+		image: entry.img,
+		alt: entry.alt,
+		transcript: entry.transcript || null,
+		news: isNullishOrEmpty(entry.news) ? null : service.turndown(entry.news)
+	} satisfies Comic;
+	comics.set(data.id, data);
+	Maximum = data.id;
+	return data;
 }
 
 export async function searchComic(id: string): Promise<readonly ComicSearchResult[]> {
@@ -72,6 +123,19 @@ export function makeComicChoice(score: number, comic: Comic): APIApplicationComm
 
 export function makeComicChoices(results: readonly ComicSearchResult[]): APIApplicationCommandOptionChoice<number>[] {
 	return results.map((result) => makeComicChoice(result.score, result.value));
+}
+
+interface RawComic {
+	num: number;
+	year: number;
+	month: number;
+	day: number;
+	safe_title: string;
+	title: string;
+	img: string;
+	alt: string;
+	transcript: string;
+	news: string;
 }
 
 export interface Comic {

@@ -1,6 +1,6 @@
 import { BrandingColors } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
-import { getComic, makeComicChoice, makeComicChoices, searchComic } from '#lib/utilities/xkcd';
+import { fetchComic, makeComicChoice, makeComicChoices, searchComic } from '#lib/utilities/xkcd';
 import { ActionRowBuilder, ButtonBuilder, EmbedBuilder } from '@discordjs/builders';
 import { isNullish } from '@sapphire/utilities';
 import { Command, RegisterCommand, type AutocompleteInteractionArguments } from '@skyra/http-framework';
@@ -17,7 +17,7 @@ export class UserCommand extends Command {
 	public override async autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
 		const number = Number(options.id);
 		if (Number.isInteger(number)) {
-			const comic = getComic(number);
+			const comic = await fetchComic(number);
 			if (comic !== null) return interaction.reply({ choices: [makeComicChoice(1, comic)] });
 		}
 
@@ -26,9 +26,9 @@ export class UserCommand extends Command {
 	}
 
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
-		const comic = getComic(options.id);
+		const comic = await fetchComic(options.id);
 		if (isNullish(comic)) {
-			const content = resolveUserKey(interaction, Root.NoComicFound);
+			const content = resolveUserKey(interaction, Root.NoComicFound, { value: options.id });
 			return interaction.reply({ content, flags: MessageFlags.Ephemeral });
 		}
 
