@@ -1,9 +1,9 @@
 {
 	"name": "xkcd",
-	"description": "Get a comic from xkcd.com",
+	"description": "Hol dir einen Comic von xkcd.com",
 	"optionsIdName": "id",
-	"optionsIdDescription": "The comic number from xkcd",
-	"noComicFound": "No comic found under the ID of {{value}}",
-	"buttonsTranscript": "Transcript",
+	"optionsIdDescription": "Die Comic-Nummer von xkcd",
+	"noComicFound": "Kein Comic unter der ID {{value}} gefunden",
+	"buttonsTranscript": "Transkript",
 	"buttonsNews": "News"
 }
