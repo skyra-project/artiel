@@ -1,5 +1,6 @@
 import { Fonts } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
+import { getAvatar } from '#lib/utilities/discord';
 import {
 	getMaximumMemeNameLength,
 	getMeme,
@@ -76,12 +77,6 @@ export class UserCommand extends Command {
 			content: target ? userMention(target.id) : undefined,
 			allowed_mentions: { roles: [], users: target ? [target.id] : [] }
 		});
-	}
-
-	private getAvatar(user: APIUser) {
-		return user.avatar
-			? this.container.rest.cdn.avatar(user.id, user.avatar, { extension: 'png', forceStatic: true, size: 128 })
-			: this.container.rest.cdn.defaultAvatar(Number(BigInt(user.id) % 5n));
 	}
 
 	private drawBox(canvas: Canvas, box: EntryBox, part: string) {
@@ -252,7 +247,7 @@ export class UserCommand extends Command {
 		if (isNullish(user)) return;
 		if (isNullishOrEmpty(positions)) return;
 
-		const avatar = await loadImage(this.getAvatar(user));
+		const avatar = await loadImage(getAvatar(user));
 		for (const position of positions) {
 			this.drawAvatar(canvas, position, avatar);
 		}
