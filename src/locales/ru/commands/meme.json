@@ -1,12 +1,12 @@
 {
-	"name": "meme",
-	"description": "Generate a meme",
-	"optionsNameName": "name",
-	"optionsNameDescription": "The name of the meme template to use",
-	"optionsContentName": "content",
-	"optionsContentDescription": "The content to write into the template",
-	"optionsTargetName": "target",
-	"optionsTargetDescription": "The user to include in the meme",
-	"noEntryFound": "No meme template found under the name of {{value}}.",
-	"altText": "A meme generated with the \"{{template}}\" template. {{parts}}"
+	"name": "мем",
+	"description": "Сгенерировать мем",
+	"optionsNameName": "название",
+	"optionsNameDescription": "Название шаблона мема для использования",
+	"optionsContentName": "содержимое",
+	"optionsContentDescription": "Содержимое для записи в шаблон",
+	"optionsTargetName": "пользователь",
+	"optionsTargetDescription": "Пользователь для включения в мем",
+	"noEntryFound": "Шаблон мема с названием {{value}} не найден.",
+	"altText": "Мем, созданный на основе шаблона \"{{template}}\". {{parts}}"
 }
