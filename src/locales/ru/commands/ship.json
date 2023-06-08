@@ -4,15 +4,15 @@
 	"optionsTargetName": "пользователь",
 	"optionsTargetDescription": "Пользователь для создания отношений",
 	"optionsAuthorName": "автор",
-	"optionsAuthorDescription": "The user to use as the author, replacing you",
+	"optionsAuthorDescription": "Пользователь, который будет автором вместо вас",
 	"optionsThemeName": "тема",
 	"optionsThemeDescription": "Используемая тема",
 	"themeLight": "Светлая",
 	"themeDark": "Тёмная",
 	"themeTransPride": "Trans Pride",
 	"themeNonBinaryPride": "Non-binary Pride",
-	"abortError": "I tried to download the avatars, but Discord is being a bit too slow right now, please try again later!",
-	"unknownError": "I received an unknown error while downloading your avatars, please let my developers know about this incident!",
-	"content": "A ship between {{author}} and {{target}}, uh? I call that {{name}}!",
-	"altText": "A ship between {{author}} and {{target}}, named {{name}}"
+	"abortError": "Я попытался загрузить аватары, но Discord в данный момент слишком медленный. Пожалуйста, повторите попытку позже!",
+	"unknownError": "Я получил неизвестную ошибку при загрузке ваших аватаров, пожалуйста, сообщите об этом моим разработчикам!",
+	"content": "Отношения между {{author}} и {{target}}, мм? Я называю это {{name}}!",
+	"altText": "Отношения между {{author}} и {{target}}, называемые {{name}}"
 }
