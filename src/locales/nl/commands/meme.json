@@ -4,7 +4,7 @@
 	"optionsNameName": "naam",
 	"optionsNameDescription": "De naam van het te gebruiken meme-sjabloon",
 	"optionsContentName": "inhoud",
-	"optionsContentDescription": "De inhoud om op het template te zetten",
+	"optionsContentDescription": "The content to write into the template, separated by |",
 	"optionsTargetName": "doel",
 	"optionsTargetDescription": "De gebruiker om op te nemen in de meme",
 	"noEntryFound": "Geen meme-sjabloon gevonden voor {{value}}.",
