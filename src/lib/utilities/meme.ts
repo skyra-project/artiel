@@ -45,6 +45,14 @@ export function getMeme(name: string) {
 	return entries.get(name.toLowerCase()) ?? null;
 }
 
+export async function increaseUseCount(name: string) {
+	const url = new URL(name, 'https://memes.skyra.pw/api/entries/');
+	const result = await Json<{ uses: number }>(
+		safeFetch(url, { method: 'PUT', headers: { authorization: envParseString('MEME_TEMPLATE_DATABASE_TOKEN', '') } })
+	);
+	result.inspectErr((error) => container.logger.error(`[MEME] Failed to update ${name}'s usage count`, error));
+}
+
 export function searchMeme(name: string): readonly MemeSearchResult[] {
 	if (name.length === 0) return defaults;
 	if (name.length > MaximumLength) return [];
