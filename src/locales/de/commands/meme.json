@@ -4,7 +4,7 @@
 	"optionsNameName": "name",
 	"optionsNameDescription": "Der Name der zu verwendenden Meme-Vorlage",
 	"optionsContentName": "inhalt",
-	"optionsContentDescription": "The content to write into the template, separated by |",
+	"optionsContentDescription": "Der Inhalt, der in die Vorlage geschrieben werden soll, getrennt durch |",
 	"optionsTargetName": "ziel",
 	"optionsTargetDescription": "Der Nutzer, der in das Meme aufgenommen werden soll",
 	"noEntryFound": "Keine Meme-Vorlage unter dem Namen {{value}} gefunden.",
