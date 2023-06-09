@@ -54,6 +54,8 @@ COPY --chown=node:node --from=builder /usr/src/app/src/locales src/locales
 COPY --chown=node:node --from=builder /usr/src/app/src/generated src/generated
 COPY --chown=node:node --from=builder /usr/src/app/src/.env src/.env
 
+COPY --chown=node:node /usr/src/app/assets assets
+
 RUN yarn workspaces focus --all --production
 
 # Patch .prisma with the built files
