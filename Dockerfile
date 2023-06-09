@@ -15,6 +15,7 @@ RUN apk add --no-cache dumb-init
 
 COPY --chown=node:node yarn.lock .
 COPY --chown=node:node package.json .
+COPY --chown=node:node assets/ assets/
 COPY --chown=node:node .yarnrc.yml .
 COPY --chown=node:node .yarn/ .yarn/
 
