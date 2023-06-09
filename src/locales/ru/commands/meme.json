@@ -4,7 +4,7 @@
 	"optionsNameName": "название",
 	"optionsNameDescription": "Название шаблона мема для использования",
 	"optionsContentName": "содержимое",
-	"optionsContentDescription": "The content to write into the template, separated by |",
+	"optionsContentDescription": "Содержимое для записи в шаблон, разделённое символами |",
 	"optionsTargetName": "пользователь",
 	"optionsTargetDescription": "Пользователь для включения в мем",
 	"noEntryFound": "Шаблон мема с названием {{value}} не найден.",
