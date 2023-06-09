@@ -4,7 +4,7 @@
 	"optionsNameName": "नाम",
 	"optionsNameDescription": "उपयोग करने के लिए मीम टेम्पलेट का नाम",
 	"optionsContentName": "कांटेंट",
-	"optionsContentDescription": "टेम्पलेट में लिखने के लिए कांटेंट",
+	"optionsContentDescription": "The content to write into the template, separated by |",
 	"optionsTargetName": "लक्ष्य",
 	"optionsTargetDescription": "मीम में शामिल करने के लिए उपयोगकर्ता",
 	"noEntryFound": "{{value}} के नाम से कोई मीम टेम्पलेट नहीं मिला।",
