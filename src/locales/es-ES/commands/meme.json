@@ -4,7 +4,7 @@
 	"optionsNameName": "nombre",
 	"optionsNameDescription": "El nombre de la plantilla del meme a usar",
 	"optionsContentName": "contenido",
-	"optionsContentDescription": "The content to write into the template, separated by |",
+	"optionsContentDescription": "El contenido a escribir en la plantilla, separado por |",
 	"optionsTargetName": "usuario",
 	"optionsTargetDescription": "El usuario a incluir en el meme",
 	"noEntryFound": "No pude encontrar una plantilla de meme con el nombre de {{value}}.",
