@@ -5,6 +5,7 @@ import {
 	getMaximumMemeNameLength,
 	getMeme,
 	getMinimumMemeNameLength,
+	increaseUseCount,
 	makeMemeChoices,
 	searchMeme,
 	type Entry,
@@ -49,6 +50,8 @@ export class UserCommand extends Command {
 			const content = resolveUserKey(interaction, Root.NoEntryFound);
 			return interaction.reply({ content, flags: MessageFlags.Ephemeral });
 		}
+
+		void increaseUseCount(entry.name);
 
 		const parts = options.content.split('|', entry.boxes.length);
 		const response = await interaction.defer();
