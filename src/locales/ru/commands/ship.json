@@ -1,0 +1,18 @@
+{
+	"name": "создать-отношения",
+	"description": "Создать отношения между двумя пользователями",
+	"optionsTargetName": "пользователь",
+	"optionsTargetDescription": "Пользователь для создания отношений",
+	"optionsAuthorName": "автор",
+	"optionsAuthorDescription": "Пользователь, который будет автором вместо вас",
+	"optionsThemeName": "тема",
+	"optionsThemeDescription": "Используемая тема",
+	"themeLight": "Светлая",
+	"themeDark": "Тёмная",
+	"themeTransPride": "Транс-гордость",
+	"themeNonBinaryPride": "Небинарная гордость",
+	"abortError": "Я попытался загрузить аватары, но Discord в данный момент слишком медленный. Пожалуйста, повторите попытку позже!",
+	"unknownError": "Я получил неизвестную ошибку при загрузке ваших аватаров, пожалуйста, сообщите об этом моим разработчикам!",
+	"content": "Отношения между {{author}} и {{target}}, мм? Я называю это {{name}}!",
+	"altText": "Отношения между {{author}} и {{target}}, называемые {{name}}"
+}

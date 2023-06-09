@@ -1,0 +1,18 @@
+{
+	"name": "मिलान",
+	"description": "दो उपयोगकर्ताओं का मिलान करें",
+	"optionsTargetName": "लक्ष्य",
+	"optionsTargetDescription": "उपयोगकर्ता जिसके साथ मिलान करना है",
+	"optionsAuthorName": "लेखक",
+	"optionsAuthorDescription": "आपकी जगह लेखक के रूप में उपयोग किया जाने वाला उपयोगकर्ता",
+	"optionsThemeName": "थीम",
+	"optionsThemeDescription": "उपयोग करने के लिए थीम",
+	"themeLight": "हल्की",
+	"themeDark": "गहरी",
+	"themeTransPride": "ट्रांस प्राइड",
+	"themeNonBinaryPride": "नॉन-बाइनरी प्राइड",
+	"abortError": "मैंने अवतारों को डाउनलोड करने की कोशिश की, लेकिन अभी Discord थोड़ा धीमा हो रहा है, कृपया बाद में फिर से कोशिश करें!",
+	"unknownError": "आपके अवतारों को डाउनलोड करते समय मुझे एक अज्ञात त्रुटि प्राप्त हुई, कृपया मेरे डेवलपर्स को इस घटना के बारे में बताएं!",
+	"content": "{{author}} और {{target}} के बीच एक मिलान, उह? मैं उसे {{name}} कहता हूँ!",
+	"altText": "{{author}} और {{target}} के बीच एक मिलान, जिसका नाम {{name}} है"
+}

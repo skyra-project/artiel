@@ -1,0 +1,18 @@
+{
+	"name": "verkuppeln",
+	"description": "Zwei Nutzer miteinander verkuppeln",
+	"optionsTargetName": "ziel",
+	"optionsTargetDescription": "Den Nutzer mit dem du verkuppelt werden willst",
+	"optionsAuthorName": "autor",
+	"optionsAuthorDescription": "Der Benutzer, der als Autor verwendet wird und dich ersetzt",
+	"optionsThemeName": "theme",
+	"optionsThemeDescription": "Das zu verwendende Theme",
+	"themeLight": "Hell",
+	"themeDark": "Dunkel",
+	"themeTransPride": "Trans Pride",
+	"themeNonBinaryPride": "Nicht-Binär Pride",
+	"abortError": "Ich habe versucht, die Avatare herunterzuladen, aber Discord ist ein bisschen zu langsam, bitte versuche es später erneut!",
+	"unknownError": "Ich habe einen unbekannten Fehler beim Herunterladen deiner Avatare erhalten, bitte informiere meine Entwickler über diesen Vorfall!",
+	"content": "Eine Verkupplung zwischen {{author}} und {{target}}, uh? Ich nenne das {{name}}!",
+	"altText": "Eine Verkupplung zwischen {{author}} und {{target}}, genannt {{name}}"
+}

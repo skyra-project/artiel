@@ -1,0 +1,18 @@
+{
+	"name": "koppel",
+	"description": "Genereer een koppel tussen 2 gebruikers",
+	"optionsTargetName": "doel",
+	"optionsTargetDescription": "De gebruiker om een koppel mee te vormen",
+	"optionsAuthorName": "auteur",
+	"optionsAuthorDescription": "De gebruiker om als auteur te gebruiken, dit is een vervanging voor jezelf",
+	"optionsThemeName": "thema",
+	"optionsThemeDescription": "Het thema om te gebruiken",
+	"themeLight": "Licht",
+	"themeDark": "Donker",
+	"themeTransPride": "Trans trots",
+	"themeNonBinaryPride": "Niet-binaire trots",
+	"abortError": "Ik heb geprobeerd de avatars te downloaden, maar Discord is nu te traag, probeer het later opnieuw!",
+	"unknownError": "Ik kreeg een onbekende fout bij het downloaden van de avatars, laat mijn ontwikkelaars alsjeblieft weten over dit incident!",
+	"content": "Een koppel tussen {{author}} en {{target}}, uh? Ik noem het {{name}}!",
+	"altText": "Een koppel tussen {{author}} en {{target}}, genaamd {{name}}"
+}
