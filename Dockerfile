@@ -20,7 +20,7 @@ COPY --chown=node:node .yarn/ .yarn/
 
 RUN sed -i 's/"postinstall": "husky install .github\/husky"/"postinstall": ""/' ./package.json
 
-ENTRYPOINT ["dumb-init", "--"]
+# ENTRYPOINT ["dumb-init", "--"]
 
 # ================ #
 #   Builder Stage  #
@@ -54,7 +54,7 @@ COPY --chown=node:node --from=builder /usr/src/app/src/locales src/locales
 COPY --chown=node:node --from=builder /usr/src/app/src/generated src/generated
 COPY --chown=node:node --from=builder /usr/src/app/src/.env src/.env
 
-COPY --chown=node:node /usr/src/app/assets assets
+COPY --chown=node:node assets assets
 
 RUN yarn workspaces focus --all --production
 
