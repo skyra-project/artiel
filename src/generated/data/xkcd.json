@@ -25063,5 +25063,14 @@
 		"alt": "[Decades in the future] \"Well, the good news is that we've received definitive communication from aliens. The bad news is that they're asking about Cats (2019).\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2787,
+		"date": 1686312000000,
+		"title": "Iceberg",
+		"image": "https://imgs.xkcd.com/comics/iceberg.png",
+		"alt": "90% of the iceberg is hidden beneath the water, but that 90% only uses 10% of its brain, so it's really only 9%.",
+		"transcript": null,
+		"news": null
 	}
 ]
