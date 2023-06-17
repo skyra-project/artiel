@@ -1,4 +1,5 @@
 import { Fonts } from '#lib/common/constants';
+import { escapeInlineCode } from '#lib/common/escape';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { getAvatar } from '#lib/utilities/discord';
 import {
@@ -15,7 +16,7 @@ import {
 	type EntryBoxModifiersOutlineType,
 	type HexadecimalColor
 } from '#lib/utilities/meme';
-import { userMention } from '@discordjs/builders';
+import { inlineCode, userMention } from '@discordjs/builders';
 import { Collection } from '@discordjs/collection';
 import type { RawFile } from '@discordjs/rest';
 import { isNullish, isNullishOrEmpty } from '@sapphire/utilities';
@@ -47,7 +48,7 @@ export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const entry = getMeme(options.name);
 		if (isNullish(entry)) {
-			const content = resolveUserKey(interaction, Root.NoEntryFound);
+			const content = resolveUserKey(interaction, Root.NoEntryFound, { value: inlineCode(escapeInlineCode(options.name)) });
 			return interaction.reply({ content, flags: MessageFlags.Ephemeral });
 		}
 
