@@ -25090,5 +25090,14 @@
 		"alt": "Oh no, I haven't checked in with Yvonne in YEARS.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2790,
+		"date": 1686916800000,
+		"title": "Heat Pump",
+		"image": "https://imgs.xkcd.com/comics/heat_pump.png",
+		"alt": "If I'm not going to upgrade to a powered one, I should at LEAST stop leaving the door open so often.",
+		"transcript": null,
+		"news": null
 	}
 ]
