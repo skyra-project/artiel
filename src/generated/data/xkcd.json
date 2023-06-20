@@ -25099,5 +25099,14 @@
 		"alt": "If I'm not going to upgrade to a powered one, I should at LEAST stop leaving the door open so often.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2791,
+		"date": 1687176000000,
+		"title": "Bookshelf Sorting",
+		"image": "https://imgs.xkcd.com/comics/bookshelf_sorting.png",
+		"alt": "Of course, I sort all my bookshelves the normal way, alphabetically (by first sentence).",
+		"transcript": null,
+		"news": null
 	}
 ]
