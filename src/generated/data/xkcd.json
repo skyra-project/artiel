@@ -25153,5 +25153,14 @@
 		"alt": "Mars does get a good score on 'noise levels' and 'scenic views,' but the school district ranking isn't great; the only teacher--the Perseverance rover--is too busy with rock samples to teach more than the occasional weekend class.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2797,
+		"date": 1688385600000,
+		"title": "Actual Progress",
+		"image": "https://imgs.xkcd.com/comics/actual_progress.png",
+		"alt": "Slowly progressing from 'how do protons behave in relativistic collisions?' to 'what the heck are protons even doing when they're just sitting there?'",
+		"transcript": null,
+		"news": null
 	}
 ]
