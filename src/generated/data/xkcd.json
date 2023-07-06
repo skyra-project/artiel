@@ -25162,5 +25162,14 @@
 		"alt": "Slowly progressing from 'how do protons behave in relativistic collisions?' to 'what the heck are protons even doing when they're just sitting there?'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2798,
+		"date": 1688558400000,
+		"title": "Room Temperature",
+		"image": "https://imgs.xkcd.com/comics/room_temperature.png",
+		"alt": "They're also refusing to fund my device that demonstrates uncontrolled hot fusion.",
+		"transcript": null,
+		"news": null
 	}
 ]
