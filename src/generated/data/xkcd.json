@@ -25216,5 +25216,14 @@
 		"alt": "The Atlantic is expanding at about 10 ppm (points per month).",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2804,
+		"date": 1689768000000,
+		"title": "Marshmallow",
+		"image": "https://imgs.xkcd.com/comics/marshmallow.png",
+		"alt": "The increasing number of graham crackers and chocolate bars in orbit has created a growing risk of Kessler s'mores.",
+		"transcript": null,
+		"news": null
 	}
 ]
