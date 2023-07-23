@@ -31,7 +31,7 @@ const entries = new Collection<string, Entry>();
 	}
 }
 
-const defaults = entries.first(25).map((value) => ({ score: 1, value } satisfies MemeSearchResult));
+const defaults = entries.first(25).map((value) => ({ score: 1, value }) satisfies MemeSearchResult);
 
 export function getMinimumMemeNameLength() {
 	return MinimumLength;
