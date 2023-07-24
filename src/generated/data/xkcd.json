@@ -25225,5 +25225,14 @@
 		"alt": "The increasing number of graham crackers and chocolate bars in orbit has created a growing risk of Kessler s'mores.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2805,
+		"date": 1689940800000,
+		"title": "Global Atmospheric Circulation",
+		"image": "https://imgs.xkcd.com/comics/global_atmospheric_circulation.png",
+		"alt": "Refs generally say that you can exercise enough altitude control to avoid the ground, but if you start strategically choosing air layers to steer yourself, that's traveling.",
+		"transcript": null,
+		"news": null
 	}
 ]
