@@ -27,7 +27,7 @@
 	"dependencies": {
 		"@discordjs/builders": "^1.6.3",
 		"@napi-rs/canvas": "^0.1.41",
-		"@prisma/client": "^4.16.2",
+		"@prisma/client": "^5.0.0",
 		"@sapphire/result": "^2.6.4",
 		"@sapphire/utilities": "^3.13.0",
 		"@skyra/env-utilities": "^1.2.1",
@@ -63,7 +63,7 @@
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.3",
 		"prettier": "^3.0.0",
-		"prisma": "^4.16.2",
+		"prisma": "^5.0.0",
 		"rimraf": "^5.0.1",
 		"typescript": "^5.1.6"
 	},
