@@ -25243,5 +25243,14 @@
 		"alt": "The vaccine stuff seems pretty simple. But if you take a closer look at the data, it's still simple, but bigger. And slightly blurry. Might need reading glasses.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2807,
+		"date": 1690372800000,
+		"title": "Bad Map Projection: ABS(Longitude)",
+		"image": "https://imgs.xkcd.com/comics/bad_map_projection_abs_longitude.png",
+		"alt": "Positive vibes/longitudes only",
+		"transcript": null,
+		"news": null
 	}
 ]
