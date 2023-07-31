@@ -25252,5 +25252,14 @@
 		"alt": "Positive vibes/longitudes only",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2808,
+		"date": 1690545600000,
+		"title": "Daytime Firefly",
+		"image": "https://imgs.xkcd.com/comics/daytime_firefly.png",
+		"alt": "Mr. Jones, watch out for Ms. Lenhart! She's from genus Photuris!",
+		"transcript": null,
+		"news": null
 	}
 ]
