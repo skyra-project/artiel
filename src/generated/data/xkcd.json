@@ -25261,5 +25261,14 @@
 		"alt": "Mr. Jones, watch out for Ms. Lenhart! She's from genus Photuris!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2809,
+		"date": 1690804800000,
+		"title": "Moon",
+		"image": "https://imgs.xkcd.com/comics/moon.png",
+		"alt": "I mean, it's pretty, but it doesn't really affect us beyond that. Except that half the nights aren't really dark, and once or twice a day it makes the oceans flood the coasts.",
+		"transcript": null,
+		"news": null
 	}
 ]
