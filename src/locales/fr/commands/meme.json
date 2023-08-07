@@ -1,1 +1,10 @@
-{}
+{
+	"description": "Générer un meme",
+	"optionsNameDescription": "Le nom du modèle de meme à utiliser",
+	"optionsContentName": "contenu",
+	"optionsContentDescription": "Le contenu à écrire dans le modèle, séparé par |",
+	"optionsTargetName": "cible",
+	"optionsTargetDescription": "L'utilisateur à inclure dans le meme",
+	"noEntryFound": "Aucun modèle de meme trouvé sous le nom de {{value}}.",
+	"altText": "Un meme généré avec le modèle \"{{template}}\". {{parts}}"
+}
