@@ -1,1 +1,11 @@
-{}
+{
+	"optionsTargetName": "cible",
+	"optionsAuthorName": "auteur",
+	"optionsAuthorDescription": "L'utilisateur à utiliser comme auteur, vous remplaçant",
+	"optionsThemeName": "thème",
+	"optionsThemeDescription": "Le thème à utiliser",
+	"themeLight": "Clair",
+	"themeDark": "Sombre",
+	"themeTransPride": "Fierté Trans",
+	"themeNonBinaryPride": "Fierté non-binaire"
+}
