@@ -1,1 +1,4 @@
-{}
+{
+	"description": "Obtenir une bande dessinée sur xkcd.com",
+	"optionsIdName": "id"
+}
