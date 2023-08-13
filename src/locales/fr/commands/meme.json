@@ -1,5 +1,6 @@
 {
 	"description": "Générer un meme",
+	"optionsNameName": "nom",
 	"optionsNameDescription": "Le nom du modèle de meme à utiliser",
 	"optionsContentName": "contenu",
 	"optionsContentDescription": "Le contenu à écrire dans le modèle, séparé par |",
