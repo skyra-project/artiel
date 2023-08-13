@@ -26,16 +26,16 @@
 	},
 	"dependencies": {
 		"@discordjs/builders": "^1.6.3",
-		"@napi-rs/canvas": "^0.1.41",
+		"@napi-rs/canvas": "^0.1.43",
 		"@prisma/client": "^5.1.1",
 		"@sapphire/result": "^2.6.4",
 		"@sapphire/utilities": "^3.13.0",
 		"@skyra/env-utilities": "^1.2.1",
-		"@skyra/http-framework": "^1.0.3",
-		"@skyra/http-framework-i18n": "^1.0.2",
+		"@skyra/http-framework": "^1.1.0",
+		"@skyra/http-framework-i18n": "^1.0.3",
 		"@skyra/logger": "^2.0.1",
 		"@skyra/safe-fetch": "^1.1.2",
-		"@skyra/shared-http-pieces": "^1.0.3",
+		"@skyra/shared-http-pieces": "^1.0.4",
 		"@skyra/start-banner": "^2.0.0",
 		"canvas-constructor": "^7.0.1",
 		"cron": "^2.4.0",
@@ -45,19 +45,19 @@
 		"turndown": "^7.1.2"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.6.7",
-		"@commitlint/config-conventional": "^17.6.7",
-		"@sapphire/eslint-config": "^5.0.0",
+		"@commitlint/cli": "^17.7.1",
+		"@commitlint/config-conventional": "^17.7.0",
+		"@sapphire/eslint-config": "^5.0.1",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^4.0.1",
 		"@types/cron": "^2.0.1",
 		"@types/gradient-string": "^1.1.2",
-		"@types/node": "^18.17.3",
+		"@types/node": "^18.17.5",
 		"@types/turndown": "^5.0.1",
-		"@typescript-eslint/eslint-plugin": "^6.2.1",
-		"@typescript-eslint/parser": "^6.2.1",
+		"@typescript-eslint/eslint-plugin": "^6.3.0",
+		"@typescript-eslint/parser": "^6.3.0",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.46.0",
+		"eslint": "^8.47.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"husky": "^8.0.3",
@@ -94,6 +94,6 @@
 	},
 	"packageManager": "yarn@3.6.1",
 	"volta": {
-		"node": "18.17.0"
+		"node": "18.17.1"
 	}
 }
