@@ -25342,5 +25342,14 @@
 		"alt": "They tried to report me to the authorities, but because I had the device they couldn't charge me.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2818,
+		"date": 1692619200000,
+		"title": "Circuit Symbols",
+		"image": "https://imgs.xkcd.com/comics/circuit_symbols.png",
+		"alt": "A circle with an A in it means that the circuit has committed a sin and has been marked as punishment.",
+		"transcript": null,
+		"news": null
 	}
 ]
