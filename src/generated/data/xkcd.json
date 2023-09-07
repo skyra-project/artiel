@@ -25405,5 +25405,14 @@
 		"alt": "Escape Artist Frees Self From Conversation With Pickup Artist",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2825,
+		"date": 1694001600000,
+		"title": "Autumn and Fall",
+		"image": "https://imgs.xkcd.com/comics/autumn_and_fall.png",
+		"alt": "Of course in reality this is just a US/UK thing; in British English, 'fall' is the brief period in between and 'autumn' is the main season.",
+		"transcript": null,
+		"news": null
 	}
 ]
