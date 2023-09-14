@@ -25432,5 +25432,14 @@
 		"alt": "Sequoia Brussels sprouts are delicious but it's pretty hard to finish one.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2828,
+		"date": 1694606400000,
+		"title": "Exoplanet Observation",
+		"image": "https://imgs.xkcd.com/comics/exoplanet_observation.png",
+		"alt": "NASA prefers to say that their rovers are 'looking for signs of past life on Mars' and not 'ghost hunting.'",
+		"transcript": null,
+		"news": null
 	}
 ]
