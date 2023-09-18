@@ -25441,5 +25441,14 @@
 		"alt": "NASA prefers to say that their rovers are 'looking for signs of past life on Mars' and not 'ghost hunting.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2829,
+		"date": 1694779200000,
+		"title": "Iceberg Efficiency",
+		"image": "https://imgs.xkcd.com/comics/iceberg_efficiency.png",
+		"alt": "Our experimental aerogel iceberg with helium pockets manages true 100% efficiency, barely touching the water, and it can even lift off of the surface and fly to more efficiently pursue fleeing hubristic liners.",
+		"transcript": null,
+		"news": null
 	}
 ]
