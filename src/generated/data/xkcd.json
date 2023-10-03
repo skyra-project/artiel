@@ -25504,5 +25504,14 @@
 		"alt": "So what do we do when we get to base 10? Do we use A, B, C, etc? No: Numbers larger than about 3.6 million are simply illegal.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2836,
+		"date": 1696248000000,
+		"title": "A Halloween Carol",
+		"image": "https://imgs.xkcd.com/comics/a_halloween_carol.png",
+		"alt": "[after a minute] \"Okay, I think I've got it, thanks. Can I--\" \"oOOOooOOooo!\"",
+		"transcript": null,
+		"news": null
 	}
 ]
