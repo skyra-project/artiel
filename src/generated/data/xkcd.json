@@ -25522,5 +25522,14 @@
 		"alt": "Ugh, it says they attempted delivery but \"Nobody was home.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2838,
+		"date": 1696593600000,
+		"title": "Dubious Islands",
+		"image": "https://imgs.xkcd.com/comics/dubious_islands.png",
+		"alt": "Running for office in Minnesota on the single-issue platform 'dig a permanent channel through the Traverse Gap because it will make this map more satisfying.'",
+		"transcript": null,
+		"news": null
 	}
 ]
