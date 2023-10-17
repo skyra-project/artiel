@@ -25558,5 +25558,14 @@
 		"alt": "Speed Limit: 45 MPH / Minimum: 65 MPH",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2842,
+		"date": 1697457600000,
+		"title": "Inspiraling Roundabout",
+		"image": "https://imgs.xkcd.com/comics/inspiraling_roundabout.png",
+		"alt": "Look, I just think we need to stop coddling those hedonistic roundabout hogs who get into the inner lane and circle for hours, wasting valuable capacity.",
+		"transcript": null,
+		"news": null
 	}
 ]
