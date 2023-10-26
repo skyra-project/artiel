@@ -25594,5 +25594,14 @@
 		"alt": "The Late Heavy Bombardment was followed a few billion years later by the Comparatively Light but Oddly Specific Bombardment.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2846,
+		"date": 1698235200000,
+		"title": "Daylight Saving Choice",
+		"image": "https://imgs.xkcd.com/comics/daylight_saving_choice.png",
+		"alt": "I average out the spring and fall changes and just set my clocks 39 minutes ahead year-round.",
+		"transcript": null,
+		"news": null
 	}
 ]
