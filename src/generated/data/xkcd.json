@@ -25603,5 +25603,14 @@
 		"alt": "I average out the spring and fall changes and just set my clocks 39 minutes ahead year-round.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2847,
+		"date": 1698408000000,
+		"title": "Dendrochronology",
+		"image": "https://imgs.xkcd.com/comics/dendrochronology.png",
+		"alt": "These anomalies are known as Miyake events, named for the pioneering scientist who discovered them and was tragically devoured by a carnivorous tree.",
+		"transcript": null,
+		"news": null
 	}
 ]
