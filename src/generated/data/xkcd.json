@@ -25612,5 +25612,14 @@
 		"alt": "These anomalies are known as Miyake events, named for the pioneering scientist who discovered them and was tragically devoured by a carnivorous tree.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2848,
+		"date": 1698667200000,
+		"title": "Breaker Box",
+		"image": "https://imgs.xkcd.com/comics/breaker_box.png",
+		"alt": "Any electrician will warn you to first locate and flip the house's CAUSALITY circuit breaker before touching the CIRCUIT BREAKERS one.",
+		"transcript": null,
+		"news": null
 	}
 ]
