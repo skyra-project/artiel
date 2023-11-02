@@ -25621,5 +25621,14 @@
 		"alt": "Any electrician will warn you to first locate and flip the house's CAUSALITY circuit breaker before touching the CIRCUIT BREAKERS one.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2849,
+		"date": 1698840000000,
+		"title": "Under the Stars",
+		"image": "https://imgs.xkcd.com/comics/under_the_stars.png",
+		"alt": "If you live in Los Angeles (around 33°52'N, roughly the latitude of Hermosa Beach) the black hole in V404 Cygni passes over you each day. On Christmas Day it will be directly overhead around 2pm.",
+		"transcript": null,
+		"news": null
 	}
 ]
