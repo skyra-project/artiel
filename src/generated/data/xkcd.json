@@ -25639,5 +25639,14 @@
 		"alt": "\"The police told me I can't be a doctor, but whenever they show up I just go into the Google Maps settings page I found and change the house to 'Police Headquarters' and then they have to do what I say.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2851,
+		"date": 1699272000000,
+		"title": "Messier Objects",
+		"image": "https://imgs.xkcd.com/comics/messier_objects.png",
+		"alt": "The debate over the correct Messier number for the Ship of Theseus is ongoing.",
+		"transcript": null,
+		"news": null
 	}
 ]
