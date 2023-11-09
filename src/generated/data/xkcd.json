@@ -25648,5 +25648,14 @@
 		"alt": "The debate over the correct Messier number for the Ship of Theseus is ongoing.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2852,
+		"date": 1699444800000,
+		"title": "Parameterball",
+		"image": "https://imgs.xkcd.com/comics/parameterball.png",
+		"alt": "The ball's density also varies, but players don't learn the value until after choosing their raquets. The infamous 'bowling ball table tennis' region of the parameter space often leads to equipment damage.",
+		"transcript": null,
+		"news": null
 	}
 ]
