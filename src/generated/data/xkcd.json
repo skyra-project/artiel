@@ -25657,5 +25657,14 @@
 		"alt": "The ball's density also varies, but players don't learn the value until after choosing their raquets. The infamous 'bowling ball table tennis' region of the parameter space often leads to equipment damage.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2853,
+		"date": 1699617600000,
+		"title": "Redshift",
+		"image": "https://imgs.xkcd.com/comics/redshift.png",
+		"alt": "So do you have any plans for z=-0.000000000000045?",
+		"transcript": null,
+		"news": null
 	}
 ]
