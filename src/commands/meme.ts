@@ -40,7 +40,7 @@ const Root = LanguageKeys.Commands.Meme;
 		.addUserOption((builder) => applyLocalizedBuilder(builder, Root.OptionsTarget))
 )
 export class UserCommand extends Command {
-	public override async autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
+	public override autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
 		const results = searchMeme(options.name);
 		return interaction.reply({ choices: makeMemeChoices(results) });
 	}
@@ -215,8 +215,8 @@ export class UserCommand extends Command {
 				? 'italic bold '
 				: 'bold '
 			: modifiers.italic
-			? 'italic '
-			: '';
+			  ? 'italic '
+			  : '';
 	}
 
 	private getFontFamily(modifiers: EntryBoxModifiers) {

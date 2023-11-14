@@ -20,13 +20,13 @@
 		"test": "vitest run",
 		"lint": "eslint --fix --ext ts src",
 		"prettier": "prettier --ignore-path=.prettierignore",
-		"format": "prettier --write --loglevel=warn \"{src,scripts}/**/*.{js,ts,json}\"",
+		"format": "prettier --write --log-level=warn \"{src,scripts}/**/*.{js,ts,json}\"",
 		"update": "yarn upgrade-interactive"
 	},
 	"dependencies": {
-		"@discordjs/builders": "^1.6.3",
+		"@discordjs/builders": "^1.7.0",
 		"@napi-rs/canvas": "^0.1.44",
-		"@prisma/client": "^5.5.2",
+		"@prisma/client": "^5.6.0",
 		"@sapphire/result": "^2.6.4",
 		"@sapphire/utilities": "^3.13.0",
 		"@skyra/env-utilities": "^1.2.1",
@@ -37,31 +37,31 @@
 		"@skyra/shared-http-pieces": "^1.1.0",
 		"@skyra/start-banner": "^2.0.0",
 		"canvas-constructor": "^7.0.1",
-		"cron": "^2.4.4",
-		"discord-api-types": "^0.37.50",
+		"cron": "^3.1.6",
+		"discord-api-types": "^0.37.63",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.6.2",
 		"turndown": "^7.1.2"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.8.1",
-		"@commitlint/config-conventional": "^17.8.1",
+		"@commitlint/cli": "^18.4.1",
+		"@commitlint/config-conventional": "^18.4.0",
 		"@sapphire/eslint-config": "^5.0.2",
 		"@sapphire/prettier-config": "^2.0.0",
-		"@sapphire/ts-config": "^4.0.1",
-		"@types/cron": "^2.0.1",
+		"@sapphire/ts-config": "^5.0.0",
+		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.5",
-		"@types/node": "^18.18.9",
+		"@types/node": "^20.9.0",
 		"@types/turndown": "^5.0.4",
-		"@typescript-eslint/eslint-plugin": "^6.10.0",
-		"@typescript-eslint/parser": "^6.10.0",
+		"@typescript-eslint/eslint-plugin": "^6.11.0",
+		"@typescript-eslint/parser": "^6.11.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.53.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.1",
-		"lint-staged": "^14.0.1",
-		"prettier": "^3.0.3",
-		"prisma": "^5.5.2",
+		"lint-staged": "^15.1.0",
+		"prettier": "^3.1.0",
+		"prisma": "^5.6.0",
 		"rimraf": "^5.0.5",
 		"typescript": "^5.2.2"
 	},
@@ -90,8 +90,8 @@
 	"eslintConfig": {
 		"extends": "@sapphire"
 	},
-	"packageManager": "yarn@3.6.4",
+	"packageManager": "yarn@4.0.2",
 	"volta": {
-		"node": "18.18.2"
+		"node": "20.9.0"
 	}
 }

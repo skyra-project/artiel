@@ -1,7 +1,7 @@
 import { refreshComicsFromRemote } from '#lib/utilities/xkcd';
-import { job } from 'cron';
+import { CronJob } from 'cron';
 
-export const xkcdRefresh = job({
+export const xkcdRefresh = CronJob.from({
 	cronTime: '0 0 13 * * 1-5',
 	onTick: refreshComicsFromRemote,
 	start: true,
