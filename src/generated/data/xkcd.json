@@ -25675,5 +25675,14 @@
 		"alt": "They estimate the rocket should be free by approximately ... uh ... well, in about two hours.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2855,
+		"date": 1700049600000,
+		"title": "Empiricism",
+		"image": "https://imgs.xkcd.com/comics/empiricism.png",
+		"alt": "The problems started with my resolution next year to reject temporal causality.",
+		"transcript": null,
+		"news": null
 	}
 ]
