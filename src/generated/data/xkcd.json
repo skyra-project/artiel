@@ -25738,5 +25738,14 @@
 		"alt": "The value of n is still unknown, but new results constrain it to fall between 8 and 10^500, ruling out popular 'n=1' and 'n=2' theories.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2862,
+		"date": 1701432000000,
+		"title": "Typical Seating Chart",
+		"image": "https://imgs.xkcd.com/comics/typical_seating_chart.png",
+		"alt": "Now that airlines have started adding wheel locks to their drink carts, less than half of flights have one accidentally fall out through the hole.",
+		"transcript": null,
+		"news": null
 	}
 ]
