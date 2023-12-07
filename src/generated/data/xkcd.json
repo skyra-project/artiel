@@ -25756,5 +25756,14 @@
 		"alt": "And over heeee[...]eeeere (i)s Saturn.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2864,
+		"date": 1701864000000,
+		"title": "Compact Graphs",
+		"image": "https://imgs.xkcd.com/comics/compact_graphs.png",
+		"alt": "People may complain about readability, but even with jpeg compression, extracting the data points is usually computationally feasible if there aren't too many of them.",
+		"transcript": null,
+		"news": null
 	}
 ]
