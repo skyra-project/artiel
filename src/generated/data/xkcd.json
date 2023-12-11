@@ -25765,5 +25765,14 @@
 		"alt": "People may complain about readability, but even with jpeg compression, extracting the data points is usually computationally feasible if there aren't too many of them.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2865,
+		"date": 1702036800000,
+		"title": "The Wrong Stuff",
+		"image": "https://imgs.xkcd.com/comics/the_wrong_stuff.png",
+		"alt": "The phantom found Edward Everett Hale a century too early; by the time we invented satellites, the specifics of his 'brick moon' proposal were dismissed as science fiction.",
+		"transcript": null,
+		"news": null
 	}
 ]
