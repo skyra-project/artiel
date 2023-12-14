@@ -25783,5 +25783,14 @@
 		"alt": "For someone who has ostensibly outgrown staying up late waiting for Santa, I do spend an awful lot of time refreshing websites to see if packages are here yet.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2867,
+		"date": 1702468800000,
+		"title": "DateTime",
+		"image": "https://imgs.xkcd.com/comics/datetime.png",
+		"alt": "It's not just time zones and leap seconds. SI seconds on Earth are slower because of relativity, so there are time standards for space stuff (TCB, TGC) that use faster SI seconds than UTC/Unix time. T2 - T1 = [God doesn't know and the Devil isn't telling.]",
+		"transcript": null,
+		"news": null
 	}
 ]
