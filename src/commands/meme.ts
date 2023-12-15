@@ -215,8 +215,8 @@ export class UserCommand extends Command {
 				? 'italic bold '
 				: 'bold '
 			: modifiers.italic
-			  ? 'italic '
-			  : '';
+				? 'italic '
+				: '';
 	}
 
 	private getFontFamily(modifiers: EntryBoxModifiers) {
