@@ -25792,5 +25792,14 @@
 		"alt": "It's not just time zones and leap seconds. SI seconds on Earth are slower because of relativity, so there are time standards for space stuff (TCB, TGC) that use faster SI seconds than UTC/Unix time. T2 - T1 = [God doesn't know and the Devil isn't telling.]",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2868,
+		"date": 1702641600000,
+		"title": "Label the States",
+		"image": "https://imgs.xkcd.com/comics/label_the_states.png",
+		"alt": "Even with a blank map, a lot of people can only name 45-50 of the 64 states.",
+		"transcript": null,
+		"news": null
 	}
 ]
