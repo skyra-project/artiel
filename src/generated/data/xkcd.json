@@ -25801,5 +25801,14 @@
 		"alt": "Even with a blank map, a lot of people can only name 45-50 of the 64 states.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2869,
+		"date": 1702900800000,
+		"title": "Puzzles",
+		"image": "https://imgs.xkcd.com/comics/puzzles.png",
+		"alt": "Why couldn't the amulet have been hidden by Aunt Alice, who understands modern key exchange algorithms?",
+		"transcript": null,
+		"news": null
 	}
 ]
