@@ -1,10 +1,10 @@
 {
 	"name": "emparejar",
-	"description": "Genera un romance entre dos usuarios",
-	"optionsTargetName": "usuario",
+	"description": "Genera un emparejamiento entre dos usuarios",
+	"optionsTargetName": "objetivo",
 	"optionsTargetDescription": "Usuario con el que emparejar",
 	"optionsAuthorName": "autor",
-	"optionsAuthorDescription": "El usuario a usar como autor, reemplazándote a ti",
+	"optionsAuthorDescription": "El usuario a usar como autor, reemplazándote",
 	"optionsThemeName": "tema",
 	"optionsThemeDescription": "El tema a utilizar",
 	"themeLight": "Claro",
@@ -13,6 +13,6 @@
 	"themeNonBinaryPride": "Orgullo no binarie",
 	"abortError": "He intentado descargar los avatares, pero Discord está siendo un poco lento ahora mismo, ¡por favor inténtalo de nuevo más tarde!",
 	"unknownError": "Recibí un error desconocido al descargar vuestros avatares, ¡por favor informa a mis desarrolladores sobre este incidente!",
-	"content": "¿Un romance entre {{author}} y {{target}}, eh? ¡Lo llamaré {{name}}!",
-	"altText": "Un romance entre {{author}} y {{target}}, llamado {{name}}"
+	"content": "¿Un emparejamiento entre {{author}} y {{target}}? ¡Lo llamaré {{name}}!",
+	"altText": "Un emparejamiento entre {{author}} y {{target}}, llamado {{name}}"
 }
