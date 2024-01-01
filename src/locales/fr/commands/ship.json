@@ -1,1 +1,13 @@
-{}
+{
+	"optionsTargetName": "cible",
+	"optionsAuthorName": "auteur",
+	"optionsAuthorDescription": "L'utilisateur à utiliser comme auteur, vous remplaçant",
+	"optionsThemeName": "thème",
+	"optionsThemeDescription": "Le thème à utiliser",
+	"themeLight": "Clair",
+	"themeDark": "Sombre",
+	"themeTransPride": "Fierté Trans",
+	"themeNonBinaryPride": "Fierté non-binaire",
+	"abortError": "J'ai essayé de télécharger les avatars, mais Discord est un peu trop lent pour l'instant, veuillez réessayer plus tard !",
+	"unknownError": "J'ai reçu une erreur inconnue lors du téléchargement de vos avatars, veuillez informer mes développeurs de cet incident !"
+}

@@ -1,1 +1,7 @@
-{}
+{
+	"name": "xkcd",
+	"description": "Obtenir une bande dessinée sur xkcd.com",
+	"optionsIdName": "id",
+	"buttonsTranscript": "Transcription",
+	"buttonsNews": "Nouveautés"
+}
