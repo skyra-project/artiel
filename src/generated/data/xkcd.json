@@ -25873,5 +25873,14 @@
 		"alt": "The Range Mischief Officer has modified the trajectory to add a single random spin somewhere in the flight, but won't tell us where.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2877,
+		"date": 1704456000000,
+		"title": "Fever",
+		"image": "https://imgs.xkcd.com/comics/fever.png",
+		"alt": "Hypothermia of below 98.6 K should be treated by leaving the giant molecular cloud and moving to the vicinity of a star.",
+		"transcript": null,
+		"news": null
 	}
 ]
