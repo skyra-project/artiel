@@ -25882,5 +25882,14 @@
 		"alt": "Hypothermia of below 98.6 K should be treated by leaving the giant molecular cloud and moving to the vicinity of a star.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2878,
+		"date": 1704715200000,
+		"title": "Supernova",
+		"image": "https://imgs.xkcd.com/comics/supernova.png",
+		"alt": "They're a little cagey about exactly where the crossover point lies relative to the likelihood of devastating effects on the planet.",
+		"transcript": null,
+		"news": null
 	}
 ]
