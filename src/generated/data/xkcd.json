@@ -25936,5 +25936,14 @@
 		"alt": "They didn't bring us a gift, but considering the kinetic energy of a bottle of wine at orbital speed, that's probably for the best.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2884,
+		"date": 1705924800000,
+		"title": "Log Alignment",
+		"image": "https://imgs.xkcd.com/comics/log_alignment.png",
+		"alt": "A video can have a log scale that's misaligned with both the time AND space axes.",
+		"transcript": null,
+		"news": null
 	}
 ]
