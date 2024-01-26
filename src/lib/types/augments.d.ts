@@ -10,5 +10,8 @@ declare module '@skyra/env-utilities' {
 
 		REGISTRY_GUILD_ID: string;
 		MEME_TEMPLATE_DATABASE_TOKEN: string;
+
+		CAT_API_TOKEN: string;
+		DOG_API_TOKEN: string;
 	}
 }

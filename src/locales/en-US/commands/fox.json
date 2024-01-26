@@ -1,0 +1,8 @@
+{
+	"name": "fox",
+	"description": "a random image of a fox",
+	"embedTitle": "foxo",
+	"embedSource": "source",
+	"abortError": "The fox skedaddled",
+	"unknownError": "The fox is confused"
+}

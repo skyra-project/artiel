@@ -1,0 +1,8 @@
+{
+	"name": "cat",
+	"description": "a random image of a cat",
+	"embedTitle": "kitty",
+	"embedSource": "source",
+	"abortError": "The cat ran away",
+	"unknownError": "The cat is hiding"
+}
