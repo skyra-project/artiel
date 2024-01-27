@@ -1,1 +1,16 @@
-{}
+{
+	"name": "dado",
+	"description": "Tira un dado",
+	"optionsFacesName": "caras",
+	"optionsFacesDescription": "El número de caras en los dados",
+	"optionsRollsName": "tiradas",
+	"optionsRollsDescription": "El número de tiradas a hacer",
+	"optionsModifierName": "modificador",
+	"optionsModifierDescription": "El modificador a añadir al resultado",
+	"optionsPresetName": "preajuste",
+	"optionsPresetDescription": "El ajuste predefinido a usar",
+	"title": "{{dice}} Tirando...",
+	"presetDnD5e": "D&D 5e (1d20)",
+	"presetCthulhu": "Cthulhu (1d100)",
+	"presetFate": "Fate (-1/0/+1)"
+}
