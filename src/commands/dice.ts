@@ -33,9 +33,9 @@ export class UserCommand extends Command {
 	private readonly RollingDiceCup = '<:rolling_dice_cup:1200786597105377290>';
 
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
-		const { faces, rolls, modifier = 0, template } = options;
+		const { faces, rolls, modifier = 0, preset } = options;
 
-		const { results, render, dice, complex } = this.runTemplate(faces, rolls, template);
+		const { results, render, dice, complex } = this.runPreset(faces, rolls, preset);
 
 		const lines = [heading(resolveKey(interaction, Root.Title, { dice }), HeadingLevel.Three)] as string[];
 		if (!(results.length === 1 && !complex)) {
@@ -49,38 +49,38 @@ export class UserCommand extends Command {
 		return interaction.reply({ content: lines.join('\n') });
 	}
 
-	private runTemplate(faces?: number, rolls?: number, template?: Template) {
-		switch (template) {
+	private runPreset(faces?: number, rolls?: number, preset?: Preset) {
+		switch (preset) {
 			case 'dnd5e':
-				return this.runTemplateDnD5e(rolls);
+				return this.runPresetDnD5e(rolls);
 			case 'cthulhu':
-				return this.runTemplateCthulhu(rolls);
+				return this.runPresetCthulhu(rolls);
 			case 'fate':
-				return this.runTemplateFate(rolls);
+				return this.runPresetFate(rolls);
 			default:
-				return this.runTemplateUndefined(faces, rolls);
+				return this.runPresetUndefined(faces, rolls);
 		}
 	}
 
-	private runTemplateUndefined(faces = 6, rolls = 1) {
+	private runPresetUndefined(faces = 6, rolls = 1) {
 		const results = arrayWith(rolls, () => this.runSingleDice(1, faces + 1));
 		const render = results.map((roll) => underscore(roll.toString())).join(' ');
 		return { results, render, dice: this.renderDice(faces), complex: false };
 	}
 
-	private runTemplateDnD5e(rolls = 1) {
+	private runPresetDnD5e(rolls = 1) {
 		const results = arrayWith(rolls, () => this.runSingleDice(1, 21));
 		const render = results.map((dice) => this.renderDnD5eDice(dice)).join(' ');
 		return { results, render, dice: this.Dice20, complex: false };
 	}
 
-	private runTemplateCthulhu(rolls = 1) {
+	private runPresetCthulhu(rolls = 1) {
 		const results = arrayWith(rolls, () => this.runSingleDice(1, 101));
 		const render = results.map((dice) => this.renderCthulhuDice(dice)).join(' ');
 		return { results, render, dice: `${this.Dice10}${this.Dice10}`, complex: true };
 	}
 
-	private runTemplateFate(rolls = 4) {
+	private runPresetFate(rolls = 4) {
 		const results = arrayWith(rolls, () => this.runSingleDice(-1, 2));
 		const render = results.map((dice) => this.renderFateDice(dice)).join(' ');
 		return { results, render, dice: this.RollingDiceCup, complex: true };
@@ -138,7 +138,7 @@ interface Options {
 	faces?: number;
 	rolls?: number;
 	modifier?: number;
-	template?: Template;
+	preset?: Preset;
 }
 
-type Template = 'dnd5e' | 'cthulhu' | 'fate';
+type Preset = 'dnd5e' | 'cthulhu' | 'fate';
