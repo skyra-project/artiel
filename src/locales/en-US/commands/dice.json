@@ -10,7 +10,7 @@
 	"optionsTemplateName": "template",
 	"optionsTemplateDescription": "The template to use",
 	"title": "{{dice}} Rolling...",
-	"templateDnD5e": "D&D 5e (20d1)",
-	"templateCthulhu": "Cthulhu (100d1)",
+	"templateDnD5e": "D&D 5e (1d20)",
+	"templateCthulhu": "Cthulhu (1d100)",
 	"templateFate": "Fate (-1/0/+1)"
 }
