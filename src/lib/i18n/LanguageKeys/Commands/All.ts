@@ -1,4 +1,5 @@
 export * as Bunny from '#lib/i18n/LanguageKeys/Commands/Bunny';
+export * as Dice from '#lib/i18n/LanguageKeys/Commands/Dice';
 export * as Dog from '#lib/i18n/LanguageKeys/Commands/Dog';
 export * as Fox from '#lib/i18n/LanguageKeys/Commands/Fox';
 export * as Cat from '#lib/i18n/LanguageKeys/Commands/Cat';
