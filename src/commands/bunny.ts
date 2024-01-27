@@ -32,7 +32,7 @@ export class UserCommand extends Command {
 		const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
 			new ButtonBuilder() //
 				.setStyle(ButtonStyle.Link)
-				.setLabel(resolveKey(interaction, Root.EmbedTitle))
+				.setLabel(resolveKey(interaction, Root.ButtonLinkToImage))
 				.setURL(url)
 		);
 
@@ -41,7 +41,7 @@ export class UserCommand extends Command {
 			row.addComponents(
 				new ButtonBuilder() //
 					.setStyle(ButtonStyle.Link)
-					.setLabel(resolveKey(interaction, Root.EmbedSource))
+					.setLabel(resolveKey(interaction, Root.ButtonSource))
 					.setURL(source)
 			);
 		}
