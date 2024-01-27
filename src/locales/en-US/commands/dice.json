@@ -7,10 +7,10 @@
 	"optionsRollsDescription": "The number of rolls to make",
 	"optionsModifierName": "modifier",
 	"optionsModifierDescription": "The modifier to add to the roll",
-	"optionsTemplateName": "template",
-	"optionsTemplateDescription": "The template to use",
+	"optionsPresetName": "preset",
+	"optionsPresetDescription": "The preset to use",
 	"title": "{{dice}} Rolling...",
-	"templateDnD5e": "D&D 5e (1d20)",
-	"templateCthulhu": "Cthulhu (1d100)",
-	"templateFate": "Fate (-1/0/+1)"
+	"presetDnD5e": "D&D 5e (1d20)",
+	"presetCthulhu": "Cthulhu (1d100)",
+	"presetFate": "Fate (-1/0/+1)"
 }

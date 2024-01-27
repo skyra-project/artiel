@@ -10,14 +10,14 @@ const Root = LanguageKeys.Commands.Dice;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsFaces).setMinValue(1).setMaxValue(100))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsRolls).setMinValue(1).setMaxValue(10))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsFaces).setMinValue(1).setMaxValue(100))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsModifier))
 		.addStringOption((builder) =>
-			applyLocalizedBuilder(builder, Root.OptionsTemplate).addChoices(
-				createSelectMenuChoiceName(Root.TemplateDnD5e, { value: 'dnd5e' }),
-				createSelectMenuChoiceName(Root.TemplateCthulhu, { value: 'cthulhu' }),
-				createSelectMenuChoiceName(Root.TemplateFate, { value: 'fate' })
+			applyLocalizedBuilder(builder, Root.OptionsPreset).addChoices(
+				createSelectMenuChoiceName(Root.PresetDnD5e, { value: 'dnd5e' }),
+				createSelectMenuChoiceName(Root.PresetCthulhu, { value: 'cthulhu' }),
+				createSelectMenuChoiceName(Root.PresetFate, { value: 'fate' })
 			)
 		)
 )
@@ -102,6 +102,8 @@ export class UserCommand extends Command {
 				return this.Dice12;
 			case 20:
 				return this.Dice20;
+			case 100:
+				return `${this.Dice10}${this.Dice10}`;
 			default:
 				return this.RollingDiceCup;
 		}
@@ -115,7 +117,7 @@ export class UserCommand extends Command {
 	private renderCthulhuDice(dice: number) {
 		const tens = Math.floor((dice % 100) / 10) * 10;
 		const units = dice % 10;
-		return underscore(`${tens.toString().padStart(2, '0')} + ${units.toString()}`);
+		return underscore(`${tens.toString().padStart(2, '0')} ${units.toString()}`);
 	}
 
 	private renderFateDice(dice: number) {
