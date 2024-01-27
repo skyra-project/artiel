@@ -1,6 +1,6 @@
 {
 	"name": "bunny",
-	"description": "a random image of a bunny",
+	"description": "Provides a random image of a bunny",
 	"embedTitle": "bunyun",
 	"embedSource": "source",
 	"abortError": "the bunny took too long to arrive",

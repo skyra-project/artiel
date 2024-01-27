@@ -1,8 +1,6 @@
 {
 	"name": "dog",
-	"description": "a random image of a dog",
-	"embedTitle": "doggo",
-	"embedSource": "source",
+	"description": "Provides a random image of a dog",
 	"abortError": "The dog is too lazy to do it",
 	"unknownError": "The dog has lost the way"
 }

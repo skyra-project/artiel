@@ -1,8 +1,6 @@
 {
 	"name": "shibe",
-	"description": "a random image of a shibe",
-	"embedTitle": "shibey",
-	"embedSource": "source",
+	"description": "Provides a random image of a shibe",
 	"abortError": "The shibe shibbed away",
 	"unknownError": "The shibe is not shibbing"
 }
