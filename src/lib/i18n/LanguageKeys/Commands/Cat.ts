@@ -5,5 +5,4 @@ export const RootName = T('commands/cat:name');
 export const RootDescription = T('commands/cat:description');
 
 // Errors
-export const AbortError = T('commands/cat:abortError');
-export const UnknownError = T('commands/cat:unknownError');
+export const Error = T('commands/cat:error');

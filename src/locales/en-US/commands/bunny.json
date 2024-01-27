@@ -1,8 +1,7 @@
 {
 	"name": "bunny",
 	"description": "Provides a random image of a bunny",
-	"embedTitle": "bunyun",
-	"embedSource": "source",
-	"abortError": "the bunny took too long to arrive",
-	"unknownError": "The bunny seems to be lost"
+	"embedTitle": "Link to Image",
+	"embedSource": "Source",
+	"error": "Where is the bunny? I don't know! They're hiding! While I find it, here's a photo of my friend's bunny!"
 }

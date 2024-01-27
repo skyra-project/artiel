@@ -1,48 +1,59 @@
+import { BrandingColors } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { getImageUrl } from '#lib/utilities/image';
-import { EmbedBuilder, hyperlink } from '@discordjs/builders';
-import { Time } from '@sapphire/time-utilities';
+import { ActionRowBuilder, ButtonBuilder, EmbedBuilder } from '@discordjs/builders';
+import { Time } from '@sapphire/duration';
 import { isNullishOrEmpty } from '@sapphire/utilities';
 import { Command, RegisterCommand } from '@skyra/http-framework';
-import { applyLocalizedBuilder, getSupportedLanguageT, resolveUserKey } from '@skyra/http-framework-i18n';
+import { applyLocalizedBuilder, resolveKey } from '@skyra/http-framework-i18n';
 import { Json, isAbortError, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
-import { MessageFlags } from 'discord-api-types/v10';
+import { ButtonStyle } from 'discord-api-types/v10';
 
 const url = new URL('https://api.bunnies.io/v2/loop/random/?media=gif,png');
 const Root = LanguageKeys.Commands.Bunny;
+const FallbackImageUrl = 'https://i.imgur.com/FnAPcxj.jpg';
 
 @RegisterCommand((builder) => applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription))
 export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction) {
 		const result = await Json<BunnyResultOk>(safeTimedFetch(url, Time.Second * 2));
 
-		return result.match({
-			ok: (value) => this.handleOk(interaction, value),
+		const data = result.match({
+			ok: (value) => this.makeData(interaction, getImageUrl(value.media.gif), this.getSource(value.source)),
 			err: (error) => this.handleError(interaction, error)
 		});
+
+		return interaction.reply({ embeds: [data.embed.toJSON()], components: [data.row.toJSON()] });
 	}
 
-	private handleOk(interaction: Command.ChatInputInteraction, value: BunnyResultOk) {
-		const imageUrl = getImageUrl(value.media.gif) ?? 'https://i.imgur.com/FnAPcxj.jpg';
-		const t = getSupportedLanguageT(interaction);
-		const source = this.getSource(value.source);
+	private makeData(interaction: Command.ChatInputInteraction, url = FallbackImageUrl, source?: string | null) {
+		const embed = new EmbedBuilder().setImage(url).setColor(BrandingColors.Primary);
 
-		const embed = new EmbedBuilder() //
-			.setURL(imageUrl)
-			.setTitle(t(Root.EmbedTitle))
-			.setImage(imageUrl)
-			.setTimestamp();
+		const row = new ActionRowBuilder<ButtonBuilder>().addComponents(
+			new ButtonBuilder() //
+				.setStyle(ButtonStyle.Link)
+				.setLabel(resolveKey(interaction, Root.EmbedTitle))
+				.setURL(url)
+		);
 
+		// If there is a source, add it to the row:
 		if (source) {
-			embed.setDescription(hyperlink(t(Root.EmbedSource), source));
+			row.addComponents(
+				new ButtonBuilder() //
+					.setStyle(ButtonStyle.Link)
+					.setLabel(resolveKey(interaction, Root.EmbedSource))
+					.setURL(source)
+			);
 		}
-
-		return interaction.reply({ embeds: [embed.toJSON()] });
+		return { embed, row };
 	}
 
 	private handleError(interaction: Command.ChatInputInteraction, error: FetchError) {
-		const key = isAbortError(error) ? Root.AbortError : Root.UnknownError;
-		return interaction.reply({ content: resolveUserKey(interaction, key), flags: MessageFlags.Ephemeral });
+		if (!isAbortError(error)) this.container.logger.error(error);
+
+		const data = this.makeData(interaction);
+		data.embed.setDescription(resolveKey(interaction, Root.Error));
+		return data;
 	}
 
 	private getSource(bunnySource: string): string | null {

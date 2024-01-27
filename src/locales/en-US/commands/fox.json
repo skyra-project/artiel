@@ -1,6 +1,5 @@
 {
 	"name": "fox",
 	"description": "Provides a random image of a fox",
-	"abortError": "The fox skedaddled",
-	"unknownError": "The fox is confused"
+	"error": "The caretaker hasn't fed the foxes yet, but I have this old photo of one that has, enjoy!"
 }

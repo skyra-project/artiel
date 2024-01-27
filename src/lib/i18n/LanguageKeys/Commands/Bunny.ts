@@ -8,5 +8,4 @@ export const EmbedTitle = T('commands/bunny:embedTitle');
 export const EmbedSource = T('commands/bunny:embedSource');
 
 // Errors
-export const AbortError = T('commands/bunny:abortError');
-export const UnknownError = T('commands/bunny:unknownError');
+export const Error = T('commands/bunny:error');
