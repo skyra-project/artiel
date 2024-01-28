@@ -1,1 +1,16 @@
-{}
+{
+	"name": "dobbelsteen",
+	"description": "Een dobbelsteen gooien",
+	"optionsFacesName": "ogen",
+	"optionsFacesDescription": "Het aantal ogen op de dobbelsteen",
+	"optionsRollsName": "worpen",
+	"optionsRollsDescription": "Het aantal worpen om te maken",
+	"optionsModifierName": "modificator",
+	"optionsModifierDescription": "De modificatie om toe te voegen aan de rol",
+	"optionsPresetName": "voorinstelling",
+	"optionsPresetDescription": "De voorinstelling om te gebruiken",
+	"title": "{{dice}} Werpen...",
+	"presetDnD5e": "D&D 5e (1d20)",
+	"presetCthulhu": "Cthulhu (1d100)",
+	"presetFate": "Fate (-1/0/+1)"
+}
