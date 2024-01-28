@@ -597,6 +597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/duration@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@sapphire/duration@npm:1.1.2"
+  checksum: 680634b17c2bb1594a408cd5de7bd270a716a3445d52a95cb3d34392858d219a8c73daa151658076b324cd87304d731638d2af8065ac76953907c7a5e4be3d18
+  languageName: node
+  linkType: hard
+
 "@sapphire/eslint-config@npm:^5.0.3":
   version: 5.0.3
   resolution: "@sapphire/eslint-config@npm:5.0.3"
@@ -744,6 +751,7 @@ __metadata:
     "@discordjs/builders": "npm:^1.7.0"
     "@napi-rs/canvas": "npm:^0.1.44"
     "@prisma/client": "npm:^5.8.1"
+    "@sapphire/duration": "npm:^1.1.2"
     "@sapphire/eslint-config": "npm:^5.0.3"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/result": "npm:^2.6.6"

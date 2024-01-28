@@ -1,0 +1,7 @@
+{
+	"name": "bunny",
+	"description": "Provides a random image of a bunny",
+	"buttonLinkToImage": "Link to Image",
+	"buttonSource": "Source",
+	"error": "Where is the bunny? I don't know! They're hiding! While I find it, here's a photo of my friend's bunny!"
+}
