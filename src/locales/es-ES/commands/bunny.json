@@ -1,1 +1,7 @@
-{}
+{
+	"name": "conejo",
+	"description": "Proporciona una imagen al azar de un conejito",
+	"buttonLinkToImage": "Enlace a Imagen",
+	"buttonSource": "Fuente",
+	"error": "¿Dónde está el conejo? ¡No lo sé! ¡Se esconden! Espera a que lo encuentre, ¡pero aquí tienes una foto del conejito de mi amigo!"
+}
