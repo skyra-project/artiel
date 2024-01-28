@@ -1,1 +1,5 @@
-{}
+{
+	"name": "shibe",
+	"description": "Geeft een willekeurige afbeelding van een Shiba Inu",
+	"error": "De Shiba Inu is aan het slapen en kan nu niet gestoord worden, maar ik heb een oude afbeelding voor je gevonden!"
+}
