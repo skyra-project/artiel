@@ -1,1 +1,14 @@
-{}
+{
+	"name": "पासा",
+	"description": "पासा फेंकता है",
+	"optionsFacesName": "चेहरे",
+	"optionsFacesDescription": "पासे पर चेहरों की संख्या",
+	"optionsRollsName": "संख्या",
+	"optionsRollsDescription": "पासा फेंकने की संख्या",
+	"optionsModifierName": "संशोधक",
+	"optionsModifierDescription": "पासा फेंकने में जोड़ने के लिए संशोधक",
+	"optionsPresetName": "पूर्वनिर्धारित",
+	"optionsPresetDescription": "उपयोग करने के लिए पूर्वनिर्धारित",
+	"title": "{{dice}} फेक रहे हैं…",
+	"presetDnD5e": "D&D 5e (1d20)"
+}
