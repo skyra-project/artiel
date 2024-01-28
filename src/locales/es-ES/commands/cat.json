@@ -1,1 +1,5 @@
-{}
+{
+	"name": "gato",
+	"description": "Proporciona una imagen al azar de un gato",
+	"error": "Lo sentimos, el gato se nos escapó de las manos. ¡Toma este lindo gato en su lugar!"
+}
