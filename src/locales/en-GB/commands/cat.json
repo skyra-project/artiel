@@ -1,1 +1,5 @@
-{}
+{
+	"name": "cat",
+	"description": "Provides a random image of a cat",
+	"error": "The cat took off our hands, we're sorry. Have this cute cat instead!"
+}
