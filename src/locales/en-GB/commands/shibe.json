@@ -1,1 +1,5 @@
-{}
+{
+	"name": "shibe",
+	"description": "Provides a random image of a shibe",
+	"error": "The shibe is sleeping and can't be disturbed right now, but I have an old picture of one I found!"
+}

@@ -1,1 +1,5 @@
-{}
+{
+	"name": "shibe",
+	"description": "Proporciona una imagen al azar de un shibe",
+	"error": "El shibe está durmiendo y no puede ser molestado ahora mismo, ¡pero tengo una foto vieja de uno que encontré!"
+}

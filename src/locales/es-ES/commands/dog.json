@@ -1,1 +1,5 @@
-{}
+{
+	"name": "perro",
+	"description": "Proporciona una imagen al azar de un perro",
+	"error": "El perro es demasiado rápido para alcanzarle, ¡por favor tenga estos cachorritos en su lugar!"
+}

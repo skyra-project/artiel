@@ -1,1 +1,5 @@
-{}
+{
+	"name": "hond",
+	"description": "Geeft een willekeurige afbeelding van een hond",
+	"error": "De hond is veel te snel om op te pakken, hier heb je andere deze puppy's!"
+}

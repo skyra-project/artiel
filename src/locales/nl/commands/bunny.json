@@ -1,1 +1,7 @@
-{}
+{
+	"name": "konijn",
+	"description": "Geeft een willekeurige afbeelding van een konijn",
+	"buttonLinkToImage": "Link naar afbeelding",
+	"buttonSource": "Bron",
+	"error": "Waar is het konijn? Ik weet het niet! Ze zijn verborgen! Terwijl ik het vind, is hier een foto van mijn vriend's konijn!"
+}

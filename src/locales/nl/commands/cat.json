@@ -1,1 +1,5 @@
-{}
+{
+	"name": "kat",
+	"description": "Geeft een willekeurige afbeelding van een kat",
+	"error": "Sorry, de kat is verborgen. Hier heb je een andere schattige kat!"
+}

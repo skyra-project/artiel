@@ -1,1 +1,5 @@
-{}
+{
+	"name": "zorro",
+	"description": "Proporciona una imagen al azar de un zorro",
+	"error": "El cuidador todavía no ha alimentado a los zorros, pero tengo esta vieja foto de uno ya ha sido alimentado, ¡disfrute!"
+}
