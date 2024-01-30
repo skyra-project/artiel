@@ -25963,5 +25963,14 @@
 		"alt": "Dr. Petroff has also shown that the Higgs boson signal was actually sparks from someone microwaving grapes, the EHT black hole photo was a frozen bagel someone left in too long, and the LIGO detection was just someone slamming the microwave door too hard.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2887,
+		"date": 1706529600000,
+		"title": "Minnesota",
+		"image": "https://imgs.xkcd.com/comics/minnesota.png",
+		"alt": "In addition to 'squishy', after reviewing my submitted intraplate ground motion data, the National Geodetic Survey has politely asked me to stop using the word 'supple' so often when describing Midwestern states.",
+		"transcript": null,
+		"news": null
 	}
 ]
