@@ -25981,5 +25981,14 @@
 		"alt": "Subway refuses to answer my questions about whether it's an International Footlong or a US Survey Footlong. A milligram of sandwich is at stake!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2889,
+		"date": 1706875200000,
+		"title": "Greenhouse Effect",
+		"image": "https://imgs.xkcd.com/comics/greenhouse_effect.png",
+		"alt": "Once he had the answer, Arrhenius complained to his friends that he'd \"wasted over a full year\" doing tedious calculations by hand about \"so trifling a matter\" as hypothetical CO2 concentrations in far-off eras (quoted in Crawford, 1997).",
+		"transcript": null,
+		"news": null
 	}
 ]
