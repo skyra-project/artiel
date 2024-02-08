@@ -10,7 +10,14 @@
 	"optionsPresetName": "preset",
 	"optionsPresetDescription": "The preset to use",
 	"title": "{{dice}} Rolling...",
-	"presetDnD5e": "D&D 5e (1d20)",
-	"presetCthulhu": "Cthulhu (1d100)",
+	"presetD2": "1d2 (coin)",
+	"presetD4": "1d4",
+	"presetD6": "1d6",
+	"presetD8": "1d8",
+	"presetD10": "1d10",
+	"presetD10Ren": "1d10 (REN)",
+	"presetD12": "1d12",
+	"presetD20": "1d20 (D&D 5e)",
+	"presetD100": "1d100 (Cthulhu)",
 	"presetFate": "Fate (-1/0/+1)"
 }
