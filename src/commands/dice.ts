@@ -10,26 +10,36 @@ const Root = LanguageKeys.Commands.Dice;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsRolls).setMinValue(1).setMaxValue(10))
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsFaces).setMinValue(1).setMaxValue(100))
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsModifier))
 		.addStringOption((builder) =>
 			applyLocalizedBuilder(builder, Root.OptionsPreset).addChoices(
-				createSelectMenuChoiceName(Root.PresetDnD5e, { value: 'dnd5e' }),
-				createSelectMenuChoiceName(Root.PresetCthulhu, { value: 'cthulhu' }),
+				createSelectMenuChoiceName(Root.PresetD2, { value: 'd2' }),
+				createSelectMenuChoiceName(Root.PresetD4, { value: 'd4' }),
+				createSelectMenuChoiceName(Root.PresetD6, { value: 'd6' }),
+				createSelectMenuChoiceName(Root.PresetD8, { value: 'd8' }),
+				createSelectMenuChoiceName(Root.PresetD10, { value: 'd10' }),
+				createSelectMenuChoiceName(Root.PresetD10Ren, { value: 'd10:ren' }),
+				createSelectMenuChoiceName(Root.PresetD12, { value: 'd12' }),
+				createSelectMenuChoiceName(Root.PresetD20, { value: 'd20:dnd5e' }),
+				createSelectMenuChoiceName(Root.PresetD100, { value: 'd100' }),
 				createSelectMenuChoiceName(Root.PresetFate, { value: 'fate' })
 			)
 		)
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsRolls).setMinValue(1).setMaxValue(10))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsFaces).setMinValue(2).setMaxValue(100))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsModifier))
 )
 export class UserCommand extends Command {
+	private readonly Dice4 = '<:d4:1200786491492802681>';
+	private readonly Dice8 = '<:d8:1200786525634437190>';
 	private readonly Dice10 = '<:d10:1200786415005483018>';
 	private readonly Dice12 = '<:d12:1200786447049957457>';
 	private readonly Dice20 = '<:d20:1200786564914085978>';
-	private readonly Dice4 = '<:d4:1200786491492802681>';
-	private readonly Dice8 = '<:d8:1200786525634437190>';
 	private readonly DicePlus = '<:dice_plus:1200790107893022740>';
 	private readonly DiceMinus = '<:dice_minus:1200790383903375430>';
 	private readonly DiceNeutral = '<:dice_neutral:1200790382540226570>';
+	private readonly CoinHeads = '<:coin_heads:1205271732747894795>';
+	private readonly CoinTails = '<:coin_tails:1205271731107930164>';
+	private readonly CoinFlip = '<:coinflip:1205271734052196402>';
 	private readonly RollingDiceCup = '<:rolling_dice_cup:1200786597105377290>';
 
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
@@ -51,12 +61,26 @@ export class UserCommand extends Command {
 
 	private runPreset(faces?: number, rolls?: number, preset?: Preset) {
 		switch (preset) {
-			case 'dnd5e':
+			case 'd2':
+				return this.runPresetCoin(rolls);
+			case 'd4':
+				return this.runPresetUndefined(4, rolls);
+			case 'd6':
+				return this.runPresetUndefined(6, rolls);
+			case 'd8':
+				return this.runPresetUndefined(8, rolls);
+			case 'd10':
+				return this.runPresetUndefined(10, rolls);
+			case 'd10:ren':
+				return this.runPresetRen10();
+			case 'd12':
+				return this.runPresetUndefined(12, rolls);
+			case 'd20:dnd5e':
 				return this.runPresetDnD5e(rolls);
-			case 'cthulhu':
+			case 'd100':
 				return this.runPresetCthulhu(rolls);
 			case 'fate':
-				return this.runPresetFate(rolls);
+				return this.runPresetFate();
 			default:
 				return this.runPresetUndefined(faces, rolls);
 		}
@@ -66,6 +90,12 @@ export class UserCommand extends Command {
 		const results = arrayWith(rolls, () => this.runSingleDice(1, faces + 1));
 		const render = results.map((roll) => underscore(roll.toString())).join(' ');
 		return { results, render, dice: this.renderDice(faces), complex: false };
+	}
+
+	private runPresetCoin(rolls = 1) {
+		const results = arrayWith(rolls, () => this.runSingleDice(1, 3));
+		const render = results.map((roll) => (roll === 1 ? this.CoinHeads : this.CoinTails)).join(' ');
+		return { results, render, dice: this.CoinFlip, complex: true };
 	}
 
 	private runPresetDnD5e(rolls = 1) {
@@ -80,10 +110,48 @@ export class UserCommand extends Command {
 		return { results, render, dice: `${this.Dice10}${this.Dice10}`, complex: true };
 	}
 
-	private runPresetFate(rolls = 4) {
-		const results = arrayWith(rolls, () => this.runSingleDice(-1, 2));
+	/**
+	 * The Fate system is a system that uses exclusively 4d6, where the faces are:
+	 * - -1: Minus
+	 * -  0: Neutral
+	 * - +1: Plus
+	 */
+	private runPresetFate() {
+		const results = arrayWith(4, () => this.runSingleDice(-1, 2));
 		const render = results.map((dice) => this.renderFateDice(dice)).join(' ');
 		return { results, render, dice: this.RollingDiceCup, complex: true };
+	}
+
+	/**
+	 * The REN system is a system that uses exclusively d10s, but with two special rules:
+	 * - Rolling a 1 is a botch, and the player must roll another d10 and subtract it from the total.
+	 * - Rolling a 10 allows the player to roll another d10 and add it to the total, repeating as many times as they roll a 10.
+	 *
+	 * This system is used in Regnum Ex Nihilo (REN).
+	 */
+	private runPresetRen10() {
+		const first = this.runSingleDice(1, 11);
+
+		// Case for a 1, we roll a single dice which negates the 1, e.g. 1 then 7 = -6
+		if (first === 1) {
+			const second = this.runSingleDice(1, 11);
+			return {
+				results: [first, -second],
+				render: `${bold(underscore(first.toString()))} ${underscore(second.toString())}`,
+				dice: this.Dice10,
+				complex: true
+			};
+		}
+
+		const results = [first];
+
+		// Case for a 10, we roll more dice until we get a non-10:
+		while (results.at(-1) === 10) {
+			results.push(this.runSingleDice(1, 11));
+		}
+
+		const render = results.map((dice, index) => this.renderRen10Dice(dice, index)).join(' ');
+		return { results, render, dice: this.Dice10, complex: false };
 	}
 
 	private runSingleDice(min: number, max: number) {
@@ -92,6 +160,8 @@ export class UserCommand extends Command {
 
 	private renderDice(faces: number) {
 		switch (faces) {
+			case 2:
+				return this.CoinFlip;
 			case 4:
 				return this.Dice4;
 			case 8:
@@ -132,6 +202,11 @@ export class UserCommand extends Command {
 				return '';
 		}
 	}
+
+	private renderRen10Dice(dice: number, index: number) {
+		const styled = underscore(dice.toString());
+		return index === 0 ? bold(styled) : styled;
+	}
 }
 
 interface Options {
@@ -141,4 +216,4 @@ interface Options {
 	preset?: Preset;
 }
 
-type Preset = 'dnd5e' | 'cthulhu' | 'fate';
+type Preset = 'd2' | 'd4' | 'd6' | 'd8' | 'd10' | 'd10:ren' | 'd12' | 'd20:dnd5e' | 'd100' | 'fate';
