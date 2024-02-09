@@ -38,7 +38,7 @@ export class UserCommand extends Command {
 	private readonly DiceMinus = '<:dice_minus:1200790383903375430>';
 	private readonly DiceNeutral = '<:dice_neutral:1200790382540226570>';
 	private readonly CoinHeads = '<:coin_heads:1205271732747894795>';
-	private readonly CoinTails = '<:coin_tails:1205271731107930164>';
+	private readonly CoinTails = '<:coin_tails:1205438570576355338>';
 	private readonly CoinFlip = '<:coinflip:1205271734052196402>';
 	private readonly RollingDiceCup = '<:rolling_dice_cup:1200786597105377290>';
 
