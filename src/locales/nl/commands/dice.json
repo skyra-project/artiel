@@ -10,7 +10,5 @@
 	"optionsPresetName": "voorinstelling",
 	"optionsPresetDescription": "De voorinstelling om te gebruiken",
 	"title": "{{dice}} Werpen...",
-	"presetDnD5e": "D&D 5e (1d20)",
-	"presetCthulhu": "Cthulhu (1d100)",
 	"presetFate": "Fate (-1/0/+1)"
 }
