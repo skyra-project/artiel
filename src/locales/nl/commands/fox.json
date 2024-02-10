@@ -1,4 +1,5 @@
 {
 	"name": "vos",
-	"description": "Geeft een willekeurige afbeelding van een vos"
+	"description": "Geeft een willekeurige afbeelding van een vos",
+	"error": "De verzorger heeft de vossen nog niet gevoed, maar ik heb deze oude foto van een vos die veel plezier heeft gevonden!"
 }
