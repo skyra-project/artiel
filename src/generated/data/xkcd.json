@@ -26008,5 +26008,14 @@
 		"alt": "I'm sure the building inspectors will approve my design once they finally manage to escape.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2892,
+		"date": 1707480000000,
+		"title": "Banana Prices",
+		"image": "https://imgs.xkcd.com/comics/banana_prices.png",
+		"alt": "It's a linear extrapolation, Michael. How big could the error be? 10%?",
+		"transcript": null,
+		"news": null
 	}
 ]
