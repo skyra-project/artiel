@@ -26017,5 +26017,14 @@
 		"alt": "It's a linear extrapolation, Michael. How big could the error be? 10%?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2893,
+		"date": 1707739200000,
+		"title": "Sphere Tastiness",
+		"image": "https://imgs.xkcd.com/comics/sphere_tastiness.png",
+		"alt": "Baseballs do present a challenge to this theory, but I'm convinced we just haven't found the right seasoning.",
+		"transcript": null,
+		"news": null
 	}
 ]
