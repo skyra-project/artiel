@@ -26044,5 +26044,14 @@
 		"alt": "[earlier] \"Your vintage-style handmade chest business is struggling. But I have a plan.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2896,
+		"date": 1708344000000,
+		"title": "Crossword Constructors",
+		"image": "https://imgs.xkcd.com/comics/crossword_constructors.png",
+		"alt": "Also, we would really appreciate it if you could prominently refer to it as an 'eHit'.",
+		"transcript": null,
+		"news": null
 	}
 ]
