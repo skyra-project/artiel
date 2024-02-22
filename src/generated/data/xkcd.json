@@ -26053,5 +26053,14 @@
 		"alt": "Also, we would really appreciate it if you could prominently refer to it as an 'eHit'.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2897,
+		"date": 1708516800000,
+		"title": "Light Leap Years",
+		"image": "https://imgs.xkcd.com/comics/light_leap_years.png",
+		"alt": "When Pope Gregory XIII briefly shortened the light-year in 1582, it led to navigational chaos and the loss of several Papal starships.",
+		"transcript": null,
+		"news": null
 	}
 ]
