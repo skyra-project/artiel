@@ -340,10 +340,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.56.0":
-  version: 8.56.0
-  resolution: "@eslint/js@npm:8.56.0"
-  checksum: 10/97a4b5ccf7e24f4d205a1fb0f21cdcd610348ecf685f6798a48dd41ba443f2c1eedd3050ff5a0b8f30b8cf6501ab512aa9b76e531db15e59c9ebaa41f3162e37
+"@eslint/js@npm:8.57.0":
+  version: 8.57.0
+  resolution: "@eslint/js@npm:8.57.0"
+  checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
   languageName: node
   linkType: hard
 
@@ -354,7 +354,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/config-array@npm:^0.11.13":
+"@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
   dependencies:
@@ -393,82 +393,82 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-android-arm64@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-android-arm64@npm:0.1.45"
+"@napi-rs/canvas-android-arm64@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-android-arm64@npm:0.1.49"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-darwin-arm64@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-darwin-arm64@npm:0.1.45"
+"@napi-rs/canvas-darwin-arm64@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-darwin-arm64@npm:0.1.49"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-darwin-x64@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-darwin-x64@npm:0.1.45"
+"@napi-rs/canvas-darwin-x64@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-darwin-x64@npm:0.1.49"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-linux-arm-gnueabihf@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-linux-arm-gnueabihf@npm:0.1.45"
+"@napi-rs/canvas-linux-arm-gnueabihf@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-linux-arm-gnueabihf@npm:0.1.49"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-linux-arm64-gnu@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-linux-arm64-gnu@npm:0.1.45"
+"@napi-rs/canvas-linux-arm64-gnu@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-linux-arm64-gnu@npm:0.1.49"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-linux-arm64-musl@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-linux-arm64-musl@npm:0.1.45"
+"@napi-rs/canvas-linux-arm64-musl@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-linux-arm64-musl@npm:0.1.49"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-linux-x64-gnu@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-linux-x64-gnu@npm:0.1.45"
+"@napi-rs/canvas-linux-x64-gnu@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-linux-x64-gnu@npm:0.1.49"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-linux-x64-musl@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-linux-x64-musl@npm:0.1.45"
+"@napi-rs/canvas-linux-x64-musl@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-linux-x64-musl@npm:0.1.49"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas-win32-x64-msvc@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas-win32-x64-msvc@npm:0.1.45"
+"@napi-rs/canvas-win32-x64-msvc@npm:0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas-win32-x64-msvc@npm:0.1.49"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@napi-rs/canvas@npm:^0.1.45":
-  version: 0.1.45
-  resolution: "@napi-rs/canvas@npm:0.1.45"
+"@napi-rs/canvas@npm:^0.1.49":
+  version: 0.1.49
+  resolution: "@napi-rs/canvas@npm:0.1.49"
   dependencies:
-    "@napi-rs/canvas-android-arm64": "npm:0.1.45"
-    "@napi-rs/canvas-darwin-arm64": "npm:0.1.45"
-    "@napi-rs/canvas-darwin-x64": "npm:0.1.45"
-    "@napi-rs/canvas-linux-arm-gnueabihf": "npm:0.1.45"
-    "@napi-rs/canvas-linux-arm64-gnu": "npm:0.1.45"
-    "@napi-rs/canvas-linux-arm64-musl": "npm:0.1.45"
-    "@napi-rs/canvas-linux-x64-gnu": "npm:0.1.45"
-    "@napi-rs/canvas-linux-x64-musl": "npm:0.1.45"
-    "@napi-rs/canvas-win32-x64-msvc": "npm:0.1.45"
+    "@napi-rs/canvas-android-arm64": "npm:0.1.49"
+    "@napi-rs/canvas-darwin-arm64": "npm:0.1.49"
+    "@napi-rs/canvas-darwin-x64": "npm:0.1.49"
+    "@napi-rs/canvas-linux-arm-gnueabihf": "npm:0.1.49"
+    "@napi-rs/canvas-linux-arm64-gnu": "npm:0.1.49"
+    "@napi-rs/canvas-linux-arm64-musl": "npm:0.1.49"
+    "@napi-rs/canvas-linux-x64-gnu": "npm:0.1.49"
+    "@napi-rs/canvas-linux-x64-musl": "npm:0.1.49"
+    "@napi-rs/canvas-win32-x64-msvc": "npm:0.1.49"
   dependenciesMeta:
     "@napi-rs/canvas-android-arm64":
       optional: true
@@ -488,7 +488,7 @@ __metadata:
       optional: true
     "@napi-rs/canvas-win32-x64-msvc":
       optional: true
-  checksum: 10/7f15bee29a30dae617ebcb7f76a8dfe0f44ebce01bc61c7931a3a6095a7f60555e369e5be31f0790feeddcfb1d16e9035780198734512bb539deaa17d3477b39
+  checksum: 10/78a7e229a0a15d337200b5a9f19da2904c4c6b11971328f5e9b29f94b3d90041a46e01a4d8058b420e0ee593f6f24bbed957dab71ff1618d75edfaff65e6b61c
   languageName: node
   linkType: hard
 
@@ -533,61 +533,61 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:^5.9.1":
-  version: 5.9.1
-  resolution: "@prisma/client@npm:5.9.1"
+"@prisma/client@npm:^5.10.2":
+  version: 5.10.2
+  resolution: "@prisma/client@npm:5.10.2"
   peerDependencies:
     prisma: "*"
   peerDependenciesMeta:
     prisma:
       optional: true
-  checksum: 10/2a661cec8fa94697ee5346e4cc793a7f3ae563ef2427cb15b6b9f712af9368010ede3f854bf75b39b5601db131d4c49cb175449f2f9a281c968685a3507ae183
+  checksum: 10/c608d872ed428fbdfd16fea6dbe313134901f02a12b75887384001718ae8d14e58b01f6968f9f4bdc362a5ad54ea56e7b7c905b4ac8022af1845f588ded50124
   languageName: node
   linkType: hard
 
-"@prisma/debug@npm:5.9.1":
-  version: 5.9.1
-  resolution: "@prisma/debug@npm:5.9.1"
-  checksum: 10/ef9daf19c083e6a7c7470417aee4d4a3a12446c18285cc76f65ce2d133650c28d7a2f0fa5efe9ed7b2d0968ea91d1884e16d377908cc853f20a458270612aa44
+"@prisma/debug@npm:5.10.2":
+  version: 5.10.2
+  resolution: "@prisma/debug@npm:5.10.2"
+  checksum: 10/300219b9f419a1786caf7ae3d60467a90eabdfc003c87bfc7c94787fac0bdd40fd00153ab36de46a1fbbc51e4b853dcf94a70900e23f53744918d98c16eca4d8
   languageName: node
   linkType: hard
 
-"@prisma/engines-version@npm:5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64":
-  version: 5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64
-  resolution: "@prisma/engines-version@npm:5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64"
-  checksum: 10/7ed88a87f64b1cd55fe5ade37020dafb47e8b2f0735cd0e1941953012c3097a6c10800fd7e6d683e8f74bffa66c3b5442e343cada383b3ec2e15c6d4c4b4074f
+"@prisma/engines-version@npm:5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9":
+  version: 5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9
+  resolution: "@prisma/engines-version@npm:5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9"
+  checksum: 10/2d417c78be5ab97d7c2b58b550ef70336b3f3e44e27b6df2feb9084c5c6c69be74b1cf8fdb8217d6aebbf6f34fe22c5d80339ba8bd8aa279a9d6eb2543dcc0b9
   languageName: node
   linkType: hard
 
-"@prisma/engines@npm:5.9.1":
-  version: 5.9.1
-  resolution: "@prisma/engines@npm:5.9.1"
+"@prisma/engines@npm:5.10.2":
+  version: 5.10.2
+  resolution: "@prisma/engines@npm:5.10.2"
   dependencies:
-    "@prisma/debug": "npm:5.9.1"
-    "@prisma/engines-version": "npm:5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64"
-    "@prisma/fetch-engine": "npm:5.9.1"
-    "@prisma/get-platform": "npm:5.9.1"
-  checksum: 10/383d2247416d8f0df577c9fcacf0662d4f30f297f135b9bd8f832f9768ed2a835a3380a1062685c0e36fe4d6b91d2f17de72d2d28b0e7afe2e055f9fc5213af2
+    "@prisma/debug": "npm:5.10.2"
+    "@prisma/engines-version": "npm:5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9"
+    "@prisma/fetch-engine": "npm:5.10.2"
+    "@prisma/get-platform": "npm:5.10.2"
+  checksum: 10/f9d8feffb89452556de3abe5134e9cb69461d3bfc22b3b3ac6ebe84ce7958470d8797e6ba31bf3b7427fbac654ace0b957a12e39b1227084f0f9bc46abe52d37
   languageName: node
   linkType: hard
 
-"@prisma/fetch-engine@npm:5.9.1":
-  version: 5.9.1
-  resolution: "@prisma/fetch-engine@npm:5.9.1"
+"@prisma/fetch-engine@npm:5.10.2":
+  version: 5.10.2
+  resolution: "@prisma/fetch-engine@npm:5.10.2"
   dependencies:
-    "@prisma/debug": "npm:5.9.1"
-    "@prisma/engines-version": "npm:5.9.0-32.23fdc5965b1e05fc54e5f26ed3de66776b93de64"
-    "@prisma/get-platform": "npm:5.9.1"
-  checksum: 10/6a48b323b4929bdcea92c2fde61fbe78c655ebf075589bd4968c4122fa14360be023f41840d43a7964f86c104da68d850ad1bcd6a5894714c3d8adf526fca95b
+    "@prisma/debug": "npm:5.10.2"
+    "@prisma/engines-version": "npm:5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9"
+    "@prisma/get-platform": "npm:5.10.2"
+  checksum: 10/164f7b54fab7d1cd691cf276b10f8da032fb147d533450eaa2689866a236f76c6fc687900a9c9d5167bfea3db52296b5ad4f7de70905437744c6529c5d86ce48
   languageName: node
   linkType: hard
 
-"@prisma/get-platform@npm:5.9.1":
-  version: 5.9.1
-  resolution: "@prisma/get-platform@npm:5.9.1"
+"@prisma/get-platform@npm:5.10.2":
+  version: 5.10.2
+  resolution: "@prisma/get-platform@npm:5.10.2"
   dependencies:
-    "@prisma/debug": "npm:5.9.1"
-  checksum: 10/14e2ba7fcb43d285cd8b1780b9abe709891cf3681eb515b5a237e543906b3b9e9e8cd0606cfb86ed5096ff690b19df1803f1b80cf02c3df9c994e77c30974113
+    "@prisma/debug": "npm:5.10.2"
+  checksum: 10/6c2f4ad8c193a93235e6eee9caab3afbec1e9f26898ede73ad4230730e60caa622a62e2facff614a2bef25f78c5167181ca5c8f4883f80bb30fb8ba0fede5d94
   languageName: node
   linkType: hard
 
@@ -749,8 +749,8 @@ __metadata:
     "@commitlint/cli": "npm:^18.6.1"
     "@commitlint/config-conventional": "npm:^18.6.2"
     "@discordjs/builders": "npm:^1.7.0"
-    "@napi-rs/canvas": "npm:^0.1.45"
-    "@prisma/client": "npm:^5.9.1"
+    "@napi-rs/canvas": "npm:^0.1.49"
+    "@prisma/client": "npm:^5.10.2"
     "@sapphire/duration": "npm:^1.1.2"
     "@sapphire/eslint-config": "npm:^5.0.3"
     "@sapphire/prettier-config": "npm:^2.0.0"
@@ -766,7 +766,7 @@ __metadata:
     "@skyra/start-banner": "npm:^2.0.1"
     "@types/cron": "npm:^2.4.0"
     "@types/gradient-string": "npm:^1.1.5"
-    "@types/node": "npm:^20.11.19"
+    "@types/node": "npm:^20.11.20"
     "@types/turndown": "npm:^5.0.4"
     "@typescript-eslint/eslint-plugin": "npm:^6.21.0"
     "@typescript-eslint/parser": "npm:^6.21.0"
@@ -774,13 +774,13 @@ __metadata:
     cron: "npm:^3.1.6"
     cz-conventional-changelog: "npm:^3.3.0"
     discord-api-types: "npm:^0.37.70"
-    eslint: "npm:^8.56.0"
+    eslint: "npm:^8.57.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-prettier: "npm:^5.1.3"
     gradient-string: "npm:^2.0.2"
     lint-staged: "npm:^15.2.2"
     prettier: "npm:^3.2.5"
-    prisma: "npm:^5.9.1"
+    prisma: "npm:^5.10.2"
     rimraf: "npm:^5.0.5"
     tslib: "npm:^2.6.2"
     turndown: "npm:^7.1.2"
@@ -919,12 +919,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.11.19":
-  version: 20.11.19
-  resolution: "@types/node@npm:20.11.19"
+"@types/node@npm:^20.11.20":
+  version: 20.11.20
+  resolution: "@types/node@npm:20.11.20"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/c7f4705d6c84aa21679ad180c33c13ca9567f650e66e14bcee77c7c43d14619c7cd3b4d7b2458947143030b7b1930180efa6d12d999b45366abff9fed7a17472
+  checksum: 10/ff449bdc94810dadb54e0f77dd587c6505ef79ffa5a208c16eb29b223365b188f4c935a3abaf0906a01d05257c3da1f72465594a841d35bcf7b6deac7a6938fb
   languageName: node
   linkType: hard
 
@@ -1862,15 +1862,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.55.0, eslint@npm:^8.56.0":
-  version: 8.56.0
-  resolution: "eslint@npm:8.56.0"
+"eslint@npm:^8.55.0, eslint@npm:^8.57.0":
+  version: 8.57.0
+  resolution: "eslint@npm:8.57.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@eslint-community/regexpp": "npm:^4.6.1"
     "@eslint/eslintrc": "npm:^2.1.4"
-    "@eslint/js": "npm:8.56.0"
-    "@humanwhocodes/config-array": "npm:^0.11.13"
+    "@eslint/js": "npm:8.57.0"
+    "@humanwhocodes/config-array": "npm:^0.11.14"
     "@humanwhocodes/module-importer": "npm:^1.0.1"
     "@nodelib/fs.walk": "npm:^1.2.8"
     "@ungap/structured-clone": "npm:^1.2.0"
@@ -1906,7 +1906,7 @@ __metadata:
     text-table: "npm:^0.2.0"
   bin:
     eslint: bin/eslint.js
-  checksum: 10/ef6193c6e4cef20774b985a5cc2fd4bf6d3c4decd423117cbc4a0196617861745db291217ad3c537bc3a160650cca965bc818f55e1f3e446af1fcb293f9940a5
+  checksum: 10/00496e218b23747a7a9817bf58b522276d0dc1f2e546dceb4eea49f9871574088f72f1f069a6b560ef537efa3a75261b8ef70e51ef19033da1cc4c86a755ef15
   languageName: node
   linkType: hard
 
@@ -3460,14 +3460,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prisma@npm:^5.9.1":
-  version: 5.9.1
-  resolution: "prisma@npm:5.9.1"
+"prisma@npm:^5.10.2":
+  version: 5.10.2
+  resolution: "prisma@npm:5.10.2"
   dependencies:
-    "@prisma/engines": "npm:5.9.1"
+    "@prisma/engines": "npm:5.10.2"
   bin:
     prisma: build/index.js
-  checksum: 10/4dd4e094939b5dd7b317a821544e777a6d8804bf106546edf3ff0d6ea8203299fca09d852c6d10694a55d088fece1e5f8d86eac5706614609860b1fee7c4769d
+  checksum: 10/5c1de44b5d52862581b9c5a38eb190081579db2a71b14d0004dae8a79a8b4e893cf3c988402efa92b6e807a7e1f30880035895e712b3d402112ceb25e6392b59
   languageName: node
   linkType: hard
 
