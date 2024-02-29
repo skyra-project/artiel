@@ -26080,5 +26080,14 @@
 		"alt": "[later] I'm pleased to report we're now identifying and replacing hundreds of outdated metrics per hour.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2900,
+		"date": 1709121600000,
+		"title": "Call My Cell",
+		"image": "https://imgs.xkcd.com/comics/call_my_cell.png",
+		"alt": "'Hey, can you call my cell?' '...I'm trying, but it says this number is blocked?' 'Ok, thanks, just checking.'",
+		"transcript": null,
+		"news": null
 	}
 ]
