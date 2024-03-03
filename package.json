@@ -25,7 +25,7 @@
 	},
 	"dependencies": {
 		"@discordjs/builders": "^1.7.0",
-		"@napi-rs/canvas": "^0.1.49",
+		"@napi-rs/canvas": "^0.1.50",
 		"@prisma/client": "^5.10.2",
 		"@sapphire/duration": "^1.1.2",
 		"@sapphire/result": "^2.6.6",
@@ -39,7 +39,7 @@
 		"@skyra/start-banner": "^2.0.1",
 		"canvas-constructor": "^7.0.1",
 		"cron": "^3.1.6",
-		"discord-api-types": "^0.37.70",
+		"discord-api-types": "^0.37.71",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.6.2",
 		"turndown": "^7.1.2"
@@ -52,7 +52,7 @@
 		"@sapphire/ts-config": "^5.0.0",
 		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.5",
-		"@types/node": "^20.11.20",
+		"@types/node": "^20.11.24",
 		"@types/turndown": "^5.0.4",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -68,7 +68,7 @@
 	},
 	"resolutions": {
 		"ansi-regex": "^5.0.1",
-		"discord-api-types": "^0.37.70",
+		"discord-api-types": "^0.37.71",
 		"minimist": "^1.2.8"
 	},
 	"engines": {
