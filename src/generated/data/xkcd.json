@@ -26089,5 +26089,14 @@
 		"alt": "'Hey, can you call my cell?' '...I'm trying, but it says this number is blocked?' 'Ok, thanks, just checking.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2901,
+		"date": 1709294400000,
+		"title": "Geographic Qualifiers",
+		"image": "https://imgs.xkcd.com/comics/geographic_qualifiers.png",
+		"alt": "'Thank you for the loveliest evening I've ever had...' [normal] '...east of the Mississippi.' [instant intrigue!]",
+		"transcript": null,
+		"news": null
 	}
 ]
