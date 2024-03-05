@@ -26098,5 +26098,14 @@
 		"alt": "'Thank you for the loveliest evening I've ever had...' [normal] '...east of the Mississippi.' [instant intrigue!]",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2902,
+		"date": 1709553600000,
+		"title": "Ice Core",
+		"image": "https://imgs.xkcd.com/comics/ice_core.png",
+		"alt": "If you find an ash deposition layer from a year in which an eruption destroyed an island that had Camellia sinensis growing on it, you can make a Gone Island Ice_τ.",
+		"transcript": null,
+		"news": null
 	}
 ]
