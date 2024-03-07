@@ -26107,5 +26107,14 @@
 		"alt": "If you find an ash deposition layer from a year in which an eruption destroyed an island that had Camellia sinensis growing on it, you can make a Gone Island Ice_τ.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2903,
+		"date": 1709726400000,
+		"title": "Earth/Venus Venn Diagram",
+		"image": "https://imgs.xkcd.com/comics/earth_venus_venn_diagram.png",
+		"alt": "Actually, the fact that Mars is still orbiting safely over here means that it was technically an *Euler* apocalypse, not a Venn one.",
+		"transcript": null,
+		"news": null
 	}
 ]
