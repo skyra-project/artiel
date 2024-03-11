@@ -26116,5 +26116,14 @@
 		"alt": "Actually, the fact that Mars is still orbiting safely over here means that it was technically an *Euler* apocalypse, not a Venn one.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2904,
+		"date": 1709899200000,
+		"title": "Physics vs. Magic",
+		"image": "https://imgs.xkcd.com/comics/physics_vs_magic.png",
+		"alt": "'At the stroke of midnight, your brother will be hurtling sideways at an altitude of 150 meters' is a regular physics prediction about your nonmagical trebuchet, whereas 'you are cursed to build a brother-launching trebuchet' falls out of the Lagrangian.",
+		"transcript": null,
+		"news": null
 	}
 ]
