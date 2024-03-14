@@ -4,6 +4,7 @@ import { isAny } from '#lib/utilities/operators';
 import { HeadingLevel, bold, heading, underscore } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, createSelectMenuChoiceName, resolveKey } from '@skyra/http-framework-i18n';
+import { MessageFlags } from 'discord-api-types/v10';
 import { randomInt } from 'node:crypto';
 
 const Root = LanguageKeys.Commands.Dice;
@@ -27,6 +28,14 @@ const Root = LanguageKeys.Commands.Dice;
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsRolls).setMinValue(1).setMaxValue(10))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsFaces).setMinValue(2).setMaxValue(100))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsModifier))
+		.addStringOption((builder) =>
+			applyLocalizedBuilder(builder, Root.OptionsSelection).addChoices(
+				createSelectMenuChoiceName(Root.SelectionAddition, { value: 'addition' }),
+				createSelectMenuChoiceName(Root.SelectionGreatest, { value: 'greatest' }),
+				createSelectMenuChoiceName(Root.SelectionLeast, { value: 'least' })
+			)
+		)
+		.addBooleanOption((builder) => applyLocalizedBuilder(builder, Root.OptionsHide))
 )
 export class UserCommand extends Command {
 	private readonly Dice4 = '<:d4:1200786491492802681>';
@@ -52,11 +61,22 @@ export class UserCommand extends Command {
 			lines.push(render);
 		}
 
-		let result = heading((results.reduce((acc, curr) => acc + curr, 0) + modifier).toString(), HeadingLevel.One);
+		let result = heading(this.getResult(results, options.selection).toString(), HeadingLevel.One);
 		if (modifier) result += ` (${modifier > 0 ? '+' : '-'}${modifier})`;
 		lines.push(result);
 
-		return interaction.reply({ content: lines.join('\n') });
+		return interaction.reply({ content: lines.join('\n'), flags: options.hide ? MessageFlags.Ephemeral : undefined });
+	}
+
+	private getResult(results: number[], selection: Selection = 'addition') {
+		switch (selection) {
+			case 'addition':
+				return results.reduce((acc, curr) => acc + curr, 0);
+			case 'greatest':
+				return Math.max(...results);
+			case 'least':
+				return Math.min(...results);
+		}
 	}
 
 	private runPreset(faces?: number, rolls?: number, preset?: Preset) {
@@ -214,6 +234,9 @@ interface Options {
 	rolls?: number;
 	modifier?: number;
 	preset?: Preset;
+	selection?: Selection;
+	hide?: boolean;
 }
 
 type Preset = 'd2' | 'd4' | 'd6' | 'd8' | 'd10' | 'd10:ren' | 'd12' | 'd20:dnd5e' | 'd100' | 'fate';
+type Selection = 'addition' | 'greatest' | 'least';
