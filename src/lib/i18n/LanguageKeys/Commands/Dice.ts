@@ -8,6 +8,8 @@ export const OptionsFaces = 'commands/dice:optionsFaces';
 export const OptionsRolls = 'commands/dice:optionsRolls';
 export const OptionsModifier = 'commands/dice:optionsModifier';
 export const OptionsPreset = 'commands/dice:optionsPreset';
+export const OptionsSelection = 'commands/dice:optionsSelection';
+export const OptionsHide = 'commands/dice:optionsHide';
 
 export const Title = FT<{ dice: string }>('commands/dice:title');
 
@@ -21,3 +23,7 @@ export const PresetD12 = T('commands/dice:presetD12');
 export const PresetD20 = T('commands/dice:presetD20');
 export const PresetD100 = T('commands/dice:presetD100');
 export const PresetFate = T('commands/dice:presetFate');
+
+export const SelectionAddition = T('commands/dice:selectionAddition');
+export const SelectionGreatest = T('commands/dice:selectionGreatest');
+export const SelectionLeast = T('commands/dice:selectionLeast');
