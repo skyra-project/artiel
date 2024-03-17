@@ -1,0 +1,12 @@
+{
+	"name": "love",
+	"description": "Lovemeter, online!",
+	"optionsUserName": "user",
+	"optionsUserDescription": "The user to measure the love with",
+	"less45": "Try again next time...",
+	"less75": "Good enough!",
+	"less100": "Good match!",
+	"at100": "Perfect match!",
+	"itself": "You are a special creature and you should love yourself more than anyone <3",
+	"result": "Result"
+}
