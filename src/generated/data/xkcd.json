@@ -26152,5 +26152,14 @@
 		"alt": "Doug's cousin, the one from London, runs a Bumble love cult.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2908,
+		"date": 1710763200000,
+		"title": "Moon Armor Index",
+		"image": "https://imgs.xkcd.com/comics/moon_armor_index.png",
+		"alt": "Astronomers are a little unsure of the applicability of this index, but NASA's Planetary Protection Officer is all in favor.",
+		"transcript": null,
+		"news": null
 	}
 ]
