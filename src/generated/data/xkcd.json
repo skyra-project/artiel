@@ -26161,5 +26161,14 @@
 		"alt": "Astronomers are a little unsure of the applicability of this index, but NASA's Planetary Protection Officer is all in favor.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2909,
+		"date": 1710936000000,
+		"title": "Moon Landing Mission Profiles",
+		"image": "https://imgs.xkcd.com/comics/moon_landing_mission_profiles.png",
+		"alt": "If you pick a low enough orbit, it gives you a lot of freedom to use a lightweight launch vehicle such as a stepladder.",
+		"transcript": null,
+		"news": null
 	}
 ]
