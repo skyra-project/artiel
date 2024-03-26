@@ -26179,5 +26179,14 @@
 		"alt": "You know that asteroid that almost destroyed Earth in the 90s? Turns out the whole thing was secretly created by Michael Bay, who then PAID Bruce Willis and Ben Affleck to look heroic while blowing it up!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2911,
+		"date": 1711368000000,
+		"title": "Greenland Size",
+		"image": "https://imgs.xkcd.com/comics/greenland_size.png",
+		"alt": "The Mercator projection drastically distorts the size of almost every area of land except a small ring around the North and South Poles.",
+		"transcript": null,
+		"news": null
 	}
 ]
