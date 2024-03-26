@@ -1,0 +1,7 @@
+{
+	"name": "pop",
+	"description": "Generates a board to pop, pop, pop, and pop.",
+	"title": "POP! Let the pops begin!",
+	"titleLost": "POP! Nobody got it in time!",
+	"titleWinner": "POP! We got a winner: {{value}}!"
+}

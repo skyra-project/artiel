@@ -1,6 +1,7 @@
+import { BrandingColors } from '#lib/common/constants';
 import type { ImageSize } from '@discordjs/rest';
 import { isNullishOrEmpty } from '@sapphire/utilities';
-import { container } from '@skyra/http-framework';
+import { container, type Interaction } from '@skyra/http-framework';
 import type { APIUser } from 'discord-api-types/v10';
 
 /**
@@ -21,4 +22,8 @@ export function getAvatar(user: APIUser, size: ImageSize = 128) {
 
 export function getTag(user: APIUser) {
 	return usesPomelo(user) ? `@${user.username}` : `${user.username}#${user.discriminator}`;
+}
+
+export function getColor(interaction: Interaction) {
+	return interaction.user.accent_color ?? BrandingColors.Primary;
 }
