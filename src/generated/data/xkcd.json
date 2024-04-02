@@ -26206,5 +26206,14 @@
 		"alt": "Cesium-133, let it be. Cesium-134, let it be even more.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2914,
+		"date": 1711972800000,
+		"title": "Eclipse Coolness",
+		"image": "https://imgs.xkcd.com/comics/eclipse_coolness.png",
+		"alt": "A partial eclipse is like a cool sunset. A total eclipse is like someone broke the sky.",
+		"transcript": null,
+		"news": null
 	}
 ]
