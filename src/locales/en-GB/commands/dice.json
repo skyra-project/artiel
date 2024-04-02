@@ -9,6 +9,10 @@
 	"optionsModifierDescription": "The modifier to add to the roll",
 	"optionsPresetName": "preset",
 	"optionsPresetDescription": "The preset to use",
+	"optionsSelectionName": "selection",
+	"optionsSelectionDescription": "The selection method to use",
+	"optionsHideName": "hide",
+	"optionsHideDescription": "Whether or not to hide the result (default: False)",
 	"title": "{{dice}} Rolling...",
 	"presetD2": "1d2 (coin)",
 	"presetD4": "1d4",
@@ -19,5 +23,8 @@
 	"presetD12": "1d12",
 	"presetD20": "1d20 (D&D 5e)",
 	"presetD100": "1d100 (Cthulhu)",
-	"presetFate": "Fate (-1/0/+1)"
+	"presetFate": "Fate (-1/0/+1)",
+	"selectionAddition": "Addition (default)",
+	"selectionGreatest": "Greatest",
+	"selectionLeast": "Least"
 }
