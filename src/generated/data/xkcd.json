@@ -26215,5 +26215,14 @@
 		"alt": "A partial eclipse is like a cool sunset. A total eclipse is like someone broke the sky.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2915,
+		"date": 1712145600000,
+		"title": "Eclipse Clouds",
+		"image": "https://imgs.xkcd.com/comics/eclipse_clouds.png",
+		"alt": "The rare compound solar-lunar-nephelogical eclipse",
+		"transcript": null,
+		"news": null
 	}
 ]
