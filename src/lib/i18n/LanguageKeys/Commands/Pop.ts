@@ -2,7 +2,23 @@ import { FT, T, type Value } from '@skyra/http-framework-i18n';
 
 // Root
 export const RootName = T('commands/pop:name');
-export const PopDescription = T('commands/pop:description');
+export const RootDescription = T('commands/pop:description');
+
+// Options
+export const OptionsTimeSpan = 'commands/pop:optionsTimeSpan';
+export const OptionsWidth = 'commands/pop:optionsWidth';
+export const OptionsHeight = 'commands/pop:optionsHeight';
+export const OptionsLength = 'commands/pop:optionsLength';
+
+// Components
+export const ButtonsInputSolution = T('commands/pop:buttonsInputSolution');
+export const ModalTitle = T('commands/pop:modalTitle');
+export const ModalInputPlaceholder = T('commands/pop:modalInputPlaceholder');
+
+// Game
+export const NonexistentGame = T('commands/pop:nonexistentGame');
+export const WrongSolution = T('commands/pop:wrongSolution');
+export const MessageFetchFailed = T('commands/pop:messageFetchFailed');
 
 // Titles
 export const Title = T('commands/pop:title');

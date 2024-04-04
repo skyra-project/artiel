@@ -1,6 +1,24 @@
 {
 	"name": "pop",
 	"description": "Generates a board to pop, pop, pop, and pop.",
+
+	"optionsTimeSpanName": "timespan",
+	"optionsTimeSpanDescription": "The time span in which the board will be active.",
+	"optionsWidthName": "width",
+	"optionsWidthDescription": "The width of the board.",
+	"optionsHeightName": "height",
+	"optionsHeightDescription": "The height of the board.",
+	"optionsLengthName": "length",
+	"optionsLengthDescription": "The length of the solution.",
+
+	"buttonsInputSolution": "Input Solution",
+	"modalTitle": "Solution",
+	"modalInputPlaceholder": "Enter the solution here",
+
+	"nonexistentGame": "There is no game to pop.",
+	"wrongSolution": "That's not the solution.",
+	"messageFetchFailed": "Failed to fetch the message.",
+
 	"title": "POP! Let the pops begin!",
 	"titleLost": "POP! Nobody got it in time!",
 	"titleWinner": "POP! We got a winner: {{value}}!"
