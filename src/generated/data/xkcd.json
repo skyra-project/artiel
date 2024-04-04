@@ -26143,5 +26143,86 @@
 		"alt": "Just think of all the countless petty squabbles and misunderstandings, of all the fervent hatreds, over so insignificant a thing as the direction and duration of a rocket engine firing.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2907,
+		"date": 1710504000000,
+		"title": "Schwa",
+		"image": "https://imgs.xkcd.com/comics/schwa.png",
+		"alt": "Doug's cousin, the one from London, runs a Bumble love cult.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2908,
+		"date": 1710763200000,
+		"title": "Moon Armor Index",
+		"image": "https://imgs.xkcd.com/comics/moon_armor_index.png",
+		"alt": "Astronomers are a little unsure of the applicability of this index, but NASA's Planetary Protection Officer is all in favor.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2909,
+		"date": 1710936000000,
+		"title": "Moon Landing Mission Profiles",
+		"image": "https://imgs.xkcd.com/comics/moon_landing_mission_profiles.png",
+		"alt": "If you pick a low enough orbit, it gives you a lot of freedom to use a lightweight launch vehicle such as a stepladder.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2910,
+		"date": 1711108800000,
+		"title": "The Wreck of the Edmund Fitzgerald",
+		"image": "https://imgs.xkcd.com/comics/the_wreck_of_the_edmund_fitzgerald.png",
+		"alt": "You know that asteroid that almost destroyed Earth in the 90s? Turns out the whole thing was secretly created by Michael Bay, who then PAID Bruce Willis and Ben Affleck to look heroic while blowing it up!",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2911,
+		"date": 1711368000000,
+		"title": "Greenland Size",
+		"image": "https://imgs.xkcd.com/comics/greenland_size.png",
+		"alt": "The Mercator projection drastically distorts the size of almost every area of land except a small ring around the North and South Poles.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2912,
+		"date": 1711540800000,
+		"title": "Cursive Letters",
+		"image": "https://imgs.xkcd.com/comics/cursive_letters.png",
+		"alt": "𝓘 𝓽𝓱𝓲𝓷𝓴 𝓬𝓪𝓹𝓲𝓽𝓪𝓵 𝓛 𝓲𝓼 𝓹𝓻𝓸𝓫𝓪𝓫𝓵𝔂 𝓽𝓱𝓮 𝓶𝓸𝓼𝓽 𝓯𝓾𝓷 𝓽𝓸 𝔀𝓻𝓲𝓽𝓮, 𝓽𝓱𝓸𝓾𝓰𝓱 𝓵𝓸𝔀𝓮𝓻𝓬𝓪𝓼𝓮 𝓺 𝓲𝓼 𝓪𝓵𝓼𝓸 𝓪 𝓼𝓽𝓻𝓸𝓷𝓰 𝓬𝓸𝓷𝓽𝓮𝓷𝓭𝓮𝓻.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2913,
+		"date": 1711713600000,
+		"title": "Periodic Table Regions",
+		"image": "https://imgs.xkcd.com/comics/periodic_table_regions.png",
+		"alt": "Cesium-133, let it be. Cesium-134, let it be even more.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2914,
+		"date": 1711972800000,
+		"title": "Eclipse Coolness",
+		"image": "https://imgs.xkcd.com/comics/eclipse_coolness.png",
+		"alt": "A partial eclipse is like a cool sunset. A total eclipse is like someone broke the sky.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2915,
+		"date": 1712145600000,
+		"title": "Eclipse Clouds",
+		"image": "https://imgs.xkcd.com/comics/eclipse_clouds.png",
+		"alt": "The rare compound solar-lunar-nephelogical eclipse",
+		"transcript": null,
+		"news": null
 	}
 ]
