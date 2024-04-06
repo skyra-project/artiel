@@ -9,6 +9,8 @@
 	"optionsModifierDescription": "Модификатор для добавления к броску",
 	"optionsPresetName": "предустановка",
 	"optionsPresetDescription": "Используемая предустановка",
+	"optionsSelectionName": "выбор",
+	"optionsSelectionDescription": "Используемый метод выбора",
 	"optionsHideName": "скрыть",
 	"optionsHideDescription": "Скрывать результат (по умолчанию: False)",
 	"title": "{{dice}} Бросаю...",
@@ -22,6 +24,7 @@
 	"presetD20": "1d20 (D&D 5e)",
 	"presetD100": "1d100 (Ктулху)",
 	"presetFate": "Fate (-1/0/+1)",
+	"selectionAddition": "Сложение (по умолчанию)",
 	"selectionGreatest": "Наибольшее",
 	"selectionLeast": "Наименьшее"
 }
