@@ -9,6 +9,8 @@
 	"optionsModifierDescription": "Модификатор для добавления к броску",
 	"optionsPresetName": "предустановка",
 	"optionsPresetDescription": "Используемая предустановка",
+	"optionsHideName": "скрыть",
+	"optionsHideDescription": "Скрывать результат (по умолчанию: False)",
 	"title": "{{dice}} Бросаю...",
 	"presetD2": "1d2 (монета)",
 	"presetD4": "1d4",
@@ -19,5 +21,7 @@
 	"presetD12": "1d12",
 	"presetD20": "1d20 (D&D 5e)",
 	"presetD100": "1d100 (Ктулху)",
-	"presetFate": "Fate (-1/0/+1)"
+	"presetFate": "Fate (-1/0/+1)",
+	"selectionGreatest": "Наибольшее",
+	"selectionLeast": "Наименьшее"
 }
