@@ -18,7 +18,6 @@ export const ModalInputPlaceholder = T('commands/pop:modalInputPlaceholder');
 // Game
 export const NonexistentGame = T('commands/pop:nonexistentGame');
 export const WrongSolution = T('commands/pop:wrongSolution');
-export const MessageFetchFailed = T('commands/pop:messageFetchFailed');
 
 // Titles
 export const Title = T('commands/pop:title');

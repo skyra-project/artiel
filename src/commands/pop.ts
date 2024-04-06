@@ -1,16 +1,15 @@
 import { Colors } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
+import { popGames } from '#lib/utilities/pop';
 import { random } from '#lib/utilities/utils';
 import { ActionRowBuilder, ButtonBuilder, EmbedBuilder } from '@discordjs/builders';
-import { Collection } from '@discordjs/collection';
 import { Time } from '@sapphire/duration';
 import { DiscordSnowflake } from '@sapphire/snowflake';
-import { ChatInputCommandInteraction, Command, PartialMessage, RegisterCommand } from '@skyra/http-framework';
+import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
 import { ButtonStyle } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Pop;
-export const popGames = new Collection<bigint, { response: PartialMessage<ChatInputCommandInteraction>; timer: NodeJS.Timeout }>();
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
@@ -25,7 +24,7 @@ export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const t = getSupportedLanguageT(interaction);
 		const [time, width, height, length] = [
-			this.parseOption(options.timespan, Time.Second * 30, Time.Second * 10, Time.Minute * 2),
+			this.parseOption(options.timespan ? options.timespan * Time.Second : undefined, Time.Second * 30, Time.Second * 10, Time.Minute * 2),
 			this.parseOption(options.width, 8, 1, 10),
 			this.parseOption(options.height, 3, 1, 8),
 			this.parseOption(options.length, 3, 3, 5)
@@ -43,13 +42,14 @@ export class UserCommand extends Command {
 			.setTimestamp();
 		const components = new ActionRowBuilder<ButtonBuilder>().addComponents(
 			new ButtonBuilder() //
-				.setCustomId(`pop.${solution}.${gameKey}`)
+				.setCustomId(`pop.${solution}.${gameKey}.${Date.now() + time + Time.Second}`)
 				.setLabel(t(Root.ButtonsInputSolution))
 				.setStyle(ButtonStyle.Secondary)
 		);
 
 		const response = await interaction.defer();
 		await response.update({ embeds: [embed.toJSON()], components: [components.toJSON()] });
+
 		popGames.set(gameKey, {
 			response,
 			timer: setTimeout(async () => {
