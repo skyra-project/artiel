@@ -9,6 +9,10 @@
 	"optionsModifierDescription": "De modificatie om toe te voegen aan de rol",
 	"optionsPresetName": "voorinstelling",
 	"optionsPresetDescription": "De voorinstelling om te gebruiken",
+	"optionsSelectionName": "selectie",
+	"optionsSelectionDescription": "De te gebruiken selectiemethode",
+	"optionsHideName": "verbergen",
+	"optionsHideDescription": "Of het bericht openbaar moet worden weergegeven (standaard: False)",
 	"title": "{{dice}} Werpen...",
 	"presetD2": "1d2 (munt)",
 	"presetD4": "1d4",
@@ -19,5 +23,8 @@
 	"presetD12": "1d12",
 	"presetD20": "1d20 (D&D 5e)",
 	"presetD100": "1d100 (Cthulhu)",
-	"presetFate": "Fate (-1/0/+1)"
+	"presetFate": "Fate (-1/0/+1)",
+	"selectionAddition": "Toevoeging (standaard)",
+	"selectionGreatest": "Grootste",
+	"selectionLeast": "Minste"
 }
