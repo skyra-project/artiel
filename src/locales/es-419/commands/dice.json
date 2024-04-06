@@ -9,6 +9,10 @@
 	"optionsModifierDescription": "El modificador a añadir al resultado",
 	"optionsPresetName": "preajuste",
 	"optionsPresetDescription": "El ajuste predefinido a usar",
+	"optionsSelectionName": "selección",
+	"optionsSelectionDescription": "El método de selección a usar",
+	"optionsHideName": "ocultar",
+	"optionsHideDescription": "Ocultar o no el resultado (por defecto: False)",
 	"title": "{{dice}} Tirando...",
 	"presetD2": "1d2 (moneda)",
 	"presetD4": "1d4",
@@ -19,5 +23,8 @@
 	"presetD12": "1d12",
 	"presetD20": "1d20 (D&D 5e)",
 	"presetD100": "1d100 (Cthulhu)",
-	"presetFate": "Fate (-1/0/+1)"
+	"presetFate": "Fate (-1/0/+1)",
+	"selectionAddition": "Adición (por defecto)",
+	"selectionGreatest": "Mayor",
+	"selectionLeast": "Menor"
 }
