@@ -17,7 +17,12 @@ export class UserHandler extends InteractionHandler {
 		const gameKey = BigInt(gameKeyString);
 
 		if (Date.now() > timestamp) {
-			popGames.delete(gameKey);
+			const popGame = popGames.get(gameKey);
+			if (popGame) {
+				clearTimeout(popGame.timer);
+				popGames.delete(gameKey);
+			}
+
 			const embed = new EmbedBuilder(interaction.message?.embeds[0]);
 			embed.setColor(Colors.Red).setTitle(t(Root.TitleLost));
 
