@@ -13,10 +13,10 @@ const Root = LanguageKeys.Commands.Pop;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsTimeSpan))
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsWidth))
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsHeight))
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsLength))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsTimeSpan).setMinValue(10).setMaxValue(120))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsWidth).setMinValue(1).setMaxValue(10))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsHeight).setMinValue(1).setMaxValue(8))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsLength).setMinValue(3).setMaxValue(5))
 )
 export class UserCommand extends Command {
 	private readonly characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -24,15 +24,15 @@ export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const t = getSupportedLanguageT(interaction);
 		const [time, width, height, length] = [
-			this.parseOption(options.timespan ? options.timespan * Time.Second : undefined, Time.Second * 30, Time.Second * 10, Time.Minute * 2),
-			this.parseOption(options.width, 8, 1, 10),
-			this.parseOption(options.height, 3, 1, 8),
-			this.parseOption(options.length, 3, 3, 5)
+			options.timespan ? options.timespan * Time.Second : Time.Second * 30,
+			options.width ?? 8,
+			options.height ?? 3,
+			options.length ?? 3
 		];
 
 		const pop = this.generatePop(length);
 		const solution = this.generateSolution(length);
-		const gameKey = DiscordSnowflake.generate();
+		const key = DiscordSnowflake.generate();
 
 		const board = [...this.generateBoard(width, height, pop, solution)].join('\n');
 		const embed = new EmbedBuilder() //
@@ -42,7 +42,7 @@ export class UserCommand extends Command {
 			.setTimestamp();
 		const components = new ActionRowBuilder<ButtonBuilder>().addComponents(
 			new ButtonBuilder() //
-				.setCustomId(`pop.${solution}.${gameKey}.${Date.now() + time + Time.Second}`)
+				.setCustomId(`pop.${solution}.${key}.${Date.now() + time + Time.Second}`)
 				.setLabel(t(Root.ButtonsInputSolution))
 				.setStyle(ButtonStyle.Secondary)
 		);
@@ -50,7 +50,7 @@ export class UserCommand extends Command {
 		const response = await interaction.defer();
 		await response.update({ embeds: [embed.toJSON()], components: [components.toJSON()] });
 
-		popGames.set(gameKey, {
+		popGames.set(key, {
 			response,
 			timer: setTimeout(async () => {
 				embed.setColor(Colors.Red).setTitle(t(Root.TitleLost));
@@ -101,11 +101,6 @@ export class UserCommand extends Command {
 	private generateBoardLineWithSolution(pop: string, solution: string, width: number) {
 		const solutionX = random(width);
 		return pop.repeat(solutionX) + solution + pop.repeat(width - solutionX - 1);
-	}
-
-	private parseOption(option: number | undefined, defaultValue: number, minimum: number, maximum: number) {
-		if (option === undefined) return defaultValue;
-		return Math.max(minimum, Math.min(maximum, option));
 	}
 }
 

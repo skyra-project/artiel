@@ -20,13 +20,12 @@ const ONE_TO_TEN = new Map<number, UtilOneToTenEntry>([
 ]);
 
 @RegisterCommand((builder) =>
-	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription).addStringOption((builder) =>
-		applyLocalizedBuilder(builder, Root.OptionsRateableTarget).setRequired(true)
-	)
+	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+		.addStringOption((builder) => applyLocalizedBuilder(builder, Root.OptionsRateableTarget).setRequired(true))
 )
 export class UserCommand extends Command {
 	private devRegex = new RegExp(`^(kyra|favna|${OWNERS.map((owner) => `<@!?${owner}>`).join('|')})$`, 'i');
-	private botRegex = new RegExp(`^(you|yourself|skyra|<@!${process.env.CLIENT_ID}>)$`, 'i');
+	private botRegex = new RegExp(`^(you|yourself|artiel|<@!${process.env.CLIENT_ID}>)$`, 'i');
 
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		let rateableThing = options.target;

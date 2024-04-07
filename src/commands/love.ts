@@ -2,22 +2,21 @@ import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { getAvatar, getColor, getTag } from '#lib/utilities/discord';
 import { EmbedBuilder } from '@discordjs/builders';
 import { Command, RegisterCommand, type TransformedArguments } from '@skyra/http-framework';
-import { applyLocalizedBuilder, getT } from '@skyra/http-framework-i18n';
+import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
 
 const Root = LanguageKeys.Commands.Love;
 const RevolvingHeartTwemoji = 'https://cdn.jsdelivr.net/gh/twitter/twemoji@v14.0.2/assets/72x72/1f49e.png';
 
 @RegisterCommand((builder) =>
-	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription).addUserOption((builder) =>
-		applyLocalizedBuilder(builder, Root.OptionsUser).setRequired(true)
-	)
+	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+		.addUserOption((builder) => applyLocalizedBuilder(builder, Root.OptionsUser).setRequired(true))
 )
 export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const isSelf = interaction.user.id === options.user.id;
 		const percentage = isSelf ? 1 : Math.random();
 		const estimatedPercentage = Math.ceil(percentage * 100);
-		const t = getT(interaction.locale);
+		const t = getSupportedLanguageT(interaction);
 
 		let result: string;
 		if (estimatedPercentage < 45) {
