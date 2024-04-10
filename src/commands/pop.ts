@@ -2,7 +2,7 @@ import { Colors } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { popGames } from '#lib/utilities/pop';
 import { random } from '#lib/utilities/utils';
-import { ActionRowBuilder, ButtonBuilder, EmbedBuilder } from '@discordjs/builders';
+import { ActionRowBuilder, ButtonBuilder, EmbedBuilder, inlineCode, spoiler } from '@discordjs/builders';
 import { Time } from '@sapphire/duration';
 import { DiscordSnowflake } from '@sapphire/snowflake';
 import { Command, RegisterCommand } from '@skyra/http-framework';
@@ -76,8 +76,8 @@ export class UserCommand extends Command {
 	}
 
 	private *generateBoard(width: number, height: number, pop: string, solution: string): IterableIterator<string> {
-		const wrappedPop = `||\`${pop}\`||`;
-		const wrappedSolution = `||\`${solution}\`||`;
+		const wrappedPop = `${spoiler(inlineCode(pop))}`;
+		const wrappedSolution = `${spoiler(inlineCode(solution))}`;
 		if (height === 0) {
 			return yield this.generateBoardLineWithSolution(wrappedPop, wrappedSolution, width);
 		}
