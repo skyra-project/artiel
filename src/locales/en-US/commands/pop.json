@@ -3,7 +3,7 @@
 	"description": "Generates a board to pop, pop, pop, and pop.",
 
 	"optionsTimeSpanName": "timespan",
-	"optionsTimeSpanDescription": "The seconds in which the board will be active.",
+	"optionsTimeSpanDescription": "The seconds during which the board will be active.",
 	"optionsWidthName": "width",
 	"optionsWidthDescription": "The width of the board.",
 	"optionsHeightName": "height",
