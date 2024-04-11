@@ -26242,5 +26242,14 @@
 		"alt": "The most rare, top-tier eclipse photo would be the Solar Earth Eclipse, but the Apollo 12 crew's attempt to capture it was marred by camera shake. They said it looked spectacular, though.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2918,
+		"date": 1712750400000,
+		"title": "Tick Marks",
+		"image": "https://imgs.xkcd.com/comics/tick_marks.png",
+		"alt": "If you're really savvy, you can hide an entire set of illicit transactions by timing them to draw what looks like a graph inset.",
+		"transcript": null,
+		"news": null
 	}
 ]
