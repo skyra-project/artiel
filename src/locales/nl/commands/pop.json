@@ -1,1 +1,20 @@
-{}
+{
+	"name": "pop",
+	"description": "Genereert een bord om te poppen, poppen, poppen en poppen.",
+	"optionsTimeSpanName": "duur",
+	"optionsTimeSpanDescription": "De seconden gedurende welke het bord actief is.",
+	"optionsWidthName": "breedte",
+	"optionsWidthDescription": "De breedte van het bord.",
+	"optionsHeightName": "hoogte",
+	"optionsHeightDescription": "De hoogte van het bord.",
+	"optionsLengthName": "lengte",
+	"optionsLengthDescription": "De lengte van de oplossing.",
+	"buttonsInputSolution": "Invoer Oplossing",
+	"modalTitle": "Oplossing",
+	"modalInputPlaceholder": "Voer de oplossing hier in",
+	"nonexistentGame": "Er is geen spel om te popen.",
+	"wrongSolution": "Dat is niet de oplossing.",
+	"title": "POP! Laat het poppen beginnen!",
+	"titleLost": "POP! Niemand heeft het op tijd gevonden!",
+	"titleWinner": "POP! We hebben een winnaar: {{value}}!"
+}
