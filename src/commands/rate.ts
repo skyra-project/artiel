@@ -32,7 +32,7 @@ export class UserCommand extends Command {
 		'i'
 	);
 
-	private readonly botRegex = new RegExp(`^(you|yourself|artiel|<@!${process.env.CLIENT_ID}>)$`, 'i');
+	private readonly botRegex = new RegExp(`^(you|yourself|artiel|<@!?${process.env.CLIENT_ID}>)$`, 'i');
 
 	private readonly myselfRegex = new RegExp(`^(myself|me)$`, 'i');
 
