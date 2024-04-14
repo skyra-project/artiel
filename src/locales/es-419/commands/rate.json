@@ -1,15 +1,15 @@
 {
-	"name": "",
-	"description": "",
-	"optionsRateableTargetName": "",
-	"optionsRateableTargetDescription": "",
-	"output": "",
+	"name": "calificar",
+	"description": "Califica a alguien",
+	"optionsRateableTargetName": "usuario",
+	"optionsRateableTargetDescription": "El usuario a calificar",
+	"output": "**{{author}}**, le daría a **{{userToRate}}** una **{{rate}}**/100 {{emoji}}",
 	"myself": [
-		"",
-		""
+		". Me amo mucho 😊",
+		"yo mismo"
 	],
 	"owners": [
-		"",
-		""
+		". Me encantan mis desarrolladores 🥰",
+		"mis desarrolladores"
 	]
 }
