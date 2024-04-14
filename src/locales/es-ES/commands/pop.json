@@ -1,1 +1,20 @@
-{}
+{
+	"name": "pop",
+	"description": "Genera un tablero de pop, pop, pop y pop",
+	"optionsDurationName": "duración",
+	"optionsDurationDescription": "El tiempo en segundos durante el cual el tablero estará activo",
+	"optionsWidthName": "anchura",
+	"optionsWidthDescription": "La anchura del tablero",
+	"optionsHeightName": "altura",
+	"optionsHeightDescription": "La altura del tablero",
+	"optionsLengthName": "longitud",
+	"optionsLengthDescription": "La longitud de la solución",
+	"buttonsInputSolution": "Escriba la Solución",
+	"modalTitle": "Solución",
+	"modalInputPlaceholder": "Introduzca la solución aquí",
+	"nonexistentGame": "No hay juego para hacer un pop.",
+	"wrongSolution": "Esa no es la solución.",
+	"title": "¡POP! ¡Que comiencen los pops!",
+	"titleLost": "¡POP! ¡Nadie lo consiguió a tiempo!",
+	"titleWinner": "¡POP! ¡Tenemos ganador: {{value}}!"
+}
