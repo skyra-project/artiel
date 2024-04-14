@@ -1,6 +1,5 @@
 {
 	"name": "liefde",
-	"description": "Liefdemeter, online!",
 	"optionsUserName": "gebruiker",
 	"optionsUserDescription": "De gebruiker om de liefde mee te meten",
 	"less45": "Probeer het de volgende keer opnieuw...",
