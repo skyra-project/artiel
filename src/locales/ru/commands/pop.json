@@ -1,7 +1,11 @@
 {
+	"name": "хлоп",
 	"optionsWidthName": "ширина",
 	"optionsHeightName": "высота",
 	"optionsLengthName": "длина",
+	"optionsLengthDescription": "Длина решения",
+	"modalTitle": "Решение",
+	"wrongSolution": "Это не решение.",
 	"titleLost": "ХЛОП! Никто не справился вовремя!",
 	"titleWinner": "ХЛОП! У нас есть победитель: {{value}}!"
 }
