@@ -1,15 +1,15 @@
 {
-	"name": "",
+	"name": "оценить",
 	"description": "",
-	"optionsRateableTargetName": "",
+	"optionsRateableTargetName": "пользователь",
 	"optionsRateableTargetDescription": "",
-	"output": "",
+	"output": "**{{author}}**, я бы дал **{{userToRate}}** **{{rate}}**/100 {{emoji}}",
 	"myself": [
-		"",
+		". Я очень люблю себя 😊",
 		""
 	],
 	"owners": [
-		"",
+		". Я очень люблю своих разработчиков 🥰",
 		""
 	]
 }
