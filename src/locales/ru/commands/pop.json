@@ -1,11 +1,16 @@
 {
 	"name": "хлоп",
+	"optionsDurationName": "продолжительность",
 	"optionsWidthName": "ширина",
+	"optionsWidthDescription": "Ширина поля",
 	"optionsHeightName": "высота",
+	"optionsHeightDescription": "Высота поля",
 	"optionsLengthName": "длина",
 	"optionsLengthDescription": "Длина решения",
 	"modalTitle": "Решение",
+	"modalInputPlaceholder": "Введите решение здесь",
 	"wrongSolution": "Это не решение.",
+	"title": "ХЛОП! Пусть начнутся хлопки!",
 	"titleLost": "ХЛОП! Никто не справился вовремя!",
 	"titleWinner": "ХЛОП! У нас есть победитель: {{value}}!"
 }
