@@ -1,5 +1,6 @@
 {
 	"name": "хлоп",
+	"description": "Генерирует поле, чтобы хлопать, хлопать, хлопать и хлопать",
 	"optionsDurationName": "продолжительность",
 	"optionsDurationDescription": "Время в секундах, в течение которого поле будет активно",
 	"optionsWidthName": "ширина",
