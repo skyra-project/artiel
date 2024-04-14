@@ -1,1 +1,7 @@
-{}
+{
+	"optionsWidthName": "ширина",
+	"optionsHeightName": "высота",
+	"optionsLengthName": "длина",
+	"titleLost": "ХЛОП! Никто не справился вовремя!",
+	"titleWinner": "ХЛОП! У нас есть победитель: {{value}}!"
+}
