@@ -1,1 +1,12 @@
-{}
+{
+	"name": "мем",
+	"description": "Згенерувати мем",
+	"optionsNameName": "назва",
+	"optionsNameDescription": "Назва шаблону мему для використання",
+	"optionsContentName": "зміст",
+	"optionsContentDescription": "Вміст для запису у шаблон, розділений |",
+	"optionsTargetName": "користувач",
+	"optionsTargetDescription": "Користувач якого буде включено у мем",
+	"noEntryFound": "Шаблону мема з назвою {{value}} не знайшлось.",
+	"altText": "Мем згенерований на основі шаблону \"{{template}}\". {{parts}}"
+}
