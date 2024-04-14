@@ -1,15 +1,15 @@
 {
-	"name": "",
-	"description": "",
-	"optionsRateableTargetName": "",
-	"optionsRateableTargetDescription": "",
-	"output": "",
+	"name": "rate",
+	"description": "Rate someone",
+	"optionsRateableTargetName": "target",
+	"optionsRateableTargetDescription": "The user to rate",
+	"output": "**{{author}}**, I would give **{{userToRate}}** a **{{rate}}**/100 {{emoji}}",
 	"myself": [
-		"",
-		""
+		". I love myself a lot 😊",
+		"myself"
 	],
 	"owners": [
-		"",
-		""
+		". I love my developers a lot 🥰",
+		"my developers"
 	]
 }
