@@ -1,6 +1,6 @@
 {
 	"name": "beoordeling",
-	"description": "Laat bots meningen hebben en iemand beoordelen.",
+	"description": "",
 	"optionsRateableTargetName": "doel",
 	"optionsRateableTargetDescription": "De gebruiker om te beoordelen",
 	"output": "**{{author}}**, Ik zou **{{userToRate}}** een **{{rate}}**/100 {{emoji}} geven",
