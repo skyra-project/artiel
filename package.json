@@ -39,7 +39,7 @@
 		"@skyra/shared-http-pieces": "^1.2.2",
 		"@skyra/start-banner": "^2.0.1",
 		"canvas-constructor": "^7.0.1",
-		"cron": "^3.1.6",
+		"cron": "^3.1.7",
 		"discord-api-types": "^0.37.79",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.6.2",
@@ -53,7 +53,7 @@
 		"@sapphire/ts-config": "^5.0.1",
 		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.6",
-		"@types/node": "^20.12.5",
+		"@types/node": "^20.12.7",
 		"@types/turndown": "^5.0.4",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -65,7 +65,7 @@
 		"prettier": "^3.2.5",
 		"prisma": "^5.12.1",
 		"rimraf": "^5.0.5",
-		"typescript": "^5.4.4"
+		"typescript": "^5.4.5"
 	},
 	"resolutions": {
 		"ansi-regex": "^5.0.1",
@@ -95,6 +95,6 @@
 	},
 	"packageManager": "yarn@4.1.1",
 	"volta": {
-		"node": "20.12.1"
+		"node": "20.12.2"
 	}
 }
