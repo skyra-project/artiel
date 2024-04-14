@@ -1,6 +1,6 @@
 {
 	"name": "love",
-	"description": "Lovemeter, online!",
+	"description": "Measure the love between two users",
 	"optionsUserName": "user",
 	"optionsUserDescription": "The user to measure the love with",
 	"less45": "Try again next time...",

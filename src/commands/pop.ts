@@ -13,7 +13,7 @@ const Root = LanguageKeys.Commands.Pop;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
-		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsTimeSpan).setMinValue(10).setMaxValue(120))
+		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsDuration).setMinValue(10).setMaxValue(120))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsWidth).setMinValue(1).setMaxValue(10))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsHeight).setMinValue(1).setMaxValue(8))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsLength).setMinValue(3).setMaxValue(5))
@@ -24,7 +24,7 @@ export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const t = getSupportedLanguageT(interaction);
 		const [time, width, height, length] = [
-			options.timespan ? options.timespan * Time.Second : Time.Second * 30,
+			options.duration ? options.duration * Time.Second : Time.Second * 30,
 			options.width ?? 8,
 			options.height ?? 3,
 			options.length ?? 3
@@ -108,5 +108,5 @@ interface Options {
 	width?: number;
 	height?: number;
 	length?: number;
-	timespan?: number;
+	duration?: number;
 }

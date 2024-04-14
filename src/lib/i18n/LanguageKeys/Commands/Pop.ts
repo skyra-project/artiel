@@ -5,7 +5,7 @@ export const RootName = T('commands/pop:name');
 export const RootDescription = T('commands/pop:description');
 
 // Options
-export const OptionsTimeSpan = 'commands/pop:optionsTimeSpan';
+export const OptionsDuration = 'commands/pop:optionsDuration';
 export const OptionsWidth = 'commands/pop:optionsWidth';
 export const OptionsHeight = 'commands/pop:optionsHeight';
 export const OptionsLength = 'commands/pop:optionsLength';

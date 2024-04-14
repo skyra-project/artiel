@@ -1,6 +1,6 @@
 {
 	"name": "rate",
-	"description": "Let bots have opinions and rate somebody.",
+	"description": "Rate someone",
 	"optionsRateableTargetName": "target",
 	"optionsRateableTargetDescription": "The user to rate",
 	"output": "**{{author}}**, I would give **{{userToRate}}** a **{{rate}}**/100 {{emoji}}",
