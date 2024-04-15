@@ -1,1 +1,20 @@
-{}
+{
+	"name": "पॉप",
+	"description": "पॉप, पॉप, पॉप और पॉप के लिए एक बोर्ड बनाएं",
+	"optionsDurationName": "अवधि",
+	"optionsDurationDescription": "सेकंड में वह समय जिसके दौरान बोर्ड सक्रिय रहेगा",
+	"optionsWidthName": "चौड़ाई",
+	"optionsWidthDescription": "बोर्ड की चौड़ाई",
+	"optionsHeightName": "ऊँचाई",
+	"optionsHeightDescription": "बोर्ड की ऊंचाई",
+	"optionsLengthName": "लंबाई",
+	"optionsLengthDescription": "हल की लंबाई",
+	"buttonsInputSolution": "हल इनपुट",
+	"modalTitle": "हल",
+	"modalInputPlaceholder": "हल यहां दर्ज करें",
+	"nonexistentGame": "पॉप करने के लिए कोई गेम नहीं है।",
+	"wrongSolution": "यह हाल नहीं है।",
+	"title": "पॉप! पॉप शुरू करते हैं!",
+	"titleLost": "पॉप! किसी को भी यह समय पर नहीं मिला!",
+	"titleWinner": "पॉप! हमें एक विजेता मिला: {{value}}!"
+}
