@@ -1,1 +1,20 @@
-{}
+{
+	"name": "pop",
+	"description": "Генерує дошку для pop, pop, pop, та pop",
+	"optionsDurationName": "тривалість",
+	"optionsDurationDescription": "Час в секундах, протягом яких дошка буде активною",
+	"optionsWidthName": "ширина",
+	"optionsWidthDescription": "Ширина дошки",
+	"optionsHeightName": "висота",
+	"optionsHeightDescription": "Висота дошки",
+	"optionsLengthName": "довжина",
+	"optionsLengthDescription": "Довжина рішення",
+	"buttonsInputSolution": "Введення Рішення",
+	"modalTitle": "Рішення",
+	"modalInputPlaceholder": "Введіть рішення тут",
+	"nonexistentGame": "Немає жодної гри в pop.",
+	"wrongSolution": "Це не є рішенням.",
+	"title": "POP! Нехай pops почнеться!",
+	"titleLost": "POP! Ніхто не встиг вчасно!",
+	"titleWinner": "POP! Ми маємо переможця: {{value}}!"
+}
