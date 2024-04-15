@@ -12,6 +12,7 @@
 	"buttonsInputSolution": "Ввести решение",
 	"modalTitle": "Решение",
 	"modalInputPlaceholder": "Введите решение здесь",
+	"nonexistentGame": "Нет игры для хлопков.",
 	"wrongSolution": "Это не решение.",
 	"title": "ХЛОП! Пусть начнутся хлопки!",
 	"titleLost": "ХЛОП! Никто не справился вовремя!",
