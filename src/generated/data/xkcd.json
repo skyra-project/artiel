@@ -26260,5 +26260,14 @@
 		"alt": "First comes blood / Then we perish / Then comes Death in his Eternity Carriage.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2920,
+		"date": 1713182400000,
+		"title": "Survey Marker",
+		"image": "https://imgs.xkcd.com/comics/survey_marker.png",
+		"alt": "Fun fact: The standard North American NAD83 coordinate system is misaligned from the actual Earth, off-center by about 7 feet. Someone knows where I am, and I'm in the wrong place.",
+		"transcript": null,
+		"news": null
 	}
 ]
