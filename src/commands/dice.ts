@@ -165,7 +165,7 @@ export class UserCommand extends Command {
 		const criticalSuccess = options.criticalSuccess ?? max - 1;
 		const onCriticalFailure = options.onCriticalFailure ?? OnCriticalReroll.Nothing;
 		const onCriticalSuccess = options.onCriticalSuccess ?? OnCriticalReroll.Nothing;
-		const render = options.render ?? renderDice;
+		const render = options.render ?? renderGenericDice;
 
 		for (let i = 0; i < rolls; i++) {
 			const first = randomInt(min, max);
@@ -190,7 +190,7 @@ export class UserCommand extends Command {
 			}
 		}
 
-		return { results, render: renders.join(' '), dice: renderDice(options.faces), complex: options.complex ?? false };
+		return { results, render: renders.join(' '), dice: getDiceEmoji(options.faces), complex: options.complex ?? false };
 	}
 
 	private getCriticalRerollAttempts(type: OnCriticalReroll) {
@@ -224,7 +224,7 @@ enum DiceEmoji {
 	RollingDiceCup = '<:rolling_dice_cup:1200786597105377290>'
 }
 
-function renderDice(faces: number) {
+function getDiceEmoji(faces: number) {
 	switch (faces) {
 		case 2:
 			return DiceEmoji.CoinFlip;
@@ -256,6 +256,10 @@ function renderFateDice(dice: number) {
 		default:
 			return '';
 	}
+}
+
+function renderGenericDice(dice: number) {
+	return underscore(dice.toString());
 }
 
 function renderCoinDice(dice: number) {
