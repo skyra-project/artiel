@@ -11,6 +11,10 @@
 	"optionsPresetDescription": "The preset to use",
 	"optionsSelectionName": "selection",
 	"optionsSelectionDescription": "The selection method to use",
+	"optionsOnCriticalSuccessName": "on-critical-success",
+	"optionsOnCriticalSuccessDescription": "The action to take on a critical success",
+	"optionsOnCriticalFailureName": "on-critical-failure",
+	"optionsOnCriticalFailureDescription": "The action to take on a critical failure",
 	"optionsHideName": "hide",
 	"optionsHideDescription": "Whether or not to hide the result (default: False)",
 	"title": "{{dice}} Rolling...",
@@ -26,5 +30,10 @@
 	"presetFate": "Fate (-1/0/+1)",
 	"selectionAddition": "Addition (default)",
 	"selectionGreatest": "Greatest",
-	"selectionLeast": "Least"
+	"selectionLeast": "Least",
+	"onCriticalNothing": "Do Nothing",
+	"onCriticalRerollOnce": "Reroll (up to 1 time)",
+	"onCriticalRerollTwice": "Reroll (up to 2 times)",
+	"onCriticalRerollThrice": "Reroll (up to 3 times)",
+	"onCriticalRerollIndefinitely": "Reroll (indefinitely)"
 }
