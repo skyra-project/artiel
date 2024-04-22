@@ -1,0 +1,20 @@
+{
+	"name": "хлоп",
+	"description": "Генерирует поле, чтобы хлопать, хлопать, хлопать и хлопать",
+	"optionsDurationName": "продолжительность",
+	"optionsDurationDescription": "Время в секундах, в течение которого поле будет активно",
+	"optionsWidthName": "ширина",
+	"optionsWidthDescription": "Ширина поля",
+	"optionsHeightName": "высота",
+	"optionsHeightDescription": "Высота поля",
+	"optionsLengthName": "длина",
+	"optionsLengthDescription": "Длина решения",
+	"buttonsInputSolution": "Ввести решение",
+	"modalTitle": "Решение",
+	"modalInputPlaceholder": "Введите решение здесь",
+	"nonexistentGame": "Нет игры для хлопков.",
+	"wrongSolution": "Это не решение.",
+	"title": "ХЛОП! Пусть начнутся хлопки!",
+	"titleLost": "ХЛОП! Никто не справился вовремя!",
+	"titleWinner": "ХЛОП! У нас есть победитель: {{value}}!"
+}
