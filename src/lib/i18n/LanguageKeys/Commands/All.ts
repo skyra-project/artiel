@@ -9,4 +9,5 @@ export * as Pop from '#lib/i18n/LanguageKeys/Commands/Pop';
 export * as Rate from '#lib/i18n/LanguageKeys/Commands/Rate';
 export * as Shibe from '#lib/i18n/LanguageKeys/Commands/Shibe';
 export * as Ship from '#lib/i18n/LanguageKeys/Commands/Ship';
+export * as Sokoban from '#lib/i18n/LanguageKeys/Commands/Sokoban';
 export * as XKCD from '#lib/i18n/LanguageKeys/Commands/XKCD';

@@ -27,3 +27,10 @@ export function getTag(user: APIUser) {
 export function getColor(interaction: Interaction) {
 	return interaction.user.accent_color ?? BrandingColors.Primary;
 }
+
+export function getEmojiData(emoji: string) {
+	const match = emoji.match(/<?(?:(a):)?(\w{2,32}):(\d{17,19})>?/);
+	if (match === null) return null;
+	const [, animated, name, id] = match;
+	return { animated: Boolean(animated), name, id };
+}

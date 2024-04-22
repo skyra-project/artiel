@@ -1,0 +1,7 @@
+{
+	"name": "sokoban",
+	"description": "Generates an interactive puzzle board",
+	"invalidComponent": "Invalid component: {{value}}",
+	"victory": "# You Win!\n## Time Taken: {{seconds}} seconds\n## Move Count: {{moves}}",
+	"defeat": "# You Lose!"
+}
