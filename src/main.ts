@@ -19,7 +19,11 @@ await init({
 const client = new Client();
 await client.load();
 
-void registerCommands();
+try {
+	await registerCommands();
+} catch (error) {
+	console.error(error);
+}
 
 const address = envParseString('HTTP_ADDRESS', '0.0.0.0');
 const port = envParseInteger('HTTP_PORT', 3000);
