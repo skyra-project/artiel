@@ -5,6 +5,7 @@ import {
 	coordinateComponents,
 	Direction,
 	EmojiGameComponents as EGC,
+	encodeLevel,
 	getPlayer,
 	parseGameComponents,
 	peekNextComponent,
@@ -37,7 +38,7 @@ export class UserHandler extends InteractionHandler {
 		if (moveExecutionResult.isErr())
 			return interaction.update({ content: moveExecutionResult.unwrapErr(), components: [], flags: MessageFlags.Ephemeral });
 		const postMoveComponents = moveExecutionResult.unwrap();
-		const updatedLevel = postMoveComponents.components.map((c) => c.component).join('');
+		const updatedLevel = encodeLevel(postMoveComponents.components.map((c) => c.component));
 
 		// check win condition, if met, send victory message
 		if (this.checkWinCondition(postMoveComponents.components)) {
@@ -115,9 +116,7 @@ export class UserHandler extends InteractionHandler {
 
 	/** are all targets covered by boxes */
 	private checkWinCondition(gameComponents: CoordinateGameComponent[]) {
-		return gameComponents
-			.filter((c) => ![EGC.Empty, EGC.Floor, EGC.NewLine, EGC.Player, EGC.Wall].includes(c.component))
-			.every((c) => c.component === EGC.BoxTarget);
+		return !gameComponents.some((c) => [EGC.FloorTarget, EGC.Box, EGC.PlayerTarget].includes(c.component));
 	}
 
 	/**

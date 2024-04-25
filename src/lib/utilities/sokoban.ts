@@ -5,6 +5,18 @@ import type { TFunction } from '@skyra/http-framework-i18n';
 import { ButtonStyle } from 'discord-api-types/v10';
 import { getEmojiData } from './discord.js';
 
+export enum ResolvableLevelComponent {
+	Empty = '0',
+	Wall = '#',
+	Floor = ' ',
+	FloorTarget = 'T',
+	Player = 'P',
+	PlayerTarget = 'X',
+	Box = 'B',
+	BoxTarget = 'Z',
+	NewLine = '.'
+}
+
 export enum EmojiGameComponents {
 	Empty = '<:ske:1231690574504001649>',
 	Wall = '<:skw:1231690589737582602>',
@@ -14,8 +26,21 @@ export enum EmojiGameComponents {
 	PlayerTarget = '<:skpt:1231708040785428641>',
 	Box = '<:skb:1231690582972170270>',
 	BoxTarget = '<:skbt:1231693431718412288>',
-	NewLine = '\n'
+	NewLine = '\n',
+	Null = 'null'
 }
+
+export const GameComponentsMapping: Record<ResolvableLevelComponent, EmojiGameComponents> = {
+	[ResolvableLevelComponent.Empty]: EmojiGameComponents.Empty,
+	[ResolvableLevelComponent.Wall]: EmojiGameComponents.Wall,
+	[ResolvableLevelComponent.Floor]: EmojiGameComponents.Floor,
+	[ResolvableLevelComponent.FloorTarget]: EmojiGameComponents.FloorTarget,
+	[ResolvableLevelComponent.Player]: EmojiGameComponents.Player,
+	[ResolvableLevelComponent.PlayerTarget]: EmojiGameComponents.PlayerTarget,
+	[ResolvableLevelComponent.Box]: EmojiGameComponents.Box,
+	[ResolvableLevelComponent.BoxTarget]: EmojiGameComponents.BoxTarget,
+	[ResolvableLevelComponent.NewLine]: EmojiGameComponents.NewLine
+};
 
 export enum EmojiAST {
 	OpenBracket = '<',
@@ -71,6 +96,95 @@ export function buildGameControls(
 	];
 }
 
+class StringStream implements Iterator<string, string> {
+	#index = 0;
+	public constructor(public readonly input: string) {}
+
+	public peek() {
+		return this.input[this.#index];
+	}
+
+	public next() {
+		if (this.#index === this.input.length) return { done: true, value: '' };
+
+		return { done: false, value: this.input[this.#index++] };
+	}
+}
+
+export function fillUnevenGameComponents(gameComponents: EmojiGameComponents[]): EmojiGameComponents[] {
+	const encodedLevel = encodeResolvableLevel(gameComponents);
+	const maxWidth = encodedLevel.split(ResolvableLevelComponent.NewLine).reduce((acc, val) => Math.max(acc, val.length), 0) + 1;
+
+	const newGameComponents: EmojiGameComponents[] = [];
+	const stream = new StringStream(encodedLevel);
+	let currentComponent = stream.next();
+	let currentWidth = 0;
+	while (!currentComponent.done) {
+		currentWidth++;
+		// TODO: cover EOL cases, i.e. I need to fix the issue with the StringStream implementation
+		if (currentComponent.value === ResolvableLevelComponent.NewLine) {
+			while (currentWidth < maxWidth) {
+				newGameComponents.push(EmojiGameComponents.Null);
+				currentWidth++;
+			}
+			newGameComponents.push(EmojiGameComponents.NewLine);
+			currentWidth = 0;
+			currentComponent = stream.next();
+			continue;
+		}
+		const component = GameComponentsMapping[currentComponent.value as ResolvableLevelComponent];
+		newGameComponents.push(component);
+		currentComponent = stream.next();
+	}
+	return newGameComponents;
+}
+
+export function encodeResolvableLevel(gameComponents: EmojiGameComponents[]): string {
+	return gameComponents
+		.map((c) => {
+			switch (c) {
+				case EmojiGameComponents.Empty:
+					return ResolvableLevelComponent.Empty;
+				case EmojiGameComponents.Wall:
+					return ResolvableLevelComponent.Wall;
+				case EmojiGameComponents.Floor:
+					return ResolvableLevelComponent.Floor;
+				case EmojiGameComponents.FloorTarget:
+					return ResolvableLevelComponent.FloorTarget;
+				case EmojiGameComponents.Player:
+					return ResolvableLevelComponent.Player;
+				case EmojiGameComponents.PlayerTarget:
+					return ResolvableLevelComponent.PlayerTarget;
+				case EmojiGameComponents.Box:
+					return ResolvableLevelComponent.Box;
+				case EmojiGameComponents.BoxTarget:
+					return ResolvableLevelComponent.BoxTarget;
+				case EmojiGameComponents.NewLine:
+					return ResolvableLevelComponent.NewLine;
+				default:
+					return ResolvableLevelComponent.Empty;
+			}
+		})
+		.join('');
+}
+
+export function encodeLevel(gameComponents: EmojiGameComponents[]): string {
+	return gameComponents.filter((c) => c !== EmojiGameComponents.Null).join('');
+}
+
+export function parseLevel(t: TFunction, level: string): Result<EmojiGameComponents[], string> {
+	const levelStream = new StringStream(level);
+	const gameComponents: EmojiGameComponents[] = [];
+	let currentComponent = levelStream.next();
+	while (!currentComponent.done) {
+		const component = GameComponentsMapping[currentComponent.value as ResolvableLevelComponent];
+		if (!component) return Result.err(t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: currentComponent.value }));
+		gameComponents.push(component);
+		currentComponent = levelStream.next();
+	}
+	return Result.ok(fillUnevenGameComponents(gameComponents));
+}
+
 export function parseGameComponents(t: TFunction, content: string): Result<EmojiGameComponents[], string> {
 	const gameComponents: EmojiGameComponents[] = [];
 	let rawComponent = '';
@@ -92,7 +206,7 @@ export function parseGameComponents(t: TFunction, content: string): Result<Emoji
 				break;
 		}
 	}
-	return Result.ok(gameComponents);
+	return Result.ok(fillUnevenGameComponents(gameComponents));
 }
 
 export function parseSingleComponent(t: TFunction, rawComponent: string): Result<EmojiGameComponents, string> {
@@ -138,7 +252,7 @@ export function peekNextComponent(
 
 	const nextComponent = coordinatedGameComponents.find((c) => c.x === nextX && c.y === nextY);
 	if (!nextComponent) return Result.err();
-	if (nextComponent.component === EmojiGameComponents.Wall) return Result.err();
+	if (nextComponent.component === EmojiGameComponents.Wall || nextComponent.component === EmojiGameComponents.Empty) return Result.err();
 	if ([EmojiGameComponents.Box, EmojiGameComponents.BoxTarget].includes(nextComponent.component)) {
 		if (boxRecurse) return Result.err();
 		const nextNextComponent = peekNextComponent(nextComponent, direction, coordinatedGameComponents, true);

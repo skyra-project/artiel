@@ -5,6 +5,10 @@ export const RootName = T('commands/sokoban:name');
 export const RootDescription = T('commands/sokoban:description');
 
 // Options
+export const OptionPlayLevel = 'commands/sokoban:optionLevel';
+export const OptionChooseLevel = 'commands/sokoban:optionChooseLevel';
+export const OptionPlayCustomLevel = 'commands/sokoban:optionCustomLevel';
+export const OptionImportCustomLevel = 'commands/sokoban:optionImportCustomLevel';
 
 // Errors
 export const SokobanInvalidComponent = FT<Value<string>>('commands/sokoban:invalidComponent');
