@@ -26296,5 +26296,14 @@
 		"alt": "Concealed mostly beneath the surface, sharks are the icebergs of the sea.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2924,
+		"date": 1713960000000,
+		"title": "Pendulum Types",
+		"image": "https://imgs.xkcd.com/comics/pendulum_types.png",
+		"alt": "The creepy fingers that grow from a vibrating cornstarch-water mix can be modeled as a chain of inverted vertical pendulums (DOI:10.1039/c4sm00265b) and are believed to be the fingers of Maxwell's Demon trying to push through into our universe.",
+		"transcript": null,
+		"news": null
 	}
 ]
