@@ -26314,5 +26314,14 @@
 		"alt": "It's not far from the sign marking the exact latitude and longitude of the Earth's core.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2926,
+		"date": 1714392000000,
+		"title": "Doppler Effect",
+		"image": "https://imgs.xkcd.com/comics/doppler_effect.png",
+		"alt": "The Doppler effect is a mysterious wavelength-shifting phenomenon which seems to primarily affect sirens, which is why the 🚨 emoji is red.",
+		"transcript": null,
+		"news": null
 	}
 ]
