@@ -61,16 +61,10 @@ export interface CoordinateGameComponent {
 	component: EmojiGameComponents;
 }
 
-export function buildGameControls(
-	disabledDirections: Direction[] = [],
-	startTimestampResult: Result<number | undefined, undefined> = Result.ok(undefined),
-	moves = 0
-) {
-	const startTimestamp = startTimestampResult.isOk() ? startTimestampResult.unwrap() : Date.now();
-
+export function buildGameControls(encodedLevel: string, disabledDirections: Direction[] = [], startTimestamp: number = 0, moves = 0) {
 	const directionalButton = (emoji: string, direction: Direction) =>
 		new ButtonBuilder() //
-			.setCustomId(`sokoban.${direction}.${Boolean(startTimestamp) ? startTimestamp : undefined}.${moves}`)
+			.setCustomId(`sokoban.${direction}.${startTimestamp}.${moves}`)
 			.setEmoji({ name: emoji })
 			.setDisabled(disabledDirections.includes(direction))
 			.setStyle(disabledDirections.includes(direction) ? ButtonStyle.Danger : ButtonStyle.Primary);
@@ -78,7 +72,7 @@ export function buildGameControls(
 	let uniquePaddingId = 0;
 	const paddingButton = () =>
 		new ButtonBuilder() //
-			.setCustomId(`sokoban.padding${uniquePaddingId++}`)
+			.setCustomId(uniquePaddingId++ === 0 ? encodedLevel : `sokoban.padding${uniquePaddingId}`)
 			.setEmoji(getEmojiData(EmojiGameComponents.Empty)!)
 			.setDisabled(true)
 			.setStyle(ButtonStyle.Secondary);
@@ -97,23 +91,25 @@ export function buildGameControls(
 }
 
 class StringStream implements Iterator<string, string> {
-	#index = 0;
+	public index = 0;
 	public constructor(public readonly input: string) {}
 
 	public peek() {
-		return this.input[this.#index];
+		return this.input[this.index];
 	}
 
 	public next() {
-		if (this.#index === this.input.length) return { done: true, value: '' };
+		if (this.index === this.input.length) return { done: true, value: '' };
 
-		return { done: false, value: this.input[this.#index++] };
+		return { done: false, value: this.input[this.index++] };
 	}
 }
 
 export function fillUnevenGameComponents(gameComponents: EmojiGameComponents[]): EmojiGameComponents[] {
 	const encodedLevel = encodeResolvableLevel(gameComponents);
+	console.log(encodedLevel);
 	const maxWidth = encodedLevel.split(ResolvableLevelComponent.NewLine).reduce((acc, val) => Math.max(acc, val.length), 0) + 1;
+	console.log(maxWidth);
 
 	const newGameComponents: EmojiGameComponents[] = [];
 	const stream = new StringStream(encodedLevel);
@@ -121,16 +117,25 @@ export function fillUnevenGameComponents(gameComponents: EmojiGameComponents[]):
 	let currentWidth = 0;
 	while (!currentComponent.done) {
 		currentWidth++;
-		// TODO: cover EOL cases, i.e. I need to fix the issue with the StringStream implementation
+		console.log(currentComponent.value, currentWidth, maxWidth, stream, stream.input.length);
 		if (currentComponent.value === ResolvableLevelComponent.NewLine) {
+			newGameComponents.push(EmojiGameComponents.NewLine);
 			while (currentWidth < maxWidth) {
 				newGameComponents.push(EmojiGameComponents.Null);
 				currentWidth++;
 			}
-			newGameComponents.push(EmojiGameComponents.NewLine);
 			currentWidth = 0;
 			currentComponent = stream.next();
 			continue;
+		}
+		if (stream.peek() === undefined) {
+			const component = GameComponentsMapping[currentComponent.value as ResolvableLevelComponent];
+			newGameComponents.push(component);
+			while (currentWidth < maxWidth) {
+				newGameComponents.push(EmojiGameComponents.Null);
+				currentWidth++;
+			}
+			return newGameComponents;
 		}
 		const component = GameComponentsMapping[currentComponent.value as ResolvableLevelComponent];
 		newGameComponents.push(component);
@@ -162,14 +167,19 @@ export function encodeResolvableLevel(gameComponents: EmojiGameComponents[]): st
 				case EmojiGameComponents.NewLine:
 					return ResolvableLevelComponent.NewLine;
 				default:
-					return ResolvableLevelComponent.Empty;
+					return '';
 			}
 		})
 		.join('');
 }
 
 export function encodeLevel(gameComponents: EmojiGameComponents[]): string {
-	return gameComponents.filter((c) => c !== EmojiGameComponents.Null).join('');
+	return gameComponents
+		.filter((c) => {
+			console.log(c, c !== EmojiGameComponents.Null);
+			return c !== EmojiGameComponents.Null;
+		})
+		.join('');
 }
 
 export function parseLevel(t: TFunction, level: string): Result<EmojiGameComponents[], string> {
@@ -252,7 +262,7 @@ export function peekNextComponent(
 
 	const nextComponent = coordinatedGameComponents.find((c) => c.x === nextX && c.y === nextY);
 	if (!nextComponent) return Result.err();
-	if (nextComponent.component === EmojiGameComponents.Wall || nextComponent.component === EmojiGameComponents.Empty) return Result.err();
+	if ([EmojiGameComponents.Wall, EmojiGameComponents.Empty, EmojiGameComponents.Null].includes(nextComponent.component)) return Result.err();
 	if ([EmojiGameComponents.Box, EmojiGameComponents.BoxTarget].includes(nextComponent.component)) {
 		if (boxRecurse) return Result.err();
 		const nextNextComponent = peekNextComponent(nextComponent, direction, coordinatedGameComponents, true);

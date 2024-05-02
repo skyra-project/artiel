@@ -6,22 +6,44 @@ import {
 	Direction,
 	EmojiGameComponents as EGC,
 	encodeLevel,
+	encodeResolvableLevel,
 	getPlayer,
 	parseGameComponents,
+	parseLevel,
 	peekNextComponent,
 	type CoordinateGameComponent
 } from '#lib/utilities/sokoban';
+import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
 import { Option, Result } from '@sapphire/result';
 import { InteractionHandler } from '@skyra/http-framework';
 import { getSupportedLanguageT } from '@skyra/http-framework-i18n';
-import { MessageFlags } from 'discord-api-types/v10';
+import { ButtonStyle, MessageFlags, type APIButtonComponentWithCustomId } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Sokoban;
 
 export class UserHandler extends InteractionHandler {
-	public async run(interaction: InteractionHandler.ButtonInteraction, [direction, startTimestamp, moves]: Parameters) {
-		startTimestamp = Number(startTimestamp);
+	// TODO: figure out why the interaction instantly fails for the retry button
+	public async run(interaction: InteractionHandler.ButtonInteraction, [directionOrRetry, startTimestampOrEncodedLevel, moves]: Parameters) {
 		const t = getSupportedLanguageT(interaction);
+		console.log(directionOrRetry, startTimestampOrEncodedLevel, moves);
+		// if the restart button is pressed, reset the current level
+		if (directionOrRetry === 'retry') {
+			const encodedLevel = startTimestampOrEncodedLevel!.replaceAll('-', '.');
+			console.log(encodedLevel);
+			const levelResult = parseLevel(t, encodedLevel);
+			if (levelResult.isErr()) return interaction.update({ content: levelResult.unwrapErr(), flags: MessageFlags.Ephemeral });
+			const level = levelResult.unwrap();
+			const coordinatedGameComponents = coordinateComponents(level);
+			const player = getPlayer(coordinatedGameComponents);
+
+			return interaction.update({
+				content: encodeLevel(level),
+				components: buildGameControls(encodeResolvableLevel(level), checkPotentialMoves(player, coordinatedGameComponents)),
+				flags: MessageFlags.Ephemeral
+			});
+		}
+
+		const startTimestamp = Number(startTimestampOrEncodedLevel);
 
 		// parse components from the emojis in the interaction's message
 		const gameComponentsResult = parseGameComponents(t, interaction.message.content);
@@ -34,7 +56,7 @@ export class UserHandler extends InteractionHandler {
 		const player = getPlayer<CoordinateGameComponent>(coordinatedGameComponents);
 
 		// execute the user's move
-		const moveExecutionResult = this.executeMove(player, direction, coordinatedGameComponents);
+		const moveExecutionResult = this.executeMove(player, directionOrRetry, coordinatedGameComponents);
 		if (moveExecutionResult.isErr())
 			return interaction.update({ content: moveExecutionResult.unwrapErr(), components: [], flags: MessageFlags.Ephemeral });
 		const postMoveComponents = moveExecutionResult.unwrap();
@@ -49,17 +71,25 @@ export class UserHandler extends InteractionHandler {
 			});
 		}
 
+		const encodedLevelFromLevelComponent = (interaction.message.components?.[0].components[0] as APIButtonComponentWithCustomId).custom_id;
+
 		// check lose condition, if met, send defeat message
 		if (postMoveComponents.pushedBox.isSome() && this.checkLoseCondition(postMoveComponents.components, postMoveComponents.pushedBox.unwrap())) {
-			return interaction.update({ content: `${t(Root.Defeat)}\n${updatedLevel}`, components: [], flags: MessageFlags.Ephemeral });
+			const retryButton = new ButtonBuilder()
+				.setCustomId(`retry.${encodedLevelFromLevelComponent.replaceAll('.', '-')}`)
+				.setLabel(t(Root.Retry))
+				.setStyle(ButtonStyle.Danger);
+			const components = [new ActionRowBuilder<ButtonBuilder>().addComponents(retryButton).toJSON()];
+			return interaction.update({ content: `${t(Root.Defeat)}\n${updatedLevel}`, components, flags: MessageFlags.Ephemeral });
 		}
 
 		// update message
 		return interaction.update({
 			content: updatedLevel,
 			components: buildGameControls(
+				encodedLevelFromLevelComponent,
 				checkPotentialMoves(getPlayer<CoordinateGameComponent>(coordinatedGameComponents), coordinatedGameComponents),
-				Result.from(() => (!isNaN(startTimestamp) && typeof startTimestamp === 'number' ? Result.ok(startTimestamp) : Result.err(undefined))),
+				startTimestamp === 0 ? Date.now() : startTimestamp,
 				(moves ? Number(moves) : 0) + 1
 			),
 			flags: MessageFlags.Ephemeral
@@ -149,4 +179,4 @@ export class UserHandler extends InteractionHandler {
 	}
 }
 
-type Parameters = [direction: Direction, startTimestamp?: number, moves?: number];
+type Parameters = [directionOrRetry: Direction | 'retry', startTimestampOrEncodedLevel?: string, moves?: number];

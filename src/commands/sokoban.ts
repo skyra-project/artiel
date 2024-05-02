@@ -5,6 +5,7 @@ import {
 	coordinateComponents,
 	EmojiGameComponents as EGC,
 	encodeLevel,
+	encodeResolvableLevel,
 	getPlayer,
 	parseGameComponents,
 	parseLevel
@@ -28,12 +29,13 @@ export class UserCommand extends Command {
 	public async level(interaction: Command.ChatInputInteraction, _options: LoadLevelOptions) {
 		const t = getSupportedLanguageT(interaction);
 		const level = this.buildDefaultLevel();
-		const coordinatedGameComponents = coordinateComponents(parseGameComponents(t, level).unwrap());
+		const parsedGameComponents = parseGameComponents(t, level).unwrap();
+		const coordinatedGameComponents = coordinateComponents(parsedGameComponents);
 		const player = getPlayer(coordinatedGameComponents);
 
 		await interaction.reply({
 			content: level,
-			components: buildGameControls(checkPotentialMoves(player, coordinatedGameComponents)),
+			components: buildGameControls(encodeResolvableLevel(parsedGameComponents), checkPotentialMoves(player, coordinatedGameComponents)),
 			flags: MessageFlags.Ephemeral
 		});
 	}
@@ -63,7 +65,7 @@ export class UserCommand extends Command {
 
 		return interaction.reply({
 			content: encodeLevel(level),
-			components: buildGameControls(checkPotentialMoves(player, coordinatedGameComponents)),
+			components: buildGameControls(encodeResolvableLevel(level), checkPotentialMoves(player, coordinatedGameComponents)),
 			flags: MessageFlags.Ephemeral
 		});
 	}

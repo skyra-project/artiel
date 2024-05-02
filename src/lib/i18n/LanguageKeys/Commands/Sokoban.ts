@@ -16,3 +16,4 @@ export const SokobanInvalidComponent = FT<Value<string>>('commands/sokoban:inval
 // Game
 export const Victory = FT<Value<{ seconds: string; moves: number }>>('commands/sokoban:victory');
 export const Defeat = T('commands/sokoban:defeat');
+export const Retry = T('commands/sokoban:retry');
