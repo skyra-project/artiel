@@ -76,7 +76,7 @@ export class UserHandler extends InteractionHandler {
 		// check lose condition, if met, send defeat message
 		if (postMoveComponents.pushedBox.isSome() && this.checkLoseCondition(postMoveComponents.components, postMoveComponents.pushedBox.unwrap())) {
 			const retryButton = new ButtonBuilder()
-				.setCustomId(`retry.${encodedLevelFromLevelComponent.replaceAll('.', '-')}`)
+				.setCustomId(`sokoban.retry.${encodedLevelFromLevelComponent.replaceAll('.', '-')}`)
 				.setLabel(t(Root.Retry))
 				.setStyle(ButtonStyle.Danger);
 			const components = [new ActionRowBuilder<ButtonBuilder>().addComponents(retryButton).toJSON()];
