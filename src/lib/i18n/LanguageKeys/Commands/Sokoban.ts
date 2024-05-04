@@ -12,6 +12,7 @@ export const OptionImportCustomLevel = 'commands/sokoban:optionImportCustomLevel
 
 // Errors
 export const SokobanInvalidComponent = FT<Value<string>>('commands/sokoban:invalidComponent');
+export const SokobanInvalidLevel = T('commands/sokoban:invalidLevel');
 
 // Game
 export const Victory = FT<Value<{ seconds: string; moves: number }>>('commands/sokoban:victory');

@@ -10,6 +10,7 @@
 	"optionImportCustomLevelName": "import",
 	"optionImportCustomLevelDescription": "Import custom level",
 	"invalidComponent": "Invalid component: {{value}}",
+	"invalidLevel": "Invalid level",
 	"victory": "# You Win!\n## Time Taken: {{seconds}} seconds\n## Move Count: {{moves}}",
 	"defeat": "# You Lose!",
 	"retry": "Retry"

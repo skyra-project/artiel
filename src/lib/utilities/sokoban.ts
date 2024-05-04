@@ -336,7 +336,7 @@ export const CLOSE_BRACKET = '>';
  * @param content the content to build the matrix from.
  * @returns the game matrix or an error message if the content contains invalid components.
  */
-export function buildMatrix(content: string): Result<SokobanMatrix, string> {
+export function buildMatrixFromVisualLevel(content: string): Result<SokobanMatrix, string> {
 	const gameComponents: EmojiGameComponent[] = [];
 	let rawComponent = '';
 	for (const char of content) {
@@ -460,7 +460,7 @@ export function encodeResolvableLevel(gameComponents: EmojiGameComponent[]): str
  * @param level resolvable encoded level.
  * @returns the parsed game matrix or an error message if the level contains invalid components.
  */
-export function parseResolvableLevel(level: string): Result<SokobanMatrix, string> {
+export function buildMatrixFromResolvableLevel(level: string): Result<SokobanMatrix, string> {
 	const levelPeekable = from(level);
 	const gameComponents: EmojiGameComponent[] = [];
 	let currentComponent = levelPeekable.next();

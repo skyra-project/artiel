@@ -1,32 +1,28 @@
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
-import {
-	buildGameControls,
-	buildMatrix,
-	EmojiGameComponent as EGC,
-	encodeLevel,
-	encodeResolvableLevel,
-	parseResolvableLevel
-} from '#lib/utilities/sokoban';
+import { buildGameControls, buildMatrixFromResolvableLevel, encodeLevel, encodeResolvableLevel } from '#lib/utilities/sokoban';
 import { Command, RegisterCommand, RegisterSubcommand, type AutocompleteInteractionArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
 import { MessageFlags } from 'discord-api-types/v10';
+import { readFile } from 'fs/promises';
 
 const Root = LanguageKeys.Commands.Sokoban;
+const Levels: Record<string, string> = JSON.parse(await readFile('src/lib/common/levels.json', { encoding: 'utf-8' }));
 
 @RegisterCommand((builder) => applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription))
 export class UserCommand extends Command {
-	/** TODO: import json file and parse the levels into  game components */
-	private readonly Levels = { default: '00#####.###   #.#TPB  #.### BT#.#T##B #.# # T ##.#B ZBBT#.#   T  #.########' };
-
 	@RegisterSubcommand((builder) =>
 		applyLocalizedBuilder(builder, Root.OptionPlayLevel) //
 			.addStringOption((builder) => applyLocalizedBuilder(builder, Root.OptionChooseLevel).setAutocomplete(true).setRequired(true))
 	)
-	// TODO: actually load a level from the options utilizing the levels json file
-	public async level(interaction: Command.ChatInputInteraction, _options: LoadLevelOptions) {
+	public async level(interaction: Command.ChatInputInteraction, options: LoadLevelOptions) {
 		const t = getSupportedLanguageT(interaction);
-		const encodedLevel = this.buildDefaultLevel();
-		const levelResult = buildMatrix(encodedLevel);
+		const resolvableLevel = Levels[options.level ?? 'default'];
+		if (!resolvableLevel)
+			return interaction.reply({
+				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidLevel),
+				flags: MessageFlags.Ephemeral
+			});
+		const levelResult = buildMatrixFromResolvableLevel(resolvableLevel);
 
 		if (levelResult.isErr())
 			return interaction.reply({
@@ -37,14 +33,14 @@ export class UserCommand extends Command {
 		const level = levelResult.unwrap();
 
 		return interaction.reply({
-			content: encodedLevel,
+			content: encodeLevel(level.gameComponents),
 			components: buildGameControls(encodeResolvableLevel(level.gameComponents), level.checkNonviableMoves()),
 			flags: MessageFlags.Ephemeral
 		});
 	}
 
 	public override autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
-		const levelChoices = (Reflect.ownKeys(this.Levels) as string[]).map((name) => ({ name, value: name }));
+		const levelChoices = (Reflect.ownKeys(Levels) as string[]).map((name) => ({ name, value: name }));
 		if (options.level === null)
 			return interaction.reply({
 				choices: levelChoices.slice(0, 25)
@@ -60,7 +56,7 @@ export class UserCommand extends Command {
 	)
 	public async customLevel(interaction: Command.ChatInputInteraction, options: ImportCustomLevelOptions) {
 		const t = getSupportedLanguageT(interaction);
-		const levelResult = parseResolvableLevel(options.import);
+		const levelResult = buildMatrixFromResolvableLevel(options.import);
 		if (levelResult.isErr())
 			return interaction.reply({
 				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
@@ -74,24 +70,10 @@ export class UserCommand extends Command {
 			flags: MessageFlags.Ephemeral
 		});
 	}
-
-	private buildDefaultLevel() {
-		return [
-			EGC.Empty + EGC.Empty + EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall,
-			EGC.Wall + EGC.Wall + EGC.Wall + EGC.Floor + EGC.Floor + EGC.Floor + EGC.Wall,
-			EGC.Wall + EGC.FloorTarget + EGC.Player + EGC.Box + EGC.Floor + EGC.Floor + EGC.Wall,
-			EGC.Wall + EGC.Wall + EGC.Wall + EGC.Floor + EGC.Box + EGC.FloorTarget + EGC.Wall,
-			EGC.Wall + EGC.FloorTarget + EGC.Wall + EGC.Wall + EGC.Box + EGC.Floor + EGC.Wall,
-			EGC.Wall + EGC.Floor + EGC.Wall + EGC.Floor + EGC.FloorTarget + EGC.Floor + EGC.Wall + EGC.Wall,
-			EGC.Wall + EGC.Box + EGC.Floor + EGC.BoxTarget + EGC.Box + EGC.Box + EGC.FloorTarget + EGC.Wall,
-			EGC.Wall + EGC.Floor + EGC.Floor + EGC.Floor + EGC.FloorTarget + EGC.Floor + EGC.Floor + EGC.Wall,
-			EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall + EGC.Wall
-		].join(EGC.NewLine);
-	}
 }
 
 interface LoadLevelOptions {
-	level?: string;
+	level?: keyof typeof Levels;
 }
 
 type AutocompleteOptions = AutocompleteInteractionArguments<Required<LoadLevelOptions>>;

@@ -1,5 +1,12 @@
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
-import { buildGameControls, buildMatrix, Direction, encodeLevel, encodeResolvableLevel, parseResolvableLevel } from '#lib/utilities/sokoban';
+import {
+	buildGameControls,
+	buildMatrixFromResolvableLevel,
+	buildMatrixFromVisualLevel,
+	Direction,
+	encodeLevel,
+	encodeResolvableLevel
+} from '#lib/utilities/sokoban';
 import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
 import { InteractionHandler } from '@skyra/http-framework';
 import { getSupportedLanguageT } from '@skyra/http-framework-i18n';
@@ -13,7 +20,7 @@ export class UserHandler extends InteractionHandler {
 		// if the restart button is pressed, reset the current level
 		if (directionOrRetry === 'retry') {
 			const encodedLevel = startTimestampOrEncodedLevel!.replaceAll('-', '.');
-			const levelResult = parseResolvableLevel(encodedLevel);
+			const levelResult = buildMatrixFromResolvableLevel(encodedLevel);
 			if (levelResult.isErr())
 				return interaction.update({
 					content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
@@ -31,7 +38,7 @@ export class UserHandler extends InteractionHandler {
 		const startTimestamp = Number(startTimestampOrEncodedLevel);
 
 		// parse components from the emojis in the interaction's message
-		const gameBoardResult = buildMatrix(interaction.message.content);
+		const gameBoardResult = buildMatrixFromVisualLevel(interaction.message.content);
 		if (gameBoardResult.isErr())
 			return interaction.update({
 				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: gameBoardResult.unwrapErr() }),
