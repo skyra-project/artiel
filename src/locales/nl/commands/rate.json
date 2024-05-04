@@ -1,0 +1,15 @@
+{
+	"name": "beoordeling",
+	"description": "",
+	"optionsRateableTargetName": "doel",
+	"optionsRateableTargetDescription": "De gebruiker om te beoordelen",
+	"output": "**{{author}}**, Ik zou **{{userToRate}}** een **{{rate}}**/100 {{emoji}} geven",
+	"myself": [
+		". Ik hou veel van mezelf 😊",
+		"mezelf"
+	],
+	"owners": [
+		". Ik hou veel van mijn ontwikkelaars 🥰",
+		"mijn ontwikkelaars"
+	]
+}

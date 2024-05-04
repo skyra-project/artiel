@@ -11,6 +11,10 @@
 	"optionsPresetDescription": "El ajuste predefinido a usar",
 	"optionsSelectionName": "selección",
 	"optionsSelectionDescription": "El método de selección a usar",
+	"optionsOnCriticalSuccessName": "en-crítico",
+	"optionsOnCriticalSuccessDescription": "La acción a tomar en el caso de crítico",
+	"optionsOnCriticalFailureName": "en-pifia",
+	"optionsOnCriticalFailureDescription": "La acción a tomar en el caso de pifia",
 	"optionsHideName": "ocultar",
 	"optionsHideDescription": "Ocultar o no el resultado (por defecto: False)",
 	"title": "{{dice}} Tirando...",
@@ -26,5 +30,10 @@
 	"presetFate": "Fate (-1/0/+1)",
 	"selectionAddition": "Adición (por defecto)",
 	"selectionGreatest": "Mayor",
-	"selectionLeast": "Menor"
+	"selectionLeast": "Menor",
+	"onCriticalNothing": "No Hacer Nada",
+	"onCriticalRerollOnce": "Volver a tirar (hasta 1 vez)",
+	"onCriticalRerollTwice": "Volver a tirar (hasta 2 veces)",
+	"onCriticalRerollThrice": "Volver a tirar (hasta 3 veces)",
+	"onCriticalRerollIndefinitely": "Volver a tirar (indefinidamente)"
 }

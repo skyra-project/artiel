@@ -9,6 +9,8 @@ export const OptionsRolls = 'commands/dice:optionsRolls';
 export const OptionsModifier = 'commands/dice:optionsModifier';
 export const OptionsPreset = 'commands/dice:optionsPreset';
 export const OptionsSelection = 'commands/dice:optionsSelection';
+export const OptionsOnCriticalSuccess = 'commands/dice:optionsOnCriticalSuccess';
+export const OptionsOnCriticalFailure = 'commands/dice:optionsOnCriticalFailure';
 export const OptionsHide = 'commands/dice:optionsHide';
 
 export const Title = FT<{ dice: string }>('commands/dice:title');
@@ -27,3 +29,9 @@ export const PresetFate = T('commands/dice:presetFate');
 export const SelectionAddition = T('commands/dice:selectionAddition');
 export const SelectionGreatest = T('commands/dice:selectionGreatest');
 export const SelectionLeast = T('commands/dice:selectionLeast');
+
+export const OnCriticalNothing = T('commands/dice:onCriticalNothing');
+export const OnCriticalRerollOnce = T('commands/dice:onCriticalRerollOnce');
+export const OnCriticalRerollTwice = T('commands/dice:onCriticalRerollTwice');
+export const OnCriticalRerollThrice = T('commands/dice:onCriticalRerollThrice');
+export const OnCriticalRerollIndefinitely = T('commands/dice:onCriticalRerollIndefinitely');

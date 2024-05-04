@@ -26278,5 +26278,59 @@
 		"alt": "Okay, this eclipse will only be visible from the Arctic in February 2063, when the sun is below the horizon, BUT if we get lucky and a gigantic chasm opens in the Earth in just the right spot...",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2922,
+		"date": 1713528000000,
+		"title": "Pub Trivia",
+		"image": "https://imgs.xkcd.com/comics/pub_trivia.png",
+		"alt": "Bonus question: Where is London located? (a) The British Isles (b) Great Britain and Northern Ireland (c) The UK (d) Europe (or 'the EU') (e) Greater London",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2923,
+		"date": 1713787200000,
+		"title": "Scary Triangles",
+		"image": "https://imgs.xkcd.com/comics/scary_triangles.png",
+		"alt": "Concealed mostly beneath the surface, sharks are the icebergs of the sea.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2924,
+		"date": 1713960000000,
+		"title": "Pendulum Types",
+		"image": "https://imgs.xkcd.com/comics/pendulum_types.png",
+		"alt": "The creepy fingers that grow from a vibrating cornstarch-water mix can be modeled as a chain of inverted vertical pendulums (DOI:10.1039/c4sm00265b) and are believed to be the fingers of Maxwell's Demon trying to push through into our universe.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2925,
+		"date": 1714132800000,
+		"title": "Earth Formation Site",
+		"image": "https://imgs.xkcd.com/comics/earth_formation_site.png",
+		"alt": "It's not far from the sign marking the exact latitude and longitude of the Earth's core.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2926,
+		"date": 1714392000000,
+		"title": "Doppler Effect",
+		"image": "https://imgs.xkcd.com/comics/doppler_effect.png",
+		"alt": "The Doppler effect is a mysterious wavelength-shifting phenomenon which seems to primarily affect sirens, which is why the 🚨 emoji is red.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2927,
+		"date": 1714564800000,
+		"title": "Alphabetical Cartogram",
+		"image": "https://imgs.xkcd.com/comics/alphabetical_cartogram.png",
+		"alt": "Poor Weeoming.",
+		"transcript": null,
+		"news": null
 	}
 ]

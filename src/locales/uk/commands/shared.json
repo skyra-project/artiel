@@ -1,1 +1,3 @@
-{}
+{
+	"infoEmbedDescription": "Artiel - це бот, орієнтований на розваги та ігри. Це лише HTTP-бот, створений на основі [Skyra HTTP Framework](https://www.npmjs.com/package/@skyra/http-framework)."
+}
