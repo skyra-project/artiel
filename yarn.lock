@@ -620,6 +620,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/iterator-utilities@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@sapphire/iterator-utilities@npm:1.0.1"
+  checksum: 10/d7a0f0513e46c7c139a049834256c6a1bdb8466ffb2125c08a83ea1d0baae447f79c7da7a30c7bb550743c0933fd126e8905ede841772d8885589f57484d8ca4
+  languageName: node
+  linkType: hard
+
 "@sapphire/pieces@npm:^4.2.0":
   version: 4.2.2
   resolution: "@sapphire/pieces@npm:4.2.2"
@@ -753,6 +760,7 @@ __metadata:
     "@prisma/client": "npm:^5.12.1"
     "@sapphire/duration": "npm:^1.1.2"
     "@sapphire/eslint-config": "npm:^5.0.4"
+    "@sapphire/iterator-utilities": "npm:^1.0.1"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/result": "npm:^2.6.6"
     "@sapphire/snowflake": "npm:^3.5.3"

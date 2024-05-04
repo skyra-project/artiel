@@ -1,14 +1,11 @@
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import {
 	buildGameControls,
-	checkPotentialMoves,
-	coordinateComponents,
-	EmojiGameComponents as EGC,
+	buildMatrix,
+	EmojiGameComponent as EGC,
 	encodeLevel,
 	encodeResolvableLevel,
-	getPlayer,
-	parseGameComponents,
-	parseLevel
+	parseResolvableLevel
 } from '#lib/utilities/sokoban';
 import { Command, RegisterCommand, RegisterSubcommand, type AutocompleteInteractionArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
@@ -28,14 +25,20 @@ export class UserCommand extends Command {
 	// TODO: actually load a level from the options utilizing the levels json file
 	public async level(interaction: Command.ChatInputInteraction, _options: LoadLevelOptions) {
 		const t = getSupportedLanguageT(interaction);
-		const level = this.buildDefaultLevel();
-		const parsedGameComponents = parseGameComponents(t, level).unwrap();
-		const coordinatedGameComponents = coordinateComponents(parsedGameComponents);
-		const player = getPlayer(coordinatedGameComponents);
+		const encodedLevel = this.buildDefaultLevel();
+		const levelResult = buildMatrix(encodedLevel);
 
-		await interaction.reply({
-			content: level,
-			components: buildGameControls(encodeResolvableLevel(parsedGameComponents), checkPotentialMoves(player, coordinatedGameComponents)),
+		if (levelResult.isErr())
+			return interaction.reply({
+				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
+				flags: MessageFlags.Ephemeral
+			});
+
+		const level = levelResult.unwrap();
+
+		return interaction.reply({
+			content: encodedLevel,
+			components: buildGameControls(encodeResolvableLevel(level.gameComponents), level.checkNonviableMoves()),
 			flags: MessageFlags.Ephemeral
 		});
 	}
@@ -57,15 +60,17 @@ export class UserCommand extends Command {
 	)
 	public async customLevel(interaction: Command.ChatInputInteraction, options: ImportCustomLevelOptions) {
 		const t = getSupportedLanguageT(interaction);
-		const levelResult = parseLevel(t, options.import);
-		if (levelResult.isErr()) return interaction.reply({ content: levelResult.unwrapErr(), flags: MessageFlags.Ephemeral });
+		const levelResult = parseResolvableLevel(options.import);
+		if (levelResult.isErr())
+			return interaction.reply({
+				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
+				flags: MessageFlags.Ephemeral
+			});
 		const level = levelResult.unwrap();
-		const coordinatedGameComponents = coordinateComponents(level);
-		const player = getPlayer(coordinatedGameComponents);
 
 		return interaction.reply({
-			content: encodeLevel(level),
-			components: buildGameControls(encodeResolvableLevel(level), checkPotentialMoves(player, coordinatedGameComponents)),
+			content: encodeLevel(level.gameComponents),
+			components: buildGameControls(encodeResolvableLevel(level.gameComponents), level.checkNonviableMoves()),
 			flags: MessageFlags.Ephemeral
 		});
 	}
