@@ -8,25 +8,18 @@ import {
 } from '#lib/utilities/sokoban';
 import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
 import { InteractionHandler } from '@skyra/http-framework';
-import { getSupportedLanguageT } from '@skyra/http-framework-i18n';
+import { getSupportedUserLanguageT } from '@skyra/http-framework-i18n';
 import { ButtonStyle, MessageFlags, type APIButtonComponentWithCustomId } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Sokoban;
 
 export class UserHandler extends InteractionHandler {
 	public async run(interaction: InteractionHandler.ButtonInteraction, [directionOrRetry, startTimestampOrEncodedLevel, moves]: Parameters) {
-		const t = getSupportedLanguageT(interaction);
+		const t = getSupportedUserLanguageT(interaction);
 		// if the restart button is pressed, reset the current level
 		if (directionOrRetry === 'retry') {
 			const encodedLevel = startTimestampOrEncodedLevel!.replaceAll('-', '.');
-			const levelResult = buildSokobanGameFromResolvableLevel(encodedLevel);
-			if (levelResult.isErr()) {
-				return interaction.update({
-					content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
-					flags: MessageFlags.Ephemeral
-				});
-			}
-			const level = levelResult.unwrap();
+			const level = buildSokobanGameFromResolvableLevel(encodedLevel).unwrap();
 
 			return interaction.update({
 				content: level.toString(),
@@ -55,7 +48,7 @@ export class UserHandler extends InteractionHandler {
 		// check win condition, if met, send victory message
 		if (level.checkWinCondition()) {
 			return interaction.update({
-				content: `${t(Root.Victory, { seconds: ((Date.now() - startTimestamp) / 1000).toFixed(2), moves })}\n${updatedLevel}`,
+				content: `${t(Root.Victory, { seconds: Math.round((Date.now() - startTimestamp) / 10) / 100, moves })}\n${updatedLevel}`,
 				components: [],
 				flags: MessageFlags.Ephemeral
 			});
@@ -64,7 +57,7 @@ export class UserHandler extends InteractionHandler {
 		const encodedLevelFromLevelComponent = (interaction.message.components?.[0].components[0] as APIButtonComponentWithCustomId).custom_id;
 
 		// check lose condition, if met, send defeat message
-		if (pushedBoxOption.isSome() && level.checkLoseCondition(pushedBoxOption.unwrap())) {
+		if (pushedBoxOption.isSomeAnd((box) => level.checkLoseCondition(box))) {
 			const retryButton = new ButtonBuilder()
 				.setCustomId(`sokoban.retry.${encodedLevelFromLevelComponent.replaceAll('.', '-')}`)
 				.setLabel(t(Root.Retry))

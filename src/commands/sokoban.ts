@@ -1,95 +1,83 @@
-import { PathSrc } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
-import { buildGameControls, buildSokobanGameFromResolvableLevel, encodeResolvableLevel } from '#lib/utilities/sokoban';
-import { Command, RegisterCommand, RegisterSubcommand, type AutocompleteInteractionArguments } from '@skyra/http-framework';
-import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
+import {
+	buildGameControls,
+	buildSokobanGameFromResolvableLevel,
+	encodeResolvableLevel,
+	getLevel,
+	makeLevelChoices,
+	searchLevels
+} from '#lib/utilities/sokoban';
+import {
+	Command,
+	RegisterCommand,
+	RegisterSubcommand,
+	type AutocompleteInteractionArguments,
+	type MessageResponseOptions
+} from '@skyra/http-framework';
+import { applyLocalizedBuilder, getSupportedUserLanguageT } from '@skyra/http-framework-i18n';
 import { MessageFlags } from 'discord-api-types/v10';
-import { readFile } from 'fs/promises';
-import { URL } from 'url';
 
 const Root = LanguageKeys.Commands.Sokoban;
-const Levels: Level[] = JSON.parse(await readFile(new URL('lib/common/levels.json', PathSrc), { encoding: 'utf-8' }));
 
 @RegisterCommand((builder) => applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription))
 export class UserCommand extends Command {
 	@RegisterSubcommand((builder) =>
-		applyLocalizedBuilder(builder, Root.OptionPlayLevel) //
-			.addStringOption((builder) => applyLocalizedBuilder(builder, Root.OptionChooseLevel).setAutocomplete(true).setRequired(true))
+		applyLocalizedBuilder(builder, Root.PlayLevel) //
+			.addStringOption((builder) => applyLocalizedBuilder(builder, Root.OptionChooseLevel).setAutocomplete(true))
 	)
-	public async level(interaction: Command.ChatInputInteraction, options: LoadLevelOptions) {
-		const t = getSupportedLanguageT(interaction);
-		const resolvableLevel = Levels.find((level) => level.name === (options.level ?? 'default'));
+	public async playLevel(interaction: Command.ChatInputInteraction, options: PlayLevelOptions) {
+		const t = getSupportedUserLanguageT(interaction);
+		const resolvableLevel = getLevel(options.level);
 		if (!resolvableLevel) {
 			return interaction.reply({
 				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidLevel),
 				flags: MessageFlags.Ephemeral
 			});
 		}
-		const levelResult = buildSokobanGameFromResolvableLevel(resolvableLevel.data);
-
-		if (levelResult.isErr()) {
-			return interaction.reply({
-				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
-				flags: MessageFlags.Ephemeral
-			});
-		}
-
-		const level = levelResult.unwrap();
-
-		return interaction.reply({
-			content: level.toString(),
-			components: buildGameControls(encodeResolvableLevel(level.components), level.checkPossibleMoves()),
-			flags: MessageFlags.Ephemeral
-		});
+		return this.prepareLevel(interaction, resolvableLevel.data);
 	}
 
 	public override autocompleteRun(interaction: Command.AutocompleteInteraction, options: AutocompleteOptions) {
-		const levelChoices = Levels.map(({ name }) => ({ name, value: name }));
-		if (options.level === null) {
-			return interaction.reply({
-				choices: levelChoices.slice(0, 25)
-			});
-		}
+		const results = searchLevels(options.level!);
 		return interaction.reply({
-			choices: levelChoices.filter((choice) => choice.name.toLowerCase().includes(options.level.toLowerCase())).slice(0, 25)
+			choices: makeLevelChoices(results)
 		});
 	}
 
 	@RegisterSubcommand((builder) =>
-		applyLocalizedBuilder(builder, Root.OptionPlayCustomLevel) //
+		applyLocalizedBuilder(builder, Root.CustomLevel) //
 			.addStringOption((builder) => applyLocalizedBuilder(builder, Root.OptionImportCustomLevel).setRequired(true))
 	)
-	public async customLevel(interaction: Command.ChatInputInteraction, options: ImportCustomLevelOptions) {
-		const t = getSupportedLanguageT(interaction);
-		const levelResult = buildSokobanGameFromResolvableLevel(options.import);
-		if (levelResult.isErr()) {
-			return interaction.reply({
-				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
-				flags: MessageFlags.Ephemeral
-			});
-		}
-		const level = levelResult.unwrap();
+	public async customLevel(interaction: Command.ChatInputInteraction, options: CustomLevelOptions) {
+		return this.prepareLevel(interaction, options.import);
+	}
 
-		return interaction.reply({
-			content: level.toString(),
-			components: buildGameControls(encodeResolvableLevel(level.components), level.checkPossibleMoves()),
-			flags: MessageFlags.Ephemeral
+	private prepareLevel(interaction: Command.ChatInputInteraction, level: string) {
+		const t = getSupportedUserLanguageT(interaction);
+		const levelResult = buildSokobanGameFromResolvableLevel(level);
+
+		const data: MessageResponseOptions = levelResult.match({
+			ok: (level) => ({
+				content: level.toString(),
+				components: buildGameControls(encodeResolvableLevel(level.components), level.checkPossibleMoves()),
+				flags: MessageFlags.Ephemeral
+			}),
+			err: (error) => ({
+				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: error }),
+				flags: MessageFlags.Ephemeral
+			})
 		});
+
+		return interaction.reply(data);
 	}
 }
 
-interface Level {
-	name: string;
-	data: string;
-	difficulty: number;
-}
-
-interface LoadLevelOptions {
+interface PlayLevelOptions {
 	level?: string;
 }
 
-type AutocompleteOptions = AutocompleteInteractionArguments<Required<LoadLevelOptions>>;
+type AutocompleteOptions = AutocompleteInteractionArguments<PlayLevelOptions>;
 
-interface ImportCustomLevelOptions {
+interface CustomLevelOptions {
 	import: string;
 }

@@ -1,6 +1,10 @@
+import { PathSrc } from '#lib/common/constants';
 import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
+import { Collection } from '@discordjs/collection';
 import { err, none, ok, some, type Option, type Result } from '@sapphire/result';
-import { ButtonStyle } from 'discord-api-types/v10';
+import { cutText } from '@sapphire/utilities';
+import { ButtonStyle, type APIApplicationCommandOptionChoice } from 'discord-api-types/v10';
+import { readFile } from 'fs/promises';
 import { getEmojiData } from './discord.js';
 
 export enum EmojiGameComponent {
@@ -478,4 +482,54 @@ export function buildGameControls(resolvableEncodedLevel: string, enabledDirecti
 			.addComponents(paddingButton(), directionalButton('⬇️', Direction.Down), paddingButton())
 			.toJSON()
 	];
+}
+
+const Levels: Collection<string, Level> = new Collection(
+	JSON.parse(await readFile(new URL('lib/common/levels.json', PathSrc), { encoding: 'utf-8' })).map(
+		(level: Level) => [level.name.toLowerCase(), level] as const
+	)
+);
+
+export function getLevel(name?: string) {
+	return Levels.get(name?.toLowerCase() ?? 'default');
+}
+
+export function searchLevels(name: string): readonly LevelSearchResult[] {
+	if (name.length === 0) return [];
+
+	name = name.toLowerCase();
+	const results: LevelSearchResult[] = [];
+	for (const [key, value] of Levels) {
+		const score = getSearchScore(name, key);
+		if (score !== 0) results.push({ score, value });
+	}
+
+	return results.sort((a, b) => b.score - a.score).slice(0, 25);
+}
+
+function getSearchScore(id: string, key: string) {
+	if (key === id) return 1;
+	return key.includes(id) ? id.length / key.length : 0;
+}
+
+export function makeLevelChoice(score: number, entry: Level): APIApplicationCommandOptionChoice<string> {
+	return {
+		name: cutText(`${score === 1 ? '⭐' : '📄'} ${entry.name}`, 100),
+		value: entry.name
+	};
+}
+
+export function makeLevelChoices(results: readonly LevelSearchResult[]): APIApplicationCommandOptionChoice<string>[] {
+	return results.map((result) => makeLevelChoice(result.score, result.value));
+}
+
+export interface LevelSearchResult {
+	score: number;
+	value: Level;
+}
+
+export interface Level {
+	name: string;
+	data: string;
+	difficulty: number;
 }
