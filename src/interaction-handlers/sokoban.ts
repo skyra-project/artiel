@@ -48,8 +48,7 @@ export class UserHandler extends InteractionHandler {
 		// check win condition, if met, send victory message
 		if (level.checkWinCondition()) {
 			return interaction.update({
-				// the milliseconds are divided by 10 to round off the 3rd decimal place for the seconds
-				// so then the seconds are rounded to 2 decimal places
+				// We use `round(ms / 1000 * 100) / 100` to convert ms to seconds and round to 2 digits, which can be simplified to `round(ms / 10) / 100`.
 				content: `${t(Root.Victory, { seconds: Math.round((Date.now() - startTimestamp) / 10) / 100, moves })}\n${updatedLevel}`,
 				components: [],
 				flags: MessageFlags.Ephemeral
