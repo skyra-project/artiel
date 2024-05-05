@@ -1,10 +1,9 @@
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import {
 	buildGameControls,
-	buildMatrixFromResolvableLevel,
-	buildMatrixFromVisualLevel,
+	buildSokobanGameFromResolvableLevel,
+	buildSokobanGameFromVisualLevel,
 	Direction,
-	encodeLevel,
 	encodeResolvableLevel
 } from '#lib/utilities/sokoban';
 import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
@@ -20,17 +19,18 @@ export class UserHandler extends InteractionHandler {
 		// if the restart button is pressed, reset the current level
 		if (directionOrRetry === 'retry') {
 			const encodedLevel = startTimestampOrEncodedLevel!.replaceAll('-', '.');
-			const levelResult = buildMatrixFromResolvableLevel(encodedLevel);
-			if (levelResult.isErr())
+			const levelResult = buildSokobanGameFromResolvableLevel(encodedLevel);
+			if (levelResult.isErr()) {
 				return interaction.update({
 					content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: levelResult.unwrapErr() }),
 					flags: MessageFlags.Ephemeral
 				});
+			}
 			const level = levelResult.unwrap();
 
 			return interaction.update({
-				content: encodeLevel(level.gameComponents),
-				components: buildGameControls(encodeResolvableLevel(level.gameComponents), level.checkNonviableMoves()),
+				content: level.toString(),
+				components: buildGameControls(encodeResolvableLevel(level.components), level.checkPossibleMoves()),
 				flags: MessageFlags.Ephemeral
 			});
 		}
@@ -38,18 +38,19 @@ export class UserHandler extends InteractionHandler {
 		const startTimestamp = Number(startTimestampOrEncodedLevel);
 
 		// parse components from the emojis in the interaction's message
-		const gameBoardResult = buildMatrixFromVisualLevel(interaction.message.content);
-		if (gameBoardResult.isErr())
+		const gameBoardResult = buildSokobanGameFromVisualLevel(interaction.message.content);
+		if (gameBoardResult.isErr()) {
 			return interaction.update({
 				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: gameBoardResult.unwrapErr() }),
 				components: [],
 				flags: MessageFlags.Ephemeral
 			});
+		}
 		const level = gameBoardResult.unwrap();
 
 		// execute the user's move
 		const pushedBoxOption = level.executeMove(directionOrRetry);
-		const updatedLevel = encodeLevel(level.gameComponents);
+		const updatedLevel = level.toString();
 
 		// check win condition, if met, send victory message
 		if (level.checkWinCondition()) {
@@ -77,7 +78,7 @@ export class UserHandler extends InteractionHandler {
 			content: updatedLevel,
 			components: buildGameControls(
 				encodedLevelFromLevelComponent,
-				level.checkNonviableMoves(),
+				level.checkPossibleMoves(),
 				startTimestamp === 0 ? Date.now() : startTimestamp,
 				(moves ? Number(moves) : 0) + 1
 			),

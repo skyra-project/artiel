@@ -1,6 +1,5 @@
 import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
-import { from } from '@sapphire/iterator-utilities';
-import { Option, Result } from '@sapphire/result';
+import { err, none, ok, some, type Option, type Result } from '@sapphire/result';
 import { ButtonStyle } from 'discord-api-types/v10';
 import { getEmojiData } from './discord.js';
 
@@ -30,19 +29,20 @@ export enum Direction {
 	Right = 'right'
 }
 
-export class SokobanMatrix {
-	public rowIndices: number;
-	public columnIndices: number;
+export class SokobanGame {
+	public rows: number;
+	public columns: number;
+	public player: GameComponent;
 
 	/**
-	 * Constructs a new game matrix.
+	 * Constructs a new game.
 	 *
-	 * @param gameComponents the game components to build the matrix from.
+	 * @param components the game components to build the matrix from.
 	 *
 	 * @example
 	 * ```typescript
-	 * // create the matrix
-	 * const gameBoardResult = buildMatrix(interaction.message.content);
+	 * // create the sokoban game
+	 * const gameBoardResult = buildSokobanGameFromVisualLevel(interaction.message.content);
 	 * if (gameBoardResult.isErr())
 	 *  return interaction.update({ content: "invalid components", flags: MessageFlags.Ephemeral });
 	 * const level = gameBoardResult.unwrap();
@@ -83,42 +83,36 @@ export class SokobanMatrix {
 	 * ```
 	 *
 	 */
-	public constructor(public readonly gameComponents: EmojiGameComponent[]) {
-		const coordinatedGameComponents: GameComponent[] = [];
-
+	public constructor(public readonly components: EmojiGameComponent[]) {
 		let maxColumnIndice = 0;
 		let maxRowIndice = 0;
 		let currentRowStartIndex = 0;
-		let x = 0;
-		let y = 0;
-		// get the max indices for rows and columns and coordinate components for simplified null fillings
-		for (let i = 0; i < gameComponents.length; i++) {
-			const component = gameComponents[i];
-			coordinatedGameComponents.push({ x, y, component });
+		// get the max indices for rows and columns
+		for (let i = 0; i < components.length; i++) {
+			const component = components[i];
 			if (component === EmojiGameComponent.NewLine) {
 				maxColumnIndice = Math.max(maxColumnIndice, i - currentRowStartIndex);
 				currentRowStartIndex = i + 1;
 				maxRowIndice++;
-				x = 0;
-				y++;
 				continue;
 			}
-			if (i === gameComponents.length - 1) maxColumnIndice = Math.max(maxColumnIndice, i - currentRowStartIndex);
-			x++;
+			if (i === components.length - 1) maxColumnIndice = Math.max(maxColumnIndice, i - currentRowStartIndex);
 		}
-		this.rowIndices = maxRowIndice;
-		this.columnIndices = maxColumnIndice;
+		this.rows = maxRowIndice + 1;
+		this.columns = maxColumnIndice + 1;
 
 		// fill the game with empty components to make it a perfect rectangle
-		for (let i = 0; i < coordinatedGameComponents.length; i++) {
-			if (coordinatedGameComponents[i].component === EmojiGameComponent.NewLine) {
-				const gap = maxColumnIndice - coordinatedGameComponents[i].x;
-				coordinatedGameComponents.splice(i, 0, ...Array(gap).fill({ x: 0, y: 0, component: EmojiGameComponent.Null }));
+		for (let i = 0; i < components.length; i++) {
+			if (components[i] === EmojiGameComponent.NewLine) {
+				const x = i % this.columns;
+				const gap = maxColumnIndice - x;
+				components.splice(i, 0, ...Array(gap).fill(EmojiGameComponent.Null));
 				i += gap;
 			}
 		}
 
-		this.gameComponents = coordinatedGameComponents.map((c) => c.component);
+		this.components = components;
+		this.player = this.getPlayer();
 	}
 
 	/**
@@ -129,7 +123,7 @@ export class SokobanMatrix {
 	 * @returns the component at the given position.
 	 */
 	public get(x: number, y: number): GameComponent {
-		return { component: this.gameComponents[y * (this.columnIndices + 1) + x], x, y };
+		return { component: this.components[y * this.columns + x], x, y };
 	}
 
 	/**
@@ -140,7 +134,7 @@ export class SokobanMatrix {
 	 * @param component the component to set the position to.
 	 */
 	public set(x: number, y: number, component: EmojiGameComponent) {
-		this.gameComponents[y * (this.columnIndices + 1) + x] = component;
+		this.components[y * this.columns + x] = component;
 	}
 
 	/**
@@ -149,21 +143,13 @@ export class SokobanMatrix {
 	 * @returns the player component.
 	 */
 	public getPlayer(): GameComponent {
-		let x = 0;
-		let y = 0;
-		const component = this.gameComponents.find((component) => {
-			if (component === EmojiGameComponent.NewLine) {
-				y++;
-				x = 0;
-				return false;
-			}
-			x++;
-			if ([EmojiGameComponent.Player, EmojiGameComponent.PlayerTarget].includes(component)) {
-				return true;
-			}
-			return false;
-		})!;
-		return { component, x: Math.max(0, x - 1), y };
+		const index = this.components.findIndex((component) => [EmojiGameComponent.Player, EmojiGameComponent.PlayerTarget].includes(component));
+		if (index === -1) throw new RangeError('Unreachable, could not find a Player');
+		return {
+			component: this.components[index],
+			x: index % this.columns,
+			y: Math.floor(index / this.columns)
+		};
 	}
 
 	/**
@@ -179,41 +165,29 @@ export class SokobanMatrix {
 		const nextY = precedingComponent.y + (direction === Direction.Up ? -1 : direction === Direction.Down ? 1 : 0);
 
 		const nextComponent = this.get(nextX, nextY);
-		if (!nextComponent.component) return Option.none;
-		if ([EmojiGameComponent.Wall, EmojiGameComponent.Empty, EmojiGameComponent.Null].includes(nextComponent.component)) return Option.none;
+		if (!nextComponent.component) return none;
+		if ([EmojiGameComponent.Wall, EmojiGameComponent.Empty, EmojiGameComponent.Null].includes(nextComponent.component)) return none;
 		if ([EmojiGameComponent.Box, EmojiGameComponent.BoxTarget].includes(nextComponent.component)) {
-			if (boxRecurse) return Option.none;
+			if (boxRecurse) return none;
 			const nextNextComponent = this.peekNextComponent(nextComponent, direction, true);
-			if (nextNextComponent.isNone()) return Option.none;
+			if (nextNextComponent.isNone()) return none;
 		}
 
-		return Option.some(nextComponent);
+		return some(nextComponent);
 	}
 
 	/**
-	 * Checks for nonviable moves.
+	 * Checks for possible moves.
 	 *
-	 * @returns the directions the player can't move in.
+	 * @returns the directions the player can move in.
 	 */
-	public checkNonviableMoves(): Direction[] {
+	public checkPossibleMoves(): Direction[] {
 		const directions: Direction[] = [];
 		for (const direction of [Direction.Up, Direction.Down, Direction.Left, Direction.Right]) {
-			const nextComponent = this.peekNextComponent(this.getPlayer(), direction);
-			if (nextComponent.isNone()) directions.push(direction);
+			const nextComponent = this.peekNextComponent(this.player, direction);
+			if (nextComponent.isSome()) directions.push(direction);
 		}
 		return directions;
-	}
-
-	/**
-	 * Executes a move in the given direction.
-	 *
-	 * @param direction the direction to move the player.
-	 * @returns the pushed box if there was one.
-	 */
-	public executeMove(direction: Direction): Option<GameComponent> {
-		const player = this.getPlayer();
-		const pushedBoxOption = this.moveComponents(direction, player);
-		return pushedBoxOption;
 	}
 
 	/**
@@ -233,24 +207,23 @@ export class SokobanMatrix {
 	 * @param player the player component.
 	 * @returns the pushed box if there was one.
 	 */
-	public moveComponents(direction: Direction, player: GameComponent): Option<GameComponent> {
-		const nextPosition = this.peekNextComponent(player, direction).unwrap();
+	public executeMove(direction: Direction): Option<GameComponent> {
+		const nextPosition = this.peekNextComponent(this.player, direction).unwrap();
 
 		// Remove the player from its current position
 		this.set(
-			player.x,
-			player.y,
-			player.component === EmojiGameComponent.PlayerTarget ? EmojiGameComponent.FloorTarget : EmojiGameComponent.Floor
+			this.player.x,
+			this.player.y,
+			this.player.component === EmojiGameComponent.PlayerTarget ? EmojiGameComponent.FloorTarget : EmojiGameComponent.Floor
 		);
 
 		// Checks if the next position is a box
 		if ([EmojiGameComponent.BoxTarget, EmojiGameComponent.Box].includes(nextPosition.component)) {
 			// Set the player to the next position
-			this.set(
-				nextPosition.x,
-				nextPosition.y,
-				nextPosition.component === EmojiGameComponent.BoxTarget ? EmojiGameComponent.PlayerTarget : EmojiGameComponent.Player
-			);
+			const newPlayerComponent =
+				nextPosition.component === EmojiGameComponent.BoxTarget ? EmojiGameComponent.PlayerTarget : EmojiGameComponent.Player;
+			this.set(nextPosition.x, nextPosition.y, newPlayerComponent);
+			this.player = { component: newPlayerComponent, x: nextPosition.x, y: nextPosition.y };
 
 			// Get the next position of the box
 			const nextBoxPosition = {
@@ -265,18 +238,20 @@ export class SokobanMatrix {
 				nextBoxPosition.y,
 				nextBoxPositionComponent.component === EmojiGameComponent.FloorTarget ? EmojiGameComponent.BoxTarget : EmojiGameComponent.Box
 			);
-			return Option.some(this.get(nextBoxPosition.x, nextBoxPosition.y));
+			return some(this.get(nextBoxPosition.x, nextBoxPosition.y));
 		}
 
 		// Check if the next position is a floor target, if so set the player as a player target
 		if (nextPosition.component === EmojiGameComponent.FloorTarget) {
 			this.set(nextPosition.x, nextPosition.y, EmojiGameComponent.PlayerTarget);
-			return Option.none;
+			this.player = { component: EmojiGameComponent.PlayerTarget, x: nextPosition.x, y: nextPosition.y };
+			return none;
 		}
 
 		// Set the player to the next position
 		this.set(nextPosition.x, nextPosition.y, EmojiGameComponent.Player);
-		return Option.none;
+		this.player = { component: EmojiGameComponent.Player, x: nextPosition.x, y: nextPosition.y };
+		return none;
 	}
 
 	/**
@@ -288,9 +263,7 @@ export class SokobanMatrix {
 	 * - The player is on a target
 	 */
 	public checkWinCondition() {
-		return !this.gameComponents.some((c) =>
-			[EmojiGameComponent.FloorTarget, EmojiGameComponent.Box, EmojiGameComponent.PlayerTarget].includes(c)
-		);
+		return !this.components.some((c) => [EmojiGameComponent.FloorTarget, EmojiGameComponent.Box, EmojiGameComponent.PlayerTarget].includes(c));
 	}
 
 	/**
@@ -319,11 +292,21 @@ export class SokobanMatrix {
 		];
 
 		return (
-			(top?.component === EmojiGameComponent.Wall && left?.component === EmojiGameComponent.Wall) ||
-			(top?.component === EmojiGameComponent.Wall && right?.component === EmojiGameComponent.Wall) ||
-			(bottom?.component === EmojiGameComponent.Wall && left?.component === EmojiGameComponent.Wall) ||
-			(bottom?.component === EmojiGameComponent.Wall && right?.component === EmojiGameComponent.Wall)
+			(top.component === EmojiGameComponent.Wall && left.component === EmojiGameComponent.Wall) ||
+			(top.component === EmojiGameComponent.Wall && right.component === EmojiGameComponent.Wall) ||
+			(bottom.component === EmojiGameComponent.Wall && left.component === EmojiGameComponent.Wall) ||
+			(bottom.component === EmojiGameComponent.Wall && right.component === EmojiGameComponent.Wall)
 		);
+	}
+
+	/**
+	 * Encodes game components into a visual representation of the game.
+	 *
+	 * @param gameComponents game components to encode.
+	 * @returns the encoded level.
+	 */
+	public toString(): string {
+		return this.components.filter((c) => c !== EmojiGameComponent.Null).join('');
 	}
 }
 
@@ -331,12 +314,12 @@ export class SokobanMatrix {
 export const CLOSE_BRACKET = '>';
 
 /**
- * Builds a game matrix from a string of emoji components.
+ * Builds a sokoban game from a string of emoji components.
  *
- * @param content the content to build the matrix from.
- * @returns the game matrix or an error message if the content contains invalid components.
+ * @param content the content to build the game from.
+ * @returns the sokoban game or an error message if the content contains invalid components.
  */
-export function buildMatrixFromVisualLevel(content: string): Result<SokobanMatrix, string> {
+export function buildSokobanGameFromVisualLevel(content: string): Result<SokobanGame, string> {
 	const gameComponents: EmojiGameComponent[] = [];
 	let rawComponent = '';
 	for (const char of content) {
@@ -357,7 +340,7 @@ export function buildMatrixFromVisualLevel(content: string): Result<SokobanMatri
 				break;
 		}
 	}
-	return Result.ok(new SokobanMatrix(gameComponents));
+	return ok(new SokobanGame(gameComponents));
 }
 
 /**
@@ -376,20 +359,10 @@ function parseSingleComponent(rawComponent: string): Result<EmojiGameComponent, 
 		case EmojiGameComponent.PlayerTarget:
 		case EmojiGameComponent.Box:
 		case EmojiGameComponent.BoxTarget:
-			return Result.ok(rawComponent);
+			return ok(rawComponent);
 		default:
-			return Result.err(rawComponent);
+			return err(rawComponent);
 	}
-}
-
-/**
- * Encodes game components into a visual representation of the game.
- *
- * @param gameComponents game components to encode.
- * @returns the encoded level.
- */
-export function encodeLevel(gameComponents: EmojiGameComponent[]): string {
-	return gameComponents.filter((c) => c !== EmojiGameComponent.Null).join('');
 }
 
 /** game components as single character resolvables for a small form-factor level storing. */
@@ -454,41 +427,37 @@ export function encodeResolvableLevel(gameComponents: EmojiGameComponent[]): str
 }
 
 /**
- * Parse a resolvable level into an interactable game matrix.
+ * Parse a resolvable level into sokoban game.
  *
- * @param t localization function for error messages.
  * @param level resolvable encoded level.
- * @returns the parsed game matrix or an error message if the level contains invalid components.
+ * @returns the sokoban game or an error message if the level contains invalid components.
  */
-export function buildMatrixFromResolvableLevel(level: string): Result<SokobanMatrix, string> {
-	const levelPeekable = from(level);
+export function buildSokobanGameFromResolvableLevel(level: string): Result<SokobanGame, string> {
 	const gameComponents: EmojiGameComponent[] = [];
-	let currentComponent = levelPeekable.next();
-	while (!currentComponent.done) {
-		const component = GameComponentsMapping[currentComponent.value as ResolvableLevelComponent];
-		if (!component) return Result.err(currentComponent.value);
+	for (const currentComponent of level) {
+		const component = GameComponentsMapping[currentComponent as ResolvableLevelComponent];
+		if (!component) return err(currentComponent);
 		gameComponents.push(component);
-		currentComponent = levelPeekable.next();
 	}
-	return Result.ok(new SokobanMatrix(gameComponents));
+	return ok(new SokobanGame(gameComponents));
 }
 
 /**
  * builds the controls for the sokoban game.
  *
  * @param resolvableEncodedLevel the chosen level encoded to be stored in a unused button for retrying the level.
- * @param disabledDirections the directions that have been checked to be invalid movements.
+ * @param enabledDirections the directions that have been checked to be invalid movements.
  * @param startTimestamp the timestamp when the game started/the first move was made.
  * @param moves the number of moves made in the game.
  * @returns discord message components for the game controls.
  */
-export function buildGameControls(resolvableEncodedLevel: string, disabledDirections: Direction[] = [], startTimestamp = 0, moves = 0) {
+export function buildGameControls(resolvableEncodedLevel: string, enabledDirections: Direction[] = [], startTimestamp = 0, moves = 0) {
 	const directionalButton = (emoji: string, direction: Direction) =>
 		new ButtonBuilder() //
 			.setCustomId(`sokoban.${direction}.${startTimestamp}.${moves}`)
 			.setEmoji({ name: emoji })
-			.setDisabled(disabledDirections.includes(direction))
-			.setStyle(disabledDirections.includes(direction) ? ButtonStyle.Danger : ButtonStyle.Primary);
+			.setDisabled(!enabledDirections.includes(direction))
+			.setStyle(enabledDirections.includes(direction) ? ButtonStyle.Primary : ButtonStyle.Danger);
 
 	let uniquePaddingId = 0;
 	const paddingButton = () =>
