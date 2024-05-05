@@ -85,7 +85,6 @@ export class SokobanGame {
 	 *	flags: MessageFlags.Ephemeral
 	 * });
 	 * ```
-	 *
 	 */
 	public constructor(public readonly components: EmojiGameComponent[]) {
 		let maxColumnIndice = 0;

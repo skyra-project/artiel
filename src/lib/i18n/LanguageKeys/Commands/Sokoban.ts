@@ -4,10 +4,12 @@ import { FT, T, type Value } from '@skyra/http-framework-i18n';
 export const RootName = T('commands/sokoban:name');
 export const RootDescription = T('commands/sokoban:description');
 
+// Subcommmands
+export const PlayLevel = 'commands/sokoban:playLevel';
+export const CustomLevel = 'commands/sokoban:customLevel';
+
 // Options
-export const PlayLevel = 'commands/sokoban:optionLevel';
 export const OptionChooseLevel = 'commands/sokoban:optionChooseLevel';
-export const CustomLevel = 'commands/sokoban:optionCustomLevel';
 export const OptionImportCustomLevel = 'commands/sokoban:optionImportCustomLevel';
 
 // Errors
