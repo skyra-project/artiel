@@ -13,7 +13,7 @@ export const OptionChooseLevel = 'commands/sokoban:optionChooseLevel';
 export const OptionImportCustomLevel = 'commands/sokoban:optionImportCustomLevel';
 
 // Errors
-export const SokobanInvalidComponent = FT<Value<string>>('commands/sokoban:invalidComponent');
+export const SokobanInvalidComponent = FT<Value>('commands/sokoban:invalidComponent');
 export const SokobanInvalidLevel = T('commands/sokoban:invalidLevel');
 
 // Game
