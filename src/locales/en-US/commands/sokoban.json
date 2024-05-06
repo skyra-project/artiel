@@ -1,0 +1,17 @@
+{
+	"name": "sokoban",
+	"description": "Generates an interactive puzzle board",
+	"playLevelName": "play-level",
+	"playLevelDescription": "Play level",
+	"customLevelName": "custom-level",
+	"customLevelDescription": "Custom level",
+	"optionChooseLevelName": "level",
+	"optionChooseLevelDescription": "Choose level",
+	"optionImportCustomLevelName": "import",
+	"optionImportCustomLevelDescription": "Import custom level",
+	"invalidComponent": "Invalid component: {{value}}",
+	"invalidLevel": "Invalid level",
+	"victory": "# You Win!\n- **Time Taken:** {{seconds}} seconds\n- **Move Count:** {{moves}}",
+	"defeat": "# You Lose!",
+	"retry": "Retry"
+}
