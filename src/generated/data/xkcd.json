@@ -26332,5 +26332,14 @@
 		"alt": "Poor Weeoming.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2928,
+		"date": 1714737600000,
+		"title": "Software Testing Day",
+		"image": "https://imgs.xkcd.com/comics/software_testing_day.png",
+		"alt": "The company tried to document how often employees were celebrating Software Testing Day, but their recordkeeping system kept mysteriously crashing.",
+		"transcript": null,
+		"news": null
 	}
 ]
