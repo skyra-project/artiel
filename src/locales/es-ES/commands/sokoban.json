@@ -1,6 +1,5 @@
 {
 	"name": "sokoban",
-	"description": "Genera un rompecabezas interactivo",
 	"playLevelName": "jugar-nivel",
 	"customLevelName": "nivel-personalizado",
 	"optionChooseLevelName": "nivel",
