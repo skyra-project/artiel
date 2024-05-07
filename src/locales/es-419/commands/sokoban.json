@@ -1,1 +1,11 @@
-{}
+{
+	"name": "sokoban",
+	"playLevelName": "jugar-nivel",
+	"customLevelName": "nivel-personalizado",
+	"optionChooseLevelName": "nivel",
+	"optionImportCustomLevelName": "importar",
+	"invalidComponent": "Componente no válido: {{value}}",
+	"victory": "# ¡Ganaste!\n- **Duración:** {{seconds}} segundos\n- **Movimientos:** {{moves}}",
+	"defeat": "# ¡Has perdido!",
+	"retry": "Reintentar"
+}
