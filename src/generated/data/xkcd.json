@@ -26341,5 +26341,14 @@
 		"alt": "The company tried to document how often employees were celebrating Software Testing Day, but their recordkeeping system kept mysteriously crashing.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2929,
+		"date": 1714996800000,
+		"title": "Good and Bad Ideas",
+		"image": "https://imgs.xkcd.com/comics/good_and_bad_ideas.png",
+		"alt": "While it seemed like a fun prank at the time, I realize my prank fire extinguishers full of leaded gasoline were a mistake.",
+		"transcript": null,
+		"news": null
 	}
 ]
