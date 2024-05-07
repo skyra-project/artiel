@@ -1,1 +1,17 @@
-{}
+{
+	"name": "sokoban",
+	"description": "Play the classic game of Sokoban",
+	"playLevelName": "play-level",
+	"playLevelDescription": "Play an existing level",
+	"customLevelName": "custom-level",
+	"customLevelDescription": "Play a custom level",
+	"optionChooseLevelName": "level",
+	"optionChooseLevelDescription": "The level to play",
+	"optionImportCustomLevelName": "import",
+	"optionImportCustomLevelDescription": "The code for the custom level",
+	"invalidComponent": "Invalid component: {{value}}",
+	"invalidLevel": "I could not find a level with the specified name.",
+	"victory": "# You Win!\n- **Time Taken:** {{seconds}} seconds\n- **Move Count:** {{moves}}",
+	"defeat": "# You Lose!",
+	"retry": "Retry"
+}
