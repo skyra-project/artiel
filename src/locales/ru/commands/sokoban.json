@@ -1,5 +1,8 @@
 {
 	"customLevelName": "пользовательский-уровень",
 	"optionChooseLevelName": "уровень",
-	"optionImportCustomLevelName": "импортировать"
+	"optionImportCustomLevelName": "импортировать",
+	"invalidLevel": "Я не смог найти уровень с указанным названием.",
+	"victory": "# Вы выиграли!\n- **Затраченное время:** {{seconds}} секунд\n- **Количество ходов:** {{moves}}",
+	"defeat": "# Вы проиграли!"
 }
