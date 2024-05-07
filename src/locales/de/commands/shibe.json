@@ -1,1 +1,4 @@
-{}
+{
+	"description": "Stellt ein zufälliges Bild eines Shibes bereit",
+	"error": "Der Shibe schläft und kann im Moment nicht gestört werden, aber ich habe ein altes Bild von einem, das ich gefunden habe!"
+}
