@@ -1,1 +1,6 @@
-{}
+{
+	"description": "Stellt ein zufälliges Bild eines Hasen bereit",
+	"buttonLinkToImage": "Link zum Bild",
+	"buttonSource": "Quelle",
+	"error": "Wo ist der Hase? Ich weiß es nicht! Sie verstecken sich! Während ich es finde, hier ist ein Foto vom Hasen meines Freundes!"
+}
