@@ -11,6 +11,8 @@
 	"optionsPresetDescription": "Используемая предустановка",
 	"optionsSelectionName": "выбор",
 	"optionsSelectionDescription": "Используемый метод выбора",
+	"optionsOnCriticalSuccessDescription": "Действие в случае критического успеха",
+	"optionsOnCriticalFailureDescription": "Действие в случае критического провала",
 	"optionsHideName": "скрыть",
 	"optionsHideDescription": "Скрывать результат (по умолчанию: False)",
 	"title": "{{dice}} Бросаю...",
