@@ -11,7 +11,9 @@
 	"optionsPresetDescription": "Используемая предустановка",
 	"optionsSelectionName": "выбор",
 	"optionsSelectionDescription": "Используемый метод выбора",
+	"optionsOnCriticalSuccessName": "критический-успех",
 	"optionsOnCriticalSuccessDescription": "Действие в случае критического успеха",
+	"optionsOnCriticalFailureName": "критический-провал",
 	"optionsOnCriticalFailureDescription": "Действие в случае критического провала",
 	"optionsHideName": "скрыть",
 	"optionsHideDescription": "Скрывать результат (по умолчанию: False)",
@@ -28,5 +30,6 @@
 	"presetFate": "Fate (-1/0/+1)",
 	"selectionAddition": "Сложение (по умолчанию)",
 	"selectionGreatest": "Наибольшее",
-	"selectionLeast": "Наименьшее"
+	"selectionLeast": "Наименьшее",
+	"onCriticalNothing": "Ничего не делать"
 }
