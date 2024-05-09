@@ -26350,5 +26350,14 @@
 		"alt": "While it seemed like a fun prank at the time, I realize my prank fire extinguishers full of leaded gasoline were a mistake.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2930,
+		"date": 1715169600000,
+		"title": "Google Solar Cycle",
+		"image": "https://imgs.xkcd.com/comics/google_solar_cycle.png",
+		"alt": "From Google Trends, it looks like the lag between people Googling cocktail recipes and 'hangover cure' is 14 hours.",
+		"transcript": null,
+		"news": null
 	}
 ]
