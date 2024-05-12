@@ -53,7 +53,7 @@
 		"@sapphire/ts-config": "^5.0.1",
 		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.6",
-		"@types/node": "^20.12.8",
+		"@types/node": "^20.12.11",
 		"@types/turndown": "^5.0.4",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -64,7 +64,7 @@
 		"lint-staged": "^15.2.2",
 		"prettier": "^3.2.5",
 		"prisma": "^5.13.0",
-		"rimraf": "^5.0.5",
+		"rimraf": "^5.0.6",
 		"typescript": "^5.4.5"
 	},
 	"resolutions": {
@@ -93,8 +93,8 @@
 	"eslintConfig": {
 		"extends": "@sapphire"
 	},
-	"packageManager": "yarn@4.2.1",
+	"packageManager": "yarn@4.2.2",
 	"volta": {
-		"node": "20.12.2"
+		"node": "20.13.1"
 	}
 }
