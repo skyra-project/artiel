@@ -26377,5 +26377,14 @@
 		"alt": "This PSA brought to you by several would-be assassins who tried to wave me in front of speeding cars in the last month and who will have to try harder next time.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2933,
+		"date": 1715774400000,
+		"title": "Elementary Physics Paths",
+		"image": "https://imgs.xkcd.com/comics/elementary_physics_paths.png",
+		"alt": "==COSMOLOGY==> 'Uhhh ... how sure are we that everything is made of these?'",
+		"transcript": null,
+		"news": null
 	}
 ]
