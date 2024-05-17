@@ -1,1 +1,17 @@
-{}
+{
+	"name": "सोकोबन",
+	"description": "सोकोबन का क्लासिक गेम खेलें",
+	"playLevelName": "खेल-स्तर",
+	"playLevelDescription": "मौजूदा स्तर खेलें",
+	"customLevelName": "कस्टम-स्तर",
+	"customLevelDescription": "एक कस्टम स्तर खेलें",
+	"optionChooseLevelName": "स्तर",
+	"optionChooseLevelDescription": "खेलने का स्तर",
+	"optionImportCustomLevelName": "आयात",
+	"optionImportCustomLevelDescription": "कस्टम स्तर के लिए कोड",
+	"invalidComponent": "अमान्य घटक: {{value}}",
+	"invalidLevel": "मुझे निर्दिष्ट नाम वाला कोई स्तर नहीं मिला।",
+	"victory": "# आप जीत!\n- **समय लिया:** {{seconds}} सेकंड\n- **चालें चलीं:** {{moves}}",
+	"defeat": "# आप हार गए!",
+	"retry": "पुन: प्रयास करें"
+}
