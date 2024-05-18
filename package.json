@@ -20,7 +20,7 @@
 		"test": "vitest run",
 		"lint": "eslint --fix --ext ts src",
 		"prettier": "prettier --ignore-path=.prettierignore",
-		"format": "prettier --write --log-level=warn \"{src,scripts}/**/*.{js,ts,json}\"",
+		"format": "prettier --write --log-level=warn",
 		"update": "yarn upgrade-interactive"
 	},
 	"dependencies": {
@@ -39,6 +39,7 @@
 		"@skyra/shared-http-pieces": "^1.2.2",
 		"@skyra/start-banner": "^2.0.1",
 		"canvas-constructor": "^7.0.1",
+		"cheerio": "^1.0.0-rc.12",
 		"cron": "^3.1.7",
 		"discord-api-types": "^0.37.84",
 		"gradient-string": "^2.0.2",
@@ -62,9 +63,11 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.1.3",
 		"lint-staged": "^15.2.2",
+		"mathjax-full": "^3.2.2",
 		"prettier": "^3.2.5",
 		"prisma": "^5.14.0",
 		"rimraf": "^5.0.7",
+		"sharp": "^0.33.4",
 		"typescript": "^5.4.5"
 	},
 	"resolutions": {
