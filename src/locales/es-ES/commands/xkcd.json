@@ -2,7 +2,6 @@
 	"name": "xkcd",
 	"description": "Muestra un cómic de xkcd.com",
 	"optionsIdName": "identificador",
-	"optionsIdDescription": "El número del cómic de xkcd",
 	"noComicFound": "No se encontró un cómic con el ID de {{value}}",
 	"buttonsTranscript": "Transcripción",
 	"buttonsNews": "Noticias"
