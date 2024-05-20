@@ -2,14 +2,16 @@
 /// <reference lib="ESNext" />
 
 import { writeFile } from 'node:fs/promises';
-import { fetchEntry, fetchLatest, outputFile } from './shared/what-if.mjs';
+import { fetchEntry, fetchLatest, outputFile, type Comic } from './shared/xkcd.mjs';
 
 const last = await fetchLatest();
 if (last === null) process.exit(1);
 
 const lastId = last.id;
-const output = [];
+const output = [] as Comic[];
 for (let i = 1; i < lastId; i++) {
+	if (i === 404) continue;
+
 	const entry = await fetchEntry(i);
 	if (entry === null) continue;
 

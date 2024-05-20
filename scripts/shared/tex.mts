@@ -27,10 +27,7 @@ const tex = new TeX({ packages: AllPackages.sort() });
 const svg = new SVG({ fontCache: 'local' });
 const html = mathjax.document('', { InputJax: tex, OutputJax: svg });
 
-/**
- * @param {string} value
- */
-export function toSVG(value) {
+export function toSVG(value: string): string {
 	const node = html.convert(value, {
 		display: true,
 		em: 16,
