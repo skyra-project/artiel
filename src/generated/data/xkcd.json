@@ -26386,5 +26386,14 @@
 		"alt": "==COSMOLOGY==> 'Uhhh ... how sure are we that everything is made of these?'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2934,
+		"date": 1715947200000,
+		"title": "Bloom Filter",
+		"image": "https://imgs.xkcd.com/comics/bloom_filter.png",
+		"alt": "Sometimes, you can tell Bloom filters are the wrong tool for the job, but when they're the right one you can never be sure.",
+		"transcript": null,
+		"news": null
 	}
 ]
