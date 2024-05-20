@@ -31,5 +31,8 @@
 	"selectionAddition": "Сложение (по умолчанию)",
 	"selectionGreatest": "Наибольшее",
 	"selectionLeast": "Наименьшее",
-	"onCriticalNothing": "Ничего не делать"
+	"onCriticalNothing": "Ничего не делать",
+	"onCriticalRerollOnce": "Бросить снова (до 1 раза)",
+	"onCriticalRerollTwice": "Бросить снова (до 2 раз)",
+	"onCriticalRerollThrice": "Бросить снова (до 3 раз)"
 }
