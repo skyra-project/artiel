@@ -2,16 +2,14 @@
 /// <reference lib="ESNext" />
 
 import { writeFile } from 'node:fs/promises';
-import { fetchEntry, fetchLatest, outputFile } from './shared/xkcd.mjs';
+import { fetchEntry, fetchLatest, outputFile, type WhatIf } from './shared/what-if.mjs';
 
 const last = await fetchLatest();
 if (last === null) process.exit(1);
 
 const lastId = last.id;
-const output = [];
+const output = [] as WhatIf[];
 for (let i = 1; i < lastId; i++) {
-	if (i === 404) continue;
-
 	const entry = await fetchEntry(i);
 	if (entry === null) continue;
 

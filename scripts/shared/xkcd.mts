@@ -1,6 +1,9 @@
 import { strikethrough } from '@discordjs/builders';
 import { isNullishOrEmpty } from '@sapphire/utilities';
 import TurndownService from 'turndown';
+import type { Comic, RawComic } from '../../src/lib/utilities/xkcd.js';
+
+export type { Comic };
 
 export const outputFile = new URL('../../src/generated/data/xkcd.json', import.meta.url);
 
@@ -10,7 +13,7 @@ service.addRule('strikethrough', {
 	replacement: (content) => strikethrough(content)
 });
 
-export async function fetchLatest() {
+export async function fetchLatest(): Promise<Comic | null> {
 	const response = await fetch('https://xkcd.com/info.0.json');
 	if (!response.ok || !response.body) {
 		console.error('Failed to read the xkcd data, see response:');
@@ -21,10 +24,7 @@ export async function fetchLatest() {
 	return transform(await response.json());
 }
 
-/**
- * @param {number} id
- */
-export async function fetchEntry(id) {
+export async function fetchEntry(id: number): Promise<Comic | null> {
 	const response = await fetch(`https://xkcd.com/${id}/info.0.json`);
 	if (!response.ok || !response.body) {
 		console.error(`Failed to read the xkcd data for ${id}, see response:`);
@@ -35,21 +35,7 @@ export async function fetchEntry(id) {
 	return transform(await response.json());
 }
 
-/**
- * @typedef {Object} XKCD
- * @property {number} id
- * @property {number} date
- * @property {string} title
- * @property {string} image
- * @property {string} alt
- * @property {?string} transcript
- * @property {?string} news
- */
-
-/**
- * @returns {XKCD}
- */
-function transform(entry) {
+function transform(entry: RawComic): Comic {
 	return {
 		id: entry.num,
 		date: Date.UTC(entry.year, entry.month - 1, entry.day, 12, 0, 0, 0),

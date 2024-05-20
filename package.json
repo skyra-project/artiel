@@ -21,7 +21,11 @@
 		"lint": "eslint --fix --ext ts src",
 		"prettier": "prettier --ignore-path=.prettierignore",
 		"format": "prettier --write --log-level=warn",
-		"update": "yarn upgrade-interactive"
+		"update": "yarn upgrade-interactive",
+		"scripts:extract-what-if-entries": "tsx ./scripts/extract-what-if-entries.mts",
+		"scripts:extract-xkcd-entries": "tsx ./scripts/extract-xkcd-entries.mts",
+		"scripts:update-what-if-entries": "tsx ./scripts/update-what-if-entries.mts",
+		"scripts:update-xkcd-entries": "tsx ./scripts/update-xkcd-entries.mts"
 	},
 	"dependencies": {
 		"@discordjs/builders": "^1.8.1",
@@ -68,6 +72,7 @@
 		"prisma": "^5.14.0",
 		"rimraf": "^5.0.7",
 		"sharp": "^0.33.4",
+		"tsx": "^4.10.5",
 		"typescript": "^5.4.5"
 	},
 	"resolutions": {

@@ -1,66 +1,26 @@
-// / <reference lib="ES2022" />
+// eslint-disable-next-line spaced-comment
+/// <reference lib="esnext" />
 
-import { bold, hyperlink, italic, spoiler, strikethrough, underscore } from '@discordjs/builders';
-import { load } from 'cheerio';
+import { bold, hyperlink, italic, spoiler, strikethrough, underline } from '@discordjs/builders';
+import { load, type Element } from 'cheerio';
+import type { WhatIf, WhatIfLine, WhatIfLineFormula, WhatIfLineImage, WhatIfLineParagraph, WhatIfQuestion } from '../../src/lib/utilities/what-if.js';
 import { hash, render } from './svg.mjs';
 import { toSVG } from './tex.mjs';
 
+export type { WhatIf, WhatIfLine, WhatIfLineFormula, WhatIfLineImage, WhatIfLineParagraph, WhatIfQuestion };
+
 export const outputFile = new URL('../../src/generated/data/what-if.json', import.meta.url);
 
-/**
- * @typedef {Object} WhatIf
- * @property {number} id
- * @property {string} title
- * @property {WhatIfQuestion[]} questions
- * @property {WhatIfLine[]} lines
- */
-
-/**
- * @typedef {Object} WhatIfQuestion
- * @property {string} question
- * @property {string} author
- */
-
-/**
- * @typedef {WhatIfLineParagraph|WhatIfLineFormula|WhatIfLineImage} WhatIfLine
- */
-
-/**
- * @typedef {Object} WhatIfLineParagraph
- * @property {'p'} type
- * @property {string} text
- * @property {WhatIfLineFormula|WhatIfLineImage?} image
- */
-
-/**
- * @typedef {Object} WhatIfLineFormula
- * @property {'formula'} type
- * @property {string} text
- * @property {string} hash
- */
-
-/**
- * @typedef {Object} WhatIfLineImage
- * @property {'img'} type
- * @property {string} src
- * @property {string} alt
- */
-
-export async function fetchLatest() {
+export async function fetchLatest(): Promise<WhatIf | null> {
 	const result = await fetchAndParseEntryFromURL('https://what-if.xkcd.com');
 	if (!result) return null;
 
 	const { $, ...data } = result;
-	// @ts-expect-error Cannot assert non-null in JavaScript
-	const id = Number($('.main-nav').children().first().attr('href').match(/\d+/)[0]) + 1;
+	const id = Number($('.main-nav').children().first().attr('href')!.match(/\d+/)![0]) + 1;
 	return { id, ...data };
 }
 
-/**
- * @param {number} id
- * @returns {Promise<WhatIf | null>}
- */
-export async function fetchEntry(id) {
+export async function fetchEntry(id: number): Promise<WhatIf | null> {
 	const result = await fetchAndParseEntryFromURL(`https://what-if.xkcd.com/${id}`);
 	if (!result) return null;
 
@@ -69,19 +29,11 @@ export async function fetchEntry(id) {
 	return { id, ...data };
 }
 
-/**
- * @typedef {Object} InternalWhatIf
- * @property {string} title
- * @property {WhatIfQuestion[]} questions
- * @property {WhatIfLine[]} lines
- * @property {import('cheerio').CheerioAPI} $
- */
+interface InternalWhatIf extends Omit<WhatIf, 'id'> {
+	$: import('cheerio').CheerioAPI;
+}
 
-/**
- * @param {string} url
- * @returns {Promise<InternalWhatIf | null>}
- */
-async function fetchAndParseEntryFromURL(url) {
+async function fetchAndParseEntryFromURL(url: string): Promise<InternalWhatIf | null> {
 	const response = await fetch(url);
 	if (!response.ok || !response.body) {
 		console.error(`Failed to read the what-if data from ${url}, see response:`);
@@ -92,20 +44,16 @@ async function fetchAndParseEntryFromURL(url) {
 	const source = await response.text();
 	const $ = load(source);
 	const title = $('#title').text();
-	/** @type {WhatIfLine[]} */
-	const lines = [];
-	/** @type {WhatIfQuestion[]} */
-	const questions = [];
-	/** @type {string} */
-	let question;
+	const lines = [] as WhatIfLine[];
+	const questions = [] as WhatIfQuestion[];
+	let question: string;
 	for (const element of $('#entry').children()) {
 		if (element.name === 'p') {
 			const text = $(element).text();
 			if (element.attribs.id === 'question') {
 				question = text;
 			} else if (element.attribs.id === 'attribute') {
-				// @ts-ignore False Positives
-				questions.push({ question, author: text.replace(/^[—–]\s*/, '') });
+				questions.push({ question: question!, author: text.replace(/^[—–]\s*/, '') });
 			} else if (text.startsWith('\\[') && text.endsWith('\\]')) {
 				updateLastOrAppend(lines, await extractFormula(text));
 			} else {
@@ -123,11 +71,7 @@ async function fetchAndParseEntryFromURL(url) {
 	return { title, questions, lines, $ };
 }
 
-/**
- * @param {WhatIfLine[]} lines
- * @param {WhatIfLineImage|WhatIfLineFormula} value
- */
-function updateLastOrAppend(lines, value) {
+function updateLastOrAppend(lines: WhatIfLine[], value: WhatIfLineImage | WhatIfLineFormula) {
 	const last = lines.at(-1);
 	if (!last || last.type !== 'p' || last.image !== null) {
 		lines.push(value);
@@ -137,11 +81,7 @@ function updateLastOrAppend(lines, value) {
 	last.image = value;
 }
 
-/**
- * @param {string} value
- * @returns {Promise<WhatIfLineFormula>}
- */
-async function extractFormula(value) {
+async function extractFormula(value: string): Promise<WhatIfLineFormula> {
 	const text = value.slice(2, -2).trim();
 	const svg = toSVG(text);
 	const name = hash(text);
@@ -149,14 +89,11 @@ async function extractFormula(value) {
 	return { type: 'formula', text, hash: name };
 }
 
-/**
- * @returns {Promise<WhatIfLineParagraph>}
- */
-async function extractParagraph(element) {
+async function extractParagraph(element: Element): Promise<WhatIfLineParagraph> {
 	let text = extractParagraphString(element);
-	let image = null;
+	let image: WhatIfLineFormula | null = null;
 
-	let formulaStartIndex;
+	let formulaStartIndex: number;
 	if (text.endsWith('\\]') && (formulaStartIndex = text.lastIndexOf('\\[')) !== -1) {
 		const formula = text.slice(formulaStartIndex);
 		image = await extractFormula(formula);
@@ -166,7 +103,7 @@ async function extractParagraph(element) {
 	return { type: 'p', text, image };
 }
 
-function extractParagraphString(element) {
+function extractParagraphString(element: Element): string {
 	let output = '';
 
 	for (const child of element.children) {
@@ -193,7 +130,7 @@ function extractParagraphString(element) {
 				if (/text-decoration:\s*line-through/.test(child.attribs.style)) out = strikethrough(out);
 				output += out;
 			} else if (child.attribs.class === 'ref') {
-				const [refnum, refbody] = child.children;
+				const [refnum, refbody] = child.children as [Element, Element];
 				output += `${toSuperScript(extractParagraphString(refnum))}${spoiler(extractParagraphString(refbody))}`;
 			} else {
 				console.warn('Unknown span class:', child.attribs.class);
@@ -201,7 +138,7 @@ function extractParagraphString(element) {
 		} else if (child.name === 'strong') {
 			output += bold(extractParagraphString(child));
 		} else if (child.name === 'u') {
-			output += underscore(extractParagraphString(child));
+			output += underline(extractParagraphString(child));
 		} else if (child.name === 's' || child.name === 'strike') {
 			output += strikethrough(extractParagraphString(child));
 		} else if (child.name === 'em') {
@@ -223,12 +160,12 @@ function extractParagraphString(element) {
 }
 
 const ExtractMarkdownHyperlink = /\[([\w\[\]\d ]+)\]\((.+?)\)/g;
-function normalizeSuperscriptElement(element) {
+function normalizeSuperscriptElement(element: Element): string {
 	const extracted = extractParagraphString(element);
 
 	let start = 0;
 	let output = '';
-	let result;
+	let result: RegExpExecArray | null;
 	while ((result = ExtractMarkdownHyperlink.exec(extracted)) !== null) {
 		if (result.index > start) {
 			output += toSuperScript(extracted.slice(start, result.index));
@@ -245,11 +182,11 @@ function normalizeSuperscriptElement(element) {
 	return output;
 }
 
-function escapeUrl(url) {
+function escapeUrl(url: string): string {
 	return url.replaceAll(' ', '%20').replaceAll('(', '%28').replaceAll(')', '%29');
 }
 
-function toSuperScript(value) {
+function toSuperScript(value: string): string {
 	let output = '';
 	for (const char of value) {
 		const lower = char.toLowerCase();
@@ -265,7 +202,7 @@ function toSuperScript(value) {
 	return output;
 }
 
-function toSubScript(value) {
+function toSubScript(value: string): string {
 	let output = '';
 	for (const char of value) {
 		const lower = char.toLowerCase();
