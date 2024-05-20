@@ -1,7 +1,7 @@
 // eslint-disable-next-line spaced-comment
 /// <reference lib="ESNext" />
 
-import { writeFile } from 'fs/promises';
+import { writeFile } from 'node:fs/promises';
 import { fetchEntry, fetchLatest, outputFile } from './shared/what-if.mjs';
 
 const last = await fetchLatest();
