@@ -14,3 +14,11 @@ model Comic {
 
     @@map("xkcd")
 }
+
+/// The amount of times a XKCD WhatIf article has been used.
+model WhatIf {
+    id   Int @id
+    uses Int @default(0)
+
+    @@map("what-if")
+}

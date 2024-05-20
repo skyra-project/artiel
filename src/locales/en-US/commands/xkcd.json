@@ -1,9 +1,14 @@
 {
 	"name": "xkcd",
 	"description": "Get a comic from xkcd.com",
+	"comicName": "comic",
+	"comicDescription": "Get a comic from xkcd.com",
+	"whatIfName": "what-if",
+	"whatIfDescription": "Get an article from what-if.xkcd.com",
 	"optionsIdName": "id",
-	"optionsIdDescription": "The comic number from xkcd",
+	"optionsIdDescription": "The entry number from xkcd",
 	"noComicFound": "No comic found under the ID of {{value}}",
 	"buttonsTranscript": "Transcript",
-	"buttonsNews": "News"
+	"buttonsNews": "News",
+	"noArticleFound": "No article found under the ID of {{value}}"
 }

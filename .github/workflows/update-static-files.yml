@@ -23,6 +23,8 @@ jobs:
         run: yarn --immutable
       - name: Run the XKCD Extraction script
         run: node ./scripts/update-xkcd-entries.mjs
+      - name: Run the WhatIf Extraction script
+        run: node ./scripts/update-what-if-entries.mjs
       - name: Commit any changes and push code
         env:
           GITHUB_USER: github-actions[bot]
