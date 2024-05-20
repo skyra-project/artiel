@@ -2,7 +2,6 @@
 	"name": "xkcd",
 	"description": "Krijg een strip van xkcd.com",
 	"optionsIdName": "id",
-	"optionsIdDescription": "Het stripnummer van xkcd",
 	"noComicFound": "Geen strip gevonden met ID {{value}}",
 	"buttonsTranscript": "Transcriptie",
 	"buttonsNews": "Nieuws"
