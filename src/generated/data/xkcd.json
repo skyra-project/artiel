@@ -26395,5 +26395,14 @@
 		"alt": "Sometimes, you can tell Bloom filters are the wrong tool for the job, but when they're the right one you can never be sure.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2935,
+		"date": 1716206400000,
+		"title": "Ocean Loop",
+		"image": "https://imgs.xkcd.com/comics/ocean_loop.png",
+		"alt": "I can't believe they wouldn't even let me hold a vote among the passengers about whether to try the loop.",
+		"transcript": null,
+		"news": null
 	}
 ]
