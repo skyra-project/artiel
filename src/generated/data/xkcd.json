@@ -26404,5 +26404,14 @@
 		"alt": "I can't believe they wouldn't even let me hold a vote among the passengers about whether to try the loop.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2936,
+		"date": 1716379200000,
+		"title": "Exponential Growth",
+		"image": "https://imgs.xkcd.com/comics/exponential_growth.png",
+		"alt": "Karpov's construction of a series of increasingly large rice cookers led to a protracted deadlock, but exponential growth won in the end.",
+		"transcript": null,
+		"news": null
 	}
 ]
