@@ -10,5 +10,5 @@
 			"#lib/*": ["lib/*"]
 		}
 	},
-	"include": ["."]
+	"include": [".", "lib/common/levels.json"]
 }
