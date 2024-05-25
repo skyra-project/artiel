@@ -484,7 +484,7 @@ export function buildGameControls(resolvableEncodedLevel: string, enabledDirecti
 }
 
 const Levels: Collection<string, Level> = new Collection(
-	JSON.parse(await readFile(new URL('lib/common/levels.json', PathSrc), { encoding: 'utf-8' })).map(
+	JSON.parse(await readFile(new URL('./generated/data/levels.json', PathSrc), { encoding: 'utf-8' })).map(
 		(level: Level) => [level.name.toLowerCase(), level] as const
 	)
 );
