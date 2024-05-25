@@ -1,9 +1,14 @@
 {
 	"name": "xkcd",
 	"description": "Muestra un cómic de xkcd.com",
+	"comicName": "cómic",
+	"comicDescription": "Muestra un cómic de xkcd.com",
+	"whatIfName": "what-if",
+	"whatIfDescription": "Muestra un artículo de what-if.xkcd.com",
 	"optionsIdName": "identificador",
-	"optionsIdDescription": "El número del cómic de xkcd",
+	"optionsIdDescription": "El número de entrada de xkcd",
 	"noComicFound": "No se encontró un cómic con el ID de {{value}}",
 	"buttonsTranscript": "Transcripción",
-	"buttonsNews": "Noticias"
+	"buttonsNews": "Noticias",
+	"noArticleFound": "No se encontró un artículo con el ID de {{value}}"
 }

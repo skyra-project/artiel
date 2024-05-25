@@ -2,7 +2,6 @@
 	"name": "xkcd",
 	"description": "Отримати комікс з xkcd.com",
 	"optionsIdName": "id",
-	"optionsIdDescription": "Номер коміксу з xkcd",
 	"noComicFound": "Комікс з ID {{value}} не знайдено",
 	"buttonsTranscript": "Стенограма",
 	"buttonsNews": "Новини"

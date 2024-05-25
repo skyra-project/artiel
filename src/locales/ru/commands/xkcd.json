@@ -1,9 +1,13 @@
 {
 	"name": "xkcd",
 	"description": "Получить комикс с xkcd.com",
+	"comicName": "комикс",
+	"comicDescription": "Получить комикс с xkcd.com",
+	"whatIfName": "what-if",
+	"whatIfDescription": "Получить статью с what-if.xkcd.com",
 	"optionsIdName": "id",
-	"optionsIdDescription": "Номер комикса с xkcd",
 	"noComicFound": "Комикс с ID {{value}} не найден",
 	"buttonsTranscript": "Транскрипт",
-	"buttonsNews": "Новости"
+	"buttonsNews": "Новости",
+	"noArticleFound": "Статья с ID {{value}} не найдена"
 }

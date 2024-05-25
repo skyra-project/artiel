@@ -11,6 +11,10 @@
 	"optionsPresetDescription": "उपयोग करने के लिए पूर्वनिर्धारित",
 	"optionsSelectionName": "चयन",
 	"optionsSelectionDescription": "उपयोग हेतु चयन विधि",
+	"optionsOnCriticalSuccessName": "विकट-सफलता-पर",
+	"optionsOnCriticalSuccessDescription": "विकट सफलता पर करने की कार्रवाई",
+	"optionsOnCriticalFailureName": "विकट-असफलता-पर",
+	"optionsOnCriticalFailureDescription": "विकट असफलता पर करने की कार्रवाई",
 	"optionsHideName": "छुपाएं",
 	"optionsHideDescription": "परिणाम छिपाना है या नहीं (डिफ़ॉल्ट: नहीं)",
 	"title": "{{dice}} फेक रहे हैं…",
@@ -26,5 +30,10 @@
 	"presetFate": "फेट (-1/0/+1)",
 	"selectionAddition": "जोड़ (डिफ़ॉल्ट)",
 	"selectionGreatest": "अधिकतम",
-	"selectionLeast": "न्यूनतम"
+	"selectionLeast": "न्यूनतम",
+	"onCriticalNothing": "कुछ न करें",
+	"onCriticalRerollOnce": "पुनः फेंके (1 बार तक)",
+	"onCriticalRerollTwice": "पुनः फेंके (2 बार तक)",
+	"onCriticalRerollThrice": "पुनः फेंके (3 बार तक)",
+	"onCriticalRerollIndefinitely": "पुनः फेंके (अनिश्चित काल के लिए)"
 }
