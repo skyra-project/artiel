@@ -30,7 +30,7 @@ export class UserCommand extends Command {
 		const resolvableLevel = getLevel(options.level);
 		if (!resolvableLevel) {
 			return interaction.reply({
-				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidLevel),
+				content: t(LanguageKeys.Commands.Sokoban.InvalidLevel),
 				flags: MessageFlags.Ephemeral
 			});
 		}
@@ -54,7 +54,7 @@ export class UserCommand extends Command {
 
 	private prepareLevel(interaction: Command.ChatInputInteraction, level: string) {
 		const t = getSupportedUserLanguageT(interaction);
-		const levelResult = buildSokobanGameFromResolvableLevel(level);
+		const levelResult = buildSokobanGameFromResolvableLevel(level, t);
 
 		const data: MessageResponseOptions = levelResult.match({
 			ok: (level) => ({
@@ -63,7 +63,7 @@ export class UserCommand extends Command {
 				flags: MessageFlags.Ephemeral
 			}),
 			err: (error) => ({
-				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: error }),
+				content: error,
 				flags: MessageFlags.Ephemeral
 			})
 		});

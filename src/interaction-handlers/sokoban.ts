@@ -19,7 +19,7 @@ export class UserHandler extends InteractionHandler {
 		// if the restart button is pressed, reset the current level
 		if (directionOrRetry === 'retry') {
 			const encodedLevel = startTimestampOrEncodedLevel!.replaceAll('-', '.');
-			const level = buildSokobanGameFromResolvableLevel(encodedLevel).unwrap();
+			const level = buildSokobanGameFromResolvableLevel(encodedLevel, t).unwrap();
 
 			return interaction.update({
 				content: level.toString(),
@@ -34,7 +34,7 @@ export class UserHandler extends InteractionHandler {
 		const gameBoardResult = buildSokobanGameFromVisualLevel(interaction.message.content);
 		if (gameBoardResult.isErr()) {
 			return interaction.update({
-				content: t(LanguageKeys.Commands.Sokoban.SokobanInvalidComponent, { value: gameBoardResult.unwrapErr() }),
+				content: t(LanguageKeys.Commands.Sokoban.InvalidComponent, { value: gameBoardResult.unwrapErr() }),
 				components: [],
 				flags: MessageFlags.Ephemeral
 			});

@@ -1,8 +1,10 @@
 import { PathSrc } from '#lib/common/constants';
+import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { ActionRowBuilder, ButtonBuilder } from '@discordjs/builders';
 import { Collection } from '@discordjs/collection';
 import { err, none, ok, some, type Option, type Result } from '@sapphire/result';
 import { cutText } from '@sapphire/utilities';
+import type { TFunction } from '@skyra/http-framework-i18n';
 import { ButtonStyle, type APIApplicationCommandOptionChoice } from 'discord-api-types/v10';
 import { readFile } from 'fs/promises';
 import { getEmojiData } from './discord.js';
@@ -435,13 +437,15 @@ export function encodeResolvableLevel(gameComponents: EmojiGameComponent[]): str
  * @param level resolvable encoded level.
  * @returns the sokoban game or an error message if the level contains invalid components.
  */
-export function buildSokobanGameFromResolvableLevel(level: string): Result<SokobanGame, string> {
+export function buildSokobanGameFromResolvableLevel(level: string, t: TFunction): Result<SokobanGame, string> {
 	const gameComponents: EmojiGameComponent[] = [];
 	for (const currentComponent of level) {
 		const component = GameComponentsMapping[currentComponent as ResolvableLevelComponent];
-		if (!component) return err(currentComponent);
+		if (!component) return err(t(LanguageKeys.Commands.Sokoban.InvalidComponent, { value: currentComponent }));
 		gameComponents.push(component);
 	}
+	if (!gameComponents.includes(EmojiGameComponent.Player)) return err(t(LanguageKeys.Commands.Sokoban.NoPlayerFound));
+	if (gameComponents.filter((c) => c === EmojiGameComponent.Player).length > 1) return err(t(LanguageKeys.Commands.Sokoban.MultiplePlayersFound));
 	return ok(new SokobanGame(gameComponents));
 }
 
