@@ -26431,5 +26431,14 @@
 		"alt": "Cosmologists estimate the spaghetti strand to be about 200 septillion calories, though it could be higher depending on the nutritional value of dark matter.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2939,
+		"date": 1716984000000,
+		"title": "Complexity Analysis",
+		"image": "https://imgs.xkcd.com/comics/complexity_analysis.png",
+		"alt": "PERPETUALLY OPTIMISTIC CASE: Early in the execution, our research group makes a breakthrough on proving P=NP.",
+		"transcript": null,
+		"news": null
 	}
 ]
