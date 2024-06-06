@@ -26458,5 +26458,14 @@
 		"alt": "It's believed that Golgi was originally an independent organism who was eventually absorbed into our cells, where he began work on his Apparatus.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2942,
+		"date": 1717588800000,
+		"title": "Fluid Speech",
+		"image": "https://imgs.xkcd.com/comics/fluid_speech.png",
+		"alt": "Thank you to linguist Gretchen McCulloch for teaching me about phonetic assimilation, and for teaching me that if you stand around in public reading texts from a linguist and murmuring example phrases to yourself, people will eventually ask if you're okay.",
+		"transcript": null,
+		"news": null
 	}
 ]
