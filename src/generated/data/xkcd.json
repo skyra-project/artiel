@@ -26485,5 +26485,14 @@
 		"alt": "The ten-way tie was judged a ten-way tie, so no one won the grand prize, a rare fishing monopole.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2945,
+		"date": 1718193600000,
+		"title": "Broken Model",
+		"image": "https://imgs.xkcd.com/comics/broken_model.png",
+		"alt": "In addition to eating foxes, rabbits can eat grass. The grass also eats foxes. Our equations chart the contours of Fox Hell.",
+		"transcript": null,
+		"news": null
 	}
 ]
