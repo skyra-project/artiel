@@ -26530,5 +26530,14 @@
 		"alt": "If you repeatedly rerun the development of technological civilization, it turns out that for some reason the only constant is that there is always a networking utility called 'netcat', though it does a different thing in each one.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2950,
+		"date": 1719230400000,
+		"title": "Situation",
+		"image": "https://imgs.xkcd.com/comics/situation.png",
+		"alt": "We're right under the flight path for the scheduled orbital launch, but don't worry--it's too cold out for the rockets to operate safely, so I'm sure they'll postpone.",
+		"transcript": null,
+		"news": null
 	}
 ]
