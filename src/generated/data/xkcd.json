@@ -26575,5 +26575,14 @@
 		"alt": "’\"‘”’\" means \"I edited this text on both my phone and my laptop before sending it\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2955,
+		"date": 1720180800000,
+		"title": "Pole Vault",
+		"image": "https://imgs.xkcd.com/comics/pole_vault.png",
+		"alt": "Ugh, and we JUST went through this yesterday with javelin.",
+		"transcript": null,
+		"news": null
 	}
 ]
