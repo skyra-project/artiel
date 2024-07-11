@@ -26593,5 +26593,14 @@
 		"alt": "Attention all passengers: This is an express sequence to infinity. If your stop is not a power of two, please disembark now.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2957,
+		"date": 1720612800000,
+		"title": "A Crossword Puzzle",
+		"image": "https://imgs.xkcd.com/comics/a_crossword_puzzle.png",
+		"alt": "Hint: If you ever encounter this puzzle in a crossword app, just [term for someone with a competitive and high-achieving personality].",
+		"transcript": null,
+		"news": "[Special 10th anniversary edition of WHAT IF?](https://xkcd.com/what-if/)—revised and annotated with brand-new illustrations and answers to important questions you never thought to ask—coming from November 2024. Preorder [here](https://bit.ly/WhatIf10th)!\n\n  \nToday's comic accidentally inspired by [this Buttersafe comic](https://www.buttersafe.com/2011/02/17/crosswords/) from 2011!"
 	}
 ]
