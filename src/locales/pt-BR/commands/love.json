@@ -1,1 +1,12 @@
-{}
+{
+	"name": "amor",
+	"description": "Medir o amor entre dois usuários",
+	"optionsUserName": "usuário",
+	"optionsUserDescription": "Usuário para medir o amor",
+	"less45": "Tente novamente em uma próxima...",
+	"less75": "Ótimo!",
+	"less100": "Combinação ótima!",
+	"at100": "Combinação perfeita!",
+	"itself": "Você é especial, e deve se amar mais do que qualquer outra pessoa <3",
+	"result": "Resultado"
+}
