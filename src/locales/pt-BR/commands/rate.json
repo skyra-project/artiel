@@ -1,9 +1,9 @@
 {
-	"name": "",
-	"description": "",
-	"optionsRateableTargetName": "",
-	"optionsRateableTargetDescription": "",
-	"output": "",
+	"name": "avaliar",
+	"description": "Avaliar alguém",
+	"optionsRateableTargetName": "usuário",
+	"optionsRateableTargetDescription": "Usuário a ser avaliado",
+	"output": "**{{author}}**, eu daria a nota de **{{userToRate}}** a **{{rate}}**/100 {{emoji}}",
 	"myself": [
 		"",
 		""
