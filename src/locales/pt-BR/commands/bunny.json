@@ -1,1 +1,6 @@
-{}
+{
+	"name": "coelho",
+	"buttonLinkToImage": "Link para a imagem",
+	"buttonSource": "Fonte",
+	"error": "Onde está o coelho? Eu não sei! Eles estão se escondendo! Enquanto eu o encontro, aqui está uma foto do coelho do meu amigo!"
+}
