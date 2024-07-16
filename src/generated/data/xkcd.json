@@ -26611,5 +26611,14 @@
 		"alt": "Anadromous fish are more vulnerable in rivers, since the lack of salt means you can quickly crack passwords using rainbow trout tables.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2959,
+		"date": 1721044800000,
+		"title": "Beam of Light",
+		"image": "https://imgs.xkcd.com/comics/beam_of_light.png",
+		"alt": "Einstein's theories solved a longstanding mystery about Mercury: Why it gets so hot. \"It's because,\" he pointed out, \"the sun is right there.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
