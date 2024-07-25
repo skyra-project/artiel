@@ -26647,5 +26647,14 @@
 		"alt": "Hard to imagine political rhetoric more microtargeted at me than 'I love Venn diagrams. I really do, I love Venn diagrams. It's just something about those three circles.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2963,
+		"date": 1721822400000,
+		"title": "House Inputs and Outputs",
+		"image": "https://imgs.xkcd.com/comics/house_inputs_and_outputs.png",
+		"alt": "People think power over ethernet is so great, and yet when I try to do water over ethernet everyone yells at me.",
+		"transcript": null,
+		"news": null
 	}
 ]
