@@ -26692,5 +26692,14 @@
 		"alt": "He was the first person to land a 900, which is especially impressive because pulling off a half-integer spin requires obeying Fermi-Dirac statistics.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2968,
+		"date": 1722859200000,
+		"title": "University Age",
+		"image": "https://imgs.xkcd.com/comics/university_age.png",
+		"alt": "This only makes it more urgent that we adopt my roadmap for the next 10 years, which should put us solidly in the lead.",
+		"transcript": null,
+		"news": null
 	}
 ]
