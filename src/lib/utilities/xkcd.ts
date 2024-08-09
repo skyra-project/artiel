@@ -125,7 +125,7 @@ export function makeComicChoices(results: readonly ComicSearchResult[]): APIAppl
 	return results.map((result) => makeComicChoice(result.score, result.value));
 }
 
-interface RawComic {
+export interface RawComic {
 	num: number;
 	year: number;
 	month: number;

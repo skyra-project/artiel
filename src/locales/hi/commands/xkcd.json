@@ -2,7 +2,6 @@
 	"name": "एक्सकेसीडी",
 	"description": "xkcd.com से कॉमिक प्राप्त करें",
 	"optionsIdName": "क्रमांक",
-	"optionsIdDescription": "एक्सकेसीडी से कॉमिक नंबर",
 	"noComicFound": "{{value}} के क्रमांक के तहत कोई कॉमिक नहीं मिला",
 	"buttonsTranscript": "प्रतिलिपि",
 	"buttonsNews": "समाचार"

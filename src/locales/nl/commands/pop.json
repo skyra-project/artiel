@@ -1,0 +1,14 @@
+{
+	"name": "pop",
+	"optionsWidthName": "breedte",
+	"optionsHeightName": "hoogte",
+	"optionsLengthName": "lengte",
+	"buttonsInputSolution": "Invoer Oplossing",
+	"modalTitle": "Oplossing",
+	"modalInputPlaceholder": "Voer de oplossing hier in",
+	"nonexistentGame": "Er is geen spel om te popen.",
+	"wrongSolution": "Dat is niet de oplossing.",
+	"title": "POP! Laat het poppen beginnen!",
+	"titleLost": "POP! Niemand heeft het op tijd gevonden!",
+	"titleWinner": "POP! We hebben een winnaar: {{value}}!"
+}

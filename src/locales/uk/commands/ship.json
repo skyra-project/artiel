@@ -1,1 +1,18 @@
-{}
+{
+	"name": "шип",
+	"description": "Генерує шип між двома користувачами",
+	"optionsTargetName": "користувач",
+	"optionsTargetDescription": "Користувач для шипу",
+	"optionsAuthorName": "автор",
+	"optionsAuthorDescription": "Користувач, який буде автором замість вас",
+	"optionsThemeName": "тема",
+	"optionsThemeDescription": "Тема для використання",
+	"themeLight": "Світла",
+	"themeDark": "Темна",
+	"themeTransPride": "Транс Прайд",
+	"themeNonBinaryPride": "Небінарний Прайд",
+	"abortError": "Я спробував завантажити аватар, але Discord зараз надто повільний, будь ласка, спробуйте ще раз пізніше!",
+	"unknownError": "Я отримав невідому помилку під час завантаження ваших аватарів, будь ласка, дайте моїм розробникам знати про цей випадок!",
+	"content": "Шип між {{author}} та {{target}}, ха? Я називаю це {{name}}!",
+	"altText": "Шип між {{author}} та {{target}}, названий {{name}}"
+}

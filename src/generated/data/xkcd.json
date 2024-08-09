@@ -26143,5 +26143,572 @@
 		"alt": "Just think of all the countless petty squabbles and misunderstandings, of all the fervent hatreds, over so insignificant a thing as the direction and duration of a rocket engine firing.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2907,
+		"date": 1710504000000,
+		"title": "Schwa",
+		"image": "https://imgs.xkcd.com/comics/schwa.png",
+		"alt": "Doug's cousin, the one from London, runs a Bumble love cult.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2908,
+		"date": 1710763200000,
+		"title": "Moon Armor Index",
+		"image": "https://imgs.xkcd.com/comics/moon_armor_index.png",
+		"alt": "Astronomers are a little unsure of the applicability of this index, but NASA's Planetary Protection Officer is all in favor.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2909,
+		"date": 1710936000000,
+		"title": "Moon Landing Mission Profiles",
+		"image": "https://imgs.xkcd.com/comics/moon_landing_mission_profiles.png",
+		"alt": "If you pick a low enough orbit, it gives you a lot of freedom to use a lightweight launch vehicle such as a stepladder.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2910,
+		"date": 1711108800000,
+		"title": "The Wreck of the Edmund Fitzgerald",
+		"image": "https://imgs.xkcd.com/comics/the_wreck_of_the_edmund_fitzgerald.png",
+		"alt": "You know that asteroid that almost destroyed Earth in the 90s? Turns out the whole thing was secretly created by Michael Bay, who then PAID Bruce Willis and Ben Affleck to look heroic while blowing it up!",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2911,
+		"date": 1711368000000,
+		"title": "Greenland Size",
+		"image": "https://imgs.xkcd.com/comics/greenland_size.png",
+		"alt": "The Mercator projection drastically distorts the size of almost every area of land except a small ring around the North and South Poles.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2912,
+		"date": 1711540800000,
+		"title": "Cursive Letters",
+		"image": "https://imgs.xkcd.com/comics/cursive_letters.png",
+		"alt": "𝓘 𝓽𝓱𝓲𝓷𝓴 𝓬𝓪𝓹𝓲𝓽𝓪𝓵 𝓛 𝓲𝓼 𝓹𝓻𝓸𝓫𝓪𝓫𝓵𝔂 𝓽𝓱𝓮 𝓶𝓸𝓼𝓽 𝓯𝓾𝓷 𝓽𝓸 𝔀𝓻𝓲𝓽𝓮, 𝓽𝓱𝓸𝓾𝓰𝓱 𝓵𝓸𝔀𝓮𝓻𝓬𝓪𝓼𝓮 𝓺 𝓲𝓼 𝓪𝓵𝓼𝓸 𝓪 𝓼𝓽𝓻𝓸𝓷𝓰 𝓬𝓸𝓷𝓽𝓮𝓷𝓭𝓮𝓻.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2913,
+		"date": 1711713600000,
+		"title": "Periodic Table Regions",
+		"image": "https://imgs.xkcd.com/comics/periodic_table_regions.png",
+		"alt": "Cesium-133, let it be. Cesium-134, let it be even more.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2914,
+		"date": 1711972800000,
+		"title": "Eclipse Coolness",
+		"image": "https://imgs.xkcd.com/comics/eclipse_coolness.png",
+		"alt": "A partial eclipse is like a cool sunset. A total eclipse is like someone broke the sky.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2915,
+		"date": 1712145600000,
+		"title": "Eclipse Clouds",
+		"image": "https://imgs.xkcd.com/comics/eclipse_clouds.png",
+		"alt": "The rare compound solar-lunar-nephelogical eclipse",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2916,
+		"date": 1712318400000,
+		"title": "Machine",
+		"image": "https://imgs.xkcd.com/comics/machine.png",
+		"alt": "The Credible Machine",
+		"transcript": null,
+		"news": "Today's comic was created with [Max Goodhart](https://chromakode.com), [Ed White](https://github.com/spyhi), [Alex Garcia](https://twitter.com/uh_oh_thats_bad), [Kevin Cotrone](https://twitter.com/cotrone), [Conor & Ami Stokes](http://burningcandle.io/), [Liran Nuna](https://liranuna.com), [Patrick](https://www.instagram.com/fading_interest/), [Manish Goregaokar](https://manishearth.github.io), [Benjamin Staffin](https://github.com/benley), [Amber](https://github.com/ayust), and [Michael Leuchtenburg](https://github.com/dyfrgi) with physics by [Rapier](https://rapier.rs)."
+	},
+	{
+		"id": 2917,
+		"date": 1712577600000,
+		"title": "Types of Eclipse Photo",
+		"image": "https://imgs.xkcd.com/comics/types_of_eclipse_photo.png",
+		"alt": "The most rare, top-tier eclipse photo would be the Solar Earth Eclipse, but the Apollo 12 crew's attempt to capture it was marred by camera shake. They said it looked spectacular, though.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2918,
+		"date": 1712750400000,
+		"title": "Tick Marks",
+		"image": "https://imgs.xkcd.com/comics/tick_marks.png",
+		"alt": "If you're really savvy, you can hide an entire set of illicit transactions by timing them to draw what looks like a graph inset.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2919,
+		"date": 1712923200000,
+		"title": "Sitting in a Tree",
+		"image": "https://imgs.xkcd.com/comics/sitting_in_a_tree.png",
+		"alt": "First comes blood / Then we perish / Then comes Death in his Eternity Carriage.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2920,
+		"date": 1713182400000,
+		"title": "Survey Marker",
+		"image": "https://imgs.xkcd.com/comics/survey_marker.png",
+		"alt": "Fun fact: The standard North American NAD83 coordinate system is misaligned from the actual Earth, off-center by about 7 feet. Someone knows where I am, and I'm in the wrong place.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2921,
+		"date": 1713355200000,
+		"title": "Eclipse Path Maps",
+		"image": "https://imgs.xkcd.com/comics/eclipse_path_maps.png",
+		"alt": "Okay, this eclipse will only be visible from the Arctic in February 2063, when the sun is below the horizon, BUT if we get lucky and a gigantic chasm opens in the Earth in just the right spot...",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2922,
+		"date": 1713528000000,
+		"title": "Pub Trivia",
+		"image": "https://imgs.xkcd.com/comics/pub_trivia.png",
+		"alt": "Bonus question: Where is London located? (a) The British Isles (b) Great Britain and Northern Ireland (c) The UK (d) Europe (or 'the EU') (e) Greater London",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2923,
+		"date": 1713787200000,
+		"title": "Scary Triangles",
+		"image": "https://imgs.xkcd.com/comics/scary_triangles.png",
+		"alt": "Concealed mostly beneath the surface, sharks are the icebergs of the sea.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2924,
+		"date": 1713960000000,
+		"title": "Pendulum Types",
+		"image": "https://imgs.xkcd.com/comics/pendulum_types.png",
+		"alt": "The creepy fingers that grow from a vibrating cornstarch-water mix can be modeled as a chain of inverted vertical pendulums (DOI:10.1039/c4sm00265b) and are believed to be the fingers of Maxwell's Demon trying to push through into our universe.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2925,
+		"date": 1714132800000,
+		"title": "Earth Formation Site",
+		"image": "https://imgs.xkcd.com/comics/earth_formation_site.png",
+		"alt": "It's not far from the sign marking the exact latitude and longitude of the Earth's core.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2926,
+		"date": 1714392000000,
+		"title": "Doppler Effect",
+		"image": "https://imgs.xkcd.com/comics/doppler_effect.png",
+		"alt": "The Doppler effect is a mysterious wavelength-shifting phenomenon which seems to primarily affect sirens, which is why the 🚨 emoji is red.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2927,
+		"date": 1714564800000,
+		"title": "Alphabetical Cartogram",
+		"image": "https://imgs.xkcd.com/comics/alphabetical_cartogram.png",
+		"alt": "Poor Weeoming.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2928,
+		"date": 1714737600000,
+		"title": "Software Testing Day",
+		"image": "https://imgs.xkcd.com/comics/software_testing_day.png",
+		"alt": "The company tried to document how often employees were celebrating Software Testing Day, but their recordkeeping system kept mysteriously crashing.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2929,
+		"date": 1714996800000,
+		"title": "Good and Bad Ideas",
+		"image": "https://imgs.xkcd.com/comics/good_and_bad_ideas.png",
+		"alt": "While it seemed like a fun prank at the time, I realize my prank fire extinguishers full of leaded gasoline were a mistake.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2930,
+		"date": 1715169600000,
+		"title": "Google Solar Cycle",
+		"image": "https://imgs.xkcd.com/comics/google_solar_cycle.png",
+		"alt": "From Google Trends, it looks like the lag between people Googling cocktail recipes and 'hangover cure' is 14 hours.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2931,
+		"date": 1715342400000,
+		"title": "Chasing",
+		"image": "https://imgs.xkcd.com/comics/chasing.png",
+		"alt": "Certain hybrid events can only happen in certain locations where all the conditions are present; chasers flock to the area in and around Kansas known as tumbleweed-colliding-with-possum alley.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2932,
+		"date": 1715601600000,
+		"title": "Driving PSA",
+		"image": "https://imgs.xkcd.com/comics/driving_psa.png",
+		"alt": "This PSA brought to you by several would-be assassins who tried to wave me in front of speeding cars in the last month and who will have to try harder next time.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2933,
+		"date": 1715774400000,
+		"title": "Elementary Physics Paths",
+		"image": "https://imgs.xkcd.com/comics/elementary_physics_paths.png",
+		"alt": "==COSMOLOGY==> 'Uhhh ... how sure are we that everything is made of these?'",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2934,
+		"date": 1715947200000,
+		"title": "Bloom Filter",
+		"image": "https://imgs.xkcd.com/comics/bloom_filter.png",
+		"alt": "Sometimes, you can tell Bloom filters are the wrong tool for the job, but when they're the right one you can never be sure.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2935,
+		"date": 1716206400000,
+		"title": "Ocean Loop",
+		"image": "https://imgs.xkcd.com/comics/ocean_loop.png",
+		"alt": "I can't believe they wouldn't even let me hold a vote among the passengers about whether to try the loop.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2936,
+		"date": 1716379200000,
+		"title": "Exponential Growth",
+		"image": "https://imgs.xkcd.com/comics/exponential_growth.png",
+		"alt": "Karpov's construction of a series of increasingly large rice cookers led to a protracted deadlock, but exponential growth won in the end.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2937,
+		"date": 1716552000000,
+		"title": "Room Code",
+		"image": "https://imgs.xkcd.com/comics/room_code.png",
+		"alt": "Sorry to make you memorize this random string of digits. If it helps, it can also double as a mnemonic for remembering your young relatives' birthdays, if they happened to have been born on February 5th, 2018.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2938,
+		"date": 1716811200000,
+		"title": "Local Group",
+		"image": "https://imgs.xkcd.com/comics/local_group.png",
+		"alt": "Cosmologists estimate the spaghetti strand to be about 200 septillion calories, though it could be higher depending on the nutritional value of dark matter.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2939,
+		"date": 1716984000000,
+		"title": "Complexity Analysis",
+		"image": "https://imgs.xkcd.com/comics/complexity_analysis.png",
+		"alt": "PERPETUALLY OPTIMISTIC CASE: Early in the execution, our research group makes a breakthrough on proving P=NP.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2940,
+		"date": 1717156800000,
+		"title": "Modes of Transportation",
+		"image": "https://imgs.xkcd.com/comics/modes_of_transportation.png",
+		"alt": "My bold criticism might anger the hot air balloon people, which would be a real concern if any of them lived along a very narrow line directly upwind of me.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2941,
+		"date": 1717416000000,
+		"title": "Cell Organelles",
+		"image": "https://imgs.xkcd.com/comics/cell_organelles.png",
+		"alt": "It's believed that Golgi was originally an independent organism who was eventually absorbed into our cells, where he began work on his Apparatus.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2942,
+		"date": 1717588800000,
+		"title": "Fluid Speech",
+		"image": "https://imgs.xkcd.com/comics/fluid_speech.png",
+		"alt": "Thank you to linguist Gretchen McCulloch for teaching me about phonetic assimilation, and for teaching me that if you stand around in public reading texts from a linguist and murmuring example phrases to yourself, people will eventually ask if you're okay.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2943,
+		"date": 1717761600000,
+		"title": "Unsolved Chemistry Problems",
+		"image": "https://imgs.xkcd.com/comics/unsolved_chemistry_problems.png",
+		"alt": "I'm an H⁺ denier, in that I refuse to consider loose protons to be real hydrogen, so I personally believe it stands for 'pretend'.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2944,
+		"date": 1718020800000,
+		"title": "Magnet Fishing",
+		"image": "https://imgs.xkcd.com/comics/magnet_fishing.png",
+		"alt": "The ten-way tie was judged a ten-way tie, so no one won the grand prize, a rare fishing monopole.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2945,
+		"date": 1718193600000,
+		"title": "Broken Model",
+		"image": "https://imgs.xkcd.com/comics/broken_model.png",
+		"alt": "In addition to eating foxes, rabbits can eat grass. The grass also eats foxes. Our equations chart the contours of Fox Hell.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2946,
+		"date": 1718366400000,
+		"title": "1.2 Kilofives",
+		"image": "https://imgs.xkcd.com/comics/1_2_kilofives.png",
+		"alt": "'Oh yeah? Give me 50 milliscore reasons why I should stop.'",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2947,
+		"date": 1718625600000,
+		"title": "Pascal's Wager Triangle",
+		"image": "https://imgs.xkcd.com/comics/pascals_wager_triangle.png",
+		"alt": "In contrast to Pascal's Wager Triangle, Pascal's Triangle Wager argues that maybe God wants you to draw a triangle of numbers where each one is the sum of the two numbers above it, so you probably should, just in case.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2948,
+		"date": 1718798400000,
+		"title": "Electric vs Gas",
+		"image": "https://imgs.xkcd.com/comics/electric_vs_gas.png",
+		"alt": "An idling gas engine may be annoyingly loud, but that's the price you pay for having WAY less torque available at a standstill.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2949,
+		"date": 1718971200000,
+		"title": "Network Configuration",
+		"image": "https://imgs.xkcd.com/comics/network_configuration.png",
+		"alt": "If you repeatedly rerun the development of technological civilization, it turns out that for some reason the only constant is that there is always a networking utility called 'netcat', though it does a different thing in each one.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2950,
+		"date": 1719230400000,
+		"title": "Situation",
+		"image": "https://imgs.xkcd.com/comics/situation.png",
+		"alt": "We're right under the flight path for the scheduled orbital launch, but don't worry--it's too cold out for the rockets to operate safely, so I'm sure they'll postpone.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2951,
+		"date": 1719403200000,
+		"title": "Bad Map Projection: Exterior Kansas",
+		"image": "https://imgs.xkcd.com/comics/bad_map_projection_exterior_kansas.png",
+		"alt": "Although Kansas is widely thought to contain the geographic center of the contiguous 48 states, topologists now believe that it's actually their outer edge.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2952,
+		"date": 1719576000000,
+		"title": "Routine Maintenance",
+		"image": "https://imgs.xkcd.com/comics/routine_maintenance.png",
+		"alt": "The worst was the time they accidentally held the can upside down and froze all the Earth's magma chambers solid.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2953,
+		"date": 1719835200000,
+		"title": "Alien Theories",
+		"image": "https://imgs.xkcd.com/comics/alien_theories.png",
+		"alt": "They originally came here to try to investigate our chemtrail technology, and got increasingly frustrated when all their samples turned out to just be water ice with trace amounts of jet exhaust.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2954,
+		"date": 1720008000000,
+		"title": "Bracket Symbols",
+		"image": "https://imgs.xkcd.com/comics/bracket_symbols.png",
+		"alt": "’\"‘”’\" means \"I edited this text on both my phone and my laptop before sending it\"",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2955,
+		"date": 1720180800000,
+		"title": "Pole Vault",
+		"image": "https://imgs.xkcd.com/comics/pole_vault.png",
+		"alt": "Ugh, and we JUST went through this yesterday with javelin.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2956,
+		"date": 1720440000000,
+		"title": "Number Line Branch",
+		"image": "https://imgs.xkcd.com/comics/number_line_branch.png",
+		"alt": "Attention all passengers: This is an express sequence to infinity. If your stop is not a power of two, please disembark now.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2957,
+		"date": 1720612800000,
+		"title": "A Crossword Puzzle",
+		"image": "https://imgs.xkcd.com/comics/a_crossword_puzzle.png",
+		"alt": "Hint: If you ever encounter this puzzle in a crossword app, just [term for someone with a competitive and high-achieving personality].",
+		"transcript": null,
+		"news": "[Special 10th anniversary edition of WHAT IF?](https://xkcd.com/what-if/)—revised and annotated with brand-new illustrations and answers to important questions you never thought to ask—coming from November 2024. Preorder [here](https://bit.ly/WhatIf10th)!\n\n  \nToday's comic accidentally inspired by [this Buttersafe comic](https://www.buttersafe.com/2011/02/17/crosswords/) from 2011!"
+	},
+	{
+		"id": 2958,
+		"date": 1720785600000,
+		"title": "Hatchery",
+		"image": "https://imgs.xkcd.com/comics/hatchery.png",
+		"alt": "Anadromous fish are more vulnerable in rivers, since the lack of salt means you can quickly crack passwords using rainbow trout tables.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2959,
+		"date": 1721044800000,
+		"title": "Beam of Light",
+		"image": "https://imgs.xkcd.com/comics/beam_of_light.png",
+		"alt": "Einstein's theories solved a longstanding mystery about Mercury: Why it gets so hot. \"It's because,\" he pointed out, \"the sun is right there.\"",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2960,
+		"date": 1721217600000,
+		"title": "Organ Meanings",
+		"image": "https://imgs.xkcd.com/comics/organ_meanings.png",
+		"alt": "IMO the thymus is one of the coolest organs and we should really use it in metaphors more.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2961,
+		"date": 1721390400000,
+		"title": "CrowdStrike",
+		"image": "https://imgs.xkcd.com/comics/crowdstrike.png",
+		"alt": "We were going to try swordfighting, but all my compiling is on hold.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2962,
+		"date": 1721649600000,
+		"title": "President Venn Diagram",
+		"image": "https://imgs.xkcd.com/comics/president_venn_diagram.png",
+		"alt": "Hard to imagine political rhetoric more microtargeted at me than 'I love Venn diagrams. I really do, I love Venn diagrams. It's just something about those three circles.'",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2963,
+		"date": 1721822400000,
+		"title": "House Inputs and Outputs",
+		"image": "https://imgs.xkcd.com/comics/house_inputs_and_outputs.png",
+		"alt": "People think power over ethernet is so great, and yet when I try to do water over ethernet everyone yells at me.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2964,
+		"date": 1721995200000,
+		"title": "Olympic Sports",
+		"image": "https://imgs.xkcd.com/comics/olympic_sports.png",
+		"alt": "Thankfully for everyone involved, the Winter Olympics officials spotted me and managed to stop me before I got to the ski jump.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2965,
+		"date": 1722254400000,
+		"title": "Chili Tornado Quake",
+		"image": "https://imgs.xkcd.com/comics/chili_tornado_quake.png",
+		"alt": "Buildings constructed from softer materials were damaged by chili pepper impacts to the storm's high Richter-Fujita-Scoville-Mohs hardness rating.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2966,
+		"date": 1722427200000,
+		"title": "Exam Numbers",
+		"image": "https://imgs.xkcd.com/comics/exam_numbers.png",
+		"alt": "Calligraphy exam: Write down the number 37, spelled out, nicely.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2967,
+		"date": 1722600000000,
+		"title": "Matter",
+		"image": "https://imgs.xkcd.com/comics/matter.png",
+		"alt": "He was the first person to land a 900, which is especially impressive because pulling off a half-integer spin requires obeying Fermi-Dirac statistics.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2968,
+		"date": 1722859200000,
+		"title": "University Age",
+		"image": "https://imgs.xkcd.com/comics/university_age.png",
+		"alt": "This only makes it more urgent that we adopt my roadmap for the next 10 years, which should put us solidly in the lead.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2969,
+		"date": 1723032000000,
+		"title": "Vice President First Names",
+		"image": "https://imgs.xkcd.com/comics/vice_president_first_names.png",
+		"alt": "[Political pundit on the ScrabbleTV News channel] \"After four years of defying orthographic pressure, Joe ceded the top of the ticket to Kamala, who--after considering Josh, Mark, Andy, Roy, and Pete--picked Tim.\"",
+		"transcript": null,
+		"news": null
 	}
 ]

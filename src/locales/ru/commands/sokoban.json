@@ -1,0 +1,15 @@
+{
+	"name": "sokoban",
+	"description": "Играть в классическую игру Sokoban",
+	"playLevelName": "играть-уровень",
+	"playLevelDescription": "Играть в существующий уровень",
+	"customLevelName": "пользовательский-уровень",
+	"customLevelDescription": "Играть в пользовательский уровень",
+	"optionChooseLevelName": "уровень",
+	"optionImportCustomLevelName": "импортировать",
+	"optionImportCustomLevelDescription": "Код пользовательского уровня",
+	"invalidComponent": "Некорректный компонент: {{value}}",
+	"invalidLevel": "Я не смог найти уровень с указанным названием.",
+	"victory": "# Вы выиграли!\n- **Затраченное время:** {{seconds}} секунд\n- **Количество ходов:** {{moves}}",
+	"defeat": "# Вы проиграли!"
+}

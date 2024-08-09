@@ -1,1 +1,8 @@
-{}
+{
+	"name": "xkcd",
+	"description": "Отримати комікс з xkcd.com",
+	"optionsIdName": "id",
+	"noComicFound": "Комікс з ID {{value}} не знайдено",
+	"buttonsTranscript": "Стенограма",
+	"buttonsNews": "Новини"
+}
