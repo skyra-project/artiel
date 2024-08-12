@@ -26710,5 +26710,14 @@
 		"alt": "[Political pundit on the ScrabbleTV News channel] \"After four years of defying orthographic pressure, Joe ceded the top of the ticket to Kamala, who--after considering Josh, Mark, Andy, Roy, and Pete--picked Tim.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2970,
+		"date": 1723204800000,
+		"title": "Meteor Shower PSA",
+		"image": "https://imgs.xkcd.com/comics/meteor_shower_psa.png",
+		"alt": "If you hold the meteor too long, it may imprint on you and form a contact binary, making reintroduction to space difficult.",
+		"transcript": null,
+		"news": null
 	}
 ]
