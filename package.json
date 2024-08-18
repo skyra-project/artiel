@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"@discordjs/builders": "^1.8.2",
-		"@napi-rs/canvas": "^0.1.53",
+		"@napi-rs/canvas": "^0.1.54",
 		"@prisma/client": "^5.18.0",
 		"@sapphire/duration": "^1.1.2",
 		"@sapphire/result": "^2.6.6",
@@ -44,7 +44,7 @@
 		"@skyra/start-banner": "^2.0.1",
 		"canvas-constructor": "^7.0.2",
 		"cron": "^3.1.7",
-		"discord-api-types": "^0.37.93",
+		"discord-api-types": "^0.37.94",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.6.3",
 		"turndown": "^7.2.0"
@@ -57,7 +57,7 @@
 		"@sapphire/ts-config": "^5.0.1",
 		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.6",
-		"@types/node": "^20.14.15",
+		"@types/node": "^20.15.0",
 		"@types/turndown": "^5.0.5",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -66,18 +66,18 @@
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
-		"lint-staged": "^15.2.8",
+		"lint-staged": "^15.2.9",
 		"mathjax-full": "^3.2.2",
 		"prettier": "^3.3.3",
 		"prisma": "^5.18.0",
 		"rimraf": "^5.0.10",
-		"sharp": "^0.33.4",
+		"sharp": "^0.33.5",
 		"tsx": "^4.17.0",
 		"typescript": "^5.4.5"
 	},
 	"resolutions": {
 		"ansi-regex": "^5.0.1",
-		"discord-api-types": "^0.37.93",
+		"discord-api-types": "^0.37.94",
 		"minimist": "^1.2.8"
 	},
 	"engines": {
