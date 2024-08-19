@@ -26737,5 +26737,14 @@
 		"alt": "Our lawyers were worried because it turns out the company inherits its debt from the parent universe, but luckily cosmic inflation reduced it to nearly zero.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2973,
+		"date": 1723809600000,
+		"title": "Ferris Wheels",
+		"image": "https://imgs.xkcd.com/comics/ferris_wheels.png",
+		"alt": "They left the belt drive in place but switched which wheel was powered, so people could choose between a regular ride, a long ride, and a REALLY long ride.",
+		"transcript": null,
+		"news": null
 	}
 ]
