@@ -26746,5 +26746,14 @@
 		"alt": "They left the belt drive in place but switched which wheel was powered, so people could choose between a regular ride, a long ride, and a REALLY long ride.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2974,
+		"date": 1724068800000,
+		"title": "Storage Tanks",
+		"image": "https://imgs.xkcd.com/comics/storage_tanks.png",
+		"alt": "We're considering installing a pressurization system to keep the tanks at constant pressure solely to deter them.",
+		"transcript": null,
+		"news": null
 	}
 ]
