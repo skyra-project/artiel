@@ -26755,5 +26755,14 @@
 		"alt": "We're considering installing a pressurization system to keep the tanks at constant pressure solely to deter them.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2975,
+		"date": 1724241600000,
+		"title": "Classical Periodic Table",
+		"image": "https://imgs.xkcd.com/comics/classical_periodic_table.png",
+		"alt": "Personally I think mercury is more of a 'wet earth' hybrid element.",
+		"transcript": null,
+		"news": null
 	}
 ]
