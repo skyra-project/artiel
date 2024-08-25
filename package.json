@@ -44,9 +44,9 @@
 		"@skyra/start-banner": "^2.0.1",
 		"canvas-constructor": "^7.0.2",
 		"cron": "^3.1.7",
-		"discord-api-types": "^0.37.94",
+		"discord-api-types": "^0.37.97",
 		"gradient-string": "^2.0.2",
-		"tslib": "^2.6.3",
+		"tslib": "^2.7.0",
 		"turndown": "^7.2.0"
 	},
 	"devDependencies": {
@@ -57,7 +57,7 @@
 		"@sapphire/ts-config": "^5.0.1",
 		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.6",
-		"@types/node": "^20.16.0",
+		"@types/node": "^20.16.1",
 		"@types/turndown": "^5.0.5",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -72,12 +72,12 @@
 		"prisma": "^5.18.0",
 		"rimraf": "^5.0.10",
 		"sharp": "^0.33.5",
-		"tsx": "^4.17.0",
+		"tsx": "^4.18.0",
 		"typescript": "^5.4.5"
 	},
 	"resolutions": {
 		"ansi-regex": "^5.0.1",
-		"discord-api-types": "^0.37.94",
+		"discord-api-types": "^0.37.97",
 		"minimist": "^1.2.8"
 	},
 	"engines": {
@@ -101,8 +101,8 @@
 	"eslintConfig": {
 		"extends": "@sapphire"
 	},
-	"packageManager": "yarn@4.4.0",
+	"packageManager": "yarn@4.4.1",
 	"volta": {
-		"node": "20.16.0"
+		"node": "20.17.0"
 	}
 }
