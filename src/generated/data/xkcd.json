@@ -26791,5 +26791,14 @@
 		"alt": "At least they're not alone down there.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2979,
+		"date": 1725019200000,
+		"title": "Sky Alarm",
+		"image": "https://imgs.xkcd.com/comics/sky_alarm.png",
+		"alt": "During the day it also activates for neat clouds and pretty sunsets.",
+		"transcript": null,
+		"news": null
 	}
 ]
