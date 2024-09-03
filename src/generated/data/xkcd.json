@@ -26800,5 +26800,14 @@
 		"alt": "During the day it also activates for neat clouds and pretty sunsets.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2980,
+		"date": 1725278400000,
+		"title": "Lava Lakes",
+		"image": "https://imgs.xkcd.com/comics/lava_lakes.png",
+		"alt": "Hey, golf balls float on lava, so this should make recovering them from the hazards easier.",
+		"transcript": null,
+		"news": null
 	}
 ]
