@@ -1,0 +1,18 @@
+{
+  "name": "feed",
+  "description": "Feed someone",
+  "optionsTargetName": "user",
+  "optionsTargetDescription": "The user you want to feed",
+  "optionsTypeName": "type",
+  "optionsTypeDescription": "The type of food you want to feed them",
+  "embedDescription": "You feed {target} {type}!",
+  "error": "The feed is way too fast for me to catch, please have these puppies instead!",
+  "pizza": "Pizza",
+  "burger": "Burger",
+  "rize": "Rize",
+  "dosa": "Dosa",
+  "pasta": "Pasta",
+  "biryani": "Biryani",
+  "samosa": "Samosa",
+  "dessert": "Dessert"
+}
