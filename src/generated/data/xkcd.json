@@ -26809,5 +26809,14 @@
 		"alt": "Hey, golf balls float on lava, so this should make recovering them from the hazards easier.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2981,
+		"date": 1725451200000,
+		"title": "Slingshots",
+		"image": "https://imgs.xkcd.com/comics/slingshots.png",
+		"alt": "In my reboot, Dennis the Menace was just trying to send Mr. Wilson a nice comet, but accidentally wiped out his dinosaur garden.",
+		"transcript": null,
+		"news": null
 	}
 ]
