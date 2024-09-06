@@ -1,7 +1,7 @@
 import { BrandingColors } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { randomEnum } from '#lib/utilities/utils';
-import { EmbedBuilder } from '@discordjs/builders';
+import { EmbedBuilder, userMention } from '@discordjs/builders';
 import { Time } from '@sapphire/duration';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, createSelectMenuChoiceName, resolveKey } from '@skyra/http-framework-i18n';
@@ -34,7 +34,7 @@ export class UserCommand extends Command {
 		const result = await Json<FeedResultOk>(safeTimedFetch(url, Time.Second * 2));
 
 		const embed = result.match({
-			ok: (value) => this.handleOk(interaction, value, options),
+			ok: (value) => this.handleOk(interaction, value, options.type),
 			err: (error) => this.handleError(interaction, error)
 		});
 
@@ -50,8 +50,8 @@ export class UserCommand extends Command {
 		return this.makeEmbed().setDescription(resolveKey(interaction, Root.Error));
 	}
 
-	private handleOk(interaction: Command.ChatInputInteraction, value: FeedResultOk, options: Options) {
-		const description = resolveKey(interaction, Root.EmbedTitle, { type: options.type ?? randomEnum(FeedType) });
+	private handleOk(interaction: Command.ChatInputInteraction, value: FeedResultOk, type: string = randomEnum(FeedType)) {
+		const description = resolveKey(interaction, Root.EmbedTitle, { type, target: userMention(interaction.user.id) });
 
 		return this.makeEmbed(value.image).setDescription(description);
 	}
