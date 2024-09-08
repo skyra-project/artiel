@@ -28,9 +28,9 @@
 		"scripts:update-xkcd-entries": "tsx ./scripts/update-xkcd-entries.mts"
 	},
 	"dependencies": {
-		"@discordjs/builders": "^1.8.2",
-		"@napi-rs/canvas": "^0.1.54",
-		"@prisma/client": "^5.19.0",
+		"@discordjs/builders": "^1.9.0",
+		"@napi-rs/canvas": "^0.1.55",
+		"@prisma/client": "^5.19.1",
 		"@sapphire/duration": "^1.1.2",
 		"@sapphire/result": "^2.6.6",
 		"@sapphire/snowflake": "^3.5.3",
@@ -44,7 +44,7 @@
 		"@skyra/start-banner": "^2.0.1",
 		"canvas-constructor": "^7.0.2",
 		"cron": "^3.1.7",
-		"discord-api-types": "^0.37.98",
+		"discord-api-types": "^0.37.100",
 		"gradient-string": "^2.0.2",
 		"tslib": "^2.7.0",
 		"turndown": "^7.2.0"
@@ -57,7 +57,7 @@
 		"@sapphire/ts-config": "^5.0.1",
 		"@types/cron": "^2.4.0",
 		"@types/gradient-string": "^1.1.6",
-		"@types/node": "^20.16.2",
+		"@types/node": "^20.16.5",
 		"@types/turndown": "^5.0.5",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -66,10 +66,10 @@
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
-		"lint-staged": "^15.2.9",
+		"lint-staged": "^15.2.10",
 		"mathjax-full": "^3.2.2",
 		"prettier": "^3.3.3",
-		"prisma": "^5.19.0",
+		"prisma": "^5.19.1",
 		"rimraf": "^5.0.10",
 		"sharp": "^0.33.5",
 		"tsx": "^4.19.0",
@@ -77,7 +77,7 @@
 	},
 	"resolutions": {
 		"ansi-regex": "^5.0.1",
-		"discord-api-types": "^0.37.98",
+		"discord-api-types": "^0.37.100",
 		"minimist": "^1.2.8"
 	},
 	"engines": {
