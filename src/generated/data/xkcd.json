@@ -26809,5 +26809,23 @@
 		"alt": "Hey, golf balls float on lava, so this should make recovering them from the hazards easier.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2981,
+		"date": 1725451200000,
+		"title": "Slingshots",
+		"image": "https://imgs.xkcd.com/comics/slingshots.png",
+		"alt": "In my reboot, Dennis the Menace was just trying to send Mr. Wilson a nice comet, but accidentally wiped out his dinosaur garden.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 2982,
+		"date": 1725624000000,
+		"title": "Water Filtration",
+		"image": "https://imgs.xkcd.com/comics/water_filtration.png",
+		"alt": "You'd think the most expensive part would be the quark-gluon plasma chamber, but it's actually usually the tube to the top of the atmosphere to carry the cosmic rays down.",
+		"transcript": null,
+		"news": null
 	}
 ]
