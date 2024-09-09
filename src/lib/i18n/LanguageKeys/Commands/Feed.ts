@@ -22,3 +22,6 @@ export const DosaKey = T('commands/feed:dosa');
 export const PastaKey = T('commands/feed:pasta');
 export const SamosaKey = T('commands/feed:samosa');
 export const BiryaniKey = T('commands/feed:biryani');
+
+export const FoodKey = (key: FoodType) => T(`commands/feed:${key}`);
+export type FoodType = 'pizza' | 'burger' | 'rize' | 'dessert' | 'dosa' | 'pasta' | 'samosa' | 'biryani';

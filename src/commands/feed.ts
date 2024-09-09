@@ -4,7 +4,7 @@ import { randomEnum } from '#lib/utilities/utils';
 import { EmbedBuilder, userMention } from '@discordjs/builders';
 import { Time } from '@sapphire/duration';
 import { Command, RegisterCommand } from '@skyra/http-framework';
-import { applyLocalizedBuilder, createSelectMenuChoiceName, resolveKey } from '@skyra/http-framework-i18n';
+import { applyLocalizedBuilder, createSelectMenuChoiceName, getSupportedLanguageT, resolveKey } from '@skyra/http-framework-i18n';
 import { Json, isAbortError, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
 
 const Root = LanguageKeys.Commands.Feed;
@@ -28,13 +28,15 @@ const FallbackImageUrl = 'https://foodish-api.com/images/burger/burger82.jpg';
 )
 export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
+		const type = options.type ?? randomEnum(FeedType);
+
 		const url = new URL(`https://foodish-api.com/api/images/${options.type}`);
 		url.searchParams.append('accept', 'application/json');
 
 		const result = await Json<FeedResultOk>(safeTimedFetch(url, Time.Second * 2));
 
 		const embed = result.match({
-			ok: (value) => this.handleOk(interaction, value, options.type),
+			ok: (value) => this.handleOk(interaction, value, type),
 			err: (error) => this.handleError(interaction, error)
 		});
 
@@ -50,15 +52,20 @@ export class UserCommand extends Command {
 		return this.makeEmbed().setDescription(resolveKey(interaction, Root.Error));
 	}
 
-	private handleOk(interaction: Command.ChatInputInteraction, value: FeedResultOk, type: string = randomEnum(FeedType)) {
-		const description = resolveKey(interaction, Root.EmbedTitle, { type, target: userMention(interaction.user.id) });
+	private handleOk(interaction: Command.ChatInputInteraction, value: FeedResultOk, type: FeedType) {
+		const t = getSupportedLanguageT(interaction);
+
+		const description = t(Root.EmbedTitle, {
+			type: t(Root.FoodKey(type)),
+			target: userMention(interaction.user.id)
+		});
 
 		return this.makeEmbed(value.image).setDescription(description);
 	}
 }
 
 interface Options {
-	type?: string;
+	type?: FeedType;
 }
 
 interface FeedResultOk {
