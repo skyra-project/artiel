@@ -30,7 +30,7 @@ export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const type = options.type ?? randomEnum(FeedType);
 
-		const url = new URL(`https://foodish-api.com/api/images/${options.type}`);
+		const url = new URL(`https://foodish-api.com/api/images/${type}`);
 		url.searchParams.append('accept', 'application/json');
 
 		const result = await Json<FeedResultOk>(safeTimedFetch(url, Time.Second * 2));
