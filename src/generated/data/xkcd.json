@@ -26827,5 +26827,14 @@
 		"alt": "You'd think the most expensive part would be the quark-gluon plasma chamber, but it's actually usually the tube to the top of the atmosphere to carry the cosmic rays down.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2983,
+		"date": 1725883200000,
+		"title": "Monocaster",
+		"image": "https://imgs.xkcd.com/comics/monocaster.png",
+		"alt": "My competitors say the tiny single tiny caster is unsafe, unstable, and offers no advantages over traditional designs, to which I say: wow, why are you guys so mean? I thought we were friends!",
+		"transcript": null,
+		"news": null
 	}
 ]
