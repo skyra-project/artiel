@@ -26836,5 +26836,14 @@
 		"alt": "My competitors say the tiny single tiny caster is unsafe, unstable, and offers no advantages over traditional designs, to which I say: wow, why are you guys so mean? I thought we were friends!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2984,
+		"date": 1726056000000,
+		"title": "Asteroid News",
+		"image": "https://imgs.xkcd.com/comics/asteroid_news.png",
+		"alt": "Their calculations show it will 'pass within the distance of the moon' but that it 'will not hit the moon, so what's the point?'",
+		"transcript": null,
+		"news": null
 	}
 ]
