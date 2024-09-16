@@ -26845,5 +26845,14 @@
 		"alt": "Their calculations show it will 'pass within the distance of the moon' but that it 'will not hit the moon, so what's the point?'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2985,
+		"date": 1726228800000,
+		"title": "Craters",
+		"image": "https://imgs.xkcd.com/comics/craters.png",
+		"alt": "It's annoying that the Nastapoka Arc isn't a meteor impact crater, but I truly believe that--with enough time, effort, and determination--we could make it one.",
+		"transcript": null,
+		"news": null
 	}
 ]
