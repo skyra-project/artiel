@@ -16,7 +16,7 @@ export const Error = T('commands/feed:error');
 
 export const PizzaKey = T('commands/feed:pizza');
 export const BurgerKey = T('commands/feed:burger');
-export const RizeKey = T('commands/feed:rize');
+export const RiceKey = T('commands/feed:rice');
 export const DessertKey = T('commands/feed:dessert');
 export const DosaKey = T('commands/feed:dosa');
 export const PastaKey = T('commands/feed:pasta');
@@ -24,4 +24,4 @@ export const SamosaKey = T('commands/feed:samosa');
 export const BiryaniKey = T('commands/feed:biryani');
 
 export const FoodKey = (key: FoodType) => T(`commands/feed:${key}`);
-export type FoodType = 'pizza' | 'burger' | 'rize' | 'dessert' | 'dosa' | 'pasta' | 'samosa' | 'biryani';
+export type FoodType = 'pizza' | 'burger' | 'rice' | 'dessert' | 'dosa' | 'pasta' | 'samosa' | 'biryani';

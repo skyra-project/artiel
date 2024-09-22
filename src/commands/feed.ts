@@ -17,7 +17,7 @@ const FallbackImageUrl = 'https://foodish-api.com/images/burger/burger82.jpg';
 			applyLocalizedBuilder(option, Root.OptionsType).addChoices(
 				createSelectMenuChoiceName(Root.PizzaKey, { value: FeedType.Pizza }),
 				createSelectMenuChoiceName(Root.BurgerKey, { value: FeedType.Burger }),
-				createSelectMenuChoiceName(Root.RizeKey, { value: FeedType.Rize }),
+				createSelectMenuChoiceName(Root.RiceKey, { value: FeedType.Rice }),
 				createSelectMenuChoiceName(Root.DessertKey, { value: FeedType.Dessert }),
 				createSelectMenuChoiceName(Root.DosaKey, { value: FeedType.Dosa }),
 				createSelectMenuChoiceName(Root.PastaKey, { value: FeedType.Pasta }),
@@ -75,7 +75,7 @@ interface FeedResultOk {
 enum FeedType {
 	Pizza = 'pizza',
 	Burger = 'burger',
-	Rize = 'rize',
+	Rice = 'rice',
 	Dessert = 'dessert',
 	Dosa = 'dosa',
 	Pasta = 'pasta',
