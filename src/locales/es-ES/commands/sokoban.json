@@ -9,6 +9,8 @@
 	"optionChooseLevelDescription": "El nivel a jugar",
 	"optionImportCustomLevelName": "importar",
 	"optionImportCustomLevelDescription": "El código para el nivel personalizado",
+	"noPlayerFound": "No pude encontrar un jugador en el nivel.",
+	"multiplePlayersFound": "He encontrado varios jugadores en el nivel.",
 	"invalidComponent": "Componente no válido: {{value}}",
 	"invalidLevel": "No pude encontrar un nivel con el nombre especificado.",
 	"victory": "# ¡Ganaste!\n- **Duración:** {{seconds}} segundos\n- **Movimientos:** {{moves}}",
