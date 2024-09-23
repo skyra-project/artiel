@@ -26872,5 +26872,14 @@
 		"alt": "The worst is when you wipe out in the barrel and you're trapped for several million years until erosion frees you.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2988,
+		"date": 1726833600000,
+		"title": "Maslow's Pyramid",
+		"image": "https://imgs.xkcd.com/comics/maslows_pyramid.png",
+		"alt": "The local police, building inspector, and fire marshal are all contesting my 'safety' assertion, or would be if they could reach me past all the traps.",
+		"transcript": null,
+		"news": null
 	}
 ]
