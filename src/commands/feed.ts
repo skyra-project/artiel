@@ -1,11 +1,12 @@
 import { BrandingColors } from '#lib/common/constants';
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { randomEnum } from '#lib/utilities/utils';
-import { EmbedBuilder, userMention } from '@discordjs/builders';
+import { ActionRowBuilder, bold, ButtonBuilder, EmbedBuilder, userMention } from '@discordjs/builders';
 import { Time } from '@sapphire/duration';
-import { Command, RegisterCommand } from '@skyra/http-framework';
-import { applyLocalizedBuilder, createSelectMenuChoiceName, getSupportedLanguageT, resolveKey } from '@skyra/http-framework-i18n';
-import { Json, isAbortError, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
+import { Command, RegisterCommand, type MessageResponseOptions, type TransformedArguments } from '@skyra/http-framework';
+import { applyLocalizedBuilder, createSelectMenuChoiceName, getSupportedLanguageT, resolveUserKey } from '@skyra/http-framework-i18n';
+import { isAbortError, Json, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
+import { ButtonStyle, MessageFlags } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Feed;
 const FallbackImageUrl = 'https://foodish-api.com/images/burger/burger82.jpg';
@@ -30,41 +31,49 @@ export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		const type = options.type ?? randomEnum(FeedType);
 
-		const url = new URL(`https://foodish-api.com/api/images/${type}`);
+		const url = new URL(type, 'https://foodish-api.com/api/images/');
 		url.searchParams.append('accept', 'application/json');
 
 		const result = await Json<FeedResultOk>(safeTimedFetch(url, Time.Second * 2));
-
-		const embed = result.match({
-			ok: (value) => this.handleOk(interaction, value, type),
+		const data = result.match({
+			ok: (value) => this.handleOk(interaction, value, { type, user: options.user }),
 			err: (error) => this.handleError(interaction, error)
 		});
 
-		return interaction.reply({ embeds: [embed.toJSON()] });
+		return interaction.reply(data);
 	}
 
-	private makeEmbed(url = FallbackImageUrl) {
-		return new EmbedBuilder().setImage(url).setColor(BrandingColors.Primary);
-	}
-
-	private handleError(interaction: Command.ChatInputInteraction, error: FetchError) {
-		if (!isAbortError(error)) this.container.logger.error(error);
-		return this.makeEmbed().setDescription(resolveKey(interaction, Root.Error));
-	}
-
-	private handleOk(interaction: Command.ChatInputInteraction, value: FeedResultOk, type: FeedType) {
+	private handleOk(interaction: Command.ChatInputInteraction, value: FeedResultOk, options: Required<Options>): MessageResponseOptions {
 		const t = getSupportedLanguageT(interaction);
 
-		const description = t(Root.EmbedTitle, {
-			type: t(Root.FoodKey(type)),
-			target: userMention(interaction.user.id)
+		const content = t(Root.Content, {
+			type: bold(t(Root.FoodKey(options.type))),
+			target: userMention(options.user.id)
 		});
 
-		return this.makeEmbed(value.image).setDescription(description);
+		const embed = new EmbedBuilder().setImage(value.image).setColor(BrandingColors.Primary);
+		const button = new ButtonBuilder().setStyle(ButtonStyle.Link).setLabel(t(Root.ButtonSource)).setURL(value.image);
+		return {
+			embeds: [embed.toJSON()],
+			components: [new ActionRowBuilder<ButtonBuilder>().addComponents(button).toJSON()],
+			content,
+			allowed_mentions: { users: [options.user.id], roles: [], parse: [] }
+		};
+	}
+
+	private handleError(interaction: Command.ChatInputInteraction, error: FetchError): MessageResponseOptions {
+		if (!isAbortError(error)) this.container.logger.error(error);
+
+		const embed = new EmbedBuilder()
+			.setDescription(resolveUserKey(interaction, Root.Error))
+			.setImage(FallbackImageUrl)
+			.setColor(BrandingColors.Secondary);
+		return { embeds: [embed.toJSON()], flags: MessageFlags.Ephemeral };
 	}
 }
 
 interface Options {
+	user: TransformedArguments.User;
 	type?: FeedType;
 }
 

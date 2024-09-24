@@ -9,7 +9,10 @@ export const OptionsTarget = 'commands/feed:optionsTarget';
 export const OptionsType = 'commands/feed:optionsType';
 
 // Embed
-export const EmbedTitle = FT<{ target: string; type: string }>('commands/feed:embedTitle');
+export const Content = FT<{ target: string; type: string }>('commands/feed:content');
+
+// Components
+export const ButtonSource = T('commands/feed:buttonSource');
 
 // Errors
 export const Error = T('commands/feed:error');
