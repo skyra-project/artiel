@@ -26881,5 +26881,14 @@
 		"alt": "The local police, building inspector, and fire marshal are all contesting my 'safety' assertion, or would be if they could reach me past all the traps.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2989,
+		"date": 1727092800000,
+		"title": "Physics Lab Thermostat",
+		"image": "https://imgs.xkcd.com/comics/physics_lab_thermostat.png",
+		"alt": "Hopefully the HVAC people set it to only affect the AIR in the room.",
+		"transcript": null,
+		"news": null
 	}
 ]
