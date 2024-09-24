@@ -70,7 +70,7 @@
 		"mathjax-full": "^3.2.2",
 		"prettier": "^3.3.3",
 		"prisma": "^5.19.1",
-		"rimraf": "^5.0.10",
+		"rimraf": "^6.0.1",
 		"sharp": "^0.33.5",
 		"tsx": "^4.19.1",
 		"typescript": "^5.4.5"
