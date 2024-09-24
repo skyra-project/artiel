@@ -5,7 +5,6 @@
   "optionsTargetDescription": "El usuario al que desees alimentar",
   "optionsTypeName": "tipo",
   "optionsTypeDescription": "El alimento con el cual alimentar",
-  "embedDescription": "¡Has alimentado {target} {type}!",
   "error": "La comida se me escapó de las manos, ¡por favor, tenga una hamburguesa!",
   "pizza": "Pizza",
   "burger": "Hamburguesa",
