@@ -15,11 +15,15 @@ import {
 	type MessageResponseOptions
 } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getSupportedUserLanguageT } from '@skyra/http-framework-i18n';
-import { MessageFlags } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, InteractionContextType, MessageFlags } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Sokoban;
 
-@RegisterCommand((builder) => applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription))
+@RegisterCommand((builder) =>
+	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
+)
 export class UserCommand extends Command {
 	@RegisterSubcommand((builder) =>
 		applyLocalizedBuilder(builder, Root.PlayLevel) //

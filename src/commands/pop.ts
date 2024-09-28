@@ -7,12 +7,14 @@ import { Time } from '@sapphire/duration';
 import { DiscordSnowflake } from '@sapphire/snowflake';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
-import { ButtonStyle } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, ButtonStyle, InteractionContextType } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Pop;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsDuration).setMinValue(10).setMaxValue(120))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsWidth).setMinValue(1).setMaxValue(10))
 		.addIntegerOption((builder) => applyLocalizedBuilder(builder, Root.OptionsHeight).setMinValue(1).setMaxValue(8))

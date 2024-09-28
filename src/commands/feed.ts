@@ -6,13 +6,15 @@ import { Time } from '@sapphire/duration';
 import { Command, RegisterCommand, type MessageResponseOptions, type TransformedArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, createSelectMenuChoiceName, getSupportedLanguageT, resolveUserKey } from '@skyra/http-framework-i18n';
 import { isAbortError, Json, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
-import { ButtonStyle, MessageFlags } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, ButtonStyle, InteractionContextType, MessageFlags } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Feed;
 const FallbackImageUrl = 'https://foodish-api.com/images/burger/burger82.jpg';
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel)
 		.addUserOption((option) => applyLocalizedBuilder(option, Root.OptionsTarget).setRequired(true))
 		.addStringOption((option) =>
 			applyLocalizedBuilder(option, Root.OptionsType).addChoices(

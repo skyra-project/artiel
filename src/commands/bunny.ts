@@ -7,13 +7,17 @@ import { isNullishOrEmpty } from '@sapphire/utilities';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, resolveKey } from '@skyra/http-framework-i18n';
 import { Json, isAbortError, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
-import { ButtonStyle } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, ButtonStyle, InteractionContextType } from 'discord-api-types/v10';
 
 const url = new URL('https://api.bunnies.io/v2/loop/random/?media=gif,png');
 const Root = LanguageKeys.Commands.Bunny;
 const FallbackImageUrl = 'https://i.imgur.com/FnAPcxj.jpg';
 
-@RegisterCommand((builder) => applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription))
+@RegisterCommand((builder) =>
+	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
+)
 export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction) {
 		const result = await Json<BunnyResultOk>(safeTimedFetch(url, Time.Second * 2));
