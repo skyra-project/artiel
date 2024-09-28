@@ -1,9 +1,9 @@
 import { LanguageKeys } from '#lib/i18n/LanguageKeys';
 import { isAny } from '#lib/utilities/operators';
-import { HeadingLevel, bold, heading, underscore } from '@discordjs/builders';
+import { HeadingLevel, bold, heading, underline } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, createSelectMenuChoiceName, resolveKey } from '@skyra/http-framework-i18n';
-import { MessageFlags } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, InteractionContextType, MessageFlags } from 'discord-api-types/v10';
 import { randomInt } from 'node:crypto';
 
 const Root = LanguageKeys.Commands.Dice;
@@ -18,6 +18,8 @@ enum OnCriticalReroll {
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
 		.addStringOption((builder) =>
 			applyLocalizedBuilder(builder, Root.OptionsPreset).addChoices(
 				createSelectMenuChoiceName(Root.PresetD2, { value: 'd2' }),
@@ -259,7 +261,7 @@ function renderFateDice(dice: number) {
 }
 
 function renderGenericDice(dice: number) {
-	return underscore(dice.toString());
+	return underline(dice.toString());
 }
 
 function renderCoinDice(dice: number) {
@@ -267,19 +269,19 @@ function renderCoinDice(dice: number) {
 }
 
 function renderRen10Dice(dice: number, index: number) {
-	const styled = underscore(dice.toString());
+	const styled = underline(dice.toString());
 	return index === 0 ? bold(styled) : styled;
 }
 
 function renderDnD5eDice(dice: number) {
-	const styled = underscore(dice.toString());
+	const styled = underline(dice.toString());
 	return isAny(dice, 1, 20) ? bold(styled) : styled;
 }
 
 function renderCthulhuDice(dice: number) {
 	const tens = Math.floor((dice % 100) / 10) * 10;
 	const units = dice % 10;
-	return underscore(`${tens.toString().padStart(2, '0')} ${units.toString()}`);
+	return underline(`${tens.toString().padStart(2, '0')} ${units.toString()}`);
 }
 
 interface Options {

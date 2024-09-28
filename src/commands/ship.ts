@@ -7,12 +7,14 @@ import { Command, RegisterCommand, type TransformedArguments } from '@skyra/http
 import { applyLocalizedBuilder, createSelectMenuChoiceName, resolveKey, resolveUserKey } from '@skyra/http-framework-i18n';
 import { isAbortError } from '@skyra/safe-fetch';
 import { Canvas, Image, Path2D, filter, loadImage } from 'canvas-constructor/napi-rs';
-import { MessageFlags, type APIUser } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, InteractionContextType, MessageFlags, type APIUser } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Ship;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel)
 		.addUserOption((builder) => applyLocalizedBuilder(builder, Root.OptionsTarget).setRequired(true))
 		.addUserOption((builder) => applyLocalizedBuilder(builder, Root.OptionsAuthor))
 		.addStringOption((builder) =>

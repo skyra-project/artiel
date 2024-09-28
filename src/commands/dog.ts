@@ -7,11 +7,16 @@ import { envParseString } from '@skyra/env-utilities';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, resolveKey } from '@skyra/http-framework-i18n';
 import { Json, isAbortError, safeTimedFetch, type FetchError } from '@skyra/safe-fetch';
+import { ApplicationIntegrationType, InteractionContextType } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Dog;
 const FallbackImageUrl = 'https://i.imgur.com/fSgnUKW.jpeg';
 
-@RegisterCommand((builder) => applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription))
+@RegisterCommand((builder) =>
+	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
+)
 export class UserCommand extends Command {
 	public override async chatInputRun(interaction: Command.ChatInputInteraction) {
 		const url = new URL('https://api.thedogapi.com/v1/images/search');

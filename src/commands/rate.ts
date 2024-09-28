@@ -3,11 +3,14 @@ import { escapeMarkdown } from '@discordjs/builders';
 import { envParseArray } from '@skyra/env-utilities';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getT } from '@skyra/http-framework-i18n';
+import { ApplicationIntegrationType, InteractionContextType } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Rate;
 
 @RegisterCommand((builder) =>
-	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription)
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
 		.addStringOption((builder) => applyLocalizedBuilder(builder, Root.OptionsRateableTarget).setRequired(true))
 )
 export class UserCommand extends Command {
@@ -33,10 +36,8 @@ export class UserCommand extends Command {
 	);
 
 	private readonly botRegex = new RegExp(`^(you|yourself|artiel|<@!?${process.env.CLIENT_ID}>)$`, 'i');
-
-	private readonly myselfRegex = new RegExp(`^(myself|me)$`, 'i');
-
-	private readonly myToYourRegex = new RegExp(`\bmy\b`, 'g');
+	private readonly myselfRegex = /^(myself|me)$/i;
+	private readonly myToYourRegex = /\bmy\b/g;
 
 	public override async chatInputRun(interaction: Command.ChatInputInteraction, options: Options) {
 		let rateableThing = options.target;
@@ -54,7 +55,7 @@ export class UserCommand extends Command {
 			[ratewaifu, rateableThing] = t(Root.MyOwners);
 		} else {
 			rateableThing = this.myselfRegex.test(rateableThing)
-				? interaction.user.global_name || interaction.user.username
+				? (interaction.user.global_name ?? interaction.user.username)
 				: escapeMarkdown(rateableThing.replace(this.myToYourRegex, 'your'));
 
 			const rng = Math.round(Math.random() * 100);

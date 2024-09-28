@@ -23,12 +23,14 @@ import { isNullish, isNullishOrEmpty } from '@sapphire/utilities';
 import { Command, RegisterCommand, type AutocompleteInteractionArguments, type TransformedArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, resolveKey, resolveUserKey } from '@skyra/http-framework-i18n';
 import { Canvas, Image, filter, loadImage } from 'canvas-constructor/napi-rs';
-import { MessageFlags, type APIUser } from 'discord-api-types/v10';
+import { ApplicationIntegrationType, InteractionContextType, MessageFlags, type APIUser } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Meme;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.BotDM, InteractionContextType.PrivateChannel)
 		.addStringOption((builder) =>
 			applyLocalizedBuilder(builder, Root.OptionsName)
 				.setMinLength(getMinimumMemeNameLength())

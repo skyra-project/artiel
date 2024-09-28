@@ -3,11 +3,14 @@ import { getAvatar, getColor, getTag } from '#lib/utilities/discord';
 import { bold, EmbedBuilder, inlineCode } from '@discordjs/builders';
 import { Command, RegisterCommand, type TransformedArguments } from '@skyra/http-framework';
 import { applyLocalizedBuilder, getSupportedLanguageT } from '@skyra/http-framework-i18n';
+import { ApplicationIntegrationType, InteractionContextType } from 'discord-api-types/v10';
 
 const Root = LanguageKeys.Commands.Love;
 
 @RegisterCommand((builder) =>
 	applyLocalizedBuilder(builder, Root.RootName, Root.RootDescription) //
+		.setIntegrationTypes(ApplicationIntegrationType.GuildInstall, ApplicationIntegrationType.UserInstall)
+		.setContexts(InteractionContextType.Guild, InteractionContextType.PrivateChannel)
 		.addUserOption((builder) => applyLocalizedBuilder(builder, Root.OptionsUser).setRequired(true))
 )
 export class UserCommand extends Command {
