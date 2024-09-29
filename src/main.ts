@@ -4,7 +4,7 @@ import { Client, container } from '@skyra/http-framework';
 import { init, load } from '@skyra/http-framework-i18n';
 import { registerCommands } from '@skyra/shared-http-pieces';
 import { createBanner } from '@skyra/start-banner';
-import gradient from 'gradient-string';
+import { atlas } from 'gradient-string';
 
 setup();
 
@@ -30,7 +30,7 @@ const port = envParseInteger('HTTP_PORT', 3000);
 await client.listen({ address, port });
 
 console.log(
-	gradient.atlas.multiline(
+	atlas.multiline(
 		createBanner({
 			name: [
 				String.raw`          :::     ::::::::: ::::::::::: ::::::::::: :::::::::: :::`,
