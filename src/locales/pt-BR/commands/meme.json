@@ -1,1 +1,12 @@
-{}
+{
+	"name": "meme",
+	"description": "Gera um meme",
+	"optionsNameName": "nome",
+	"optionsNameDescription": "O nome do meme para ser usado de modelo",
+	"optionsContentName": "conteúdo",
+	"optionsContentDescription": "O conteúdo para escrever no modelo, separado por \"|\"",
+	"optionsTargetName": "usuário",
+	"optionsTargetDescription": "Usuário para incluir no meme",
+	"noEntryFound": "Nenhum modelo de meme encontrado com o nome de {{value}}.",
+	"altText": "Meme gerado com o modelo \"{{template}}\". {{parts}}"
+}

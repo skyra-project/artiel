@@ -1,1 +1,19 @@
-{}
+{
+	"name": "poppit",
+	"description": "Gera uma mensagem para brincar de poppit",
+	"optionsDurationName": "duração",
+	"optionsDurationDescription": "O tempo em segundos durante o qual o quadro estará ativo",
+	"optionsWidthName": "largura",
+	"optionsWidthDescription": "A largura do \"poppit\"",
+	"optionsHeightName": "altura",
+	"optionsHeightDescription": "Altura do \"poppit\"",
+	"optionsLengthName": "tamanho",
+	"optionsLengthDescription": "O comprimento da solução",
+	"buttonsInputSolution": "Inserir solução",
+	"modalTitle": "Solução",
+	"modalInputPlaceholder": "Coloque a solução aqui",
+	"nonexistentGame": "Não existe jogo poppit.",
+	"wrongSolution": "Essa não é a solução.",
+	"title": "POPIT! Que os estouros comecem!",
+	"titleWinner": "POPIT! Temos um ganhador: {{value}}!"
+}
