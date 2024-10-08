@@ -26935,5 +26935,14 @@
 		"alt": "I see white shores, and beyond it, a far green country under a tequila sunrise.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2995,
+		"date": 1728302400000,
+		"title": "University Commas",
+		"image": "https://imgs.xkcd.com/comics/university_commas.png",
+		"alt": "The distinctive 'UCLA comma' and 'Michigan comma' are a long string of commas at the start and end of the sentence respectively.",
+		"transcript": null,
+		"news": null
 	}
 ]
