@@ -26971,5 +26971,14 @@
 		"alt": "It's a real accomplishment to mess up a ravioli recipe badly enough that the resulting incident touches all four quadrants of the NFPA hazard diamond.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 2999,
+		"date": 1729080000000,
+		"title": "Bad Map Projection: The United Stralia",
+		"image": "https://imgs.xkcd.com/comics/bad_map_projection_the_united_stralia.png",
+		"alt": "This projection distorts both area and direction, but preserves Melbourne.",
+		"transcript": null,
+		"news": null
 	}
 ]
