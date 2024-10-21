@@ -26980,5 +26980,14 @@
 		"alt": "This projection distorts both area and direction, but preserves Melbourne.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3000,
+		"date": 1729252800000,
+		"title": "Experimental Astrophysics",
+		"image": "https://imgs.xkcd.com/comics/experimental_astrophysics.png",
+		"alt": "Our experiment will be expensive, but we believe it will produce important spin-offs, especially if we manage to hit the sun from the right angle.",
+		"transcript": null,
+		"news": null
 	}
 ]
