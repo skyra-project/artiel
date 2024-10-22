@@ -1,1 +1,5 @@
-{}
+{
+	"name": "shibe",
+	"description": "Envia uma imagem aleatória do shibe",
+	"error": "O shibe esta dormindo e não pode ser perturbado, mas eu tenho uma foto antiga aqui"
+}

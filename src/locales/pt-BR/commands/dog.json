@@ -1,1 +1,5 @@
-{}
+{
+	"name": "cachorro",
+	"description": "Envia a imagem de um cachorro",
+	"error": "O cachorro é muito rápido para eu pegar, por favor, pegue esses filhotes!"
+}

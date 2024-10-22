@@ -1,1 +1,18 @@
-{}
+{
+	"name": "ship",
+	"description": "Gera uma combinação de nomes entre dois usuários",
+	"optionsTargetName": "usuário",
+	"optionsTargetDescription": "Usuário a combinar o nome",
+	"optionsAuthorName": "autor",
+	"optionsAuthorDescription": "O usuário a ser usado como autor, substituindo você",
+	"optionsThemeName": "tema",
+	"optionsThemeDescription": "O tema a ser usado",
+	"themeLight": "Claro",
+	"themeDark": "Escuro",
+	"themeTransPride": "Orgulho trans",
+	"themeNonBinaryPride": "Orgulho não-binário",
+	"abortError": "I tentei baixar os avatares, mas o discord está muito lento agora, tente novamente depois",
+	"unknownError": "Eu recebi um erro desconhecido enquanto baixava os avatares, por favor,  entre em contato com meus desenvolvedores para respostar esse erro",
+	"content": "Uma combinação entre {{author}} e {{target}}, hein? Eu chamo eles de {{name}}!",
+	"altText": "Uma combinação entre {{author}} e {{target}}, chamado {{name}}"
+}

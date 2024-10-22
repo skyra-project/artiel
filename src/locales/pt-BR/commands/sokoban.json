@@ -1,1 +1,19 @@
-{}
+{
+	"name": "sokoban",
+	"description": "Jogue um jogo clássico de Sokoban",
+	"playLevelName": "jogar-nível",
+	"playLevelDescription": "Jogar um nível existente",
+	"customLevelName": "nível-customizado",
+	"customLevelDescription": "Jogar um nível customizado",
+	"optionChooseLevelName": "nível",
+	"optionChooseLevelDescription": "Nível para jogar",
+	"optionImportCustomLevelName": "importar",
+	"optionImportCustomLevelDescription": "Código para o nível customizado",
+	"noPlayerFound": "Não consegui encontrar um jogador no nível.",
+	"multiplePlayersFound": "Eu encontrei vários jogadores no nível.",
+	"invalidComponent": "Componente inválido: {{value}}",
+	"invalidLevel": "Eu não consegui encontrar um nível com o nome especificado.",
+	"victory": "# Você ganhou!\n- **Tempo Realizado:** {{seconds}} segundos\n- **Quantidade de movimentos:** {{moves}}",
+	"defeat": "# Você perdeu!",
+	"retry": "Tentar novamente"
+}
