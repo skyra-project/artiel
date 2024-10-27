@@ -9,6 +9,8 @@
 	"optionChooseLevelDescription": "खेलने का स्तर",
 	"optionImportCustomLevelName": "आयात",
 	"optionImportCustomLevelDescription": "कस्टम स्तर के लिए कोड",
+	"noPlayerFound": "मुझे इस स्तर पर कोई खिलाड़ी नहीं मिला।",
+	"multiplePlayersFound": "मुझे इस स्तर पर कई खिलाड़ी मिले।",
 	"invalidComponent": "अमान्य घटक: {{value}}",
 	"invalidLevel": "मुझे निर्दिष्ट नाम वाला कोई स्तर नहीं मिला।",
 	"victory": "# आप जीत!\n- **समय लिया:** {{seconds}} सेकंड\n- **चालें चलीं:** {{moves}}",
