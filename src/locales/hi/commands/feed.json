@@ -1,1 +1,19 @@
-{}
+{
+  "name": "खिलाएं",
+  "description": "किसी को खाना खिलाएं",
+  "optionsTargetName": "उपयोगकर्ता",
+  "optionsTargetDescription": "जिस उपयोगकर्ता को आप खिलाना चाहते हैं",
+  "optionsTypeName": "प्रकार",
+  "optionsTypeDescription": "आप उन्हें किस प्रकार का खाना खिलाना चाहते हैं",
+  "content": "आपने {{target}} को {{type}} खिलाया!",
+  "buttonSource": "स्रोत",
+  "error": "खाना मेरे हाथ से फिसल गया, कृपया इसके यह बजाय बर्गर लें!",
+  "pizza": "पिज़्ज़ा",
+  "burger": "बर्गर",
+  "rice": "चावल",
+  "dosa": "डोसा",
+  "pasta": "पास्ता",
+  "biryani": "बिरयानी",
+  "samosa": "समोसा",
+  "dessert": "मिठाई"
+}
