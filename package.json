@@ -55,9 +55,9 @@
 		"@sapphire/eslint-config": "^5.0.5",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.1",
-		"@types/cron": "^2.4.0",
+		"@types/cron": "^2.4.3",
 		"@types/gradient-string": "^1.1.6",
-		"@types/node": "^20.16.13",
+		"@types/node": "^20.17.1",
 		"@types/turndown": "^5.0.5",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
@@ -72,7 +72,7 @@
 		"prisma": "^5.21.1",
 		"rimraf": "^5.0.10",
 		"sharp": "^0.33.5",
-		"tsx": "^4.19.1",
+		"tsx": "^4.19.2",
 		"typescript": "^5.4.5"
 	},
 	"resolutions": {
