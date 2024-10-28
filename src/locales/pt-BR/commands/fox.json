@@ -1,1 +1,5 @@
-{}
+{
+	"name": "raposa",
+	"description": "Envia a imagem de uma raposa",
+	"error": "O cuidador ainda não alimentou as raposas, mas tenho esta antiga foto de uma que já foi alimentada, aproveite!"
+}

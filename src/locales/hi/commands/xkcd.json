@@ -1,8 +1,14 @@
 {
 	"name": "एक्सकेसीडी",
 	"description": "xkcd.com से कॉमिक प्राप्त करें",
+	"comicName": "कॉमिक",
+	"comicDescription": "xkcd.com से कॉमिक प्राप्त करें",
+	"whatIfName": "व्हाट-इफ",
+	"whatIfDescription": "what-if.xkcd.com से एक लेख प्राप्त करें",
 	"optionsIdName": "क्रमांक",
+	"optionsIdDescription": "xkcd से प्रविष्टि संख्या",
 	"noComicFound": "{{value}} के क्रमांक के तहत कोई कॉमिक नहीं मिला",
 	"buttonsTranscript": "प्रतिलिपि",
-	"buttonsNews": "समाचार"
+	"buttonsNews": "समाचार",
+	"noArticleFound": "{{value}} के क्रमांक के तहत कोई लेख नहीं मिला"
 }

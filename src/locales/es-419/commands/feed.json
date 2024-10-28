@@ -1,0 +1,16 @@
+{
+  "name": "alimentar",
+  "description": "Alimenta a alguien",
+  "optionsTargetName": "usuario",
+  "optionsTargetDescription": "El usuario al que desees alimentar",
+  "optionsTypeName": "tipo",
+  "optionsTypeDescription": "El alimento con el cual alimentar",
+  "error": "La comida se me escapó de las manos, ¡por favor, tenga una hamburguesa!",
+  "pizza": "Pizza",
+  "burger": "Hamburguesa",
+  "dosa": "Dosa",
+  "pasta": "Pasta",
+  "biryani": "Biryani",
+  "samosa": "Samosa",
+  "dessert": "Postre"
+}

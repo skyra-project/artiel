@@ -1,1 +1,14 @@
-{}
+{
+	"name": "xkcd",
+	"description": "Envia um gibi em xkcd.com",
+	"comicName": "gibi",
+	"comicDescription": "Envia um gibi em xkcd.com",
+	"whatIfName": "e-se",
+	"whatIfDescription": "Envia um artigo \"e se\" em xkcd.com",
+	"optionsIdName": "id",
+	"optionsIdDescription": "Numero de identificação do gibi em xkcd",
+	"noComicFound": "Não encontrei um gibi com o “id” {{value}}",
+	"buttonsTranscript": "Transcrever",
+	"buttonsNews": "Noticia",
+	"noArticleFound": "Não encontrei um artigo com o \"id\" {{value}}"
+}
