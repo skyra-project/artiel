@@ -27016,5 +27016,14 @@
 		"alt": "The number one rule of string manipulation is that youâ€™ve got to specify your encodings.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3004,
+		"date": 1730116800000,
+		"title": "Wells",
+		"image": "https://imgs.xkcd.com/comics/wells.png",
+		"alt": "You do have to be careful, though--sometimes, instead of water, you hit this free fuel that you can sell for a lot of money instead.",
+		"transcript": null,
+		"news": null
 	}
 ]
