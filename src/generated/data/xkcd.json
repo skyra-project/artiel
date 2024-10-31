@@ -27025,5 +27025,14 @@
 		"alt": "You do have to be careful, though--sometimes, instead of water, you hit this free fuel that you can sell for a lot of money instead.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3005,
+		"date": 1730289600000,
+		"title": "Disposal",
+		"image": "https://imgs.xkcd.com/comics/disposal.png",
+		"alt": "We were disappointed that the rocket didn't make a THOOOONK noise when it went into the tube, but we're setting up big loudspeakers for future launches to add the sound effect.",
+		"transcript": null,
+		"news": null
 	}
 ]
