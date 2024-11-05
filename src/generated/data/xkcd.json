@@ -27043,5 +27043,14 @@
 		"alt": "Though they do appreciate how much he improved the heating system for the flame pit.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3007,
+		"date": 1730721600000,
+		"title": "Probabilistic Uncertainty",
+		"image": "https://imgs.xkcd.com/comics/probabilistic_uncertainty.png",
+		"alt": "\"One popular strategy is to enter an emotional spiral. Could that be the right approach? We contacted several researchers who are experts in emotional spirals to ask them, but none of them were in a state to speak with us.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
