@@ -46,6 +46,7 @@
 		"cron": "^3.1.7",
 		"discord-api-types": "^0.37.100",
 		"gradient-string": "^3.0.0",
+		"minisearch": "^7.1.0",
 		"tslib": "^2.8.0",
 		"turndown": "^7.2.0"
 	},
