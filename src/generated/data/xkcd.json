@@ -27061,5 +27061,14 @@
 		"alt": "These rocks are from a time before eyes, brains, and bones, pieces of a land warmed by an unseen sun.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3009,
+		"date": 1731067200000,
+		"title": "Number Shortage",
+		"image": "https://imgs.xkcd.com/comics/number_shortage.png",
+		"alt": "\"10 minutes ago we were down to only 2 0s!\" \"How many do we have now?\" \"I ... don't know!!\"",
+		"transcript": null,
+		"news": null
 	}
 ]
