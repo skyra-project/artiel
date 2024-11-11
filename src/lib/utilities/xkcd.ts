@@ -1,19 +1,38 @@
 import { PathSrc } from '#lib/common/constants';
 import { strikethrough } from '@discordjs/builders';
-import { cutText, isNullishOrEmpty, regExpEsc } from '@sapphire/utilities';
+import { cutText, isNullishOrEmpty } from '@sapphire/utilities';
 import { container } from '@skyra/http-framework';
 import { Json, safeFetch, safeTimedFetch } from '@skyra/safe-fetch';
 import type { APIApplicationCommandOptionChoice } from 'discord-api-types/v10';
 import { readFile } from 'fs/promises';
+import MiniSearch from 'minisearch';
 import TurndownService from 'turndown';
+
+const engine = new MiniSearch<Comic>({
+	fields: ['title', 'alt', 'transcript', 'news'],
+	searchOptions: {
+		boost: { title: 2 },
+		fields: ['title', 'alt', 'transcript', 'news'],
+		fuzzy: 0.2,
+		prefix: true
+	}
+});
 
 let Maximum = 0;
 const comics = new Map<number, Comic>();
+
+function add(entry: Comic) {
+	comics.set(entry.id, entry);
+	engine.add(entry);
+	Maximum = Math.max(Maximum, entry.id);
+
+	return entry;
+}
+
 {
 	const PathXKCD = new URL('./generated/data/xkcd.json', PathSrc);
 	for (const entry of JSON.parse(await readFile(PathXKCD, 'utf8')) as Comic[]) {
-		comics.set(entry.id, entry);
-		Maximum = Math.max(Maximum, entry.id);
+		add(entry);
 	}
 }
 
@@ -21,9 +40,9 @@ export async function refreshComicsFromRemote() {
 	const result = await Json<Comic[]>(safeFetch('https://raw.githubusercontent.com/skyra-project/artiel/main/src/generated/data/xkcd.json'));
 	result.match({
 		ok(entries) {
+			engine.removeAll();
 			for (const entry of entries) {
-				comics.set(entry.id, entry);
-				Maximum = Math.max(Maximum, entry.id);
+				add(entry);
 			}
 			container.logger.debug('Successfully refreshed the local database. Latest comic:', Maximum);
 		},
@@ -55,7 +74,7 @@ async function tryFetchComic(id: number) {
 	if (result.isErr()) return null;
 
 	const entry = result.unwrap();
-	const data = {
+	return add({
 		id: entry.num,
 		date: Date.UTC(entry.year, entry.month - 1, entry.day, 12, 0, 0, 0),
 		title: entry.safe_title || entry.title,
@@ -63,10 +82,7 @@ async function tryFetchComic(id: number) {
 		alt: entry.alt,
 		transcript: entry.transcript || null,
 		news: isNullishOrEmpty(entry.news) ? null : service.turndown(entry.news)
-	} satisfies Comic;
-	comics.set(data.id, data);
-	Maximum = data.id;
-	return data;
+	});
 }
 
 export async function searchComic(id: string): Promise<readonly ComicSearchResult[]> {
@@ -85,38 +101,15 @@ export async function searchComic(id: string): Promise<readonly ComicSearchResul
 		return entries;
 	}
 
-	const query = new RegExp(regExpEsc(id), 'i');
-	for (const value of comics.values()) {
-		const score = getSearchScore(id, query, value);
-		if (score !== 0) entries.push({ score, value });
-	}
-
-	return entries.sort((a, b) => b.score - a.score).slice(0, 25);
-}
-
-function getSearchScore(id: string, query: RegExp, value: Comic) {
-	let score = 0;
-	if (query.test(value.title)) {
-		if (id.length === value.title.length) return 1;
-		score = id.length / value.title.length;
-	}
-
-	if (query.test(value.alt)) {
-		if (id.length === value.alt.length) return 1;
-		score = Math.max(score, id.length / value.alt.length);
-	}
-
-	if (value.transcript && query.test(value.transcript)) {
-		if (id.length === value.transcript.length) return 1;
-		score = Math.max(score, id.length / value.transcript.length);
-	}
-
-	return score;
+	return engine
+		.search(id)
+		.slice(0, 25)
+		.map((value) => ({ score: value.score, value: comics.get(value.id)! }));
 }
 
 export function makeComicChoice(score: number, comic: Comic): APIApplicationCommandOptionChoice<number> {
 	return {
-		name: cutText(`${score === 1 ? '⭐' : '📄'} ${comic.id} — ${comic.title} — ${comic.alt}`, 100),
+		name: cutText(`${score > 10 ? '⭐' : '📄'} ${comic.id} — ${comic.title} — ${comic.alt}`, 100),
 		value: comic.id
 	};
 }

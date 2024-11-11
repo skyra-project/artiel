@@ -1,17 +1,44 @@
 import { PathSrc } from '#lib/common/constants';
-import { cutText, regExpEsc } from '@sapphire/utilities';
+import { cutText } from '@sapphire/utilities';
 import { container } from '@skyra/http-framework';
 import { Json, safeFetch } from '@skyra/safe-fetch';
 import type { APIApplicationCommandOptionChoice } from 'discord-api-types/v10';
+import MiniSearch from 'minisearch';
 import { readFile } from 'node:fs/promises';
+
+const engine = new MiniSearch<{ id: number; title: string; questions: string; lines: string }>({
+	fields: ['title', 'questions', 'lines'],
+	searchOptions: {
+		boost: { title: 2 },
+		fields: ['title', 'questions', 'lines'],
+		fuzzy: 0.2,
+		prefix: true
+	}
+});
 
 let Maximum = 0;
 const articles = new Map<number, WhatIf>();
+
+function add(entry: WhatIf) {
+	articles.set(entry.id, entry);
+	engine.add({
+		id: entry.id,
+		title: entry.title,
+		questions: entry.questions.map((question) => question.question).join('\n'),
+		lines: entry.lines
+			.filter((line): line is WhatIfLineParagraph => line.type === 'p')
+			.map((line) => line.text)
+			.join('\n')
+	});
+	Maximum = Math.max(Maximum, entry.id);
+
+	return entry;
+}
+
 {
 	const PathWhatIf = new URL('./generated/data/what-if.json', PathSrc);
 	for (const entry of JSON.parse(await readFile(PathWhatIf, 'utf8')) as WhatIf[]) {
-		articles.set(entry.id, entry);
-		Maximum = Math.max(Maximum, entry.id);
+		add(entry);
 	}
 }
 
@@ -47,35 +74,15 @@ export async function searchArticle(id: string): Promise<readonly WhatIfSearchRe
 		return entries;
 	}
 
-	const query = new RegExp(regExpEsc(id), 'i');
-	for (const value of articles.values()) {
-		const score = getSearchScore(id, query, value);
-		if (score !== 0) entries.push({ score, value });
-	}
-
-	return entries.sort((a, b) => b.score - a.score).slice(0, 25);
-}
-
-function getSearchScore(id: string, query: RegExp, value: WhatIf) {
-	let score = 0;
-	if (query.test(value.title)) {
-		if (id.length === value.title.length) return 1;
-		score = id.length / value.title.length;
-	}
-
-	for (const question of value.questions) {
-		if (query.test(question.question)) {
-			if (id.length === question.question.length) return 1;
-			score = Math.max(score, id.length / question.question.length);
-		}
-	}
-
-	return score;
+	return engine
+		.search(id)
+		.slice(0, 25)
+		.map((value) => ({ score: value.score, value: articles.get(value.id)! }));
 }
 
 export function makeArticleChoice(score: number, article: WhatIf): APIApplicationCommandOptionChoice<number> {
 	return {
-		name: cutText(`${score === 1 ? '⭐' : '📄'} ${article.id} — ${article.title}`, 100),
+		name: cutText(`${score > 10 ? '⭐' : '📄'} ${article.id} — ${article.title}`, 100),
 		value: article.id
 	};
 }
@@ -87,10 +94,9 @@ export function makeArticleChoices(results: readonly WhatIfSearchResult[]): APIA
 export async function refreshArticlesFromRemote() {
 	const result = await Json<WhatIf[]>(safeFetch('https://raw.githubusercontent.com/skyra-project/artiel/main/src/generated/data/what-if.json'));
 	result.match({
-		ok(values) {
-			for (const value of values) {
-				articles.set(value.id, value);
-				Maximum = Math.max(Maximum, value.id);
+		ok(entries) {
+			for (const entry of entries) {
+				add(entry);
 			}
 			container.logger.debug('Successfully refreshed the local database. Latest entry:', Maximum);
 		},
