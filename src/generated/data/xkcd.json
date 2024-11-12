@@ -27070,5 +27070,14 @@
 		"alt": "\"10 minutes ago we were down to only 2 0s!\" \"How many do we have now?\" \"I ... don't know!!\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3010,
+		"date": 1731326400000,
+		"title": "Geometriphylogenetics",
+		"image": "https://imgs.xkcd.com/comics/geometriphylogenetics.png",
+		"alt": "There's a maximum likelihood that I'm doing phylogenetics wrong.",
+		"transcript": null,
+		"news": null
 	}
 ]
