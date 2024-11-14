@@ -27079,5 +27079,14 @@
 		"alt": "There's a maximum likelihood that I'm doing phylogenetics wrong.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3011,
+		"date": 1731499200000,
+		"title": "Europa Clipper",
+		"image": "https://imgs.xkcd.com/comics/europa_clipper.png",
+		"alt": "They had BETTER make this a sample return mission.",
+		"transcript": null,
+		"news": null
 	}
 ]
