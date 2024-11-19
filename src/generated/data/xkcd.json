@@ -27097,5 +27097,14 @@
 		"alt": "Dinosaur Cosmics",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3013,
+		"date": 1731931200000,
+		"title": "Kedging Cannon",
+		"image": "https://imgs.xkcd.com/comics/kedging_cannon.png",
+		"alt": "The real key was inventing the windmill-powered winch.",
+		"transcript": null,
+		"news": null
 	}
 ]
