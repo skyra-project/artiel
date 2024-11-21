@@ -27106,5 +27106,14 @@
 		"alt": "The real key was inventing the windmill-powered winch.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3014,
+		"date": 1732104000000,
+		"title": "Arizona Chess",
+		"image": "https://imgs.xkcd.com/comics/arizona_chess.png",
+		"alt": "Sometimes, you have to sacrifice pieces to gain the advantage. Sometimes, to advance ... you have to fall back.",
+		"transcript": null,
+		"news": null
 	}
 ]
