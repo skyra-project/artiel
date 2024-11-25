@@ -27115,5 +27115,14 @@
 		"alt": "Sometimes, you have to sacrifice pieces to gain the advantage. Sometimes, to advance ... you have to fall back.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3015,
+		"date": 1732276800000,
+		"title": "D Combinatorics",
+		"image": "https://imgs.xkcd.com/comics/dnd_combinatorics.png",
+		"alt": "Look, you can't complain about this after giving us so many scenarios involving N locked chests and M unlabeled keys.",
+		"transcript": null,
+		"news": null
 	}
 ]
