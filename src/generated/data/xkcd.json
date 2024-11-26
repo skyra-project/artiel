@@ -27124,5 +27124,14 @@
 		"alt": "Look, you can't complain about this after giving us so many scenarios involving N locked chests and M unlabeled keys.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3016,
+		"date": 1732536000000,
+		"title": "Cold Air",
+		"image": "https://imgs.xkcd.com/comics/cold_air.png",
+		"alt": "We also should really have checked that the old water tower was disconnected from the water system before we started filling it with compressed air.",
+		"transcript": null,
+		"news": null
 	}
 ]
