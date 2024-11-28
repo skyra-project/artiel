@@ -27133,5 +27133,14 @@
 		"alt": "We also should really have checked that the old water tower was disconnected from the water system before we started filling it with compressed air.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3017,
+		"date": 1732708800000,
+		"title": "Neutrino Modem",
+		"image": "https://imgs.xkcd.com/comics/neutrino_modem.png",
+		"alt": "Our sysadmin accidentally won a Nobel Prize while trying to debug neutrino oscillation error correction.",
+		"transcript": null,
+		"news": null
 	}
 ]
