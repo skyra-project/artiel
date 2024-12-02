@@ -27142,5 +27142,14 @@
 		"alt": "Our sysadmin accidentally won a Nobel Prize while trying to debug neutrino oscillation error correction.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3018,
+		"date": 1732881600000,
+		"title": "Second Stage",
+		"image": "https://imgs.xkcd.com/comics/second_stage.png",
+		"alt": "Hmm, they won't do in-flight delivery, so let's order a new first and second stage to our emergency landing site and then try to touch down on top of them to save time.",
+		"transcript": null,
+		"news": null
 	}
 ]
