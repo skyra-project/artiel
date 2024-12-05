@@ -27160,5 +27160,14 @@
 		"alt": "The growth rate of items per day may may seem absurd, but it's actually much less than the acceleration in the 12 Days of Christmas song.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3020,
+		"date": 1733313600000,
+		"title": "Infinite Armada Chess",
+		"image": "https://imgs.xkcd.com/comics/infinite_armada_chess.png",
+		"alt": "Stockfish 16 suggests the unconventional opening 1. RuntimeError: Out of bounds memory access",
+		"transcript": null,
+		"news": null
 	}
 ]
