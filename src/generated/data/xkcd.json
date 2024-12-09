@@ -27169,5 +27169,14 @@
 		"alt": "Stockfish 16 suggests the unconventional opening 1. RuntimeError: Out of bounds memory access",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3021,
+		"date": 1733486400000,
+		"title": "Seismologists",
+		"image": "https://imgs.xkcd.com/comics/seismologists.png",
+		"alt": "And even when they're not distracted, they usually get kicked out for illegal under-the-net 'subduction spikes'.",
+		"transcript": null,
+		"news": null
 	}
 ]
