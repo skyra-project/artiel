@@ -27187,5 +27187,14 @@
 		"alt": "No, of course we don't microwave the mug WITH the teabag in it. We microwave the teabag separately.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3023,
+		"date": 1733918400000,
+		"title": "The Maritime Approximation",
+		"image": "https://imgs.xkcd.com/comics/the_maritime_approximation.png",
+		"alt": "It works because a nautical mile is based on a degree of latitude, and the Earth (e) is a circle.",
+		"transcript": null,
+		"news": null
 	}
 ]
