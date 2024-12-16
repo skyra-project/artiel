@@ -27196,5 +27196,14 @@
 		"alt": "It works because a nautical mile is based on a degree of latitude, and the Earth (e) is a circle.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3024,
+		"date": 1734091200000,
+		"title": "METAR",
+		"image": "https://imgs.xkcd.com/comics/metar.png",
+		"alt": "In the aviation world, they don't use AM/PM times. Instead, all times are assumed to be AM unless they're labeled NOTAM.",
+		"transcript": null,
+		"news": null
 	}
 ]
