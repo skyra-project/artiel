@@ -27214,5 +27214,14 @@
 		"alt": "Even when you try to make nice, smooth ice cubes in a freezer, sometimes one of them will shoot out a random ice spike, which physicists ascribe to kiki conservation.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3026,
+		"date": 1734523200000,
+		"title": "Linear Sort",
+		"image": "https://imgs.xkcd.com/comics/linear_sort.png",
+		"alt": "The best case is O(n), and the worst case is that someone checks why.",
+		"transcript": null,
+		"news": null
 	}
 ]
