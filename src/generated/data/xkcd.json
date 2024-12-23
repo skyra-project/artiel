@@ -27223,5 +27223,14 @@
 		"alt": "The best case is O(n), and the worst case is that someone checks why.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3027,
+		"date": 1734696000000,
+		"title": "Exclusion Principle",
+		"image": "https://imgs.xkcd.com/comics/exclusion_principle.png",
+		"alt": "Fermions are weird about each other in a standoffish way. Integer-spin particles are weird about each other in a 'stand uncomfortably close while talking' kind of way.",
+		"transcript": null,
+		"news": null
 	}
 ]
