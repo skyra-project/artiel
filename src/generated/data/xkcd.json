@@ -27250,5 +27250,14 @@
 		"alt": "C'mon, ESA Solar Orbiter team, just give the Parker probe a LITTLE nudge at aphelion. Crash it into the sun. Fulfill the dream of Icarus. It is your destiny.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3030,
+		"date": 1735300800000,
+		"title": "Lasering Incidents",
+		"image": "https://imgs.xkcd.com/comics/lasering_incidents.png",
+		"alt": "I still don't know how the police found my compound where I ran an illegal searchlight depot/covert blimp airfield/fireworks testing range.",
+		"transcript": null,
+		"news": null
 	}
 ]
