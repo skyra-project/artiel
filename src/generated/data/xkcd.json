@@ -27268,5 +27268,14 @@
 		"alt": "Inside is a third box, labeled DO NOT OPEN UNLESS YOU ARE IN THE TIME ZONE WHERE YOU OPENED BOTH PREVIOUS BOXES.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3032,
+		"date": 1735732800000,
+		"title": "Skew-T Log-P",
+		"image": "https://imgs.xkcd.com/comics/skew_t_log_p.png",
+		"alt": "The most important quantity for meteorologists is of course the product of latent pressure and temperostrophic enthalpy, though 'how nice the weather is' is a close second.",
+		"transcript": null,
+		"news": null
 	}
 ]
