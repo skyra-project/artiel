@@ -27304,5 +27304,14 @@
 		"alt": "You don't want the nitrogen percentage to be too high or you run the risk of eutrophication.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3036,
+		"date": 1736510400000,
+		"title": "Chess Zoo",
+		"image": "https://imgs.xkcd.com/comics/chess_zoo.png",
+		"alt": "The zoo takes special care to keep kings separated from opposite-color pieces as part of their conservation program to prevent mating in captivity.",
+		"transcript": null,
+		"news": null
 	}
 ]
