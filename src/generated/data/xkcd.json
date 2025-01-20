@@ -27331,5 +27331,14 @@
 		"alt": "Speed limit c arcminutes^2 per steradian",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3039,
+		"date": 1737115200000,
+		"title": "Human Altitude",
+		"image": "https://imgs.xkcd.com/comics/human_altitude.png",
+		"alt": "I wonder what surviving human held the record before balloons (excluding edge cases like jumping gaps on a mountain bridge). Probably it was someone falling from a cliff into snow or water, but maybe it involved something weird like a gunpowder explosion or volcano.",
+		"transcript": null,
+		"news": null
 	}
 ]
