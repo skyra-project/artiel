@@ -27349,5 +27349,14 @@
 		"alt": "Can you pass the nackle?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3041,
+		"date": 1737547200000,
+		"title": "Unit Circle",
+		"image": "https://imgs.xkcd.com/comics/unit_circle.png",
+		"alt": "They're continuing to search for a square with the same area as the circle, as efforts to construct one have run into difficulties.",
+		"transcript": null,
+		"news": null
 	}
 ]
