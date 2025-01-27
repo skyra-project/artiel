@@ -27358,5 +27358,14 @@
 		"alt": "They're continuing to search for a square with the same area as the circle, as efforts to construct one have run into difficulties.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3042,
+		"date": 1737720000000,
+		"title": "T. Rex Evolution",
+		"image": "https://imgs.xkcd.com/comics/t_rex_evolution.png",
+		"alt": "Unfortunately, body size and bite force continue to increase.",
+		"transcript": null,
+		"news": null
 	}
 ]
