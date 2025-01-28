@@ -27367,5 +27367,14 @@
 		"alt": "Unfortunately, body size and bite force continue to increase.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3043,
+		"date": 1737979200000,
+		"title": "Muons",
+		"image": "https://imgs.xkcd.com/comics/muons.png",
+		"alt": "Update: I've been banned from the physics department for the way I pronounce \"Doppler effect.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
