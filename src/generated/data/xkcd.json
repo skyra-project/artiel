@@ -27376,5 +27376,14 @@
 		"alt": "Update: I've been banned from the physics department for the way I pronounce \"Doppler effect.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3044,
+		"date": 1738152000000,
+		"title": "Humidifier Review",
+		"image": "https://imgs.xkcd.com/comics/humidifier_review.png",
+		"alt": "They should add a little sticker that certifies that the humidifier supports water conservation, but in the sense of energy conservation or momentum conservation.",
+		"transcript": null,
+		"news": null
 	}
 ]
