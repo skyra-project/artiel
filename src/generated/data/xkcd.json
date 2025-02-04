@@ -27394,5 +27394,14 @@
 		"alt": "It struggles a little with complex positions, like when there are an even number of moves and it has to round down, but when run against itself it's capable of finding some novelties. At one point I saw six knights on the board at once; Stockfish rarely exceeds four.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3046,
+		"date": 1738584000000,
+		"title": "Stromatolites",
+		"image": "https://imgs.xkcd.com/comics/stromatolites.png",
+		"alt": "If only my ancestors had been fortunate enough to marry into the branch of the bacteria family that could photosynthesize, like all my little green cousins here.",
+		"transcript": null,
+		"news": null
 	}
 ]
