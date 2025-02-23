@@ -1201,7 +1201,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.21.0"
     canvas-constructor: "npm:^7.0.2"
     cheerio: "npm:^1.0.0"
-    cron: "npm:^3.1.7"
+    cron: "npm:^4.0.0"
     cz-conventional-changelog: "npm:^3.3.0"
     discord-api-types: "npm:^0.37.100"
     eslint: "npm:^8.57.1"
@@ -2294,13 +2294,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:*, cron@npm:^3.1.7":
-  version: 3.1.7
-  resolution: "cron@npm:3.1.7"
+"cron@npm:*, cron@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "cron@npm:4.0.0"
   dependencies:
     "@types/luxon": "npm:~3.4.0"
-    luxon: "npm:~3.4.0"
-  checksum: 10/54f867b51039aa93fc909aee70461cfff3d253e412686ea19891d6b28a86cb413cdbd969d018613fc890403f1f17045f193628733596ef77eef3f3a93b344878
+    luxon: "npm:~3.5.0"
+  checksum: 10/79204752f463eb6fb31d8f97fe6fd70c3421cc7dd1690abb1e3a1a60792201aadb00b3680334be5a910848aa603fc45737eb9d5f967b4d66a266af531ea45df5
   languageName: node
   linkType: hard
 
@@ -4081,10 +4081,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:~3.4.0":
-  version: 3.4.4
-  resolution: "luxon@npm:3.4.4"
-  checksum: 10/c14164bc338987349075a08e63ea3ff902866735f7f5553a355b27be22667919765ff96fde4d3413d0e9a0edc4ff9e2e74ebcb8f86eae0ce8b14b27330d87d6e
+"luxon@npm:~3.5.0":
+  version: 3.5.0
+  resolution: "luxon@npm:3.5.0"
+  checksum: 10/48f86e6c1c96815139f8559456a3354a276ba79bcef0ae0d4f2172f7652f3ba2be2237b0e103b8ea0b79b47715354ac9fac04eb1db3485dcc72d5110491dd47f
   languageName: node
   linkType: hard
 
