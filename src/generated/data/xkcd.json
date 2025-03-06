@@ -27511,5 +27511,14 @@
 		"alt": "Briefly set a new record for tallest human-made structure by getting my knit sweater snagged on the skydiving plane door as I jumped and not noticing until I'd landed.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3059,
+		"date": 1741176000000,
+		"title": "Water Damage",
+		"image": "https://imgs.xkcd.com/comics/water_damage.png",
+		"alt": "Your homeowner's insurance might cover it, but be sure to check the subductible.",
+		"transcript": null,
+		"news": null
 	}
 ]
