@@ -27520,5 +27520,14 @@
 		"alt": "Your homeowner's insurance might cover it, but be sure to check the subductible.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3060,
+		"date": 1741348800000,
+		"title": "Omniroll",
+		"image": "https://imgs.xkcd.com/comics/omniroll.png",
+		"alt": "It seems wrong that Fruit by the Foot is only sold by weight or by number of rolls.",
+		"transcript": null,
+		"news": null
 	}
 ]
