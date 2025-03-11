@@ -27529,5 +27529,14 @@
 		"alt": "It seems wrong that Fruit by the Foot is only sold by weight or by number of rolls.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3061,
+		"date": 1741608000000,
+		"title": "Water Balloons",
+		"image": "https://imgs.xkcd.com/comics/water_balloons.png",
+		"alt": "Update: The physics department has recruited an astronomer who studies meteor fireballs.",
+		"transcript": null,
+		"news": null
 	}
 ]
