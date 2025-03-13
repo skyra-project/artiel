@@ -27538,5 +27538,14 @@
 		"alt": "Update: The physics department has recruited an astronomer who studies meteor fireballs.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3062,
+		"date": 1741780800000,
+		"title": "Off By One",
+		"image": "https://imgs.xkcd.com/comics/off_by_one.png",
+		"alt": "It does come at the small cost of a LOT more off-by-40-or-50 errors.",
+		"transcript": null,
+		"news": null
 	}
 ]
