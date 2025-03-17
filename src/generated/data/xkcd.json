@@ -27547,5 +27547,14 @@
 		"alt": "It does come at the small cost of a LOT more off-by-40-or-50 errors.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3063,
+		"date": 1741953600000,
+		"title": "Planet Definitions",
+		"image": "https://imgs.xkcd.com/comics/planet_definitions.png",
+		"alt": "Under the 'has cleared its orbital neighborhood' and 'fuses hydrogen into helium' definitions, thanks to human activities Earth technically no longer qualifies as a planet but DOES count as a star.",
+		"transcript": null,
+		"news": null
 	}
 ]
