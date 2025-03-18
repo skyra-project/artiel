@@ -27556,5 +27556,14 @@
 		"alt": "Under the 'has cleared its orbital neighborhood' and 'fuses hydrogen into helium' definitions, thanks to human activities Earth technically no longer qualifies as a planet but DOES count as a star.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3064,
+		"date": 1742212800000,
+		"title": "Lungfish",
+		"image": "https://imgs.xkcd.com/comics/lungfish.png",
+		"alt": "I know having so many base pairs makes rebasing complicated, but you're in Bilateria, so shouldn't you at LEAST be better at using git head?",
+		"transcript": null,
+		"news": null
 	}
 ]
