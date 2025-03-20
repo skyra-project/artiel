@@ -27565,5 +27565,14 @@
 		"alt": "I know having so many base pairs makes rebasing complicated, but you're in Bilateria, so shouldn't you at LEAST be better at using git head?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3065,
+		"date": 1742385600000,
+		"title": "Square Units",
+		"image": "https://imgs.xkcd.com/comics/square_units.png",
+		"alt": "The biggest I've seen in a published source in the wild is an 80-fold error in a reported distance, which I think came from a series of at least three unit conversions and area/length misinterpretations.",
+		"transcript": null,
+		"news": null
 	}
 ]
