@@ -27574,5 +27574,14 @@
 		"alt": "The biggest I've seen in a published source in the wild is an 80-fold error in a reported distance, which I think came from a series of at least three unit conversions and area/length misinterpretations.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3066,
+		"date": 1742558400000,
+		"title": "Cosmic Distance Calibration",
+		"image": "https://imgs.xkcd.com/comics/cosmic_distance_calibration.png",
+		"alt": "This is the biggest breakthrough since astronomers noticed that the little crosshairs around red giant stars starting to burn helium are all the same size.",
+		"transcript": null,
+		"news": null
 	}
 ]
