@@ -27583,5 +27583,14 @@
 		"alt": "This is the biggest breakthrough since astronomers noticed that the little crosshairs around red giant stars starting to burn helium are all the same size.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3067,
+		"date": 1742817600000,
+		"title": "SawStart",
+		"image": "https://imgs.xkcd.com/comics/sawstart.png",
+		"alt": "Unfortunately, SawStart is one-use-only. Once started, the blade cannot be stopped, and must be replaced with a fresh blade while the running one is carefully disposed of.",
+		"transcript": null,
+		"news": null
 	}
 ]
