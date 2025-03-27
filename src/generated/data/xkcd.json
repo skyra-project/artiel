@@ -27592,5 +27592,14 @@
 		"alt": "Unfortunately, SawStart is one-use-only. Once started, the blade cannot be stopped, and must be replaced with a fresh blade while the running one is carefully disposed of.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3068,
+		"date": 1742990400000,
+		"title": "Rock Identification",
+		"image": "https://imgs.xkcd.com/comics/rock_identification.png",
+		"alt": "'Is it worth anything?' 'I dunno, is the answer to that question worth another $5?'",
+		"transcript": null,
+		"news": null
 	}
 ]
