@@ -27601,5 +27601,14 @@
 		"alt": "'Is it worth anything?' 'I dunno, is the answer to that question worth another $5?'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3069,
+		"date": 1743163200000,
+		"title": "Terror Bird",
+		"image": "https://imgs.xkcd.com/comics/terror_bird.png",
+		"alt": "There has long been debate about Big Bird's species, with some experts claiming he was a canary, but recent genetic analysis places him firmly in Cariamiformes.",
+		"transcript": null,
+		"news": null
 	}
 ]
