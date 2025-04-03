@@ -27619,5 +27619,14 @@
 		"alt": "Most properties can only boast INDOOR heated floors.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3071,
+		"date": 1743595200000,
+		"title": "Decay Chain",
+		"image": "https://imgs.xkcd.com/comics/decay_chain.png",
+		"alt": "If you have an old phone in a drawer, and you listen very carefully, you can occasionally hear the occasional tap of an emitted SIM card hitting the side of the drawer as the phone transmutes to a lower-end model.",
+		"transcript": null,
+		"news": null
 	}
 ]
