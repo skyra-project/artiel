@@ -27628,5 +27628,14 @@
 		"alt": "If you have an old phone in a drawer, and you listen very carefully, you can occasionally hear the occasional tap of an emitted SIM card hitting the side of the drawer as the phone transmutes to a lower-end model.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3072,
+		"date": 1743768000000,
+		"title": "Stargazing 4",
+		"image": "https://imgs.xkcd.com/comics/stargazing_4.png",
+		"alt": "We haven't actually seen a star fall in since we invented telescopes, but I have a list of ones I'm really hoping are next.",
+		"transcript": null,
+		"news": null
 	}
 ]
