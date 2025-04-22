@@ -27691,5 +27691,14 @@
 		"alt": "The biggest expense was installing the mantle ducts to keep the carbonate-silicate cycle operating.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3079,
+		"date": 1745236800000,
+		"title": "Air Fact",
+		"image": "https://imgs.xkcd.com/comics/air_fact.png",
+		"alt": "'Wow, that must be why you swallow so many of them per year!' 'No, that's spiders. You swallow WAY more ants.'",
+		"transcript": null,
+		"news": null
 	}
 ]
