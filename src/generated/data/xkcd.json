@@ -27727,5 +27727,14 @@
 		"alt": "It's important to learn the moves that take you into the vortex, but it's best not to study vortex itself too closely. Even grandmasters who have built up a tolerance lose the ability to play for a few hours after studying it.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3083,
+		"date": 1746014400000,
+		"title": "Jupiter Core",
+		"image": "https://imgs.xkcd.com/comics/jupiter_core.png",
+		"alt": "Juno mission data suggests that Jupiter actually contains Matryoshka doll-style nested copies of every other planet in the Solar System.",
+		"transcript": null,
+		"news": null
 	}
 ]
