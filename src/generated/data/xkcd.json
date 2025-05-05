@@ -27736,5 +27736,14 @@
 		"alt": "Juno mission data suggests that Jupiter actually contains Matryoshka doll-style nested copies of every other planet in the Solar System.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3084,
+		"date": 1746187200000,
+		"title": "Unstoppable Force and Immovable Object",
+		"image": "https://imgs.xkcd.com/comics/unstoppable_force_and_immovable_object.png",
+		"alt": "Unstoppable force-carrying particles can't interact with immovable matter by definition.",
+		"transcript": null,
+		"news": null
 	}
 ]
