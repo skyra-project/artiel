@@ -27763,5 +27763,14 @@
 		"alt": "Frankly, given their extreme gravitational fields and general instability, even 12-inch globes should probably be banned.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3087,
+		"date": 1746792000000,
+		"title": "Pascal's Law",
+		"image": "https://imgs.xkcd.com/comics/pascals_law.png",
+		"alt": "Reductio ad absurdum fails when reality is absurd.",
+		"transcript": null,
+		"news": null
 	}
 ]
