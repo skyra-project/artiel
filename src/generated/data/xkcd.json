@@ -27781,5 +27781,14 @@
 		"alt": "P.S. If you have time travel, come to my birthday party Saturday!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3089,
+		"date": 1747224000000,
+		"title": "Modern",
+		"image": "https://imgs.xkcd.com/comics/modern.png",
+		"alt": "Scholars are still debating whether the current period is post-postmodern or neo-contemporary.",
+		"transcript": null,
+		"news": null
 	}
 ]
