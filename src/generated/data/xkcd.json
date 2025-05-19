@@ -27790,5 +27790,14 @@
 		"alt": "Scholars are still debating whether the current period is post-postmodern or neo-contemporary.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3090,
+		"date": 1747396800000,
+		"title": "Sail Physics",
+		"image": "https://imgs.xkcd.com/comics/sail_physics.png",
+		"alt": "Turning in other directions can be accomplished by using a magnetized centerboard and ocean currents, since a current flowing through a magnetic field induces a Laplace force.",
+		"transcript": null,
+		"news": null
 	}
 ]
