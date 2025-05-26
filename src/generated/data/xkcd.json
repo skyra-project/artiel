@@ -27817,5 +27817,14 @@
 		"alt": "169 is a baker's gross.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3093,
+		"date": 1748001600000,
+		"title": "Drafting",
+		"image": "https://imgs.xkcd.com/comics/drafting.png",
+		"alt": "A 5% efficiency gain at the cost of a 99% efficiency loss",
+		"transcript": null,
+		"news": null
 	}
 ]
