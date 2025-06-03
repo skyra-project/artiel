@@ -27853,5 +27853,14 @@
 		"alt": "They say it's probably safe to keep orbiting for a while, but if it stays on or starts flashing we might have to call someone.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3097,
+		"date": 1748865600000,
+		"title": "Bridge Types",
+		"image": "https://imgs.xkcd.com/comics/bridge_types.png",
+		"alt": "Pontoon bridges are just linear open-sided waterbeds.",
+		"transcript": null,
+		"news": null
 	}
 ]
