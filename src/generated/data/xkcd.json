@@ -27862,5 +27862,14 @@
 		"alt": "Pontoon bridges are just linear open-sided waterbeds.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3098,
+		"date": 1749038400000,
+		"title": "Trojan Horse",
+		"image": "https://imgs.xkcd.com/comics/trojan_horse.png",
+		"alt": "Ultimately, history would imperfectly record the story of the Foal of Troy.",
+		"transcript": null,
+		"news": null
 	}
 ]
