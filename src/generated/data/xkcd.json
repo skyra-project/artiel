@@ -27880,5 +27880,14 @@
 		"alt": "The installation of the pipes on the inside of the insulation can be challenging, especially when the neighbor could come home at any minute.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3100,
+		"date": 1749470400000,
+		"title": "Alert Sound",
+		"image": "https://imgs.xkcd.com/comics/alert_sound.png",
+		"alt": "With a good battery, the device can easily last for 5 or 10 years, although the walls probably won't.",
+		"transcript": null,
+		"news": null
 	}
 ]
