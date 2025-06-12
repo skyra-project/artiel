@@ -27889,5 +27889,14 @@
 		"alt": "With a good battery, the device can easily last for 5 or 10 years, although the walls probably won't.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3101,
+		"date": 1749643200000,
+		"title": "Good Science",
+		"image": "https://imgs.xkcd.com/comics/good_science.png",
+		"alt": "If you think curiosity without rigor is bad, you should see rigor without curiosity.",
+		"transcript": null,
+		"news": null
 	}
 ]
