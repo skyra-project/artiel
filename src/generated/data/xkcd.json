@@ -27898,5 +27898,14 @@
 		"alt": "If you think curiosity without rigor is bad, you should see rigor without curiosity.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3102,
+		"date": 1749816000000,
+		"title": "Reading a Big Number",
+		"image": "https://imgs.xkcd.com/comics/reading_a_big_number.png",
+		"alt": "[desperately] Maybe this is from some country where they use commas as decimal points, and also as digit separators after the decimal, and also use random other characters for decoration???",
+		"transcript": null,
+		"news": null
 	}
 ]
