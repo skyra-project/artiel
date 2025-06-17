@@ -27907,5 +27907,14 @@
 		"alt": "[desperately] Maybe this is from some country where they use commas as decimal points, and also as digit separators after the decimal, and also use random other characters for decoration???",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3103,
+		"date": 1750075200000,
+		"title": "Exoplanet System",
+		"image": "https://imgs.xkcd.com/comics/exoplanet_system.png",
+		"alt": "Sure, this exoplanet we discovered may seem hostile to life, but our calculations suggest it's actually in the accretion disc's habitable zone.",
+		"transcript": null,
+		"news": null
 	}
 ]
