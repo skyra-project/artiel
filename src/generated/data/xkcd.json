@@ -27934,5 +27934,14 @@
 		"alt": "We're getting a lot of complaints from commuters who were routed onto a coaster, but the theme park patrons who spent hours stuck on an intercity line are also not happy.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3106,
+		"date": 1750680000000,
+		"title": "Farads",
+		"image": "https://imgs.xkcd.com/comics/farads.png",
+		"alt": "'This HAZMAT container contains radioactive material with activity of one becquerel.' 'So, like, a single banana slice?'",
+		"transcript": null,
+		"news": null
 	}
 ]
