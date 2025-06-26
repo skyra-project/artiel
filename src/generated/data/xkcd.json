@@ -27943,5 +27943,14 @@
 		"alt": "'This HAZMAT container contains radioactive material with activity of one becquerel.' 'So, like, a single banana slice?'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3107,
+		"date": 1750852800000,
+		"title": "Weather Balloons",
+		"image": "https://imgs.xkcd.com/comics/weather_balloons.png",
+		"alt": "Once you add the balloons into the model, it makes forecasting easier overall--the forecast is always 'cold and dark, with minimal solar-driven convection.'",
+		"transcript": null,
+		"news": null
 	}
 ]
