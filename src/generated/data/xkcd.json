@@ -27952,5 +27952,23 @@
 		"alt": "Once you add the balloons into the model, it makes forecasting easier overall--the forecast is always 'cold and dark, with minimal solar-driven convection.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3108,
+		"date": 1751025600000,
+		"title": "Laser Danger",
+		"image": "https://imgs.xkcd.com/comics/laser_danger.png",
+		"alt": "To combat the threat, many airlines are installing wing-mounted spray bottles.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3109,
+		"date": 1751284800000,
+		"title": "Dehumidifier",
+		"image": "https://imgs.xkcd.com/comics/dehumidifier.png",
+		"alt": "It's important for devices to have internet connectivity so the manufacturer can patch remote exploits.",
+		"transcript": null,
+		"news": null
 	}
 ]
