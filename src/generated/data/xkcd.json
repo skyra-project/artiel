@@ -27979,5 +27979,14 @@
 		"alt": "Starting a meta-leaderboard for tracking who holds the record for ranking behind the most distinct people on an online leaderboard.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3111,
+		"date": 1751630400000,
+		"title": "Artificial Gravity",
+		"image": "https://imgs.xkcd.com/comics/artificial_gravity.png",
+		"alt": "Low gravity can cause bone loss, so we're pleased to report that, since we initiated capsule motion, the number of bones in each crew member has been steadily increasing.",
+		"transcript": null,
+		"news": null
 	}
 ]
