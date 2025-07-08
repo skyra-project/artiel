@@ -27988,5 +27988,14 @@
 		"alt": "Low gravity can cause bone loss, so we're pleased to report that, since we initiated capsule motion, the number of bones in each crew member has been steadily increasing.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3112,
+		"date": 1751889600000,
+		"title": "Geology Murder",
+		"image": "https://imgs.xkcd.com/comics/geology_murder.png",
+		"alt": "After determining that his body was full of pipes carrying iron-rich fluid, our current theory is that the dagger-shaped object precipitated within the wound.",
+		"transcript": null,
+		"news": null
 	}
 ]
