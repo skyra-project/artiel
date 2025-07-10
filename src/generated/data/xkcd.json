@@ -27997,5 +27997,14 @@
 		"alt": "After determining that his body was full of pipes carrying iron-rich fluid, our current theory is that the dagger-shaped object precipitated within the wound.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3113,
+		"date": 1752062400000,
+		"title": "Fix This Sign",
+		"image": "https://imgs.xkcd.com/comics/fix_this_sign.png",
+		"alt": "We're building on our earlier success getting web developers to pay to change the backslashes in our displayed payment URL to forward slashes.",
+		"transcript": null,
+		"news": null
 	}
 ]
