@@ -28006,5 +28006,14 @@
 		"alt": "We're building on our earlier success getting web developers to pay to change the backslashes in our displayed payment URL to forward slashes.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3114,
+		"date": 1752235200000,
+		"title": "Building a Fire",
+		"image": "https://imgs.xkcd.com/comics/building_a_fire.png",
+		"alt": "That was quicker than usual! The cabin's sprinkler system often makes it really hard to keep anything lit.",
+		"transcript": null,
+		"news": null
 	}
 ]
