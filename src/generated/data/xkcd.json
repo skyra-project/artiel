@@ -28015,5 +28015,14 @@
 		"alt": "That was quicker than usual! The cabin's sprinkler system often makes it really hard to keep anything lit.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3115,
+		"date": 1752494400000,
+		"title": "Unsolved Physics Problems",
+		"image": "https://imgs.xkcd.com/comics/unsolved_physics_problems.png",
+		"alt": "'Tin pest' makes more sense to me. Tin just doesn't want to be locked down in a shape like that. I get it. But why would any metal want to grow hair??",
+		"transcript": null,
+		"news": null
 	}
 ]
