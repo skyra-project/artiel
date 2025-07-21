@@ -28033,5 +28033,14 @@
 		"alt": "This is almost as bad as the time I signed up for a purely partisan fishing expedition.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3117,
+		"date": 1752840000000,
+		"title": "Replication Crisis",
+		"image": "https://imgs.xkcd.com/comics/replication_crisis.png",
+		"alt": "Maybe encouraging the publication of null results isn't enough--maybe we need a journal devoted to publishing results the study authors find personally annoying.",
+		"transcript": null,
+		"news": null
 	}
 ]
