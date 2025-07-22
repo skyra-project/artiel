@@ -28042,5 +28042,14 @@
 		"alt": "Maybe encouraging the publication of null results isn't enough--maybe we need a journal devoted to publishing results the study authors find personally annoying.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3118,
+		"date": 1753099200000,
+		"title": "iNaturalist Animals and Plants",
+		"image": "https://imgs.xkcd.com/comics/inaturalist_animals_and_plants.png",
+		"alt": "Washington, DC: Eastern gray squirrel, Amur honeysuckle. Puerto Rico: Crested anole, sea grape. US as a whole: Mallard, eastern poison ivy.",
+		"transcript": null,
+		"news": null
 	}
 ]
