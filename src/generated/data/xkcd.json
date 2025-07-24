@@ -28051,5 +28051,14 @@
 		"alt": "Washington, DC: Eastern gray squirrel, Amur honeysuckle. Puerto Rico: Crested anole, sea grape. US as a whole: Mallard, eastern poison ivy.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3119,
+		"date": 1753272000000,
+		"title": "Flettner Rotor",
+		"image": "https://imgs.xkcd.com/comics/flettner_rotor.png",
+		"alt": "\"And in maritime news, the Coast Guard is on the scene today after an apparent collision between two lighthouses.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
