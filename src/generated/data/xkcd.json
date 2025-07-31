@@ -28078,5 +28078,14 @@
 		"alt": "Detectives say the key to tracking down the source of the kites was a large wall map covered in thumbtacks and string. 'It's the first time that method has ever actually worked,' said a spokesperson.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3122,
+		"date": 1753876800000,
+		"title": "Bad Map Projection: Interrupted Spheres",
+		"image": "https://imgs.xkcd.com/comics/bad_map_projection_interrupted_spheres.png",
+		"alt": "During the most recent glacial maximum, it's believed that land bridges extended from the surfaces and connected several of the spheres together.",
+		"transcript": null,
+		"news": null
 	}
 ]
