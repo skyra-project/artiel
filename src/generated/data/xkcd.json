@@ -28105,5 +28105,14 @@
 		"alt": "We should have you at the gate in just under two hours--two and a half if we get pulled over.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3125,
+		"date": 1754481600000,
+		"title": "Snake-in-the-Box Problem",
+		"image": "https://imgs.xkcd.com/comics/snake_in_the_box_problem.png",
+		"alt": "Chemistry grad students have been spotted trying to lure campus squirrels into laundry hampers in the hope that it sparks inspiration.",
+		"transcript": null,
+		"news": null
 	}
 ]
