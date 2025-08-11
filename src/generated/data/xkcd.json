@@ -28114,5 +28114,14 @@
 		"alt": "Chemistry grad students have been spotted trying to lure campus squirrels into laundry hampers in the hope that it sparks inspiration.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3126,
+		"date": 1754654400000,
+		"title": "Disclaimer",
+		"image": "https://imgs.xkcd.com/comics/disclaimer.png",
+		"alt": "You say no human would reply to a forum thread about Tom Bombadil by writing and editing hundreds of words of text, complete with formatting, fancy punctuation, and two separate uses of the word 'delve'. Unfortunately for both of us, you are wrong.",
+		"transcript": null,
+		"news": null
 	}
 ]
