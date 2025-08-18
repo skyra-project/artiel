@@ -28141,5 +28141,14 @@
 		"alt": "Hey, so did you ever finish your video series about Cassie and the caterpillar morph? I loved the first three, but never ... no, sorry, I get it, this isn't the place. Sorry! Sorry.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3129,
+		"date": 1755259200000,
+		"title": "Archaeology Research",
+		"image": "https://imgs.xkcd.com/comics/archaeology_research.png",
+		"alt": "The academic archaeology establishment is suppressing my breakthroughs because of the disruption it would bring to their prepared-core flake-based toolmaking industry.",
+		"transcript": null,
+		"news": null
 	}
 ]
