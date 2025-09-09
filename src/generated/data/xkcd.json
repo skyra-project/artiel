@@ -28231,5 +28231,14 @@
 		"alt": "A person with two watches is never sure what time it is, especially if I got them one of the watches.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3139,
+		"date": 1757332800000,
+		"title": "Chess Variant",
+		"image": "https://imgs.xkcd.com/comics/chess_variant.png",
+		"alt": "The draw-by-repetition rule does a good job of keeping players from sliding a tile back and forth repeatedly, but the tiles definitely introduce some weird en passant and castling edge cases.",
+		"transcript": null,
+		"news": null
 	}
 ]
