@@ -28240,5 +28240,14 @@
 		"alt": "The draw-by-repetition rule does a good job of keeping players from sliding a tile back and forth repeatedly, but the tiles definitely introduce some weird en passant and castling edge cases.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3140,
+		"date": 1757505600000,
+		"title": "Biology Department",
+		"image": "https://imgs.xkcd.com/comics/biology_department.png",
+		"alt": "Welcome to the Linguistics Department - It has been [2] [DAYS] since someone noticed that the Biology Department sign has a one-day-long singular/plural disagreement after it resets.",
+		"transcript": null,
+		"news": null
 	}
 ]
