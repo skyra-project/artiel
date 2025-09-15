@@ -28249,5 +28249,14 @@
 		"alt": "Welcome to the Linguistics Department - It has been [2] [DAYS] since someone noticed that the Biology Department sign has a one-day-long singular/plural disagreement after it resets.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3141,
+		"date": 1757678400000,
+		"title": "Mantle Model",
+		"image": "https://imgs.xkcd.com/comics/mantle_model.png",
+		"alt": "Mantle plumes explain Hawaii, Yellowstone, Iceland, the East African Rift, the Adirondack uplift, the Permian extinction, the decline of Rome, the DB Cooper hijacking, and the balrog in Moria. Those little hills of sand in your yard are caused by antle plumes.",
+		"transcript": null,
+		"news": null
 	}
 ]
