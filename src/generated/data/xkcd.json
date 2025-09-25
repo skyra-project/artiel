@@ -28294,5 +28294,14 @@
 		"alt": "Some lava around the piercing site is normal, but keep an eye out for spreading earthquakes and eruptive activity that might indicate rifting.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3146,
+		"date": 1758715200000,
+		"title": "Fantastic Four",
+		"image": "https://imgs.xkcd.com/comics/fantastic_four.png",
+		"alt": "One perk of being born at 0.88c is that your birthday is over two days long.",
+		"transcript": null,
+		"news": null
 	}
 ]
