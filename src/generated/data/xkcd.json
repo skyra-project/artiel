@@ -28303,5 +28303,14 @@
 		"alt": "One perk of being born at 0.88c is that your birthday is over two days long.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3147,
+		"date": 1758888000000,
+		"title": "Hiking",
+		"image": "https://imgs.xkcd.com/comics/hiking.png",
+		"alt": "Every downhill walk is a waterslide that might have been.",
+		"transcript": null,
+		"news": null
 	}
 ]
