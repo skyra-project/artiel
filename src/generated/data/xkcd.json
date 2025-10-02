@@ -28321,5 +28321,14 @@
 		"alt": "I'm trying to share my footage of the full run to prove it's not tool-assisted, but the uploader has problems with video lengths of more than a decade.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3149,
+		"date": 1759320000000,
+		"title": "Measure Twice, Cut Once",
+		"image": "https://imgs.xkcd.com/comics/measure_twice_cut_once.png",
+		"alt": "\"Measure zero times, cut zero times.\" --carpenter who has achieved enlightenment and realized the wood is fine where it is",
+		"transcript": null,
+		"news": null
 	}
 ]
