@@ -28330,5 +28330,14 @@
 		"alt": "\"Measure zero times, cut zero times.\" --carpenter who has achieved enlightenment and realized the wood is fine where it is",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3150,
+		"date": 1759492800000,
+		"title": "Ping",
+		"image": "https://imgs.xkcd.com/comics/ping.png",
+		"alt": "Progress on getting shipwrecked sailors to adopt ICMPv6 has been slow.",
+		"transcript": null,
+		"news": null
 	}
 ]
