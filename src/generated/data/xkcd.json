@@ -28339,5 +28339,14 @@
 		"alt": "Progress on getting shipwrecked sailors to adopt ICMPv6 has been slow.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3151,
+		"date": 1759752000000,
+		"title": "Window Screen",
+		"image": "https://imgs.xkcd.com/comics/window_screen.png",
+		"alt": "The Nobel Prize in Physiology or Medicine or Home Improvement or DIY",
+		"transcript": null,
+		"news": null
 	}
 ]
