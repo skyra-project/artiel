@@ -28348,5 +28348,14 @@
 		"alt": "The Nobel Prize in Physiology or Medicine or Home Improvement or DIY",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3152,
+		"date": 1759924800000,
+		"title": "Skateboard",
+		"image": "https://imgs.xkcd.com/comics/skateboard.png",
+		"alt": "I understand it's hard to do more than 300 feet on these 90-second rush jobs, but with a smaller ramp I'm worried the gee forces will be too high for me to do any tricks.",
+		"transcript": null,
+		"news": null
 	}
 ]
