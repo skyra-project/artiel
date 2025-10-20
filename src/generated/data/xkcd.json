@@ -28384,5 +28384,14 @@
 		"alt": "If nothing else, that reasoning definitely overturns syllogisms.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3156,
+		"date": 1760702400000,
+		"title": "Planetary Rings",
+		"image": "https://imgs.xkcd.com/comics/planetary_rings.png",
+		"alt": "If you don't know where you are on Earth, the angle of satellite dishes can help constrain your latitude. If some of them are pointing straight up, you're probably near the Equator, right under the ring.",
+		"transcript": null,
+		"news": null
 	}
 ]
