@@ -28402,5 +28402,14 @@
 		"alt": "Many things about Star Wars were not well planned out, but having a 37-year-old in old-age makeup play the Emperor in Return of the Jedi was such an incredible call.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3158,
+		"date": 1761134400000,
+		"title": "Shielding Chart",
+		"image": "https://imgs.xkcd.com/comics/shielding_chart.png",
+		"alt": "Sharks can occasionally travel short distances through air when pursuing prey, but their attenuation coefficient is pretty high.",
+		"transcript": null,
+		"news": null
 	}
 ]
