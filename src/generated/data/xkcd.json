@@ -28465,5 +28465,14 @@
 		"alt": "The package weighs 7 kg 9 oz.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3165,
+		"date": 1762516800000,
+		"title": "Earthquake Prediction Flowchart",
+		"image": "https://imgs.xkcd.com/comics/earthquake_prediction_flowchart.png",
+		"alt": "At least people who make religious predictions of the apocalypse have an answer to the question 'Why didn't you predict any of the other ones that happened recently?'",
+		"transcript": null,
+		"news": null
 	}
 ]
