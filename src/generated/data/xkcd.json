@@ -28483,5 +28483,14 @@
 		"alt": "Are you the annoying spoon or the sleepy spoon?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3167,
+		"date": 1762948800000,
+		"title": "Car Size",
+		"image": "https://imgs.xkcd.com/comics/car_size.png",
+		"alt": "'They really shouldn't let those small cars drive in traffic. I worry I'm going to kill someone if I hit one! They should have to drive on the sidewalk, safely out of the way.'",
+		"transcript": null,
+		"news": null
 	}
 ]
