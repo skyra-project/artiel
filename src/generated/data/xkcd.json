@@ -28492,5 +28492,14 @@
 		"alt": "'They really shouldn't let those small cars drive in traffic. I worry I'm going to kill someone if I hit one! They should have to drive on the sidewalk, safely out of the way.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3168,
+		"date": 1763121600000,
+		"title": "Beam Dump",
+		"image": "https://imgs.xkcd.com/comics/beam_dump.png",
+		"alt": "We're adding some industrial flypaper to minimize reflection or scattering of customers who might complain.",
+		"transcript": null,
+		"news": null
 	}
 ]
