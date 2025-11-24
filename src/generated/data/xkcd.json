@@ -28519,5 +28519,14 @@
 		"alt": "Now, if it were the *Canon* wiki, it's possible to imagine someone with a productivity-related reason for consulting it, but no one's job requires them to read that much about Admiral Daala.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3171,
+		"date": 1763726400000,
+		"title": "Geologic Core Sample",
+		"image": "https://imgs.xkcd.com/comics/geologic_core_sample.png",
+		"alt": "If you drill at the right angle and time things perfectly, your core sample can include a section of a rival team's coring equipment.",
+		"transcript": null,
+		"news": null
 	}
 ]
