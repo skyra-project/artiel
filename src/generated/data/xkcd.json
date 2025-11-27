@@ -28537,5 +28537,14 @@
 		"alt": "\"Want to feel old?\" \"Yes.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3173,
+		"date": 1764158400000,
+		"title": "Satellite Imagery",
+		"image": "https://imgs.xkcd.com/comics/satellite_imagery.png",
+		"alt": "Every weekend I take an ATV out into the desert and spend a day tracing a faint \"(C) GOOGLE 2009\" watermark across the landscape.",
+		"transcript": null,
+		"news": null
 	}
 ]
