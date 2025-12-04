@@ -28564,5 +28564,14 @@
 		"alt": "Tired of waiting on hold? Use our website to chat with one of our live agents, who are available to produce words at you 24/7!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3176,
+		"date": 1764763200000,
+		"title": "Inverted Catenaries",
+		"image": "https://imgs.xkcd.com/comics/inverted_catenaries.png",
+		"alt": "Some tires are marketed as 'all-shape tires,' but if driven in a climate with both inverted catenary falls and triangle falls, they wear out really fast.",
+		"transcript": null,
+		"news": null
 	}
 ]
