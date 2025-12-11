@@ -28591,5 +28591,14 @@
 		"alt": "Our models fall apart where the three theories overlap; we're unable to predict what happens when a nanometer-sized squirrel eats a grapefruit with the mass of the sun.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3179,
+		"date": 1765368000000,
+		"title": "Fishing",
+		"image": "https://imgs.xkcd.com/comics/fishing.png",
+		"alt": "'That's definitely above the catch-and-release size minimum for planetesimals.' 'I'm going to throw it back anyway.'",
+		"transcript": null,
+		"news": null
 	}
 ]
