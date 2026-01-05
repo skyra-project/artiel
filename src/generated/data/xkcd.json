@@ -28681,5 +28681,14 @@
 		"alt": "Anyone else watching this Youtube video in 1954? If so, my last trip definitely messed with the timeline.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3189,
+		"date": 1767355200000,
+		"title": "Conic Sections",
+		"image": "https://imgs.xkcd.com/comics/conic_sections.png",
+		"alt": "They're not generally used for crewed spacecraft because astronauts HATE going around the corners.",
+		"transcript": null,
+		"news": null
 	}
 ]
