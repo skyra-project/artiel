@@ -28690,5 +28690,14 @@
 		"alt": "They're not generally used for crewed spacecraft because astronauts HATE going around the corners.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3190,
+		"date": 1767614400000,
+		"title": "Tensegrity",
+		"image": "https://imgs.xkcd.com/comics/tensegrity.png",
+		"alt": "Some people argue that the tension and compression in the human skeleton is technically tensegrity, but it's missing the defining characteristic: making people say 'wtf, how is that thing floating?' when they see it.",
+		"transcript": null,
+		"news": null
 	}
 ]
