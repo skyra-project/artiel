@@ -28717,5 +28717,14 @@
 		"alt": "We're going to need to modify the surface to mount it on the test stand. Which ocean basin do you like the least?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3193,
+		"date": 1768219200000,
+		"title": "Sailing Rigs",
+		"image": "https://imgs.xkcd.com/comics/sailing_rigs.png",
+		"alt": "I wanted to make the world's fastest yawl, so I made the aft sail bigger, but apparently that means it's not a yawl anymore! It's a real ketch-22.",
+		"transcript": null,
+		"news": null
 	}
 ]
