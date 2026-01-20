@@ -28744,5 +28744,14 @@
 		"alt": "Welcome to the International Space Station Exclamation Point!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3196,
+		"date": 1768824000000,
+		"title": "Aurora Coolness",
+		"image": "https://imgs.xkcd.com/comics/aurora_coolness.png",
+		"alt": "I've had countless nights where the line never left the bottom zone of the graph, but the few moments where it's climbed all the way to the top have made up for them all.",
+		"transcript": null,
+		"news": null
 	}
 ]
