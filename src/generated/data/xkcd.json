@@ -28789,5 +28789,14 @@
 		"alt": "Some of the atoms in the molecule are very weakly bound.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3201,
+		"date": 1769774400000,
+		"title": "Proof Without Content",
+		"image": "https://imgs.xkcd.com/comics/proof_without_content.png",
+		"alt": "There's also a proof without content of a conjecture without content, but it's left as an exercise for the reader.",
+		"transcript": null,
+		"news": null
 	}
 ]
