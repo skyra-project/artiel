@@ -28816,5 +28816,14 @@
 		"alt": "The discovery of a fully typographical star system comes with a big asterisk.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3204,
+		"date": 1770379200000,
+		"title": "Dinosaurs And Non-Dinosaurs",
+		"image": "https://imgs.xkcd.com/comics/dinosaurs_and_non_dinosaurs.png",
+		"alt": "Staplers are actually in Pseudosuchia, making them more closely related to crocodiles than to dinosaurs.",
+		"transcript": null,
+		"news": null
 	}
 ]
