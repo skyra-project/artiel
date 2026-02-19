@@ -28861,5 +28861,14 @@
 		"alt": "People say setting of fireworks indoors is dangerous, but I looked at their energy release and it's like 10^-40 foe; totally negligible.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3209,
+		"date": 1771416000000,
+		"title": "Plums",
+		"image": "https://imgs.xkcd.com/comics/plums.png",
+		"alt": "My icebox plum trap easily captured William Carlos Williams. It took much less work than the infinite looping network of diverging paths I had to build in that yellow wood to ensnare Robert Frost.",
+		"transcript": null,
+		"news": null
 	}
 ]
