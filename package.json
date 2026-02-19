@@ -30,7 +30,7 @@
 	"dependencies": {
 		"@discordjs/builders": "^1.9.0",
 		"@napi-rs/canvas": "^0.1.58",
-		"@prisma/client": "^5.21.1",
+		"@prisma/client": "^7.4.1",
 		"@sapphire/duration": "^1.1.2",
 		"@sapphire/result": "^2.6.6",
 		"@sapphire/snowflake": "^3.5.3",
@@ -70,7 +70,7 @@
 		"lint-staged": "^15.2.10",
 		"mathjax-full": "^3.2.2",
 		"prettier": "^3.3.3",
-		"prisma": "^5.21.1",
+		"prisma": "^7.4.1",
 		"rimraf": "^5.0.10",
 		"sharp": "^0.33.5",
 		"tsx": "^4.19.2",
