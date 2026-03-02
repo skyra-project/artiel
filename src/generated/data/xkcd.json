@@ -28897,5 +28897,14 @@
 		"alt": "After a lot of analysis, I've determined that they're actually big red dots; they're just very far away.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3213,
+		"date": 1772193600000,
+		"title": "Dental Formulas",
+		"image": "https://imgs.xkcd.com/comics/dental_formulas.png",
+		"alt": "I mean, half of these are undefined. And your multiplication dots are too low; they look like decimal points.",
+		"transcript": null,
+		"news": null
 	}
 ]
