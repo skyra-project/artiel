@@ -28906,5 +28906,14 @@
 		"alt": "I mean, half of these are undefined. And your multiplication dots are too low; they look like decimal points.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3214,
+		"date": 1772452800000,
+		"title": "Electric Vehicles",
+		"image": "https://imgs.xkcd.com/comics/electric_vehicles.png",
+		"alt": "Now that I've finally gotten an electric vehicle, I'm never going back to an acoustic one.",
+		"transcript": null,
+		"news": null
 	}
 ]
