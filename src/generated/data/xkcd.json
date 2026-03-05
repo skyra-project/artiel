@@ -28915,5 +28915,14 @@
 		"alt": "Now that I've finally gotten an electric vehicle, I'm never going back to an acoustic one.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3215,
+		"date": 1772625600000,
+		"title": "Solar Warning",
+		"image": "https://imgs.xkcd.com/comics/solar_warning.png",
+		"alt": "This replaces the previous solar activity watch, which was issued last month when the sun took off its sunglasses.",
+		"transcript": null,
+		"news": null
 	}
 ]
