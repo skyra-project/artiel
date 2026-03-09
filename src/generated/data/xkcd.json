@@ -28924,5 +28924,14 @@
 		"alt": "This replaces the previous solar activity watch, which was issued last month when the sun took off its sunglasses.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3216,
+		"date": 1772798400000,
+		"title": "Bazookasaurus",
+		"image": "https://imgs.xkcd.com/comics/bazookasaurus.png",
+		"alt": "In contrast to the deep booming sound associated with the cannon in pop culture depictions, recent studies show it actually made more of a 'toot toot!' noise.",
+		"transcript": null,
+		"news": null
 	}
 ]
