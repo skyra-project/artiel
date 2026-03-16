@@ -28951,5 +28951,14 @@
 		"alt": "Aww, the oceanic crust and the continental crust are getting married!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3219,
+		"date": 1773403200000,
+		"title": "Planets and Bright Stars",
+		"image": "https://imgs.xkcd.com/comics/planets_and_bright_stars.png",
+		"alt": "An old astronomer trick for distinguishing the Sun from other stars is to take multiple photos a few minutes apart and overlay them, making the Sun stand out due to its high proper motion.",
+		"transcript": null,
+		"news": null
 	}
 ]
