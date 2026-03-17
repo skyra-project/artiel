@@ -28960,5 +28960,14 @@
 		"alt": "An old astronomer trick for distinguishing the Sun from other stars is to take multiple photos a few minutes apart and overlay them, making the Sun stand out due to its high proper motion.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3220,
+		"date": 1773662400000,
+		"title": "Rotational Gravity",
+		"image": "https://imgs.xkcd.com/comics/rotational_gravity.png",
+		"alt": "I don't get it. The peak acceleration for passengers was WAY lower than in the giant-waterslide-loop-the-loop incident the other cruise line fired me for.",
+		"transcript": null,
+		"news": null
 	}
 ]
