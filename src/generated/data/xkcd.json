@@ -28978,5 +28978,14 @@
 		"alt": "'Well, there's speculation that it's due to a mantle hotspot.' --a geologist who's trying to cover up the fact that they didn't hear your question",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3222,
+		"date": 1774008000000,
+		"title": "Star Formation",
+		"image": "https://imgs.xkcd.com/comics/star_formation.png",
+		"alt": "It's ok, I still have some nice, cool gas clouds that aren't collapsing. As long as nothing ionizes them, I can continue to enjoy their ... HEY! NO!!!",
+		"transcript": null,
+		"news": null
 	}
 ]
