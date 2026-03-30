@@ -29005,5 +29005,14 @@
 		"alt": "Yes, the cosmic microwave background is great, but what about the earthly microwave foreground?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3225,
+		"date": 1774612800000,
+		"title": "Satellite Pollution",
+		"image": "https://imgs.xkcd.com/comics/satellite_pollution.png",
+		"alt": "We're working to make sure the images are as up-to-date and accurate as possible, with a minimum number of sponsored galaxies.",
+		"transcript": null,
+		"news": null
 	}
 ]
