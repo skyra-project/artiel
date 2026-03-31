@@ -29014,5 +29014,14 @@
 		"alt": "We're working to make sure the images are as up-to-date and accurate as possible, with a minimum number of sponsored galaxies.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3226,
+		"date": 1774872000000,
+		"title": "Home Solar",
+		"image": "https://imgs.xkcd.com/comics/home_solar.png",
+		"alt": "\"While I try to do my part to destroy the environment, I try not to focus too much on individual responsibility. By pushing for broad policy changes, we can collectively do far more damage to the biosphere than any of us could on our own.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
