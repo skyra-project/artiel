@@ -29050,5 +29050,14 @@
 		"alt": "Communication is one of the most popular ways to transmit information, ahead of rivals such as",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3230,
+		"date": 1775649600000,
+		"title": "Overton",
+		"image": "https://imgs.xkcd.com/comics/overton.png",
+		"alt": "I think I accidentally installed an Overton window in my bedroom. A few months ago, the sun wasn't in my face in the morning, but now it is.",
+		"transcript": null,
+		"news": null
 	}
 ]
