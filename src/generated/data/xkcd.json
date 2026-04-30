@@ -29131,5 +29131,14 @@
 		"alt": "Imagine you could ride alongside a sound wave. It would probably be pretty cool, right? We're putting in a departmental budget request to buy a really fast plane so we can check it out.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3239,
+		"date": 1777464000000,
+		"title": "Simple Machines",
+		"image": "https://imgs.xkcd.com/comics/simple_machines.png",
+		"alt": "It's hard to decide which simple machine system to invest in. DeWalt makes a great lever and inclined plane, but I hear Milwaukee's wheel-and-axles are really good.",
+		"transcript": null,
+		"news": null
 	}
 ]
