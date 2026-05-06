@@ -29149,5 +29149,14 @@
 		"alt": "\"I know it seems impossible, but the trick is that I sailed in here when I was very young.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3241,
+		"date": 1777896000000,
+		"title": "Horizontal Stabilizers",
+		"image": "https://imgs.xkcd.com/comics/horizontal_stabilizers.png",
+		"alt": "It started as a mistake that everyone was afraid to admit to, and then it stuck because removing it 'looks silly.'.",
+		"transcript": null,
+		"news": null
 	}
 ]
