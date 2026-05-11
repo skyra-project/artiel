@@ -29167,5 +29167,14 @@
 		"alt": "Scientists occasionally invent alternative periodic table layouts, which is usually a sign that they don't have enough enrichment in their enclosures.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3243,
+		"date": 1778241600000,
+		"title": "Crystal Gazing",
+		"image": "https://imgs.xkcd.com/comics/crystal_gazing.png",
+		"alt": "'Beyond that lies a vale of fire through which my vision cannot penetrate' is the kind of fun thing geologists, heliophysicists, and early universe cosmologists have a lot of opportunities to say.",
+		"transcript": null,
+		"news": null
 	}
 ]
