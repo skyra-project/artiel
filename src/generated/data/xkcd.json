@@ -29185,5 +29185,14 @@
 		"alt": "\"How does the spring not run out almost immediately?\" \"We pull it back REALLY far.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3245,
+		"date": 1778673600000,
+		"title": "Results Age",
+		"image": "https://imgs.xkcd.com/comics/results_age.png",
+		"alt": "Please, we need your help. Our research suggests you're the last living descendant of the person who knew how to format this config file.",
+		"transcript": null,
+		"news": null
 	}
 ]
