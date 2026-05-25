@@ -29221,5 +29221,14 @@
 		"alt": "They rounded down to 182.8 instead of rounding up to 182.9 because 182.9 might make the statement incorrect.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3249,
+		"date": 1779451200000,
+		"title": "Neutrino Project",
+		"image": "https://imgs.xkcd.com/comics/neutrino_project.png",
+		"alt": "We definitely put the pool in a mine for shielding. It was absolutely not to hide it from the funding people.",
+		"transcript": null,
+		"news": null
 	}
 ]
