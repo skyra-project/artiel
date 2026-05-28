@@ -29239,5 +29239,14 @@
 		"alt": "Every place has a local cryptid; more places need a local Pictish Beast, a creature in historical art that's drawn so weirdly that no one can tell what animal it's supposed to be.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3251,
+		"date": 1779883200000,
+		"title": "Time Machine Conversation",
+		"image": "https://imgs.xkcd.com/comics/time_machine_conversation.png",
+		"alt": "It's possible to do sea navigation without a compass, but you'll have to get some spoilers from the Polynesians.",
+		"transcript": null,
+		"news": null
 	}
 ]
