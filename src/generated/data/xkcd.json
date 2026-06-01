@@ -29248,5 +29248,23 @@
 		"alt": "It's possible to do sea navigation without a compass, but you'll have to get some spoilers from the Polynesians.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3252,
+		"date": 1780056000000,
+		"title": "Ancestral Genomes",
+		"image": "https://imgs.xkcd.com/comics/ancestral_genomes.png",
+		"alt": "SUGGESTIONS FOR FUTURE RESEARCH: No further research is needed as it is frankly none of our business.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3253,
+		"date": 1780315200000,
+		"title": "Sunbeam",
+		"image": "https://imgs.xkcd.com/comics/sunbeam.png",
+		"alt": "While weather control is typically thought of as a superpower, the unconscious ability of astronomers and astrophotographers to summon clouds is more properly classified as a curse.",
+		"transcript": null,
+		"news": null
 	}
 ]
