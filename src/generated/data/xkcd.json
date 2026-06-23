@@ -29338,5 +29338,14 @@
 		"alt": "Brace yourself--the chirp gets pretty weird.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3262,
+		"date": 1782129600000,
+		"title": "Sports Commentary",
+		"image": "https://imgs.xkcd.com/comics/sports_commentary.png",
+		"alt": "The plural of anecdote may not be data, but the singular of data is anecdote.",
+		"transcript": null,
+		"news": null
 	}
 ]
