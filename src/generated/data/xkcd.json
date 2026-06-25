@@ -29347,5 +29347,14 @@
 		"alt": "The plural of anecdote may not be data, but the singular of data is anecdote.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3263,
+		"date": 1782302400000,
+		"title": "Baryon Asymmetry",
+		"image": "https://imgs.xkcd.com/comics/baryon_asymmetry.png",
+		"alt": "Wait, what do you mean, 'dark matter'? It's not dark, it interacts with high-energy gamma rays ... right? Oh jeez, did I forget to make it interact?",
+		"transcript": null,
+		"news": null
 	}
 ]
