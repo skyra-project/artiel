@@ -29356,5 +29356,14 @@
 		"alt": "Wait, what do you mean, 'dark matter'? It's not dark, it interacts with high-energy gamma rays ... right? Oh jeez, did I forget to make it interact?",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3264,
+		"date": 1782475200000,
+		"title": "720 Ollie",
+		"image": "https://imgs.xkcd.com/comics/720_ollie.png",
+		"alt": "This discovery was key to his demonstration of regular/goofy symmetry violation, which won him gold in the theory portion of the X Games.",
+		"transcript": null,
+		"news": null
 	}
 ]
