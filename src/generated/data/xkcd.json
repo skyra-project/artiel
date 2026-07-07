@@ -29392,5 +29392,14 @@
 		"alt": "I hate the unearthly sound my phone makes when the weather service issues a tornado harbinger.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3268,
+		"date": 1783339200000,
+		"title": "Offside",
+		"image": "https://imgs.xkcd.com/comics/offside.png",
+		"alt": "The arbiter gave my knight a red card for capturing with cleats up :(",
+		"transcript": null,
+		"news": null
 	}
 ]
