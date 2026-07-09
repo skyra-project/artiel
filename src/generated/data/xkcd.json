@@ -29401,5 +29401,14 @@
 		"alt": "The arbiter gave my knight a red card for capturing with cleats up :(",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3269,
+		"date": 1783512000000,
+		"title": "Airport Meeting",
+		"image": "https://imgs.xkcd.com/comics/airport_meeting.png",
+		"alt": "Although it was a setback for physics, I'm glad the particle naming rights issue led to the cancelation of Pizza Hut's Superconducting Super Collider in the early 90s, so the Double Stuffed Extra Cheese Topping Quark ended up just being named 'top quark.'",
+		"transcript": null,
+		"news": null
 	}
 ]
