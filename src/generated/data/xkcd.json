@@ -29464,5 +29464,14 @@
 		"alt": "We would like to once again apologize to Dr. Jones for last year's mistaken announcement. We should really have double-checked the envelope for this award in particular.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3276,
+		"date": 1784894400000,
+		"title": "Recursive Trucker's Hitch",
+		"image": "https://imgs.xkcd.com/comics/recursive_truckers_hitch.png",
+		"alt": "As if the americium smoke detector incident wasn't enough, now nuclear regulators have ANOTHER reason to worry about the Boy Scouts.",
+		"transcript": null,
+		"news": null
 	}
 ]
