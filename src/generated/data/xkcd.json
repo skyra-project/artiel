@@ -29482,5 +29482,14 @@
 		"alt": "I NOTATION POLISH REVERSE ❤️",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3278,
+		"date": 1785326400000,
+		"title": "Vera Rubin Observatory",
+		"image": "https://imgs.xkcd.com/comics/vera_rubin_observatory.png",
+		"alt": "'Spurious signals from the kitchen' is harder for an optical telescope than a radio one, but with enough determination and creativity, I believe it's possible.",
+		"transcript": null,
+		"news": null
 	}
 ]
