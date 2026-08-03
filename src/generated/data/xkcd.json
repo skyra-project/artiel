@@ -29491,5 +29491,14 @@
 		"alt": "'Spurious signals from the kitchen' is harder for an optical telescope than a radio one, but with enough determination and creativity, I believe it's possible.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3279,
+		"date": 1785499200000,
+		"title": "Main Span",
+		"image": "https://imgs.xkcd.com/comics/main_span.png",
+		"alt": "Wind stress? Don't be silly. When has wind stress ever been a problem for a suspension bridge?",
+		"transcript": null,
+		"news": null
 	}
 ]
