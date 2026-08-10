@@ -29518,5 +29518,23 @@
 		"alt": "The family lore was that we've had it ever since it was ejected from a star-forming gas cloud, but it seems more likely that my great-grandparents probably just bought it while on vacation in the galactic thin disk.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3282,
+		"date": 1786104000000,
+		"title": "Trick Play",
+		"image": "https://imgs.xkcd.com/comics/trick_play.png",
+		"alt": "I've been trying to find out whether the Laws of the Game take the axiom of choice or not, but FIFA officials keep blocking my number.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3283,
+		"date": 1786363200000,
+		"title": "Size and Lifespan",
+		"image": "https://imgs.xkcd.com/comics/size_and_lifespan.png",
+		"alt": "With their 13 years recording and performing together and two humans worth of mass, the White Stripes are sandwiched neatly between gray wolves and blue whales.",
+		"transcript": null,
+		"news": null
 	}
 ]
