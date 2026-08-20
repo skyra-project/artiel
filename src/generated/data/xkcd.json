@@ -29563,5 +29563,14 @@
 		"alt": "The one that sounds like the oracle at the center of the galaxy where the hero travels to hear a prophecy is probably Brookhaven National Laboratory's now-dismantled COSMOTRON.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3287,
+		"date": 1787140800000,
+		"title": "Perseids",
+		"image": "https://imgs.xkcd.com/comics/perseids.png",
+		"alt": "Recently I've been watching the Daytime Perseids. I haven't seen a meteor from them yet, but the clouds are pretty and the snacks are good.",
+		"transcript": null,
+		"news": null
 	}
 ]
