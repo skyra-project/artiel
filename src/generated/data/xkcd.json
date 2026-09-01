@@ -29608,5 +29608,14 @@
 		"alt": "It does come at the cost of some launchpad expansions and increased fuel requirements, but that all comes out of the facility's budget.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3292,
+		"date": 1788177600000,
+		"title": "Geology Class",
+		"image": "https://imgs.xkcd.com/comics/geology_class.png",
+		"alt": "The rise of AI review bombing tools threatens to take away a crucial source of experience for geology undergraduates.",
+		"transcript": null,
+		"news": null
 	}
 ]
