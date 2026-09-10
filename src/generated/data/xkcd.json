@@ -29644,5 +29644,14 @@
 		"alt": "The speed of light in air is 50% faster than in fiber, but it's a challenge to get the arms to move fast enough to realize the latency advantage.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3296,
+		"date": 1788955200000,
+		"title": "Fault Taunting",
+		"image": "https://imgs.xkcd.com/comics/fault_taunting.png",
+		"alt": "One of the first things they teach you is to NEVER play with the geology toy over a mantle hotspot.",
+		"transcript": null,
+		"news": null
 	}
 ]
