@@ -29662,5 +29662,14 @@
 		"alt": "To access distant parts of the project, I ended up building a regular-scale passenger train inside each rail.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3298,
+		"date": 1789387200000,
+		"title": "Aerospace Flowchart",
+		"image": "https://imgs.xkcd.com/comics/aerospace_flowchart.png",
+		"alt": "Someday, we will find the problem that goes with this solution.",
+		"transcript": null,
+		"news": null
 	}
 ]
