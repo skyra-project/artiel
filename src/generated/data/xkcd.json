@@ -29671,5 +29671,14 @@
 		"alt": "Someday, we will find the problem that goes with this solution.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3299,
+		"date": 1789560000000,
+		"title": "Summer",
+		"image": "https://imgs.xkcd.com/comics/summer.png",
+		"alt": "You should probably get back to shore before spring hits.",
+		"transcript": null,
+		"news": null
 	}
 ]
