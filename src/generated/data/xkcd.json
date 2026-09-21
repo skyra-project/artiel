@@ -29680,5 +29680,14 @@
 		"alt": "You should probably get back to shore before spring hits.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3300,
+		"date": 1789732800000,
+		"title": "Tyrannosaurus",
+		"image": "https://imgs.xkcd.com/comics/tyrannosaurus.png",
+		"alt": "Many of the smaller dinosaurs seem to have largely preyed on housecats.",
+		"transcript": null,
+		"news": null
 	}
 ]
