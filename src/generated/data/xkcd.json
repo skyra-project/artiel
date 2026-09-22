@@ -29689,5 +29689,14 @@
 		"alt": "Many of the smaller dinosaurs seem to have largely preyed on housecats.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3301,
+		"date": 1789992000000,
+		"title": "Stargazing 5",
+		"image": "https://imgs.xkcd.com/comics/stargazing_5.png",
+		"alt": "The sun and the moon appear the same size in the sky, even though in real life the sun is more than twice as big. Some call this lucky alignment coincidence; others say it's proof that sometimes things can be the same size.",
+		"transcript": null,
+		"news": null
 	}
 ]
