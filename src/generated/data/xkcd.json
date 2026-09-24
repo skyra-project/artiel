@@ -29698,5 +29698,14 @@
 		"alt": "The sun and the moon appear the same size in the sky, even though in real life the sun is more than twice as big. Some call this lucky alignment coincidence; others say it's proof that sometimes things can be the same size.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3302,
+		"date": 1790164800000,
+		"title": "Voyager Instruments",
+		"image": "https://imgs.xkcd.com/comics/voyager_instruments.png",
+		"alt": "Convincing him to turn off the stupid laser show and useless sound system was such a huge ordeal that no one has wanted to do it again.",
+		"transcript": null,
+		"news": null
 	}
 ]
