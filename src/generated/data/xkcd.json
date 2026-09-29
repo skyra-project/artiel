@@ -29716,5 +29716,14 @@
 		"alt": "It's ok if you want to close close your eyes for the slab graveyard, so you can still have fun riding the mantle plume back up afterward!",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3304,
+		"date": 1790596800000,
+		"title": "Jupiter Icy Moons Explorer",
+		"image": "https://imgs.xkcd.com/comics/jupiter_icy_moons_explorer.png",
+		"alt": "\"I did briefly visit Venus in August 2025, but I figured out the mistake on my own because it didn't have any moons.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
