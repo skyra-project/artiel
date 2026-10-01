@@ -29725,5 +29725,14 @@
 		"alt": "\"I did briefly visit Venus in August 2025, but I figured out the mistake on my own because it didn't have any moons.\"",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3305,
+		"date": 1790769600000,
+		"title": "Ground Effect",
+		"image": "https://imgs.xkcd.com/comics/ground_effect.png",
+		"alt": "Runners looking for aerodynamic advantage typically wear sneakers because some fancy dress shoes can create wingtip vortices.",
+		"transcript": null,
+		"news": null
 	}
 ]
