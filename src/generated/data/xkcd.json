@@ -29734,5 +29734,23 @@
 		"alt": "Runners looking for aerodynamic advantage typically wear sneakers because some fancy dress shoes can create wingtip vortices.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3306,
+		"date": 1790942400000,
+		"title": "Accelerator Energies",
+		"image": "https://imgs.xkcd.com/comics/accelerator_energies.png",
+		"alt": "Fans at Daytona always get extra excited when officials decide to introduce some antimatter cars circling the track in the opposite direction.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3307,
+		"date": 1791201600000,
+		"title": "Spectrum Allocation",
+		"image": "https://imgs.xkcd.com/comics/spectrum_allocation.png",
+		"alt": "Rumor has it that they're finally auctioning off the zeppelin navigation bands, but everyone is worried that the scary boat captains will express interest.",
+		"transcript": null,
+		"news": null
 	}
 ]
