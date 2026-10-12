@@ -29761,5 +29761,23 @@
 		"alt": "I need to push some updates to the remote sensing instruments, which are there to measure the surface and definitely not do anything else.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3309,
+		"date": 1791547200000,
+		"title": "Dogcatcher",
+		"image": "https://imgs.xkcd.com/comics/dogcatcher.png",
+		"alt": "People out here catching strays out here catching strays",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3310,
+		"date": 1791806400000,
+		"title": "Rejected Space Mission Profiles",
+		"image": "https://imgs.xkcd.com/comics/rejected_space_mission_profiles.png",
+		"alt": "Although NASA agreed that Voyager 2 'seemed lonely' they decided against launching a companion orbiter mission after further measurements indicated that the spacecraft actually preferred the peace and quiet.",
+		"transcript": null,
+		"news": null
 	}
 ]
