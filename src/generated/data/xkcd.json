@@ -29779,5 +29779,14 @@
 		"alt": "Although NASA agreed that Voyager 2 'seemed lonely' they decided against launching a companion orbiter mission after further measurements indicated that the spacecraft actually preferred the peace and quiet.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3311,
+		"date": 1791979200000,
+		"title": "Planet Database",
+		"image": "https://imgs.xkcd.com/comics/planet_database.png",
+		"alt": "Atmospheric transmission spectroscopy has revealed that the sunsets from the observatory are really pretty.",
+		"transcript": null,
+		"news": null
 	}
 ]
