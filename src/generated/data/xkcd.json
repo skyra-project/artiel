@@ -29788,5 +29788,14 @@
 		"alt": "Atmospheric transmission spectroscopy has revealed that the sunsets from the observatory are really pretty.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3312,
+		"date": 1792152000000,
+		"title": "Momentum Demonstration",
+		"image": "https://imgs.xkcd.com/comics/momentum_demonstration.png",
+		"alt": "\"I'm doing really well on the Hertzsprung-Russell academic diagram, which has spectral class on one axis and Rate My Professors rating on the other.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
