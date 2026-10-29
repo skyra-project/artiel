@@ -29833,5 +29833,14 @@
 		"alt": "They initially thought the containment structure alone would be sufficient, but for good measure they decided to include the Elephant's Foot inside.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3317,
+		"date": 1793188800000,
+		"title": "Gravitational Square Wave",
+		"image": "https://imgs.xkcd.com/comics/gravitational_square_wave.png",
+		"alt": "Depending on the energy deposition I can manage, it might also be a fun prank on the rest of the Earth.",
+		"transcript": null,
+		"news": null
 	}
 ]
