@@ -29842,5 +29842,23 @@
 		"alt": "Depending on the energy deposition I can manage, it might also be a fun prank on the rest of the Earth.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3318,
+		"date": 1793361600000,
+		"title": "Earth Sized Planets",
+		"image": "https://imgs.xkcd.com/comics/earth_sized_planets.png",
+		"alt": "It probably has an icy mantle over the real silicate geology, but I'm hoping something weird happened to burn off most of the water like with Io.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3319,
+		"date": 1793620800000,
+		"title": "Elevators",
+		"image": "https://imgs.xkcd.com/comics/elevators.png",
+		"alt": "\"A reusable elevator would also be great because we'd save so much on the bulky and expensive shields that people currently use to avoid bruises and rug burns when sliding down the stairs.\"",
+		"transcript": null,
+		"news": null
 	}
 ]
