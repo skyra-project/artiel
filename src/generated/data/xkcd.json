@@ -29869,5 +29869,23 @@
 		"alt": "For the first time in history, it will be possible for a Democratic Senator from Kansas to see a programmable automatic digital computer.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3321,
+		"date": 1793966400000,
+		"title": "Simulation",
+		"image": "https://imgs.xkcd.com/comics/simulation.png",
+		"alt": "No matter what I initially open Universe Sandbox to do, I always end up just mashing planets together like a small child making toys kiss.",
+		"transcript": null,
+		"news": null
+	},
+	{
+		"id": 3322,
+		"date": 1794225600000,
+		"title": "Dragonfly",
+		"image": "https://imgs.xkcd.com/comics/dragonfly.png",
+		"alt": "I'm excited for Dragonfly, because on the list of places in the solar system that I desperately want more pictures from, 'Titan's surface' is right up there at the top with 'Jupiter's atmosphere.'",
+		"transcript": null,
+		"news": null
 	}
 ]
