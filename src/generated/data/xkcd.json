@@ -29887,5 +29887,14 @@
 		"alt": "I'm excited for Dragonfly, because on the list of places in the solar system that I desperately want more pictures from, 'Titan's surface' is right up there at the top with 'Jupiter's atmosphere.'",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3323,
+		"date": 1794398400000,
+		"title": "Meteor Fear",
+		"image": "https://imgs.xkcd.com/comics/meteor_fear.png",
+		"alt": "Don't worry--even though small and potentially deadly meteors hit the ground all the time, statistically you're actually much more likely to die from a rare large one that destroys your whole area!",
+		"transcript": null,
+		"news": null
 	}
 ]
