@@ -29914,5 +29914,14 @@
 		"alt": "After 49 years, NASA is considering shutting down Voyager 1's multiplayer gaming server; the 172800000ms ping has just become too annoying for players.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3326,
+		"date": 1795003200000,
+		"title": "Voyager Crash",
+		"image": "https://imgs.xkcd.com/comics/voyager_crash.png",
+		"alt": "[Several months later] Actaully, it looks like what it hit a few months ago was just the START of the crystal sphere zone. New data confirms Voyager 1 has now struck the ACTUAL crystal sphere.",
+		"transcript": null,
+		"news": null
 	}
 ]
