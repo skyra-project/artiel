@@ -29923,5 +29923,14 @@
 		"alt": "[Several months later] Actaully, it looks like what it hit a few months ago was just the START of the crystal sphere zone. New data confirms Voyager 1 has now struck the ACTUAL crystal sphere.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3327,
+		"date": 1795176000000,
+		"title": "Plate Maintenance",
+		"image": "https://imgs.xkcd.com/comics/plate_maintenance.png",
+		"alt": "First we're going to have to relieve the built-up strain, but we'll do it one hemisphere at a time, so you'll just need to briefly move all your fragile stuff like buildings over to the other hemisphere while we work.",
+		"transcript": null,
+		"news": null
 	}
 ]
