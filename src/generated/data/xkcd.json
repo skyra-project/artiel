@@ -29941,5 +29941,14 @@
 		"alt": "These ivory tower elites are flouting both CITES and municipal building codes.",
 		"transcript": null,
 		"news": null
+	},
+	{
+		"id": 3329,
+		"date": 1795608000000,
+		"title": "Cesium Atom",
+		"image": "https://imgs.xkcd.com/comics/cesium_atom.png",
+		"alt": "We've all chipped in to buy the retiring committee chair a gold-plated cesium atom.",
+		"transcript": null,
+		"news": null
 	}
 ]
